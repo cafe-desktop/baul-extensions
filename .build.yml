@@ -123,7 +123,7 @@ build_scripts:
   - fi
 
 after_scripts:
-  - make distcheck
+  - ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/cafe-icon-theme/raw/master/cafe/16x16/apps/system-file-manager.png
 
 releases:
   draft: false
