@@ -1,0 +1,699 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the caja-extensions package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Mattias Põldaru <mahfiaz@gmail.com>, 2020
+# Ivar Smolin <okul@linux.ee>, 2020
+# Rivo Zängov <eraser@eraser.ee>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: caja-extensions 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/caja-extensions\n"
+"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"PO-Revision-Date: 2020-02-14 11:51+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
+"Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gksu/libcaja-gksu.c:135
+msgid "Open as administrator"
+msgstr "Ava haldurina"
+
+#: gksu/libcaja-gksu.c:136
+msgid "Opens the file with administrator privileges"
+msgstr "Faili avamine halduri õigustes"
+
+#: gksu/libcaja-gksu.c:223
+msgid ""
+"<big><b>Unable to determine the program to run.</b></big>\n"
+"\n"
+"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+msgstr ""
+"<big><b>Käivitatavat programmi pole võimalik kindlaks teha.</b></big>\n"
+"\n"
+"Sinu poolt valitud kirjet pole võimalik halduri õigustes avada, kuna selle jaoks vajalikku rakendust pole võimalik kindlaks teha."
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: gksu/libcaja-gksu.caja-extension.desktop.in.in:4
+msgid "system"
+msgstr ""
+
+#: gksu/libcaja-gksu.caja-extension.desktop.in.in:5
+msgid "Gksu"
+msgstr "Gksu"
+
+#: gksu/libcaja-gksu.caja-extension.desktop.in.in:6
+msgid "Privilege granting extension"
+msgstr "Õiguste võimaldamise laiend"
+
+#: gksu/libcaja-gksu.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
+msgstr ""
+
+#: image-converter/caja-image-converter.c:120
+msgid "_Resize Images..."
+msgstr "Muuda pildi suu_rust..."
+
+#: image-converter/caja-image-converter.c:121
+msgid "Resize each selected image"
+msgstr "Iga valitud pildi suuruse muutmine"
+
+#: image-converter/caja-image-converter.c:130
+msgid "Ro_tate Images..."
+msgstr "Pööra pil_te"
+
+#: image-converter/caja-image-converter.c:131
+msgid "Rotate each selected image"
+msgstr "Iga valitud pildi pööramine"
+
+#: image-converter/caja-image-resize.ui:33
+msgid "Resize Images"
+msgstr "Piltide suuruse muutmine"
+
+#: image-converter/caja-image-resize.ui:53
+msgid "_Cancel"
+msgstr "_Tühista"
+
+#: image-converter/caja-image-resize.ui:69
+msgid "_Resize"
+msgstr "Muuda s_uurust"
+
+#: image-converter/caja-image-resize.ui:119
+msgid "Select a size:"
+msgstr "Suuruse valimine"
+
+#: image-converter/caja-image-resize.ui:165
+#: image-converter/caja-image-resize.ui:307
+msgid "pixels"
+msgstr "pikslit"
+
+#: image-converter/caja-image-resize.ui:187
+msgid "Scale:"
+msgstr "Skaleerimine:"
+
+#: image-converter/caja-image-resize.ui:218
+msgid "percent"
+msgstr "protsenti"
+
+#: image-converter/caja-image-resize.ui:240
+msgid "Custom size:"
+msgstr "Kohandatud suurus:"
+
+#: image-converter/caja-image-resize.ui:259
+msgid "Width:"
+msgstr "Laius:"
+
+#: image-converter/caja-image-resize.ui:283
+msgid "Height:"
+msgstr "Kõrgus:"
+
+#: image-converter/caja-image-resize.ui:330
+msgid "Image Size"
+msgstr ""
+
+#: image-converter/caja-image-resize.ui:368
+#: image-converter/caja-image-rotate.ui:206
+msgid "Append"
+msgstr "Lisa"
+
+#: image-converter/caja-image-resize.ui:386
+msgid ".resized"
+msgstr ".muudetud_suurusega"
+
+#: image-converter/caja-image-resize.ui:398
+#: image-converter/caja-image-rotate.ui:228
+msgid "to file title"
+msgstr "faili nimele"
+
+#: image-converter/caja-image-resize.ui:415
+msgid "Resize in place"
+msgstr "Suuruse muutmine toimub faili asukohas"
+
+#: image-converter/caja-image-resize.ui:438
+msgid "Filename"
+msgstr "Failinimi"
+
+#: image-converter/caja-image-resizer.c:207
+#: image-converter/caja-image-rotator.c:204
+msgid "_Skip"
+msgstr "_Jäta vahele"
+
+#: image-converter/caja-image-resizer.c:209
+#: image-converter/caja-image-rotator.c:206
+msgid "_Retry"
+msgstr "_Proovi uuesti"
+
+#: image-converter/caja-image-resizer.c:287
+#, c-format
+msgid "Resizing image: %d of %d"
+msgstr "Pildi suuruse muutmine: %d. %d-st"
+
+#: image-converter/caja-image-resizer.c:292
+#, c-format
+msgid "<i>Resizing \"%s\"</i>"
+msgstr "<i>Pildi \"%s\" suuruse muutmine<i>"
+
+#: image-converter/caja-image-resizer.c:310
+#: image-converter/caja-image-rotator.c:309
+msgid "Please enter a valid filename suffix!"
+msgstr "Palun sisesta paikapidav faili nime laiend"
+
+#: image-converter/caja-image-rotate.ui:18
+msgid "90° clockwise"
+msgstr ""
+
+#: image-converter/caja-image-rotate.ui:21
+msgid "90° counter-clockwise"
+msgstr ""
+
+#: image-converter/caja-image-rotate.ui:24
+msgid "180°"
+msgstr ""
+
+#: image-converter/caja-image-rotate.ui:31
+msgid "Rotate Images"
+msgstr "Piltide pööramine"
+
+#: image-converter/caja-image-rotate.ui:46
+msgid "<b>Image Rotation</b>"
+msgstr "<b>Pildi pööramine</b>"
+
+#: image-converter/caja-image-rotate.ui:79
+msgid "Select an angle:"
+msgstr "Nurga valimine:"
+
+#: image-converter/caja-image-rotate.ui:117
+msgid "Custom angle:"
+msgstr "Kohandatud nurk:"
+
+#: image-converter/caja-image-rotate.ui:143
+msgid "degrees clockwise"
+msgstr "kraadi päripäeva"
+
+#: image-converter/caja-image-rotate.ui:172
+msgid "<b>Filename</b>"
+msgstr "<p>Faili nimi</p>"
+
+#: image-converter/caja-image-rotate.ui:219
+msgid ".rotated"
+msgstr ".pööratud"
+
+#: image-converter/caja-image-rotate.ui:242
+msgid "Rotate in place"
+msgstr "Pööramine toimub faili asukohas"
+
+#: image-converter/caja-image-rotate.ui:288
+msgid "_Rotate"
+msgstr "Pöö_ra"
+
+#: image-converter/caja-image-rotator.c:286
+#, c-format
+msgid "Rotating image: %d of %d"
+msgstr "Pildi pööramine: %d (%d-st)"
+
+#: image-converter/caja-image-rotator.c:291
+#, c-format
+msgid "<i>Rotating \"%s\"</i>"
+msgstr "<i>\"%s\" pööramine</i>"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:4
+msgid "image"
+msgstr ""
+
+#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:5
+msgid "Image Converter"
+msgstr "Pilditeisendaja"
+
+#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:6
+msgid "Rotate and resize images"
+msgstr "Piltide pööramine ja nende suuruse muutmine"
+
+#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2004-2005 Jürg Billeter"
+msgstr ""
+
+#: open-terminal/caja-open-terminal.c:459
+#: open-terminal/caja-open-terminal.c:472
+msgid "Open in _Terminal"
+msgstr "Ava _terminalis"
+
+#: open-terminal/caja-open-terminal.c:461
+msgid "Open the currently selected folder in a terminal"
+msgstr "Hetkel valitud kausta avamine terminalis"
+
+#: open-terminal/caja-open-terminal.c:463
+#: open-terminal/caja-open-terminal.c:473
+msgid "Open the currently open folder in a terminal"
+msgstr "Hetkel avatud kausta avamine terminalis"
+
+#: open-terminal/caja-open-terminal.c:469
+msgid "Open _Terminal"
+msgstr "Ava _terminal"
+
+#: open-terminal/caja-open-terminal.c:470
+msgid "Open a terminal"
+msgstr "Terminali avamine"
+
+#: open-terminal/caja-open-terminal.c:563
+msgid "Open at Home if trying to open on desktop"
+msgstr "Töölaual avamise asemel avamine kodukaustas"
+
+#: open-terminal/caja-open-terminal.c:566
+msgid "Terminal application:"
+msgstr "Terminali rakendus:"
+
+#: open-terminal/caja-open-terminal.c:586
+msgid "Close"
+msgstr "Suletud"
+
+#: open-terminal/caja-open-terminal.c:592
+msgid "open-terminal Configuration"
+msgstr "open-terminal'i seaditus"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:4
+msgid "terminal"
+msgstr ""
+
+#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:5
+msgid "Open terminal"
+msgstr "Terminali avamine"
+
+#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:6
+msgid "Open terminals from folders"
+msgstr "Terminali avamine kataloogides"
+
+#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
+msgstr ""
+
+#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:5
+msgid ""
+"Whether opening a terminal on the desktop opens a terminal in the home "
+"directory"
+msgstr "Kas töölaualt terminali avamine avab terminali kodukataloogis"
+
+#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:6
+msgid ""
+"If set to true, then opening a terminal on the desktop will open a terminal "
+"in the home directory. Otherwise, it will be opened in the desktop "
+"directory. Note that this key is irrelevant if the desktop directory is "
+"identical to the home directory."
+msgstr ""
+"Kui määratud, siis töölaualt terminali avamine avab terminali "
+"kodukataloogis. Kui määramata, siis avatakse see terminal töölaua "
+"kataloogis. Kui töölaud ja kodukataloog on samas kataloogis, siis ei oma see"
+" väärtus tähendust."
+
+#: sendto/caja-nste.c:76 sendto/caja-nste.c:81
+msgid "Send to..."
+msgstr "Saada..."
+
+#: sendto/caja-nste.c:77
+msgid "Send file by mail, instant message..."
+msgstr "Faili saatmine e-posti või välksõnumiga..."
+
+#: sendto/caja-nste.c:82
+msgid "Send files by mail, instant message..."
+msgstr "Failide saatmine e-posti või välksõnumiga..."
+
+#: sendto/caja-sendto-command.c:578
+msgid "Files"
+msgstr "Failid"
+
+#: sendto/caja-sendto-command.c:790
+msgid "Expects URIs or filenames to be passed as options\n"
+msgstr "Ootab, et URId või failinimed edastatakse võtmetena\n"
+
+#: sendto/caja-sendto-command.c:810
+#, c-format
+msgid "Could not parse command-line options: %s\n"
+msgstr "Käsurea võtmete analüüs pole võimalik: %s\n"
+
+#: sendto/caja-sendto-command.c:825
+msgid "Could not load any plugins."
+msgstr "Ühtegi pluginat pole võimalik laadida."
+
+#: sendto/caja-sendto-command.c:828
+msgid "Please verify your installation"
+msgstr "Palun kontrolli paigaldust"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: sendto/libcaja-sendto.caja-extension.desktop.in.in:4
+msgid "mail-send"
+msgstr ""
+
+#: sendto/libcaja-sendto.caja-extension.desktop.in.in:5
+msgid "Send To"
+msgstr "Saatmine"
+
+#: sendto/libcaja-sendto.caja-extension.desktop.in.in:6
+msgid "Integrates email clients and Pidgin"
+msgstr "E-posti kliendi ja Pidgini integratsioon"
+
+#: sendto/libcaja-sendto.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2004 Roberto Majadas"
+msgstr ""
+
+#: sendto/org.mate.Caja.Sendto.gschema.xml.in:6
+msgid "Last plugin used to send"
+msgstr ""
+
+#: sendto/org.mate.Caja.Sendto.gschema.xml.in:7
+msgid ""
+"Used to store which plugin was used the last time files were sent using "
+"caja-sendto."
+msgstr ""
+
+#: sendto/org.mate.Caja.Sendto.gschema.xml.in:14
+msgid "Last type of archive used"
+msgstr "Viimati kasutatud arhiivi liik"
+
+#: sendto/org.mate.Caja.Sendto.gschema.xml.in:15
+msgid ""
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
+msgstr ""
+"Kasutatakse viimati kastutatud arhiivi liigi meelespidamiseks (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
+
+#: sendto/caja-sendto.ui:24
+msgid "Send To..."
+msgstr "Failide saatmine..."
+
+#: sendto/caja-sendto.ui:100
+msgid "_Send"
+msgstr "_Saada"
+
+#: sendto/caja-sendto.ui:149
+msgid "<b>Destination</b>"
+msgstr "<b>Sihtkoht</b>"
+
+#: sendto/caja-sendto.ui:192
+msgid "Send _as:"
+msgstr "_Millega saata:"
+
+#: sendto/caja-sendto.ui:234
+msgid "Send t_o:"
+msgstr "_Kuhu saata:"
+
+#: sendto/caja-sendto.ui:300
+msgid "<b>Compression</b>"
+msgstr "<b>Tihendamine</b>"
+
+#: sendto/caja-sendto.ui:341
+msgid "Send _packed in:"
+msgstr "Saatmine _pakituna arhiivi:"
+
+#: sendto/plugins/emailclient/emailclient.c:263
+msgid "Email"
+msgstr "E-post"
+
+#: sendto/plugins/gajim/gajim.c:419
+msgid "Unable to send file"
+msgstr "Faili pole võimalik saata"
+
+#: sendto/plugins/gajim/gajim.c:420
+msgid "There is no connection to gajim remote service."
+msgstr "Puudub ühendus Gajim'i kaugteenusega."
+
+#: sendto/plugins/gajim/gajim.c:444 sendto/plugins/gajim/gajim.c:484
+msgid "Sending file failed"
+msgstr "Tõrge faili saatmisel"
+
+#: sendto/plugins/gajim/gajim.c:445
+msgid "Recipient is missing."
+msgstr "Saaja on puudu."
+
+#: sendto/plugins/gajim/gajim.c:484
+msgid "Unknown recipient."
+msgstr "Tundmatu saaja."
+
+#: sendto/plugins/gajim/gajim.c:507
+msgid "Instant Message (Gajim)"
+msgstr "Välksõnum (Gajim)"
+
+#: sendto/plugins/caja-burn/caja-burn.c:92
+msgid "New CD/DVD"
+msgstr "Uus CD/DVD"
+
+#: sendto/plugins/caja-burn/caja-burn.c:99
+msgid "Existing CD/DVD"
+msgstr "Olemasolev CD/DVD"
+
+#: sendto/plugins/caja-burn/caja-burn.c:178
+msgid "CD/DVD Creator"
+msgstr "CD/DVD looja"
+
+#: sendto/plugins/pidgin/pidgin.c:462
+msgid "Instant Message (Pidgin)"
+msgstr "Välksõnum (Pidgin)"
+
+#: sendto/plugins/removable-devices/removable-devices.c:248
+msgid "Removable disks and shares"
+msgstr "Eemaldatavad andmekandjad ja jagatud kataloogid"
+
+#: sendto/plugins/upnp/upnp.c:313
+msgid "UPnP Media Server"
+msgstr "UPnP meediaserver"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: share/libcaja-share.caja-extension.desktop.in.in:4
+msgid "folder-remote"
+msgstr ""
+
+#: share/libcaja-share.caja-extension.desktop.in.in:5 share/caja-share.c:1063
+msgid "Share"
+msgstr "Jagatud ressurss"
+
+#: share/libcaja-share.caja-extension.desktop.in.in:6
+msgid "Allows to quickly share a folder"
+msgstr "Teeb kaustade jagamise kiireks"
+
+#: share/libcaja-share.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2005 Ethium, Inc."
+msgstr ""
+
+#: share/caja-share.c:123
+#, c-format
+msgid ""
+"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"it"
+msgstr "Caja peab kataloogi \"%s\" jagamiseks lisama sellele mõned pääsuõiguseid"
+
+#: share/caja-share.c:131
+#, c-format
+msgid ""
+"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+msgstr ""
+"Kaust \"%s\" vajab jagamise toimimiseks järgmiseid lisaõiguseid:\n"
+"%s%s%sKas tahad, et Caja lisaks kaustale need õigused automaatselt?"
+
+#: share/caja-share.c:135
+msgid "  - read permission by others\n"
+msgstr "- teistel lugemisõigus\n"
+
+#: share/caja-share.c:136
+msgid "  - write permission by others\n"
+msgstr "- teistel kirjutusõigus\n"
+
+#: share/caja-share.c:137
+msgid "  - execute permission by others\n"
+msgstr "- teistel käivitusõigus\n"
+
+#: share/caja-share.c:141
+msgid "Add the permissions automatically"
+msgstr "Õiguste automaatne lisamine"
+
+#: share/caja-share.c:167
+#, c-format
+msgid "Could not change the permissions of folder \"%s\""
+msgstr "Kausta \"%s\" õigusi pole võimalik muuta"
+
+#: share/caja-share.c:451
+msgid "Share name is too long"
+msgstr "Jagatud ressursi nimi on liiga pikk"
+
+#: share/caja-share.c:493
+msgid "The share name cannot be empty"
+msgstr "Jagatud ressursi nimi ei tohi olla tühi"
+
+#: share/caja-share.c:506
+#, c-format
+msgid "Error while getting share information: %s"
+msgstr "Viga jagatud ressursi kohta andmete hankimisel: %s"
+
+#: share/caja-share.c:516
+msgid "Another share has the same name"
+msgstr "Sellise nimega jagatud ressurss on juba olemas"
+
+#: share/caja-share.c:563 share/caja-share.c:799
+msgid "Modify _Share"
+msgstr "Muuda _jagatud ressurssi"
+
+#: share/caja-share.c:563 share/caja-share.c:801
+msgid "Create _Share"
+msgstr "Loo _jagatud ressurss"
+
+#: share/caja-share.c:691
+msgid "There was an error while getting the sharing information"
+msgstr "Jagatud ressursi kohta andmete hankimisel tekkis viga"
+
+#: share/caja-share.c:1123
+msgid "Folder Sharing"
+msgstr "Kataloogi jagamine"
+
+#: share/caja-share.c:1164
+msgid "Sharing Options"
+msgstr "Jagamise valikud"
+
+#: share/caja-share.c:1165
+msgid "Share this Folder"
+msgstr "Selle kataloogi jagamine"
+
+#: share/share-dialog.ui:27
+msgid "<big><b>Folder Sharing</b></big>"
+msgstr "<big><b>Kataloogi jagamine</b></big>"
+
+#: share/share-dialog.ui:75
+msgid "Share _name:"
+msgstr "_Jagatud ressursi nimi:"
+
+#: share/share-dialog.ui:108
+msgid "Share this _folder"
+msgstr "_Jaga seda kataloogi"
+
+#: share/share-dialog.ui:139
+msgid "Co_mment:"
+msgstr "_Kommentaar:"
+
+#: share/share-dialog.ui:170
+msgid "_Allow others to create and delete files in this folder"
+msgstr "_Teistel on lubatud selles kaustas faile luua ja kustutada"
+
+#: share/share-dialog.ui:187
+msgid "_Guest access (for people without a user account)"
+msgstr "_Ligipääs külalistele (kontota kasutajatele)"
+
+#: share/shares.c:123
+#, c-format
+msgid "%s %s %s returned with signal %d"
+msgstr "%s %s %s lõpetas signaaliga %d"
+
+#: share/shares.c:132
+#, c-format
+msgid "%s %s %s failed for an unknown reason"
+msgstr "%s %s %s lõpetas teadmata põhjusel veaga"
+
+#: share/shares.c:152
+#, c-format
+msgid "'net usershare' returned error %d: %s"
+msgstr "'net usershare' tagastas vea %d: %s"
+
+#: share/shares.c:154
+#, c-format
+msgid "'net usershare' returned error %d"
+msgstr "'net usershare' tagastas vea %d"
+
+#: share/shares.c:185
+msgid "the output of 'net usershare' is not in valid UTF-8 encoding"
+msgstr "'net usershare' väljund pole korrektses UTF-8 kodeeringus"
+
+#: share/shares.c:439 share/shares.c:613
+msgid "Failed"
+msgstr "Tõrge"
+
+#: share/shares.c:547
+#, c-format
+msgid "Samba's testparm returned with signal %d"
+msgstr "Samba testparm lõpetas signaaliga %d"
+
+#: share/shares.c:553
+msgid "Samba's testparm failed for an unknown reason"
+msgstr "Samba testparm lõpetas teadmata põhjusel veaga"
+
+#: share/shares.c:568
+#, c-format
+msgid "Samba's testparm returned error %d: %s"
+msgstr "Samba testparm tagastas vea %d: %s"
+
+#: share/shares.c:570
+#, c-format
+msgid "Samba's testparm returned error %d"
+msgstr "Samba testparm tagastas vea %d"
+
+#: share/shares.c:681
+#, c-format
+msgid "Cannot remove the share for path %s: that path is not shared"
+msgstr ""
+"Kataloogi %s jagamist pole võimalik lõpetada: see kataloog pole jagatud"
+
+#: share/shares.c:727
+msgid ""
+"Cannot change the path of an existing share; please remove the old share "
+"first and add a new one"
+msgstr ""
+"Olemasoleva jagatud ressursi kataloogi pole võimalik muuta. Eemalda eelmine "
+"jagamine ja lisa uus"
+
+#: wallpaper/caja-wallpaper-extension.c:109
+msgid "Set as wallpaper"
+msgstr "Määra tapeediks"
+
+#: wallpaper/caja-wallpaper-extension.c:110
+msgid "Set image as the current wallpaper"
+msgstr "Kujutise määramine praeguseks tapeediks"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:4
+#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:4
+msgid "desktop"
+msgstr "töölaud"
+
+#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:5
+msgid "Wallpaper"
+msgstr "Tapeet"
+
+#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:6
+msgid "Allows to quickly set wallpaper"
+msgstr "Tapeedi kiire määramise lubamine"
+
+#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2014 Stefano Karapetsas"
+msgstr ""
+
+#: xattr-tags/caja-xattr-tags-extension.c:177
+msgid "Tags"
+msgstr "Sildid"
+
+#: xattr-tags/caja-xattr-tags-extension.c:178
+msgid "Tags stored in extended attributes"
+msgstr "Lisaatribuutides salvestatud sildid"
+
+#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:5
+msgid "xattr Tags"
+msgstr "xattr sildid"
+
+#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:6
+msgid "View tags stored in extended attributes"
+msgstr "Lisaatribuutides salvestatud siltide kuvamine"
+
+#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:8
+msgid "Copyright (C) 2016 Felipe Barriga Richards"
+msgstr ""
