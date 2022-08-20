@@ -124,16 +124,3 @@ build_scripts:
 
 after_scripts:
   - ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/cafe-icon-theme/raw/master/cafe/16x16/apps/system-file-manager.png
-
-releases:
-  draft: false
-  prerelease: false
-  checksum: true
-  file_glob: true
-  files: caja-extensions-*.tar.xz
-  github_release:
-    tags: true
-    overwrite: true
-    base_version: 1.20.0
-    notify_servers:
-      - https://release.mate-desktop.org/release
