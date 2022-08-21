@@ -157,7 +157,7 @@ gboolean send_files (NstPlugin *plugin,
 
 	copy_files_to (file_list, burn);
 
-	ctk_show_uri_on_window (NULL, "burn:///", GDK_CURRENT_TIME, NULL);
+	ctk_show_uri_on_window (NULL, "burn:///", CDK_CURRENT_TIME, NULL);
 
 	return TRUE;
 }
