@@ -65,7 +65,7 @@ AC_ARG_ENABLE([image-converter],
 
 if test "x$enable_image-converter" = "xyes"; then
         PKG_CHECK_MODULES(IMAGE_CONVERTER,
-                gtk+-3.0  >= $GTK_REQUIRED
+                ctk+-3.0  >= $GTK_REQUIRED
                 glib-2.0  >= $GLIB_REQUIRED
                 gio-2.0   >= $GLIB_REQUIRED)
         AC_SUBST(IMAGE_CONVERTER_CFLAGS)
@@ -106,7 +106,7 @@ if test "x$enable_sendto" = "xyes"; then
                 gthread-2.0 >= $GTHREAD_REQUIRED
                 gmodule-2.0 >= $GLIB_REQUIRED
                 gobject-2.0 >= $GLIB_REQUIRED
-                gtk+-3.0 >= $GTK_REQUIRED)
+                ctk+-3.0 >= $GTK_REQUIRED)
         AC_SUBST(SENDTO_CFLAGS)
         AC_SUBST(SENDTO_LIBS)
 

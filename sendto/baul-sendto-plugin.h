@@ -27,7 +27,7 @@
 #define _BAUL_SENDTO_PLUGIN_H_
 
 #include <gmodule.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 /**
  * SECTION:baul-sendto-plugin

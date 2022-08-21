@@ -5,7 +5,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gio/gio.h>
 #include <libbaul-extension/baul-extension-types.h>
 #include <libbaul-extension/baul-menu-provider.h>
@@ -217,7 +217,7 @@ gksu_context_menu_activate (BaulMenuItem *item,
     {
       GtkWidget *dialog;
 
-      dialog = gtk_message_dialog_new_with_markup (NULL, 0,
+      dialog = ctk_message_dialog_new_with_markup (NULL, 0,
 						   GTK_MESSAGE_ERROR,
 						   GTK_BUTTONS_CLOSE,
 						   _("<big><b>"
@@ -226,8 +226,8 @@ gksu_context_menu_activate (BaulMenuItem *item,
 						     "The item you selected cannot be open with "
 						     "administrator powers because the correct "
 						     "application cannot be determined."));
-      gtk_dialog_run (GTK_DIALOG(dialog));
-      gtk_widget_destroy (dialog);
+      ctk_dialog_run (GTK_DIALOG(dialog));
+      ctk_widget_destroy (dialog);
       return;
     }
 

@@ -26,7 +26,7 @@
 #include <stdlib.h>
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "baul-sendto-plugin.h"
 
 #define BAUL_SENDTO_LAST_MEDIUM	"last-medium"
@@ -84,7 +84,7 @@ static const GOptionEntry entries[] = {
 static void
 destroy_dialog (GtkWidget *widget, gpointer data )
 {
-        gtk_main_quit ();
+        ctk_main_quit ();
 }
 
 static char *
@@ -187,7 +187,7 @@ pack_files (NS_ui *ui)
 	char *pack_type, *tmp_dir, *tmp_work_dir, *packed_file;
 
 	engrampa_cmd = g_find_program_in_path ("engrampa");
-	filename = gtk_entry_get_text(GTK_ENTRY(ui->pack_entry));
+	filename = ctk_entry_get_text(GTK_ENTRY(ui->pack_entry));
 
 	g_assert (filename != NULL && *filename != '\0');
 
@@ -200,8 +200,8 @@ pack_files (NS_ui *ui)
 	g_mkdir (tmp_work_dir, 0700);
 	g_free (tmp_dir);
 
-	if (gtk_combo_box_get_active (GTK_COMBO_BOX(ui->pack_combobox)) != 0) {
-		pack_type = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT(ui->pack_combobox));
+	if (ctk_combo_box_get_active (GTK_COMBO_BOX(ui->pack_combobox)) != 0) {
+		pack_type = ctk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT(ui->pack_combobox));
 	} else {
 		pack_type = NULL;
 		g_assert_not_reached ();
@@ -209,7 +209,7 @@ pack_files (NS_ui *ui)
 
 	g_settings_set_int (settings,
 			    BAUL_SENDTO_LAST_COMPRESS,
-			    gtk_combo_box_get_active(GTK_COMBO_BOX(ui->pack_combobox)));
+			    ctk_combo_box_get_active(GTK_COMBO_BOX(ui->pack_combobox)));
 
 	cmd = g_string_new ("");
 	g_string_printf (cmd, "%s --add-to=\"%s/%s%s\"",
@@ -244,8 +244,8 @@ static gboolean
 status_label_clear (gpointer data)
 {
 	NS_ui *ui = (NS_ui *) data;
-	gtk_label_set_label (GTK_LABEL (ui->status_label), "");
-	gtk_widget_hide (ui->status_image);
+	ctk_label_set_label (GTK_LABEL (ui->status_label), "");
+	ctk_widget_hide (ui->status_image);
 
 	ui->status_timeoutid = 0;
 
@@ -259,7 +259,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 	NstPlugin *p;
 	GtkWidget *w;
 
-	gtk_widget_set_sensitive (ui->dialog, FALSE);
+	ctk_widget_set_sensitive (ui->dialog, FALSE);
 
 	p = (NstPlugin *) g_list_nth_data (plugin_list, option);
 	w = (GtkWidget *) g_list_nth_data (ui->contact_widgets, option);
@@ -279,14 +279,14 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 
 			message = g_strdup_printf ("<b>%s</b>", error);
 			g_free (error);
-			gtk_label_set_markup (GTK_LABEL (ui->status_label), message);
+			ctk_label_set_markup (GTK_LABEL (ui->status_label), message);
 			g_free (message);
 			ui->status_timeoutid = g_timeout_add_seconds (BAUL_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS,
 								      status_label_clear,
 								      ui);
-			gtk_widget_show (ui->status_image);
-			gtk_widget_show (ui->status_box);
-			gtk_widget_set_sensitive (ui->dialog, TRUE);
+			ctk_widget_show (ui->status_image);
+			ctk_widget_show (ui->status_box);
+			ctk_widget_set_sensitive (ui->dialog, TRUE);
 			return;
 		}
 	}
@@ -295,7 +295,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 			       BAUL_SENDTO_LAST_MEDIUM,
 			       p->info->id);
 
-	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ui->pack_checkbutton))){
+	if (ctk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ui->pack_checkbutton))){
 		char *f;
 
 		f = pack_files (ui);
@@ -309,7 +309,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 			}
 			g_list_free (packed_file);
 		} else {
-			gtk_widget_set_sensitive (ui->dialog, TRUE);
+			ctk_widget_set_sensitive (ui->dialog, TRUE);
 			return;
 		}
 		g_free (f);
@@ -329,11 +329,11 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 static void
 send_if_no_pack_cb (GtkWidget *widget, NS_ui *ui)
 {
-	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton))) {
-		if (gtk_widget_is_sensitive (ui->pack_entry)) {
-			gtk_widget_grab_focus (ui->pack_entry);
+	if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton))) {
+		if (ctk_widget_is_sensitive (ui->pack_entry)) {
+			ctk_widget_grab_focus (ui->pack_entry);
 		} else {
-			gtk_widget_grab_focus (ui->pack_checkbutton);
+			ctk_widget_grab_focus (ui->pack_checkbutton);
 		}
 	} else {
 		send_button_cb (widget, ui);
@@ -346,21 +346,21 @@ toggle_pack_check (GtkWidget *widget, NS_ui *ui)
 	GtkToggleButton *t = GTK_TOGGLE_BUTTON (widget);
 	gboolean enabled, send_enabled;
 
-	enabled = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (t));
-	gtk_widget_set_sensitive (ui->pack_combobox, enabled);
-	gtk_widget_set_sensitive (ui->pack_entry, enabled);
+	enabled = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (t));
+	ctk_widget_set_sensitive (ui->pack_combobox, enabled);
+	ctk_widget_set_sensitive (ui->pack_entry, enabled);
 
 	send_enabled = TRUE;
 
 	if (enabled) {
 		const char *filename;
 
-		filename = gtk_entry_get_text(GTK_ENTRY(ui->pack_entry));
+		filename = ctk_entry_get_text(GTK_ENTRY(ui->pack_entry));
 		if (filename == NULL || *filename == '\0')
 			send_enabled = FALSE;
 	}
 
-	gtk_widget_set_sensitive (ui->send_button, send_enabled);
+	ctk_widget_set_sensitive (ui->send_button, send_enabled);
 }
 
 static void
@@ -371,12 +371,12 @@ option_changed (GtkComboBox *cb, NS_ui *ui)
 	gboolean supports_dirs = FALSE;
 
 	w = g_list_nth_data (ui->contact_widgets, option);
-	option = gtk_combo_box_get_active (GTK_COMBO_BOX(cb));
-	gtk_widget_hide (w);
+	option = ctk_combo_box_get_active (GTK_COMBO_BOX(cb));
+	ctk_widget_hide (w);
 	w = g_list_nth_data (ui->contact_widgets, option);
-	gtk_widget_show (w);
+	ctk_widget_show (w);
 
-	gtk_label_set_mnemonic_widget (GTK_LABEL (ui->send_to_label), w);
+	ctk_label_set_mnemonic_widget (GTK_LABEL (ui->send_to_label), w);
 
 	p = (NstPlugin *) g_list_nth_data (plugin_list, option);
 	supports_dirs = (p->info->capabilities & BAUL_CAPS_SEND_DIRECTORIES);
@@ -384,13 +384,13 @@ option_changed (GtkComboBox *cb, NS_ui *ui)
 	if (has_dirs == FALSE || supports_dirs != FALSE) {
 		gboolean toggle;
 
-		toggle = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton));
-		gtk_widget_set_sensitive (ui->pack_combobox, toggle);
-		gtk_widget_set_sensitive (ui->pack_entry, toggle);
-		gtk_widget_set_sensitive (ui->pack_checkbutton, TRUE);
+		toggle = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton));
+		ctk_widget_set_sensitive (ui->pack_combobox, toggle);
+		ctk_widget_set_sensitive (ui->pack_entry, toggle);
+		ctk_widget_set_sensitive (ui->pack_checkbutton, TRUE);
 	} else {
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton), TRUE);
-		gtk_widget_set_sensitive (ui->pack_checkbutton, FALSE);
+		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton), TRUE);
+		ctk_widget_set_sensitive (ui->pack_checkbutton, FALSE);
 	}
 }
 
@@ -406,8 +406,8 @@ set_contact_widgets (NS_ui *ui)
 	for (aux = plugin_list; aux; aux = aux->next){
 		p = (NstPlugin *) aux->data;
 		w = p->info->get_contacts_widget(p);
-		gtk_box_pack_end (GTK_BOX(ui->hbox_contacts_ws),w, TRUE, TRUE, 0);
-		gtk_widget_hide (GTK_WIDGET(w));
+		ctk_box_pack_end (GTK_BOX(ui->hbox_contacts_ws),w, TRUE, TRUE, 0);
+		ctk_widget_hide (GTK_WIDGET(w));
 		ui->contact_widgets = g_list_append (ui->contact_widgets, w);
 		if (GTK_IS_ENTRY (w)) {
 			g_signal_connect_after (G_OBJECT (w), "activate",
@@ -431,19 +431,19 @@ set_model_for_options_combobox (NS_ui *ui)
 	int i = 0;
 	gboolean last_used_support_dirs = FALSE;
 
-	it = gtk_icon_theme_get_default ();
+	it = ctk_icon_theme_get_default ();
 
-	model = gtk_list_store_new (NUM_COLUMNS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
+	model = ctk_list_store_new (NUM_COLUMNS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 
 	last_used = g_settings_get_string (settings,
 					   BAUL_SENDTO_LAST_MEDIUM);
 
 	for (aux = plugin_list; aux; aux = aux->next) {
 		p = (NstPlugin *) aux->data;
-		pixbuf = gtk_icon_theme_load_icon (it, p->info->icon, 16,
+		pixbuf = ctk_icon_theme_load_icon (it, p->info->icon, 16,
 						   GTK_ICON_LOOKUP_USE_BUILTIN, NULL);
-		gtk_list_store_append (model, &iter);
-		gtk_list_store_set (model, &iter,
+		ctk_list_store_append (model, &iter);
+		ctk_list_store_set (model, &iter,
 					COLUMN_ICON, pixbuf,
 					COLUMN_DESCRIPTION, dgettext(p->info->gettext_package, p->info->description),
 					-1);
@@ -455,22 +455,22 @@ set_model_for_options_combobox (NS_ui *ui)
 	}
 	g_free(last_used);
 
-	gtk_combo_box_set_model (GTK_COMBO_BOX(ui->options_combobox),
+	ctk_combo_box_set_model (GTK_COMBO_BOX(ui->options_combobox),
 				GTK_TREE_MODEL (model));
-	renderer = gtk_cell_renderer_pixbuf_new ();
-        gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (ui->options_combobox),
+	renderer = ctk_cell_renderer_pixbuf_new ();
+        ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (ui->options_combobox),
                                     renderer,
                                     FALSE);
-        gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (ui->options_combobox),
+        ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (ui->options_combobox),
 					renderer,
                                         "pixbuf", COLUMN_ICON,
                                         NULL);
-        renderer = gtk_cell_renderer_text_new ();
+        renderer = ctk_cell_renderer_text_new ();
         g_object_set (G_OBJECT (renderer), "ellipsize", PANGO_ELLIPSIZE_END, NULL);
-        gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (ui->options_combobox),
+        ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (ui->options_combobox),
                                     renderer,
                                     TRUE);
-        gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (ui->options_combobox),
+        ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (ui->options_combobox),
 					renderer,
                                         "text", COLUMN_DESCRIPTION,
                                         NULL);
@@ -478,11 +478,11 @@ set_model_for_options_combobox (NS_ui *ui)
 	g_signal_connect (G_OBJECT (ui->options_combobox), "changed",
 			  G_CALLBACK (option_changed), ui);
 
-	gtk_combo_box_set_active (GTK_COMBO_BOX (ui->options_combobox), option);
+	ctk_combo_box_set_active (GTK_COMBO_BOX (ui->options_combobox), option);
 
 	/* Grab the focus for the most recently used widget */
 	widget = g_list_nth_data (ui->contact_widgets, option);
-	gtk_widget_grab_focus (widget);
+	ctk_widget_grab_focus (widget);
 
 	return last_used_support_dirs;
 }
@@ -494,15 +494,15 @@ pack_entry_changed_cb (GObject *object, GParamSpec *spec, NS_ui *ui)
 
 	send_enabled = TRUE;
 
-	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton))) {
+	if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton))) {
 		const char *filename;
 
-		filename = gtk_entry_get_text(GTK_ENTRY(ui->pack_entry));
+		filename = ctk_entry_get_text(GTK_ENTRY(ui->pack_entry));
 		if (filename == NULL || *filename == '\0')
 			send_enabled = FALSE;
 	}
 
-	gtk_widget_set_sensitive (ui->send_button, send_enabled);
+	ctk_widget_set_sensitive (ui->send_button, send_enabled);
 }
 
 static void
@@ -512,11 +512,11 @@ update_button_image (GtkSettings *settings,
 {
 	gboolean show_images;
 
-	g_object_get (settings, "gtk-button-images", &show_images, NULL);
+	g_object_get (settings, "ctk-button-images", &show_images, NULL);
 	if (show_images == FALSE)
-		gtk_widget_hide (widget);
+		ctk_widget_hide (widget);
 	else
-		gtk_widget_show (widget);
+		ctk_widget_show (widget);
 }
 
 static void
@@ -527,37 +527,37 @@ baul_sendto_create_ui (void)
 	NS_ui *ui;
 	gboolean one_file = FALSE;
 	gboolean supports_dirs;
-	GtkSettings *gtk_settings;
+	GtkSettings *ctk_settings;
 	GtkWidget *button_image;
 
-	app = gtk_builder_new ();
-	if (gtk_builder_add_from_resource (app, "/org/cafe/baul/extensions/sendto/baul-sendto.ui", &error) == 0) {
+	app = ctk_builder_new ();
+	if (ctk_builder_add_from_resource (app, "/org/cafe/baul/extensions/sendto/baul-sendto.ui", &error) == 0) {
 		g_warning ("Could not parse UI definition: %s", error->message);
 		g_error_free (error);
 	}
 
 	ui = g_new0 (NS_ui, 1);
 
-	ui->hbox_contacts_ws = GTK_WIDGET (gtk_builder_get_object (app, "hbox_contacts_widgets"));
-	ui->send_to_label = GTK_WIDGET (gtk_builder_get_object (app, "send_to_label"));
-	ui->options_combobox = GTK_WIDGET (gtk_builder_get_object (app, "options_combobox"));
-	ui->dialog = GTK_WIDGET (gtk_builder_get_object (app, "baul_sendto_dialog"));
-	ui->cancel_button = GTK_WIDGET (gtk_builder_get_object (app, "cancel_button"));
-	ui->send_button = GTK_WIDGET (gtk_builder_get_object (app, "send_button"));
-	ui->pack_combobox = GTK_WIDGET (gtk_builder_get_object (app, "pack_combobox"));
-	ui->pack_entry = GTK_WIDGET (gtk_builder_get_object (app, "pack_entry"));
-	ui->pack_checkbutton = GTK_WIDGET (gtk_builder_get_object (app, "pack_checkbutton"));
-	ui->status_box = GTK_WIDGET (gtk_builder_get_object (app, "status_box"));
-	ui->status_label = GTK_WIDGET (gtk_builder_get_object (app, "status_label"));
-	ui->status_image = GTK_WIDGET (gtk_builder_get_object (app, "status_image"));
+	ui->hbox_contacts_ws = GTK_WIDGET (ctk_builder_get_object (app, "hbox_contacts_widgets"));
+	ui->send_to_label = GTK_WIDGET (ctk_builder_get_object (app, "send_to_label"));
+	ui->options_combobox = GTK_WIDGET (ctk_builder_get_object (app, "options_combobox"));
+	ui->dialog = GTK_WIDGET (ctk_builder_get_object (app, "baul_sendto_dialog"));
+	ui->cancel_button = GTK_WIDGET (ctk_builder_get_object (app, "cancel_button"));
+	ui->send_button = GTK_WIDGET (ctk_builder_get_object (app, "send_button"));
+	ui->pack_combobox = GTK_WIDGET (ctk_builder_get_object (app, "pack_combobox"));
+	ui->pack_entry = GTK_WIDGET (ctk_builder_get_object (app, "pack_entry"));
+	ui->pack_checkbutton = GTK_WIDGET (ctk_builder_get_object (app, "pack_checkbutton"));
+	ui->status_box = GTK_WIDGET (ctk_builder_get_object (app, "status_box"));
+	ui->status_label = GTK_WIDGET (ctk_builder_get_object (app, "status_label"));
+	ui->status_image = GTK_WIDGET (ctk_builder_get_object (app, "status_image"));
 
-	gtk_settings = gtk_settings_get_default ();
-	button_image = GTK_WIDGET (gtk_builder_get_object (app, "image1"));
-	g_signal_connect (G_OBJECT (gtk_settings), "notify::gtk-button-images",
+	ctk_settings = ctk_settings_get_default ();
+	button_image = GTK_WIDGET (ctk_builder_get_object (app, "image1"));
+	g_signal_connect (G_OBJECT (ctk_settings), "notify::ctk-button-images",
 			  G_CALLBACK (update_button_image), button_image);
-	update_button_image (gtk_settings, NULL, button_image);
+	update_button_image (ctk_settings, NULL, button_image);
 
-	gtk_combo_box_set_active (GTK_COMBO_BOX(ui->pack_combobox),
+	ctk_combo_box_set_active (GTK_COMBO_BOX(ui->pack_combobox),
 				  g_settings_get_int (settings,
 						      BAUL_SENDTO_LAST_COMPRESS));
 
@@ -566,7 +566,7 @@ baul_sendto_create_ui (void)
 	else if (file_list != NULL)
 		one_file = TRUE;
 
-	gtk_entry_set_text (GTK_ENTRY (ui->pack_entry), _("Files"));
+	ctk_entry_set_text (GTK_ENTRY (ui->pack_entry), _("Files"));
 
 	if (one_file) {
 		char *filepath = NULL, *filename = NULL;
@@ -577,14 +577,14 @@ baul_sendto_create_ui (void)
 		if (filepath != NULL)
 			filename = g_path_get_basename (filepath);
 		if (filename != NULL && filename[0] != '\0')
-			gtk_entry_set_text (GTK_ENTRY (ui->pack_entry), filename);
+			ctk_entry_set_text (GTK_ENTRY (ui->pack_entry), filename);
 
 		g_free (filename);
 		g_free (filepath);
 	} else {
 		char *filename = get_filename_from_list ();
 		if (filename != NULL && filename[0] != '\0') {
-			gtk_entry_set_text (GTK_ENTRY (ui->pack_entry),
+			ctk_entry_set_text (GTK_ENTRY (ui->pack_entry),
 					filename);
 		}
 		g_free (filename);
@@ -608,15 +608,15 @@ baul_sendto_create_ui (void)
 	if (has_dirs == FALSE || supports_dirs != FALSE) {
 		gboolean toggle;
 
-		toggle = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton));
-		gtk_widget_set_sensitive (ui->pack_combobox, toggle);
-		gtk_widget_set_sensitive (ui->pack_entry, toggle);
+		toggle = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton));
+		ctk_widget_set_sensitive (ui->pack_combobox, toggle);
+		ctk_widget_set_sensitive (ui->pack_entry, toggle);
 	} else {
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton), TRUE);
-		gtk_widget_set_sensitive (ui->pack_checkbutton, FALSE);
+		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton), TRUE);
+		ctk_widget_set_sensitive (ui->pack_checkbutton, FALSE);
 	}
 
-	gtk_widget_show (ui->dialog);
+	ctk_widget_show (ui->dialog);
 
 }
 
@@ -796,7 +796,7 @@ int main (int argc, char **argv)
 
 	context = g_option_context_new ("");
 	g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
-	g_option_context_add_group (context, gtk_get_option_group (TRUE));
+	g_option_context_add_group (context, ctk_get_option_group (TRUE));
 	if (g_option_context_parse (context, &argc, &argv, &error) == FALSE) {
 		g_print (_("Could not parse command-line options: %s\n"), error->message);
 		g_error_free (error);
@@ -809,25 +809,25 @@ int main (int argc, char **argv)
 		GtkWidget *error_dialog;
 
 		error_dialog =
-			gtk_message_dialog_new (NULL,
+			ctk_message_dialog_new (NULL,
 						GTK_DIALOG_MODAL,
 						GTK_MESSAGE_ERROR,
 						GTK_BUTTONS_OK,
 						_("Could not load any plugins."));
-		gtk_message_dialog_format_secondary_text
+		ctk_message_dialog_format_secondary_text
 			(GTK_MESSAGE_DIALOG (error_dialog),
 			 _("Please verify your installation"));
 
-		gtk_window_set_title (GTK_WINDOW (error_dialog), ""); /* as per HIG */
-		gtk_container_set_border_width (GTK_CONTAINER (error_dialog), 5);
-		gtk_dialog_set_default_response (GTK_DIALOG (error_dialog),
+		ctk_window_set_title (GTK_WINDOW (error_dialog), ""); /* as per HIG */
+		ctk_container_set_border_width (GTK_CONTAINER (error_dialog), 5);
+		ctk_dialog_set_default_response (GTK_DIALOG (error_dialog),
 						 GTK_RESPONSE_OK);
-		gtk_dialog_run (GTK_DIALOG (error_dialog));
+		ctk_dialog_run (GTK_DIALOG (error_dialog));
 		return 1;
 	}
 	baul_sendto_create_ui ();
 
-	gtk_main ();
+	ctk_main ();
 	g_object_unref(settings);
 
 	return 0;

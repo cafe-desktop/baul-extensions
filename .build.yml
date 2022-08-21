@@ -16,7 +16,7 @@ requires:
     - git
     - gla11y
     - gobject-introspection
-    - gtk-doc-tools
+    - ctk-doc-tools
     - intltool
     - iso-codes
     - libdbus-1-dev

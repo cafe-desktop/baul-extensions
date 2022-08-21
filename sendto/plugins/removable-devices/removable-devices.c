@@ -45,29 +45,29 @@ cb_mount_removed (GVolumeMonitor *volume_monitor,
 	GtkListStore *store;
 	gboolean b, found;
 
-	store = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	b = gtk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
+	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
+	b = ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
 	found = FALSE;
 
 	while (b) {
 		GMount *m;
-		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
+		ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
 		if (m == mount) {
-			gtk_list_store_remove (store, &iter);
+			ctk_list_store_remove (store, &iter);
 			g_object_unref (m);
 			found = TRUE;
 			break;
 		}
 		g_object_unref (m);
-		b = gtk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
+		b = ctk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
 	}
 
 	/* If a mount was removed */
 	if (found != FALSE) {
 		/* And it was the selected one */
-		if (gtk_combo_box_get_active (GTK_COMBO_BOX (cb)) == -1) {
+		if (ctk_combo_box_get_active (GTK_COMBO_BOX (cb)) == -1) {
 			/* Select the first item in the list */
-			gtk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+			ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
 		}
 	}
 }
@@ -86,18 +86,18 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 		return;
 	}
 
-	store = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	b = gtk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
+	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
+	b = ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
 
 	while (b) {
 		GMount *m;
-		gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
+		ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
 
 		if (m == mount) {
 			char *name;
 
 			name = g_mount_get_name (mount);
-			gtk_list_store_set (store, &iter,
+			ctk_list_store_set (store, &iter,
 					    NAME_COL, name,
 					    ICON_COL, g_mount_get_icon (mount),
 					    -1);
@@ -106,7 +106,7 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 			break;
 		}
 		g_object_unref (m);
-		b = gtk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
+		b = ctk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
 	}
 }
 
@@ -124,12 +124,12 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 		return;
 
 	name = g_mount_get_name (mount);
-	model = gtk_combo_box_get_model (GTK_COMBO_BOX (cb));
+	model = ctk_combo_box_get_model (GTK_COMBO_BOX (cb));
 
-	select_added = gtk_tree_model_iter_n_children (model, NULL) == 0;
+	select_added = ctk_tree_model_iter_n_children (model, NULL) == 0;
 
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	ctk_list_store_append (GTK_LIST_STORE (model), &iter);
+	ctk_list_store_set (GTK_LIST_STORE (model), &iter,
 			    NAME_COL, name,
 			    ICON_COL, g_mount_get_icon (mount),
 			    MOUNT_COL, mount,
@@ -138,7 +138,7 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 	g_free (name);
 
 	if (select_added != FALSE)
-		gtk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+		ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
 
 }
 
@@ -151,7 +151,7 @@ init (NstPlugin *plugin)
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
 	vol_monitor = g_volume_monitor_get ();
-	cb = gtk_combo_box_new ();
+	cb = ctk_combo_box_new ();
 
 	return TRUE;
 }
@@ -166,7 +166,7 @@ get_contacts_widget (NstPlugin *plugin)
 
 	mounts = g_volume_monitor_get_mounts (vol_monitor);
 
-	store = gtk_list_store_new (NUM_COLS, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_OBJECT);
+	store = ctk_list_store_new (NUM_COLS, G_TYPE_STRING, G_TYPE_ICON, G_TYPE_OBJECT);
 
 	for (l = mounts; l != NULL; l = l->next) {
 		char *name;
@@ -178,8 +178,8 @@ get_contacts_widget (NstPlugin *plugin)
 
 		name = g_mount_get_name (l->data);
 
-		gtk_list_store_append (store, &iter);
-		gtk_list_store_set (store, &iter,
+		ctk_list_store_append (store, &iter);
+		ctk_list_store_set (store, &iter,
 				    NAME_COL, name,
 				    ICON_COL, g_mount_get_icon (l->data),
 				    MOUNT_COL, l->data,
@@ -190,17 +190,17 @@ get_contacts_widget (NstPlugin *plugin)
 	}
 	g_list_free (mounts);
 
-	gtk_cell_layout_clear (GTK_CELL_LAYOUT (cb));
-	gtk_combo_box_set_model (GTK_COMBO_BOX (cb), GTK_TREE_MODEL (store));
+	ctk_cell_layout_clear (GTK_CELL_LAYOUT (cb));
+	ctk_combo_box_set_model (GTK_COMBO_BOX (cb), GTK_TREE_MODEL (store));
 
-	text_renderer = gtk_cell_renderer_text_new ();
-	icon_renderer = gtk_cell_renderer_pixbuf_new ();
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), icon_renderer, FALSE);
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), text_renderer, TRUE);
+	text_renderer = ctk_cell_renderer_text_new ();
+	icon_renderer = ctk_cell_renderer_pixbuf_new ();
+	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), icon_renderer, FALSE);
+	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), text_renderer, TRUE);
 
-	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), text_renderer, "text", 0,  NULL);
-	gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), icon_renderer, "gicon", 1,  NULL);
-	gtk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), text_renderer, "text", 0,  NULL);
+	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), icon_renderer, "gicon", 1,  NULL);
+	ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
 
 	g_signal_connect (G_OBJECT (vol_monitor), "mount-removed", G_CALLBACK (cb_mount_removed), plugin);
 	g_signal_connect (G_OBJECT (vol_monitor), "mount-added", G_CALLBACK (cb_mount_added), plugin);
@@ -218,11 +218,11 @@ send_files (NstPlugin *plugin, GtkWidget *contact_widget,
 	GMount *dest_mount;
 	GFile *mount_root;
 
-	if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (contact_widget), &iter) == FALSE)
+	if (ctk_combo_box_get_active_iter (GTK_COMBO_BOX (contact_widget), &iter) == FALSE)
 		return TRUE;
 
-	store = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &dest_mount, -1);
+	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
+	ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &dest_mount, -1);
 	mount_root = g_mount_get_root (dest_mount);
 
 	copy_files_to (file_list, mount_root);
@@ -235,7 +235,7 @@ send_files (NstPlugin *plugin, GtkWidget *contact_widget,
 static gboolean
 destroy (NstPlugin *plugin)
 {
-	gtk_widget_destroy (cb);
+	ctk_widget_destroy (cb);
 
 	g_object_unref (vol_monitor);
 	return TRUE;

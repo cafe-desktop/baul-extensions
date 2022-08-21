@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <interface>
-  <!-- interface-requires gtk+ 2.12 -->
+  <!-- interface-requires ctk+ 2.12 -->
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkVBox" id="vbox1">
     <property name="visible">True</property>
@@ -259,7 +259,7 @@
         <property name="layout_style">end</property>
         <child>
           <object class="GtkButton" id="button_cancel">
-            <property name="label">gtk-cancel</property>
+            <property name="label">ctk-cancel</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="can_default">True</property>
@@ -281,7 +281,7 @@
             <child>
               <object class="GtkImage" id="image1">
                 <property name="visible">True</property>
-                <property name="stock">gtk-save</property>
+                <property name="stock">ctk-save</property>
               </object>
             </child>
           </object>

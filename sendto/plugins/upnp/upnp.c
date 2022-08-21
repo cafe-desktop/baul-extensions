@@ -51,13 +51,13 @@ find_device (const gchar *udn,
 {
 	gboolean found = FALSE;
 
-	if (!gtk_tree_model_get_iter_first (model, iter))
+	if (!ctk_tree_model_get_iter_first (model, iter))
 		return FALSE;
 
 	do {
 		gchar *tmp;
 
-		gtk_tree_model_get (model,
+		ctk_tree_model_get (model,
 				    iter,
 				    UDN_COL, &tmp,
 				    -1);
@@ -66,7 +66,7 @@ find_device (const gchar *udn,
 			found = TRUE;
 
 		g_free (tmp);
-	} while (!found && gtk_tree_model_iter_next (model, iter));
+	} while (!found && ctk_tree_model_iter_next (model, iter));
 
 	return found;
 }
@@ -119,7 +119,7 @@ get_introspection_cb (GUPnPServiceInfo *service_info,
 	context = gupnp_device_info_get_context (device_info);
 	interface = gssdp_client_get_interface (GSSDP_CLIENT (context));
 
-	gtk_list_store_insert_with_values (GTK_LIST_STORE (model), NULL, -1,
+	ctk_list_store_insert_with_values (GTK_LIST_STORE (model), NULL, -1,
 					   UDN_COL, udn,
 					   NAME_COL, name,
 					   INTERFACE_COL, interface,
@@ -163,7 +163,7 @@ device_proxy_unavailable_cb (GUPnPControlPoint *cp,
 
 	/* First check if the device is already added */
 	if (find_device (udn, &iter))
-		gtk_list_store_remove (GTK_LIST_STORE (model), &iter);
+		ctk_list_store_remove (GTK_LIST_STORE (model), &iter);
 }
 
 static void
@@ -215,21 +215,21 @@ init (NstPlugin *plugin)
 	g_signal_connect (context_manager, "context-available",
 			  G_CALLBACK (on_context_available), NULL);
 
-	combobox = gtk_combo_box_new ();
+	combobox = ctk_combo_box_new ();
 
-	store = gtk_list_store_new (NUM_COLS,
+	store = ctk_list_store_new (NUM_COLS,
 				    G_TYPE_STRING,   /* UDN  */
 				    G_TYPE_STRING,   /* Name */
 				    G_TYPE_STRING);  /* Network Interface */
 	model = GTK_TREE_MODEL (store);
-	gtk_combo_box_set_model (GTK_COMBO_BOX (combobox), model);
+	ctk_combo_box_set_model (GTK_COMBO_BOX (combobox), model);
 
-	renderer = gtk_cell_renderer_text_new ();
+	renderer = ctk_cell_renderer_text_new ();
 
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combobox),
+	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (combobox),
 				    renderer,
 				    TRUE);
-	gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combobox),
+	ctk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combobox),
 				       renderer,
 				       "text", NAME_COL);
 
@@ -254,10 +254,10 @@ send_files (NstPlugin *plugin,
 	GtkTreeIter iter;
 	GError *err = NULL;
 
-	if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (combobox), &iter))
+	if (!ctk_combo_box_get_active_iter (GTK_COMBO_BOX (combobox), &iter))
 		return FALSE;
 
-	gtk_tree_model_get (model, &iter, UDN_COL, &udn, INTERFACE_COL,
+	ctk_tree_model_get (model, &iter, UDN_COL, &udn, INTERFACE_COL,
 			    &interface, -1);
 
 	upload_cmd = g_find_program_in_path ("gupnp-upload");
@@ -298,7 +298,7 @@ send_files (NstPlugin *plugin,
 static gboolean
 destroy (NstPlugin *plugin)
 {
-	gtk_widget_destroy (combobox);
+	ctk_widget_destroy (combobox);
 	g_object_unref (model);
 
 	g_object_unref (context_manager);
