@@ -11,7 +11,7 @@ AM_PROG_LIBTOOL
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
-CAJA_REQUIRED=1.21.3
+BAUL_REQUIRED=1.21.3
 LIBCAFE_DESKTOP_REQUIRED=1.17.0
 GLIB_REQUIRED=2.50.0
 GTK_REQUIRED=3.22.0
@@ -52,10 +52,10 @@ if test -z "$XMLLINT"; then
 fi
 
 # Common requirements
-PKG_CHECK_MODULES(CAJA,
-                  libbaul-extension >= $CAJA_REQUIRED)
-AC_SUBST(CAJA_CFLAGS)
-AC_SUBST(CAJA_LIBS)
+PKG_CHECK_MODULES(BAUL,
+                  libbaul-extension >= $BAUL_REQUIRED)
+AC_SUBST(BAUL_CFLAGS)
+AC_SUBST(BAUL_LIBS)
 
 # image-converter extension
 AC_ARG_ENABLE([image-converter],
@@ -322,7 +322,7 @@ if test "${ac_with_bauldir}" = ""; then
     ac_with_bauldir=`$PKG_CONFIG --variable=extensiondir libbaul-extension`
 fi
 AC_MSG_NOTICE([Installing baul plugins in ${ac_with_bauldir}])
-AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_bauldir}])
+AC_SUBST([BAUL_EXTENSION_DIR],[${ac_with_bauldir}])
 
 # gettext
 AM_GNU_GETTEXT_VERSION([0.19.8])

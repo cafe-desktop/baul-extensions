@@ -247,7 +247,7 @@ NstPluginInfo plugin_info = {
 	"folder-remote",
 	N_("Removable disks and shares"),
 	NULL,
-	CAJA_CAPS_SEND_DIRECTORIES,
+	BAUL_CAPS_SEND_DIRECTORIES,
 	init,
 	get_contacts_widget,
 	NULL,

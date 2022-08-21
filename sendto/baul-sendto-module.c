@@ -50,7 +50,7 @@ baul_module_list_types (const GType **types,
 {
 	static GType type_list[1];
 
-	type_list[0] = CAJA_TYPE_NSTE;
+	type_list[0] = BAUL_TYPE_NSTE;
 	*types = type_list;
 
 	*num_types = 1;

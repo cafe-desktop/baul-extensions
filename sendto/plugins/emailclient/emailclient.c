@@ -266,7 +266,7 @@ NstPluginInfo plugin_info = {
 	"emailclient",
 	N_("Email"),
 	NULL,
-	CAJA_CAPS_NONE,
+	BAUL_CAPS_NONE,
 	init,
 	get_contacts_widget,
 	NULL,

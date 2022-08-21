@@ -11,10 +11,10 @@ libbaul_share_la_CFLAGS =				\
 	-I$(top_builddir)				\
 	$(WARN_CFLAGS)                                  \
 	$(DISABLE_DEPRECATED_CFLAGS)			\
-	$(CAJA_CFLAGS)				\
+	$(BAUL_CFLAGS)				\
 	$(SHARE_CFLAGS)
 
-baul_extensiondir=$(CAJA_EXTENSION_DIR)
+baul_extensiondir=$(BAUL_EXTENSION_DIR)
 baul_extension_LTLIBRARIES=libbaul-share.la
 
 libbaul_share_la_SOURCES =  \
@@ -24,7 +24,7 @@ libbaul_share_la_SOURCES =  \
 	shares.h
 
 libbaul_share_la_LDFLAGS = -module -avoid-version
-libbaul_share_la_LIBADD  = $(SHARE_LIBS) $(CAJA_LIBS)
+libbaul_share_la_LIBADD  = $(SHARE_LIBS) $(BAUL_LIBS)
 
 extensiondir = $(datadir)/baul/extensions
 extension_in_files = libbaul-share.baul-extension.desktop.in

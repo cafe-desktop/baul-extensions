@@ -6,10 +6,10 @@ AM_CPPFLAGS =						\
 	-I$(top_builddir)				\
 	$(WARN_CFLAGS)                                  \
 	$(DISABLE_DEPRECATED_CFLAGS)			\
-	$(CAJA_CFLAGS) \
+	$(BAUL_CFLAGS) \
 	$(IMAGE_CONVERTER_CFLAGS)
 
-baul_extensiondir=$(CAJA_EXTENSION_DIR)
+baul_extensiondir=$(BAUL_EXTENSION_DIR)
 
 baul_extension_LTLIBRARIES=libbaul-image-converter.la
 
@@ -20,7 +20,7 @@ libbaul_image_converter_la_SOURCES =				\
 	baul-image-rotator.c	baul-image-rotator.h
 
 libbaul_image_converter_la_LDFLAGS = -module -avoid-version
-libbaul_image_converter_la_LIBADD  = $(CAJA_LIBS) $(IMAGE_CONVERTER_LIBS)
+libbaul_image_converter_la_LIBADD  = $(BAUL_LIBS) $(IMAGE_CONVERTER_LIBS)
 
 builderdir = $(datadir)/baul-extensions
 builder_DATA = 				\

@@ -44,7 +44,7 @@ baul_module_list_types (const GType **types, int *num_types)
 {
     static GType type_list[1];
 
-    type_list[0] = CAJA_TYPE_CWE;
+    type_list[0] = BAUL_TYPE_CWE;
     *types = type_list;
     *num_types = 1;
 }

@@ -850,18 +850,18 @@ create_property_page (BaulFileInfo *fileinfo)
  * the extension should add data to.
  *
  * If the data can be added immediately (without doing blocking IO),
- * the extension can do so, and return CAJA_OPERATION_COMPLETE.
+ * the extension can do so, and return BAUL_OPERATION_COMPLETE.
  * In this case the 'update_complete' and 'handle' parameters can be
  * ignored.
  *
  * If waiting for the deata would block the UI, the extension should
  * perform the task asynchronously, and return
- * CAJA_OPERATION_IN_PROGRESS.  The function must also set the
+ * BAUL_OPERATION_IN_PROGRESS.  The function must also set the
  * 'handle' pointer to a value unique to the object, and invoke the
  * 'update_complete' closure when the update is done.
  *
  * If the extension encounters an error, it should return
- * CAJA_OPERATION_FAILED.
+ * BAUL_OPERATION_FAILED.
  */
 typedef struct {
   gboolean cancelled;
@@ -876,13 +876,13 @@ get_share_status_and_free_share_info (ShareInfo *share_info)
   BaulShareStatus result;
 
   if (!share_info)
-    result = CAJA_SHARE_NOT_SHARED;
+    result = BAUL_SHARE_NOT_SHARED;
   else
     {
       if (share_info->is_writable)
-	result = CAJA_SHARE_SHARED_RW;
+	result = BAUL_SHARE_SHARED_RW;
       else
-	result = CAJA_SHARE_SHARED_RO;
+	result = BAUL_SHARE_SHARED_RO;
 
       shares_free_share_info (share_info);
     }
@@ -959,7 +959,7 @@ file_get_share_status_file(BaulFileInfo *file)
   get_share_info_for_file_info (file, &share_info, &is_shareable);
 
   if (!is_shareable)
-    return CAJA_SHARE_NOT_SHARED;
+    return BAUL_SHARE_NOT_SHARED;
 
   return get_share_status_and_free_share_info (share_info);
 }
@@ -974,17 +974,17 @@ baul_share_update_file_info (BaulInfoProvider *provider,
 
   switch (file_get_share_status_file (file)) {
 
-  case CAJA_SHARE_SHARED_RO:
+  case BAUL_SHARE_SHARED_RO:
     baul_file_info_add_emblem (file, "shared");
 /*     share_status = _("shared (read only)"); */
     break;
 
-  case CAJA_SHARE_SHARED_RW:
+  case BAUL_SHARE_SHARED_RW:
     baul_file_info_add_emblem (file, "shared");
 /*     share_status = _("shared (read and write)"); */
     break;
 
-  case CAJA_SHARE_NOT_SHARED:
+  case BAUL_SHARE_NOT_SHARED:
 /*     share_status = _("not shared"); */
     break;
 
@@ -996,7 +996,7 @@ baul_share_update_file_info (BaulInfoProvider *provider,
 /*   baul_file_info_add_string_attribute (file, */
 /* 					   "BaulShare::share_status", */
 /* 					   share_status); */
-  return CAJA_OPERATION_COMPLETE;
+  return BAUL_OPERATION_COMPLETE;
 }
 
 
@@ -1045,7 +1045,7 @@ baul_share_get_property_pages (BaulPropertyPageProvider *provider,
     return NULL;
   }
 
-  fileinfo = CAJA_FILE_INFO (files->data);
+  fileinfo = BAUL_FILE_INFO (files->data);
 
   get_share_info_for_file_info (fileinfo, &share_info, &is_shareable);
   if (!is_shareable)
@@ -1116,7 +1116,7 @@ share_this_folder_callback (BaulMenuItem *item,
   PropertyPage *page;
   GtkWidget * window;
 
-  fileinfo = CAJA_FILE_INFO (user_data);
+  fileinfo = BAUL_FILE_INFO (user_data);
   g_assert (fileinfo != NULL);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -1146,7 +1146,7 @@ baul_share_get_file_items (BaulMenuProvider *provider,
     return NULL;
   }
 
-  fileinfo = CAJA_FILE_INFO (files->data);
+  fileinfo = BAUL_FILE_INFO (files->data);
 
   get_share_info_for_file_info (fileinfo, &share_info, &is_shareable);
 
@@ -1190,7 +1190,7 @@ baul_share_menu_provider_iface_init (BaulMenuProviderIface *iface)
  * initialization function. */
 static GType share_type = 0;
 
-#define CAJA_TYPE_SHARE  (baul_share_get_type ())
+#define BAUL_TYPE_SHARE  (baul_share_get_type ())
 
 static GType
 baul_share_get_type (void)
@@ -1226,7 +1226,7 @@ baul_share_register_type (GTypeModule *module)
 
   g_type_module_add_interface (module,
 			       share_type,
-			       CAJA_TYPE_PROPERTY_PAGE_PROVIDER,
+			       BAUL_TYPE_PROPERTY_PAGE_PROVIDER,
 			       &property_page_provider_iface_info);
 
 
@@ -1238,7 +1238,7 @@ baul_share_register_type (GTypeModule *module)
 
   g_type_module_add_interface (module,
 			       share_type,
-			       CAJA_TYPE_INFO_PROVIDER,
+			       BAUL_TYPE_INFO_PROVIDER,
 			       &info_provider_iface_info);
 
   /* Menu right clik */
@@ -1250,7 +1250,7 @@ baul_share_register_type (GTypeModule *module)
 
   g_type_module_add_interface (module,
 			       share_type,
-			       CAJA_TYPE_MENU_PROVIDER,
+			       BAUL_TYPE_MENU_PROVIDER,
 			       &menu_provider_iface_info);
 
 }
@@ -1288,7 +1288,7 @@ baul_module_list_types (const GType **types,
 {
   static GType type_list[1];
 
-  type_list[0] = CAJA_TYPE_SHARE;
+  type_list[0] = BAUL_TYPE_SHARE;
 
   *types = type_list;
   *num_types = 1;

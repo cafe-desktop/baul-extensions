@@ -1,6 +1,6 @@
-AM_CPPFLAGS = $(CAJA_CFLAGS)
+AM_CPPFLAGS = $(BAUL_CFLAGS)
 
-baul_extensiondir = $(CAJA_EXTENSION_DIR)
+baul_extensiondir = $(BAUL_EXTENSION_DIR)
 baul_extension_LTLIBRARIES = libbaul-xattr-tags.la
 
 libbaul_xattr_tags_la_SOURCES = \
@@ -8,7 +8,7 @@ libbaul_xattr_tags_la_SOURCES = \
 	baul-xattr-tags-extension.h
 
 libbaul_xattr_tags_la_LDFLAGS = -module -avoid-version
-libbaul_xattr_tags_la_LIBADD = $(CAJA_LIBS)
+libbaul_xattr_tags_la_LIBADD = $(BAUL_LIBS)
 
 extensiondir = $(datadir)/baul/extensions
 extension_in_files = libbaul-xattr-tags.baul-extension.desktop.in

@@ -37,7 +37,7 @@ baul_module_initialize (GTypeModule *module)
 	g_print ("Initializing baul-open-terminal extension\n");
 
 	baul_open_terminal_register_type (module);
-	type_list[0] = CAJA_TYPE_OPEN_TERMINAL;
+	type_list[0] = BAUL_TYPE_OPEN_TERMINAL;
 
 	bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");

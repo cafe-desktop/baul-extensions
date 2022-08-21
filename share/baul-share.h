@@ -19,8 +19,8 @@
  * (C) Copyright 2005 Ethium, Inc.
  */
 
-#ifndef CAJA_SHARE_H
-#define CAJA_SHARE_H
+#ifndef BAUL_SHARE_H
+#define BAUL_SHARE_H
 
 #include <glib-object.h>
 
@@ -56,9 +56,9 @@ struct _BaulShareData {
 G_END_DECLS
 
 typedef enum {
-  CAJA_SHARE_NOT_SHARED,
-  CAJA_SHARE_SHARED_RO,
-  CAJA_SHARE_SHARED_RW
+  BAUL_SHARE_NOT_SHARED,
+  BAUL_SHARE_SHARED_RO,
+  BAUL_SHARE_SHARED_RW
 } BaulShareStatus;
 
 #endif

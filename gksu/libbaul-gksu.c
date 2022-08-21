@@ -76,7 +76,7 @@ gksu_context_menu_register_type (GTypeModule *module)
 					    &info, 0);
     g_type_module_add_interface (module,
 				 gksucm_type,
-				 CAJA_TYPE_MENU_PROVIDER,
+				 BAUL_TYPE_MENU_PROVIDER,
 				 &menu_provider_iface_info);
 }
 

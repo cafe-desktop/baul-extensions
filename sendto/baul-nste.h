@@ -21,16 +21,16 @@
  *
  */
 
-#ifndef CAJA_NSTE_H
-#define CAJA_NSTE_H
+#ifndef BAUL_NSTE_H
+#define BAUL_NSTE_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_NSTE  (baul_nste_get_type ())
-#define CAJA_NSTE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_NSTE, BaulNste))
-#define CAJA_IS_NSTE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_NSTE))
+#define BAUL_TYPE_NSTE  (baul_nste_get_type ())
+#define BAUL_NSTE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_NSTE, BaulNste))
+#define BAUL_IS_NSTE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_NSTE))
 
 typedef struct _BaulNste      BaulNste;
 typedef struct _BaulNsteClass BaulNsteClass;
@@ -48,4 +48,4 @@ void  baul_nste_register_type (GTypeModule *module);
 
 G_END_DECLS
 
-#endif /* CAJA_NSTE_H */
+#endif /* BAUL_NSTE_H */

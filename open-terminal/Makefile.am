@@ -6,10 +6,10 @@ AM_CPPFLAGS =						\
 	-I$(top_builddir)				\
 	$(WARN_CFLAGS)                                  \
 	$(DISABLE_DEPRECATED_CFLAGS)			\
-	$(CAJA_CFLAGS)				\
+	$(BAUL_CFLAGS)				\
 	$(OPENTERMINAL_CFLAGS)
 
-baul_extensiondir=$(CAJA_EXTENSION_DIR)
+baul_extensiondir=$(BAUL_EXTENSION_DIR)
 
 baul_extension_LTLIBRARIES=libbaul-open-terminal.la
 
@@ -19,7 +19,7 @@ libbaul_open_terminal_la_SOURCES = \
 	open-terminal.c
 
 libbaul_open_terminal_la_LDFLAGS = -module -avoid-version
-libbaul_open_terminal_la_LIBADD  = $(CAJA_LIBS) $(OPENTERMINAL_LIBS)
+libbaul_open_terminal_la_LIBADD  = $(BAUL_LIBS) $(OPENTERMINAL_LIBS)
 
 gsettings_schemas_in_files = org.cafe.baul-open-terminal.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)

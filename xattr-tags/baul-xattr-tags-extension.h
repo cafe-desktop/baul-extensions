@@ -20,16 +20,16 @@
  *  Authors: Felipe Barriga Richards <spam@felipebarriga.cl>
  */
 
-#ifndef CAJA_XATTR_TAGS_EXTENSION_H
-#define CAJA_XATTR_TAGS_EXTENSION_H
+#ifndef BAUL_XATTR_TAGS_EXTENSION_H
+#define BAUL_XATTR_TAGS_EXTENSION_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_XATTR_TAGS  (baul_xattr_tags_get_type ())
-#define CAJA_XATTR_TAGS(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_XATTR_TAGS, baulXattrTags))
-#define CAJA_IS_XATTR_TAGS(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_XATTR_TAGS))
+#define BAUL_TYPE_XATTR_TAGS  (baul_xattr_tags_get_type ())
+#define BAUL_XATTR_TAGS(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_XATTR_TAGS, baulXattrTags))
+#define BAUL_IS_XATTR_TAGS(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_XATTR_TAGS))
 
 typedef struct _BaulXattrTags      BaulXattrTags;
 typedef struct _BaulXattrTagsClass BaulXattrTagsClass;
@@ -47,4 +47,4 @@ void  baul_xattr_tags_register_type(GTypeModule *module);
 
 G_END_DECLS
 
-#endif /* CAJA_XATTR_TAGS_EXTENSION_H */
+#endif /* BAUL_XATTR_TAGS_EXTENSION_H */
