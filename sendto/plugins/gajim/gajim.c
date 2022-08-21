@@ -272,7 +272,7 @@ init (NstPlugin *plugin)
 
 
 static void
-_set_pixbuf_from_status (const gchar *show, GdkPixbuf **pixbuf)
+_set_pixbuf_from_status (const gchar *show, CdkPixbuf **pixbuf)
 {
 	GString *pixbuf_path;
 	GError *error;
@@ -305,7 +305,7 @@ _add_contact_to_model(gpointer key, gpointer value, gpointer user_data)
 {
 	CtkTreeIter *iter;
 	CtkListStore *store;
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 	GValue *val;
 	GHashTable *contact_props;
 	const gchar *show;
