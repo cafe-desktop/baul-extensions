@@ -25,7 +25,7 @@
 #include <string.h>
 #include <glib/gi18n-lib.h>
 #include "nst-common.h"
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 enum {
 	COL_PIXBUF,
@@ -44,7 +44,7 @@ gboolean init (NstPlugin *plugin)
 	GtkIconTheme *it;
 	char *cmd;
 
-	g_print ("Init caja burn plugin\n");
+	g_print ("Init baul burn plugin\n");
 
 	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -174,7 +174,7 @@ gboolean destroy (NstPlugin *plugin){
 static
 NstPluginInfo plugin_info = {
 	"brasero",
-	"caja-burn",
+	"baul-burn",
 	N_("CD/DVD Creator"),
 	NULL,
 	CAJA_CAPS_SEND_DIRECTORIES,

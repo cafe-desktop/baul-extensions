@@ -24,7 +24,7 @@
 #include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 #include "nst-common.h"
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 enum {
 	NAME_COL,

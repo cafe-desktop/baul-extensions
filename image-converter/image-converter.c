@@ -25,18 +25,18 @@
  #include <config.h>
 #endif
 
-#include "caja-image-converter.h"
+#include "baul-image-converter.h"
 
 #include <libintl.h>
 
 static GType type_list[1];
 
 void
-caja_module_initialize (GTypeModule *module)
+baul_module_initialize (GTypeModule *module)
 {
-	g_print ("Initializing caja-image-converter extension\n");
+	g_print ("Initializing baul-image-converter extension\n");
 
-	caja_image_converter_register_type (module);
+	baul_image_converter_register_type (module);
 	type_list[0] = CAJA_TYPE_IMAGE_CONVERTER;
 
 	bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
@@ -44,13 +44,13 @@ caja_module_initialize (GTypeModule *module)
 }
 
 void
-caja_module_shutdown (void)
+baul_module_shutdown (void)
 {
-	g_print ("Shutting down caja-image-converter extension\n");
+	g_print ("Shutting down baul-image-converter extension\n");
 }
 
 void
-caja_module_list_types (const GType **types,
+baul_module_list_types (const GType **types,
 			    int          *num_types)
 {
 	*types = type_list;

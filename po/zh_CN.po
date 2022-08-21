@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR CAFE Desktop Environment team
-# This file is distributed under the same license as the caja-extensions package.
+# This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -16,8 +16,8 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: caja-extensions 1.23.1\n"
-"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/caja-extensions\n"
+"Project-Id-Version: baul-extensions 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
 "POT-Creation-Date: 2020-02-01 13:01+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2020\n"
@@ -28,15 +28,15 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gksu/libcaja-gksu.c:135
+#: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
 msgstr "以管理员身份打开"
 
-#: gksu/libcaja-gksu.c:136
+#: gksu/libbaul-gksu.c:136
 msgid "Opens the file with administrator privileges"
 msgstr "以管理员权限打开文件"
 
-#: gksu/libcaja-gksu.c:223
+#: gksu/libbaul-gksu.c:223
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -48,269 +48,269 @@ msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:4
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "system"
 msgstr "system"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
 msgid "Privilege granting extension"
 msgstr "授权 扩展"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 
-#: image-converter/caja-image-converter.c:120
+#: image-converter/baul-image-converter.c:120
 msgid "_Resize Images..."
 msgstr "调整图像大小(_R)..."
 
-#: image-converter/caja-image-converter.c:121
+#: image-converter/baul-image-converter.c:121
 msgid "Resize each selected image"
 msgstr "调整每个选中图像的大小"
 
-#: image-converter/caja-image-converter.c:130
+#: image-converter/baul-image-converter.c:130
 msgid "Ro_tate Images..."
 msgstr "旋转图像(_T)..."
 
-#: image-converter/caja-image-converter.c:131
+#: image-converter/baul-image-converter.c:131
 msgid "Rotate each selected image"
 msgstr "旋转每个选中的图像"
 
-#: image-converter/caja-image-resize.ui:33
+#: image-converter/baul-image-resize.ui:33
 msgid "Resize Images"
 msgstr "调整图像大小"
 
-#: image-converter/caja-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: image-converter/caja-image-resize.ui:69
+#: image-converter/baul-image-resize.ui:69
 msgid "_Resize"
 msgstr "改变大小(_R)"
 
-#: image-converter/caja-image-resize.ui:119
+#: image-converter/baul-image-resize.ui:119
 msgid "Select a size:"
 msgstr "选择一个尺寸："
 
-#: image-converter/caja-image-resize.ui:165
-#: image-converter/caja-image-resize.ui:307
+#: image-converter/baul-image-resize.ui:165
+#: image-converter/baul-image-resize.ui:307
 msgid "pixels"
 msgstr "像素"
 
-#: image-converter/caja-image-resize.ui:187
+#: image-converter/baul-image-resize.ui:187
 msgid "Scale:"
 msgstr "缩放："
 
-#: image-converter/caja-image-resize.ui:218
+#: image-converter/baul-image-resize.ui:218
 msgid "percent"
 msgstr "百分比"
 
-#: image-converter/caja-image-resize.ui:240
+#: image-converter/baul-image-resize.ui:240
 msgid "Custom size:"
 msgstr "自定义尺寸："
 
-#: image-converter/caja-image-resize.ui:259
+#: image-converter/baul-image-resize.ui:259
 msgid "Width:"
 msgstr "宽度："
 
-#: image-converter/caja-image-resize.ui:283
+#: image-converter/baul-image-resize.ui:283
 msgid "Height:"
 msgstr "高度："
 
-#: image-converter/caja-image-resize.ui:330
+#: image-converter/baul-image-resize.ui:330
 msgid "Image Size"
 msgstr "图像尺寸"
 
-#: image-converter/caja-image-resize.ui:368
-#: image-converter/caja-image-rotate.ui:206
+#: image-converter/baul-image-resize.ui:368
+#: image-converter/baul-image-rotate.ui:206
 msgid "Append"
 msgstr "附加"
 
-#: image-converter/caja-image-resize.ui:386
+#: image-converter/baul-image-resize.ui:386
 msgid ".resized"
 msgstr ".resized"
 
-#: image-converter/caja-image-resize.ui:398
-#: image-converter/caja-image-rotate.ui:228
+#: image-converter/baul-image-resize.ui:398
+#: image-converter/baul-image-rotate.ui:228
 msgid "to file title"
 msgstr "到文件标题"
 
-#: image-converter/caja-image-resize.ui:415
+#: image-converter/baul-image-resize.ui:415
 msgid "Resize in place"
 msgstr "就地调整大小"
 
-#: image-converter/caja-image-resize.ui:438
+#: image-converter/baul-image-resize.ui:438
 msgid "Filename"
 msgstr "文件名"
 
-#: image-converter/caja-image-resizer.c:207
-#: image-converter/caja-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:207
+#: image-converter/baul-image-rotator.c:204
 msgid "_Skip"
 msgstr "跳过 (_S)"
 
-#: image-converter/caja-image-resizer.c:209
-#: image-converter/caja-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Retry"
 msgstr "重试(_R)"
 
-#: image-converter/caja-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:287
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "正在调整图像大小：%d/%d"
 
-#: image-converter/caja-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:292
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>正在调整 \"%s\" 大小</i>"
 
-#: image-converter/caja-image-resizer.c:310
-#: image-converter/caja-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:310
+#: image-converter/baul-image-rotator.c:309
 msgid "Please enter a valid filename suffix!"
 msgstr "请输入一个有效的文件名后缀！"
 
-#: image-converter/caja-image-rotate.ui:18
+#: image-converter/baul-image-rotate.ui:18
 msgid "90° clockwise"
 msgstr "90度-顺时针"
 
-#: image-converter/caja-image-rotate.ui:21
+#: image-converter/baul-image-rotate.ui:21
 msgid "90° counter-clockwise"
 msgstr "90度-逆时针"
 
-#: image-converter/caja-image-rotate.ui:24
+#: image-converter/baul-image-rotate.ui:24
 msgid "180°"
 msgstr "180°"
 
-#: image-converter/caja-image-rotate.ui:31
+#: image-converter/baul-image-rotate.ui:31
 msgid "Rotate Images"
 msgstr "旋转图像"
 
-#: image-converter/caja-image-rotate.ui:46
+#: image-converter/baul-image-rotate.ui:46
 msgid "<b>Image Rotation</b>"
 msgstr "<b>图像旋转</b>"
 
-#: image-converter/caja-image-rotate.ui:79
+#: image-converter/baul-image-rotate.ui:79
 msgid "Select an angle:"
 msgstr "选择一个角度："
 
-#: image-converter/caja-image-rotate.ui:117
+#: image-converter/baul-image-rotate.ui:117
 msgid "Custom angle:"
 msgstr "自定义角度："
 
-#: image-converter/caja-image-rotate.ui:143
+#: image-converter/baul-image-rotate.ui:143
 msgid "degrees clockwise"
 msgstr "度-顺时针"
 
-#: image-converter/caja-image-rotate.ui:172
+#: image-converter/baul-image-rotate.ui:172
 msgid "<b>Filename</b>"
 msgstr "<b>文件名</b>"
 
-#: image-converter/caja-image-rotate.ui:219
+#: image-converter/baul-image-rotate.ui:219
 msgid ".rotated"
 msgstr ".rotated"
 
-#: image-converter/caja-image-rotate.ui:242
+#: image-converter/baul-image-rotate.ui:242
 msgid "Rotate in place"
 msgstr "就地旋转"
 
-#: image-converter/caja-image-rotate.ui:288
+#: image-converter/baul-image-rotate.ui:288
 msgid "_Rotate"
 msgstr "旋转(_R)"
 
-#: image-converter/caja-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:286
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "正在旋转图像：%d/%d"
 
-#: image-converter/caja-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:291
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>图像旋转进度 \"%s\"</i>"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:4
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "image"
 msgstr "image"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "图像转换工具"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
 msgid "Rotate and resize images"
 msgstr "旋转和调整图像大小"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Copyright (C) 2004-2005 Jürg Billeter"
 
-#: open-terminal/caja-open-terminal.c:459
-#: open-terminal/caja-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:459
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open in _Terminal"
 msgstr "在终端中打开(_T)"
 
-#: open-terminal/caja-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:461
 msgid "Open the currently selected folder in a terminal"
 msgstr "在终端中打开目前选中的文件夹"
 
-#: open-terminal/caja-open-terminal.c:463
-#: open-terminal/caja-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:463
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open the currently open folder in a terminal"
 msgstr "在终端中打开当前文件夹"
 
-#: open-terminal/caja-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:469
 msgid "Open _Terminal"
 msgstr "打开终端(_T)"
 
-#: open-terminal/caja-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:470
 msgid "Open a terminal"
 msgstr "打开终端"
 
-#: open-terminal/caja-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:563
 msgid "Open at Home if trying to open on desktop"
 msgstr "在桌面启动终端时，打开主目录"
 
-#: open-terminal/caja-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:566
 msgid "Terminal application:"
 msgstr "终端应用程序："
 
-#: open-terminal/caja-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:586
 msgid "Close"
 msgstr "关闭"
 
-#: open-terminal/caja-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:592
 msgid "open-terminal Configuration"
 msgstr "open-terminal配置"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:4
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "terminal"
 msgstr "terminal"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "打开终端"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
 msgid "Open terminals from folders"
 msgstr "从文件夹处打开终端"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr "Copyright (C) 2004, 2005 自由软件基金会"
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:5
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:5
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
 msgstr "在桌面打开终端时是否在主目录打开终端"
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:6
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:6
 msgid ""
 "If set to true, then opening a terminal on the desktop will open a terminal "
 "in the home directory. Otherwise, it will be opened in the desktop "
@@ -319,54 +319,54 @@ msgid ""
 msgstr ""
 "如果设置为 true，在桌面上打开终端时将会在主目录中打开终端。否则会在桌面目录打开终端。注意如果桌面目录与主目录相同，则怎么设置没什么关系。"
 
-#: sendto/caja-nste.c:76 sendto/caja-nste.c:81
+#: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
 msgstr "发送到..."
 
-#: sendto/caja-nste.c:77
+#: sendto/baul-nste.c:77
 msgid "Send file by mail, instant message..."
 msgstr "通过邮件、即时通讯发送文件..."
 
-#: sendto/caja-nste.c:82
+#: sendto/baul-nste.c:82
 msgid "Send files by mail, instant message..."
 msgstr "通过邮件、即时通讯发送文件..."
 
-#: sendto/caja-sendto-command.c:578
+#: sendto/baul-sendto-command.c:578
 msgid "Files"
 msgstr "文件"
 
-#: sendto/caja-sendto-command.c:790
+#: sendto/baul-sendto-command.c:790
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "需要网址或者文件名称来作为选项\n"
 
-#: sendto/caja-sendto-command.c:810
+#: sendto/baul-sendto-command.c:810
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "不能够解析命令行选项：%s\n"
 
-#: sendto/caja-sendto-command.c:825
+#: sendto/baul-sendto-command.c:825
 msgid "Could not load any plugins."
 msgstr "不能够加载任何插件。"
 
-#: sendto/caja-sendto-command.c:828
+#: sendto/baul-sendto-command.c:828
 msgid "Please verify your installation"
 msgstr "请确认你的安装。"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:4
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "mail-send"
 msgstr "mail-send"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
 msgstr "发送给"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
 msgid "Integrates email clients and Pidgin"
 msgstr "集成电子邮件客户端和  "
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Copyright (C) 2004 Roberto Majadas"
 
@@ -377,8 +377,8 @@ msgstr "最近用于发送的插件"
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
-"caja-sendto."
-msgstr "用于存储最近 caja-sendto 用于发送文件的插件。"
+"baul-sendto."
+msgstr "用于存储最近 baul-sendto 用于发送文件的插件。"
 
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
@@ -390,31 +390,31 @@ msgid ""
 "tar.gz, 2: tar.bz2)."
 msgstr "用于存储最近使用的归档类型 (0: zip, 1: tar.gz, 2: tar.bz2)。"
 
-#: sendto/caja-sendto.ui:24
+#: sendto/baul-sendto.ui:24
 msgid "Send To..."
 msgstr "发送到..."
 
-#: sendto/caja-sendto.ui:100
+#: sendto/baul-sendto.ui:100
 msgid "_Send"
 msgstr "发送(_S)"
 
-#: sendto/caja-sendto.ui:149
+#: sendto/baul-sendto.ui:149
 msgid "<b>Destination</b>"
 msgstr "<b>目的</b>"
 
-#: sendto/caja-sendto.ui:192
+#: sendto/baul-sendto.ui:192
 msgid "Send _as:"
 msgstr "发送作为(_A)："
 
-#: sendto/caja-sendto.ui:234
+#: sendto/baul-sendto.ui:234
 msgid "Send t_o:"
 msgstr "发送到(_O)："
 
-#: sendto/caja-sendto.ui:300
+#: sendto/baul-sendto.ui:300
 msgid "<b>Compression</b>"
 msgstr "<b>压缩</b>"
 
-#: sendto/caja-sendto.ui:341
+#: sendto/baul-sendto.ui:341
 msgid "Send _packed in:"
 msgstr "打包发送(_P)："
 
@@ -446,15 +446,15 @@ msgstr "未知接收者。"
 msgid "Instant Message (Gajim)"
 msgstr "即时消息 (Gajim)"
 
-#: sendto/plugins/caja-burn/caja-burn.c:92
+#: sendto/plugins/baul-burn/baul-burn.c:92
 msgid "New CD/DVD"
 msgstr "新建 CD/DVD"
 
-#: sendto/plugins/caja-burn/caja-burn.c:99
+#: sendto/plugins/baul-burn/baul-burn.c:99
 msgid "Existing CD/DVD"
 msgstr "现有的 CD/DVD"
 
-#: sendto/plugins/caja-burn/caja-burn.c:178
+#: sendto/plugins/baul-burn/baul-burn.c:178
 msgid "CD/DVD Creator"
 msgstr "CD/DVD 创建器"
 
@@ -472,30 +472,30 @@ msgstr "UPnP 媒体服务器"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: share/libcaja-share.caja-extension.desktop.in.in:4
+#: share/libbaul-share.baul-extension.desktop.in.in:4
 msgid "folder-remote"
 msgstr "folder-remote"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:5 share/caja-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "共享"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:6
 msgid "Allows to quickly share a folder"
 msgstr "允许快速分享文件夹"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr "Copyright (C) 2005 Ethium, Inc."
 
-#: share/caja-share.c:123
+#: share/baul-share.c:123
 #, c-format
 msgid ""
 "Caja needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr "要让 Caja 共享您的文件夹“%s”，您需要给它添加一些权限"
 
-#: share/caja-share.c:131
+#: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
@@ -504,65 +504,65 @@ msgstr ""
 "文件夹“%s”需要增加以下权限才能共享：\n"
 "%s%s%s您想让 Caja 自动给该文件夹添加这些权限吗？"
 
-#: share/caja-share.c:135
+#: share/baul-share.c:135
 msgid "  - read permission by others\n"
 msgstr "- 他人的读权限\n"
 
-#: share/caja-share.c:136
+#: share/baul-share.c:136
 msgid "  - write permission by others\n"
 msgstr "- 他人的写权限\n"
 
-#: share/caja-share.c:137
+#: share/baul-share.c:137
 msgid "  - execute permission by others\n"
 msgstr "- 他人的执行权限\n"
 
-#: share/caja-share.c:141
+#: share/baul-share.c:141
 msgid "Add the permissions automatically"
 msgstr "自动添加权限"
 
-#: share/caja-share.c:167
+#: share/baul-share.c:167
 #, c-format
 msgid "Could not change the permissions of folder \"%s\""
 msgstr "无法更改文件夹“%s”的权限"
 
-#: share/caja-share.c:451
+#: share/baul-share.c:451
 msgid "Share name is too long"
 msgstr "共享名太长"
 
-#: share/caja-share.c:493
+#: share/baul-share.c:493
 msgid "The share name cannot be empty"
 msgstr "共享名不能为空"
 
-#: share/caja-share.c:506
+#: share/baul-share.c:506
 #, c-format
 msgid "Error while getting share information: %s"
 msgstr "获取共享信息出错：%s"
 
-#: share/caja-share.c:516
+#: share/baul-share.c:516
 msgid "Another share has the same name"
 msgstr "与另一共享重名"
 
-#: share/caja-share.c:563 share/caja-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:799
 msgid "Modify _Share"
 msgstr "修改共享(_S)"
 
-#: share/caja-share.c:563 share/caja-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:801
 msgid "Create _Share"
 msgstr "创建共享(_S)"
 
-#: share/caja-share.c:691
+#: share/baul-share.c:691
 msgid "There was an error while getting the sharing information"
 msgstr "获取共享信息时出错"
 
-#: share/caja-share.c:1123
+#: share/baul-share.c:1123
 msgid "Folder Sharing"
 msgstr "文件夹共享"
 
-#: share/caja-share.c:1164
+#: share/baul-share.c:1164
 msgid "Sharing Options"
 msgstr "共享选项"
 
-#: share/caja-share.c:1165
+#: share/baul-share.c:1165
 msgid "Share this Folder"
 msgstr "共享此文件夹"
 
@@ -648,49 +648,49 @@ msgid ""
 "first and add a new one"
 msgstr "无法更改现有共享的路径；请先移除旧的共享，再添加一个新的"
 
-#: wallpaper/caja-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:109
 msgid "Set as wallpaper"
 msgstr "设置为壁纸"
 
-#: wallpaper/caja-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:110
 msgid "Set image as the current wallpaper"
 msgstr "设置图像为当前的壁纸"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:4
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:4
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "desktop"
 msgstr "桌面"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
 msgstr "壁纸"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
 msgid "Allows to quickly set wallpaper"
 msgstr "允许快速设置壁纸"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr "Copyright (C) 2014 Stefano Karapetsas"
 
-#: xattr-tags/caja-xattr-tags-extension.c:177
+#: xattr-tags/baul-xattr-tags-extension.c:177
 msgid "Tags"
 msgstr "标签"
 
-#: xattr-tags/caja-xattr-tags-extension.c:178
+#: xattr-tags/baul-xattr-tags-extension.c:178
 msgid "Tags stored in extended attributes"
 msgstr "保存在扩展属性中的标记"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "xattr Tags"
 msgstr "扩展属性标记"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
 msgid "View tags stored in extended attributes"
 msgstr "查看保存在扩展属性中的标记"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Copyright (C) 2016 Felipe Barriga Richards"

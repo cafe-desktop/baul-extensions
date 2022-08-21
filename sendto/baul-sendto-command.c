@@ -27,14 +27,14 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 #include <gtk/gtk.h>
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 #define CAJA_SENDTO_LAST_MEDIUM	"last-medium"
 #define CAJA_SENDTO_LAST_COMPRESS	"last-compress"
 #define CAJA_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS 10
 
 #define UNINSTALLED_PLUGINDIR "plugins/removable-devices"
-#define UNINSTALLED_SOURCE "caja-sendto-command.c"
+#define UNINSTALLED_SOURCE "baul-sendto-command.c"
 
 #define SOEXT           ("." G_MODULE_SUFFIX)
 #define SOEXT_LEN       (strlen (SOEXT))
@@ -191,10 +191,10 @@ pack_files (NS_ui *ui)
 
 	g_assert (filename != NULL && *filename != '\0');
 
-	tmp_dir = g_strdup_printf ("%s/caja-sendto-%s",
+	tmp_dir = g_strdup_printf ("%s/baul-sendto-%s",
 				   g_get_tmp_dir(), g_get_user_name());
 	g_mkdir (tmp_dir, 0700);
-	tmp_work_dir = g_strdup_printf ("%s/caja-sendto-%s/%li",
+	tmp_work_dir = g_strdup_printf ("%s/baul-sendto-%s/%li",
 					g_get_tmp_dir(), g_get_user_name(),
 					time(NULL));
 	g_mkdir (tmp_work_dir, 0700);
@@ -520,7 +520,7 @@ update_button_image (GtkSettings *settings,
 }
 
 static void
-caja_sendto_create_ui (void)
+baul_sendto_create_ui (void)
 {
 	GtkBuilder *app;
 	GError* error = NULL;
@@ -531,7 +531,7 @@ caja_sendto_create_ui (void)
 	GtkWidget *button_image;
 
 	app = gtk_builder_new ();
-	if (gtk_builder_add_from_resource (app, "/org/cafe/caja/extensions/sendto/caja-sendto.ui", &error) == 0) {
+	if (gtk_builder_add_from_resource (app, "/org/cafe/baul/extensions/sendto/baul-sendto.ui", &error) == 0) {
 		g_warning ("Could not parse UI definition: %s", error->message);
 		g_error_free (error);
 	}
@@ -541,7 +541,7 @@ caja_sendto_create_ui (void)
 	ui->hbox_contacts_ws = GTK_WIDGET (gtk_builder_get_object (app, "hbox_contacts_widgets"));
 	ui->send_to_label = GTK_WIDGET (gtk_builder_get_object (app, "send_to_label"));
 	ui->options_combobox = GTK_WIDGET (gtk_builder_get_object (app, "options_combobox"));
-	ui->dialog = GTK_WIDGET (gtk_builder_get_object (app, "caja_sendto_dialog"));
+	ui->dialog = GTK_WIDGET (gtk_builder_get_object (app, "baul_sendto_dialog"));
 	ui->cancel_button = GTK_WIDGET (gtk_builder_get_object (app, "cancel_button"));
 	ui->send_button = GTK_WIDGET (gtk_builder_get_object (app, "send_button"));
 	ui->pack_combobox = GTK_WIDGET (gtk_builder_get_object (app, "pack_combobox"));
@@ -621,7 +621,7 @@ caja_sendto_create_ui (void)
 }
 
 static void
-caja_sendto_plugin_dir_process (const char *plugindir)
+baul_sendto_plugin_dir_process (const char *plugindir)
 {
 	GDir *dir;
 	const char *item;
@@ -669,7 +669,7 @@ caja_sendto_plugin_dir_process (const char *plugindir)
 }
 
 static gboolean
-caja_sendto_plugin_init (void)
+baul_sendto_plugin_init (void)
 {
 	if (g_file_test (UNINSTALLED_PLUGINDIR, G_FILE_TEST_IS_DIR) != FALSE) {
 		/* Try to load the local plugins */
@@ -689,14 +689,14 @@ caja_sendto_plugin_init (void)
 
 			plugindir = g_strdup_printf ("plugins/%s/.libs/", item);
 			if (g_file_test (plugindir, G_FILE_TEST_IS_DIR) != FALSE)
-				caja_sendto_plugin_dir_process (plugindir);
+				baul_sendto_plugin_dir_process (plugindir);
 			g_free (plugindir);
 		}
 		g_dir_close (dir);
 	}
 
 	if (g_list_length (plugin_list) == 0)
-		caja_sendto_plugin_dir_process (PLUGINDIR);
+		baul_sendto_plugin_dir_process (PLUGINDIR);
 
 	return g_list_length (plugin_list) != 0;
 }
@@ -745,7 +745,7 @@ escape_ampersands_and_commas (const char *url)
 }
 
 static void
-caja_sendto_init (void)
+baul_sendto_init (void)
 {
 	int i;
 
@@ -804,8 +804,8 @@ int main (int argc, char **argv)
 	}
 
 	settings = g_settings_new ("org.cafe.Caja.Sendto");
-	caja_sendto_init ();
-	if (caja_sendto_plugin_init () == FALSE) {
+	baul_sendto_init ();
+	if (baul_sendto_plugin_init () == FALSE) {
 		GtkWidget *error_dialog;
 
 		error_dialog =
@@ -825,7 +825,7 @@ int main (int argc, char **argv)
 		gtk_dialog_run (GTK_DIALOG (error_dialog));
 		return 1;
 	}
-	caja_sendto_create_ui ();
+	baul_sendto_create_ui ();
 
 	gtk_main ();
 	g_object_unref(settings);

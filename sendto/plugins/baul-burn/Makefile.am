@@ -1,4 +1,4 @@
-plugindir = $(libdir)/caja-sendto/plugins
+plugindir = $(libdir)/baul-sendto/plugins
 
 AM_CPPFLAGS =                                      \
         -DDATADIR=\"$(datadir)\"                \
@@ -14,7 +14,7 @@ AM_CPPFLAGS =                                      \
 
 plugin_LTLIBRARIES = libnstburn.la
 
-libnstburn_la_SOURCES = caja-burn.c
+libnstburn_la_SOURCES = baul-burn.c
 libnstburn_la_LDFLAGS = -module -avoid-version
 libnstburn_la_LIBADD = $(GIO_LIBS) $(SENDTO_LIBS) $(builddir)/../libnstcommon.la
 

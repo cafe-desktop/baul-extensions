@@ -29,7 +29,7 @@
 
 #include <glib/gi18n-lib.h>
 #include <libgupnp/gupnp.h>
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 #define MEDIA_SERVER "urn:schemas-upnp-org:device:MediaServer:1"
 #define CDS "urn:schemas-upnp-org:service:ContentDirectory"

@@ -16,7 +16,7 @@
     along with Caja Extensions.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/cafe/caja/extensions/sendto">
-    <file compressed="true">caja-sendto.ui</file>
+  <gresource prefix="/org/cafe/baul/extensions/sendto">
+    <file compressed="true">baul-sendto.ui</file>
   </gresource>
 </gresources>

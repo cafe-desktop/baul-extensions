@@ -1,10 +1,10 @@
 prefix=@prefix@
 exec_prefix=@exec_prefix@
 includedir=@includedir@
-pluginsdir=@libdir@/caja-sendto/plugins
+pluginsdir=@libdir@/baul-sendto/plugins
 
-Name: caja-sendto
-Description: Extend caja-sendto through plugins
+Name: baul-sendto
+Description: Extend baul-sendto through plugins
 Version: @VERSION@
 Requires: glib-2.0 gmodule-2.0 gtk+-3.0
-Cflags: -I${includedir}/caja-sendto
+Cflags: -I${includedir}/baul-sendto

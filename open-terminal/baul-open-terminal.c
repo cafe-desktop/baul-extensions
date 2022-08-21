@@ -1,5 +1,5 @@
 /*
- *  caja-open-terminal.c
+ *  baul-open-terminal.c
  *
  *  Copyright (C) 2004, 2005 Free Software Foundation, Inc.
  *
@@ -25,10 +25,10 @@
  #include <config.h> /* for GETTEXT_PACKAGE */
 #endif
 
-#include "caja-open-terminal.h"
+#include "baul-open-terminal.h"
 
-#include <libcaja-extension/caja-menu-provider.h>
-#include <libcaja-extension/caja-configurable.h>
+#include <libbaul-extension/baul-menu-provider.h>
+#include <libbaul-extension/baul-configurable.h>
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtkicontheme.h>
@@ -45,15 +45,15 @@
 #include <stdlib.h> /* for atoi */
 #include <sys/stat.h>
 
-#define COT_SCHEMA "org.cafe.caja-open-terminal"
+#define COT_SCHEMA "org.cafe.baul-open-terminal"
 #define COT_DESKTOP_KEY "desktop-opens-home-dir"
-#define CAJA_SCHEMA "org.cafe.caja.preferences"
+#define CAJA_SCHEMA "org.cafe.baul.preferences"
 #define CAJA_DESKTOP_KEY "desktop-is-home-dir"
 #define TERM_SCHEMA "org.cafe.applications-terminal"
 #define TERM_EXEC_KEY "exec"
 
-static void caja_open_terminal_instance_init (CajaOpenTerminal      *cvs);
-static void caja_open_terminal_class_init    (CajaOpenTerminalClass *class);
+static void baul_open_terminal_instance_init (CajaOpenTerminal      *cvs);
+static void baul_open_terminal_class_init    (CajaOpenTerminalClass *class);
 
 static GType terminal_type = 0;
 
@@ -71,12 +71,12 @@ get_terminal_file_info (CajaFileInfo *file_info)
 	char             *uri;
 	char             *uri_scheme;
 
-	uri = caja_file_info_get_activation_uri (file_info);
+	uri = baul_file_info_get_activation_uri (file_info);
 	uri_scheme = g_uri_parse_scheme (uri);
 
 	if (strcmp (uri_scheme, "file") == 0) {
 		ret = FILE_INFO_LOCAL;
-	} else if (strcmp (uri_scheme, "x-caja-desktop") == 0) {
+	} else if (strcmp (uri_scheme, "x-baul-desktop") == 0) {
 		ret = FILE_INFO_DESKTOP;
 	} else if (strcmp (uri_scheme, "sftp") == 0 ||
 		   strcmp (uri_scheme, "ssh") == 0) {
@@ -261,7 +261,7 @@ append_sftp_info (char **terminal_exec,
 	g_assert (file_info != NULL);
 
 
-	vfs_uri = g_file_new_for_uri (caja_file_info_get_activation_uri (file_info));
+	vfs_uri = g_file_new_for_uri (baul_file_info_get_activation_uri (file_info));
 	g_assert (vfs_uri != NULL);
 
 	g_assert (g_file_has_uri_scheme(vfs_uri, "sftp")==TRUE ||
@@ -324,7 +324,7 @@ open_terminal_callback (CajaMenuItem *item,
 
 	switch (get_terminal_file_info (file_info)) {
 		case FILE_INFO_LOCAL:
-			uri = caja_file_info_get_activation_uri (file_info);
+			uri = baul_file_info_get_activation_uri (file_info);
 			if (uri != NULL) {
 				working_directory = g_filename_from_uri (uri, NULL, NULL);
 			} else {
@@ -479,7 +479,7 @@ open_terminal_menu_item_new (CajaFileInfo	  *file_info,
 			g_assert_not_reached ();
 	}
 
-	ret = caja_menu_item_new ("CajaOpenTerminal::open_terminal",
+	ret = baul_menu_item_new ("CajaOpenTerminal::open_terminal",
 				      name, tooltip, "terminal");
 
 	g_object_set_data (G_OBJECT (ret),
@@ -497,7 +497,7 @@ open_terminal_menu_item_new (CajaFileInfo	  *file_info,
 }
 
 static GList *
-caja_open_terminal_get_background_items (CajaMenuProvider *provider,
+baul_open_terminal_get_background_items (CajaMenuProvider *provider,
                                          GtkWidget        *window,
                                          CajaFileInfo     *file_info)
 {
@@ -521,7 +521,7 @@ caja_open_terminal_get_background_items (CajaMenuProvider *provider,
 }
 
 GList *
-caja_open_terminal_get_file_items (CajaMenuProvider *provider,
+baul_open_terminal_get_file_items (CajaMenuProvider *provider,
                                    GtkWidget        *window,
                                    GList            *files)
 {
@@ -529,9 +529,9 @@ caja_open_terminal_get_file_items (CajaMenuProvider *provider,
 	TerminalFileInfo  terminal_file_info;
 
 	if (g_list_length (files) != 1 ||
-	    (!caja_file_info_is_directory (files->data) &&
-	     caja_file_info_get_file_type (files->data) != G_FILE_TYPE_SHORTCUT &&
-	     caja_file_info_get_file_type (files->data) != G_FILE_TYPE_MOUNTABLE)) {
+	    (!baul_file_info_is_directory (files->data) &&
+	     baul_file_info_get_file_type (files->data) != G_FILE_TYPE_SHORTCUT &&
+	     baul_file_info_get_file_type (files->data) != G_FILE_TYPE_MOUNTABLE)) {
 		return NULL;
 	}
 
@@ -552,7 +552,7 @@ caja_open_terminal_get_file_items (CajaMenuProvider *provider,
 }
 
 static void
-caja_open_terminal_run_config (CajaConfigurable *provider)
+baul_open_terminal_run_config (CajaConfigurable *provider)
 {
 	GtkWidget *extconf_dialog, *extconf_content, *extconf_desktophomedir, *extconf_inform1, *extconf_inform2, *extconf_exec;
 	gchar * terminal;
@@ -599,57 +599,57 @@ caja_open_terminal_run_config (CajaConfigurable *provider)
 }
 
 static void
-caja_open_terminal_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_open_terminal_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
-	iface->get_background_items = caja_open_terminal_get_background_items;
-	iface->get_file_items = caja_open_terminal_get_file_items;
+	iface->get_background_items = baul_open_terminal_get_background_items;
+	iface->get_file_items = baul_open_terminal_get_file_items;
 }
 
 static void
-caja_open_terminal_configurable_iface_init (CajaConfigurableIface *iface)
+baul_open_terminal_configurable_iface_init (CajaConfigurableIface *iface)
 {
-	iface->run_config = caja_open_terminal_run_config;
+	iface->run_config = baul_open_terminal_run_config;
 }
 
 static void
-caja_open_terminal_instance_init (CajaOpenTerminal *cvs)
+baul_open_terminal_instance_init (CajaOpenTerminal *cvs)
 {
 }
 
 static void
-caja_open_terminal_class_init (CajaOpenTerminalClass *class)
+baul_open_terminal_class_init (CajaOpenTerminalClass *class)
 {
 }
 
 GType
-caja_open_terminal_get_type (void)
+baul_open_terminal_get_type (void)
 {
 	return terminal_type;
 }
 
 void
-caja_open_terminal_register_type (GTypeModule *module)
+baul_open_terminal_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
 		sizeof (CajaOpenTerminalClass),
 		(GBaseInitFunc) NULL,
 		(GBaseFinalizeFunc) NULL,
-		(GClassInitFunc) caja_open_terminal_class_init,
+		(GClassInitFunc) baul_open_terminal_class_init,
 		NULL,
 		NULL,
 		sizeof (CajaOpenTerminal),
 		0,
-		(GInstanceInitFunc) caja_open_terminal_instance_init,
+		(GInstanceInitFunc) baul_open_terminal_instance_init,
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) caja_open_terminal_menu_provider_iface_init,
+		(GInterfaceInitFunc) baul_open_terminal_menu_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo configurable_iface_info = {
-		(GInterfaceInitFunc) caja_open_terminal_configurable_iface_init,
+		(GInterfaceInitFunc) baul_open_terminal_configurable_iface_init,
 		NULL,
 		NULL
 	};

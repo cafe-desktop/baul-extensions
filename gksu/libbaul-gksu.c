@@ -7,8 +7,8 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gio/gio.h>
-#include <libcaja-extension/caja-extension-types.h>
-#include <libcaja-extension/caja-menu-provider.h>
+#include <libbaul-extension/baul-extension-types.h>
+#include <libbaul-extension/baul-menu-provider.h>
 
 #include "../config.h"
 
@@ -117,12 +117,12 @@ gksu_context_menu_get_file_items (CajaMenuProvider *provider,
 
     file = files->data;
 
-    /* ... and if it is not a caja special item */
+    /* ... and if it is not a baul special item */
     {
       gchar *uri_scheme = NULL;
 
-      uri_scheme = caja_file_info_get_uri_scheme (file);
-      if (!strncmp (uri_scheme, "x-caja-desktop", 18))
+      uri_scheme = baul_file_info_get_uri_scheme (file);
+      if (!strncmp (uri_scheme, "x-baul-desktop", 18))
 	{
 	  g_free (uri_scheme);
 	  return NULL;
@@ -131,7 +131,7 @@ gksu_context_menu_get_file_items (CajaMenuProvider *provider,
     }
 
     /* create the context menu item */
-    item = caja_menu_item_new ("Gksu::open_as_root",
+    item = baul_menu_item_new ("Gksu::open_as_root",
 				   _("Open as administrator"),
 				   _("Opens the file with administrator privileges"),
 				   NULL);
@@ -185,8 +185,8 @@ gksu_context_menu_activate (CajaMenuItem *item,
   gchar *tmp = NULL;
   gboolean is_desktop = FALSE;
 
-  uri = caja_file_info_get_uri (file);
-  mime_type = caja_file_info_get_mime_type (file);
+  uri = baul_file_info_get_uri (file);
+  mime_type = baul_file_info_get_mime_type (file);
 
   if (!strcmp (mime_type, "application/x-desktop"))
     { /* we're handling a .desktop file */
@@ -259,18 +259,18 @@ gksu_context_menu_activate (CajaMenuItem *item,
 
 /* --- extension interface --- */
 void
-caja_module_initialize (GTypeModule *module)
+baul_module_initialize (GTypeModule *module)
 {
     gksu_context_menu_register_type (module);
 }
 
 void
-caja_module_shutdown (void)
+baul_module_shutdown (void)
 {
 }
 
 void
-caja_module_list_types (const GType **types,
+baul_module_list_types (const GType **types,
 			    int *num_types)
 {
     static GType type_list[1];

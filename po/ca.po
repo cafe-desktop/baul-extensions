@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR CAFE Desktop Environment team
-# This file is distributed under the same license as the caja-extensions package.
+# This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -10,8 +10,8 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: caja-extensions 1.23.1\n"
-"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/caja-extensions\n"
+"Project-Id-Version: baul-extensions 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
 "POT-Creation-Date: 2020-02-01 13:01+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Francesc Famadas, 2020\n"
@@ -22,15 +22,15 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gksu/libcaja-gksu.c:135
+#: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
 msgstr "Obre com a administrador"
 
-#: gksu/libcaja-gksu.c:136
+#: gksu/libbaul-gksu.c:136
 msgid "Opens the file with administrator privileges"
 msgstr "Obre el fitxer amb privilegis d'administrador"
 
-#: gksu/libcaja-gksu.c:223
+#: gksu/libbaul-gksu.c:223
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -42,263 +42,263 @@ msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:4
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "system"
 msgstr "system"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
 msgid "Privilege granting extension"
 msgstr "Extensió de concessió de privilegis"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr "Drets d'autor (C) 2002-2005 Gustavo Noronha Silva"
 
-#: image-converter/caja-image-converter.c:120
+#: image-converter/baul-image-converter.c:120
 msgid "_Resize Images..."
 msgstr "_Redimensiona les imatges..."
 
-#: image-converter/caja-image-converter.c:121
+#: image-converter/baul-image-converter.c:121
 msgid "Resize each selected image"
 msgstr "Redimensiona cadascuna de les imatges seleccionades"
 
-#: image-converter/caja-image-converter.c:130
+#: image-converter/baul-image-converter.c:130
 msgid "Ro_tate Images..."
 msgstr "Gira les ima_tges..."
 
-#: image-converter/caja-image-converter.c:131
+#: image-converter/baul-image-converter.c:131
 msgid "Rotate each selected image"
 msgstr "Redimensiona cadascuna de les imatges seleccionades"
 
-#: image-converter/caja-image-resize.ui:33
+#: image-converter/baul-image-resize.ui:33
 msgid "Resize Images"
 msgstr "Redimensiona les imatges"
 
-#: image-converter/caja-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: image-converter/caja-image-resize.ui:69
+#: image-converter/baul-image-resize.ui:69
 msgid "_Resize"
 msgstr "_Redimensiona"
 
-#: image-converter/caja-image-resize.ui:119
+#: image-converter/baul-image-resize.ui:119
 msgid "Select a size:"
 msgstr "Seleccioneu una mida:"
 
-#: image-converter/caja-image-resize.ui:165
-#: image-converter/caja-image-resize.ui:307
+#: image-converter/baul-image-resize.ui:165
+#: image-converter/baul-image-resize.ui:307
 msgid "pixels"
 msgstr "píxels"
 
-#: image-converter/caja-image-resize.ui:187
+#: image-converter/baul-image-resize.ui:187
 msgid "Scale:"
 msgstr "Escala:"
 
-#: image-converter/caja-image-resize.ui:218
+#: image-converter/baul-image-resize.ui:218
 msgid "percent"
 msgstr "per cent"
 
-#: image-converter/caja-image-resize.ui:240
+#: image-converter/baul-image-resize.ui:240
 msgid "Custom size:"
 msgstr "Mida personalitzada:"
 
-#: image-converter/caja-image-resize.ui:259
+#: image-converter/baul-image-resize.ui:259
 msgid "Width:"
 msgstr "Amplada:"
 
-#: image-converter/caja-image-resize.ui:283
+#: image-converter/baul-image-resize.ui:283
 msgid "Height:"
 msgstr "Alçada:"
 
-#: image-converter/caja-image-resize.ui:330
+#: image-converter/baul-image-resize.ui:330
 msgid "Image Size"
 msgstr "Mida de la imatge"
 
-#: image-converter/caja-image-resize.ui:368
-#: image-converter/caja-image-rotate.ui:206
+#: image-converter/baul-image-resize.ui:368
+#: image-converter/baul-image-rotate.ui:206
 msgid "Append"
 msgstr "Annexa"
 
-#: image-converter/caja-image-resize.ui:386
+#: image-converter/baul-image-resize.ui:386
 msgid ".resized"
 msgstr ".redimensionada"
 
-#: image-converter/caja-image-resize.ui:398
-#: image-converter/caja-image-rotate.ui:228
+#: image-converter/baul-image-resize.ui:398
+#: image-converter/baul-image-rotate.ui:228
 msgid "to file title"
 msgstr "al títol del fitxer"
 
-#: image-converter/caja-image-resize.ui:415
+#: image-converter/baul-image-resize.ui:415
 msgid "Resize in place"
 msgstr "Sobreescriu els fitxers existents amb la seva versió redimensionada"
 
-#: image-converter/caja-image-resize.ui:438
+#: image-converter/baul-image-resize.ui:438
 msgid "Filename"
 msgstr "Nom del fitxer"
 
-#: image-converter/caja-image-resizer.c:207
-#: image-converter/caja-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:207
+#: image-converter/baul-image-rotator.c:204
 msgid "_Skip"
 msgstr "_Omet"
 
-#: image-converter/caja-image-resizer.c:209
-#: image-converter/caja-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Retry"
 msgstr "_Torna-ho a intentar"
 
-#: image-converter/caja-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:287
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "S'està redimensionant la imatge %d de %d"
 
-#: image-converter/caja-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:292
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>S'està redimensionant «%s»</i>"
 
-#: image-converter/caja-image-resizer.c:310
-#: image-converter/caja-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:310
+#: image-converter/baul-image-rotator.c:309
 msgid "Please enter a valid filename suffix!"
 msgstr "Introduïu un sufix vàlid per al nom de fitxer!"
 
-#: image-converter/caja-image-rotate.ui:18
+#: image-converter/baul-image-rotate.ui:18
 msgid "90° clockwise"
 msgstr "90° en sentit horari"
 
-#: image-converter/caja-image-rotate.ui:21
+#: image-converter/baul-image-rotate.ui:21
 msgid "90° counter-clockwise"
 msgstr "90° en sentit antihorari"
 
-#: image-converter/caja-image-rotate.ui:24
+#: image-converter/baul-image-rotate.ui:24
 msgid "180°"
 msgstr "180°"
 
-#: image-converter/caja-image-rotate.ui:31
+#: image-converter/baul-image-rotate.ui:31
 msgid "Rotate Images"
 msgstr "Gira les imatges"
 
-#: image-converter/caja-image-rotate.ui:46
+#: image-converter/baul-image-rotate.ui:46
 msgid "<b>Image Rotation</b>"
 msgstr "<b>Rotació de la imatge</b>"
 
-#: image-converter/caja-image-rotate.ui:79
+#: image-converter/baul-image-rotate.ui:79
 msgid "Select an angle:"
 msgstr "Seleccioneu un angle:"
 
-#: image-converter/caja-image-rotate.ui:117
+#: image-converter/baul-image-rotate.ui:117
 msgid "Custom angle:"
 msgstr "Angle personalitzat:"
 
-#: image-converter/caja-image-rotate.ui:143
+#: image-converter/baul-image-rotate.ui:143
 msgid "degrees clockwise"
 msgstr "graus en sentit horari"
 
-#: image-converter/caja-image-rotate.ui:172
+#: image-converter/baul-image-rotate.ui:172
 msgid "<b>Filename</b>"
 msgstr "<b>Nom del fitxer</b>"
 
-#: image-converter/caja-image-rotate.ui:219
+#: image-converter/baul-image-rotate.ui:219
 msgid ".rotated"
 msgstr ".girada"
 
-#: image-converter/caja-image-rotate.ui:242
+#: image-converter/baul-image-rotate.ui:242
 msgid "Rotate in place"
 msgstr "Sobreescriu els fitxers existents amb la seva versió girada"
 
-#: image-converter/caja-image-rotate.ui:288
+#: image-converter/baul-image-rotate.ui:288
 msgid "_Rotate"
 msgstr "_Gira"
 
-#: image-converter/caja-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:286
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "S'està girant la imatge %d de %d"
 
-#: image-converter/caja-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:291
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>S'està girant «%s»</i>"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:4
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "image"
 msgstr "image"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Convertidor d'imatges"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
 msgid "Rotate and resize images"
 msgstr "Gira i redimensiona les imatges"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Drets d'autor (C) 2004-2005 Jürg Billeter"
 
-#: open-terminal/caja-open-terminal.c:459
-#: open-terminal/caja-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:459
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open in _Terminal"
 msgstr "Obre al _terminal"
 
-#: open-terminal/caja-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:461
 msgid "Open the currently selected folder in a terminal"
 msgstr "Obre la carpeta seleccionada actualment en un terminal"
 
-#: open-terminal/caja-open-terminal.c:463
-#: open-terminal/caja-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:463
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open the currently open folder in a terminal"
 msgstr "Obre la carpeta oberta actualment en un terminal"
 
-#: open-terminal/caja-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:469
 msgid "Open _Terminal"
 msgstr "Obre un _terminal"
 
-#: open-terminal/caja-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:470
 msgid "Open a terminal"
 msgstr "Obre un terminal"
 
-#: open-terminal/caja-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:563
 msgid "Open at Home if trying to open on desktop"
 msgstr "Obre a la carpeta d'usuari si s'intenta obrir a l'escriptori"
 
-#: open-terminal/caja-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:566
 msgid "Terminal application:"
 msgstr "Aplicació de terminal:"
 
-#: open-terminal/caja-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:586
 msgid "Close"
 msgstr "Tanca"
 
-#: open-terminal/caja-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:592
 msgid "open-terminal Configuration"
 msgstr "Configuració d'obertura de terminal"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:4
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "terminal"
 msgstr "terminal"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Obre un terminal"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
 msgid "Open terminals from folders"
 msgstr "Obre els terminals des de les carpetes"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr "Drets d'autor (C) 2004, 2005 Free Software Foundation, Inc."
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:5
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:5
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
@@ -306,7 +306,7 @@ msgstr ""
 "Si l'obertura d'un terminal a l'escriptori obre un terminal al directori de "
 "l'usuari"
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:6
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:6
 msgid ""
 "If set to true, then opening a terminal on the desktop will open a terminal "
 "in the home directory. Otherwise, it will be opened in the desktop "
@@ -318,54 +318,54 @@ msgstr ""
 "s'obrirà al directori de l'escriptori. Fixeu-vos que la clau és irrellevant "
 "si el directori de l'escriptori és idèntic al directori de l'usuari."
 
-#: sendto/caja-nste.c:76 sendto/caja-nste.c:81
+#: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
 msgstr "Envia a..."
 
-#: sendto/caja-nste.c:77
+#: sendto/baul-nste.c:77
 msgid "Send file by mail, instant message..."
 msgstr "Envia el fitxer per correu electrònic, missatgeria instantània..."
 
-#: sendto/caja-nste.c:82
+#: sendto/baul-nste.c:82
 msgid "Send files by mail, instant message..."
 msgstr "Envia els fitxers per correu electrònic, missatgeria instantània..."
 
-#: sendto/caja-sendto-command.c:578
+#: sendto/baul-sendto-command.c:578
 msgid "Files"
 msgstr "Fitxers"
 
-#: sendto/caja-sendto-command.c:790
+#: sendto/baul-sendto-command.c:790
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Espera que es passin com a opcions els URI o els noms dels fitxers\n"
 
-#: sendto/caja-sendto-command.c:810
+#: sendto/baul-sendto-command.c:810
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "No s'han pogut analitzar les opcions de línia d'ordres: %s\n"
 
-#: sendto/caja-sendto-command.c:825
+#: sendto/baul-sendto-command.c:825
 msgid "Could not load any plugins."
 msgstr "No s'ha pogut carregar cap connector."
 
-#: sendto/caja-sendto-command.c:828
+#: sendto/baul-sendto-command.c:828
 msgid "Please verify your installation"
 msgstr "Verifiqueu la instal·lació"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:4
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "mail-send"
 msgstr "mail-send"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
 msgstr "Envia a"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
 msgid "Integrates email clients and Pidgin"
 msgstr "Integra els clients de correu electrònic i Pidgin"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Drets d'autor (C) 2004 Roberto Majadas"
 
@@ -376,10 +376,10 @@ msgstr "L'últim connector que es va utilitzar per enviar"
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
-"caja-sendto."
+"baul-sendto."
 msgstr ""
 "S'utilitza per emmagatzemar el complement que es va utilitzar l'última "
-"vegada quan va enviar els fitxers amb caja-sendto."
+"vegada quan va enviar els fitxers amb baul-sendto."
 
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
@@ -393,31 +393,31 @@ msgstr ""
 "S'utilitza per emmagatzemar el tipus de fitxer que es va utilitzar l'última "
 "vegada (0: zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/caja-sendto.ui:24
+#: sendto/baul-sendto.ui:24
 msgid "Send To..."
 msgstr "Envia a..."
 
-#: sendto/caja-sendto.ui:100
+#: sendto/baul-sendto.ui:100
 msgid "_Send"
 msgstr "En_via"
 
-#: sendto/caja-sendto.ui:149
+#: sendto/baul-sendto.ui:149
 msgid "<b>Destination</b>"
 msgstr "<b>Destinació</b>"
 
-#: sendto/caja-sendto.ui:192
+#: sendto/baul-sendto.ui:192
 msgid "Send _as:"
 msgstr "Envia com _a:"
 
-#: sendto/caja-sendto.ui:234
+#: sendto/baul-sendto.ui:234
 msgid "Send t_o:"
 msgstr "E_nvia a:"
 
-#: sendto/caja-sendto.ui:300
+#: sendto/baul-sendto.ui:300
 msgid "<b>Compression</b>"
 msgstr "<b>Compressió</b>"
 
-#: sendto/caja-sendto.ui:341
+#: sendto/baul-sendto.ui:341
 msgid "Send _packed in:"
 msgstr "Envia-ho em_paquetat:"
 
@@ -449,15 +449,15 @@ msgstr "Destinatari desconegut."
 msgid "Instant Message (Gajim)"
 msgstr "Missatge instantani (Gajim)"
 
-#: sendto/plugins/caja-burn/caja-burn.c:92
+#: sendto/plugins/baul-burn/baul-burn.c:92
 msgid "New CD/DVD"
 msgstr "CD/DVD nou"
 
-#: sendto/plugins/caja-burn/caja-burn.c:99
+#: sendto/plugins/baul-burn/baul-burn.c:99
 msgid "Existing CD/DVD"
 msgstr "CD/DVD existent"
 
-#: sendto/plugins/caja-burn/caja-burn.c:178
+#: sendto/plugins/baul-burn/baul-burn.c:178
 msgid "CD/DVD Creator"
 msgstr "Creador de CD o DVD"
 
@@ -475,23 +475,23 @@ msgstr "Servidor de mitjans UPnP"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: share/libcaja-share.caja-extension.desktop.in.in:4
+#: share/libbaul-share.baul-extension.desktop.in.in:4
 msgid "folder-remote"
 msgstr "folder-remote"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:5 share/caja-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Comparteix"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:6
 msgid "Allows to quickly share a folder"
 msgstr "Permet compartir ràpidament una carpeta"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr "Drets d'autor (C) 2005 Ethium, Inc."
 
-#: share/caja-share.c:123
+#: share/baul-share.c:123
 #, c-format
 msgid ""
 "Caja needs to add some permissions to your folder \"%s\" in order to share "
@@ -500,7 +500,7 @@ msgstr ""
 "Caja necessita afegir alguns permisos a la carpeta «%s» per tal de "
 "compartir-la"
 
-#: share/caja-share.c:131
+#: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
@@ -509,65 +509,65 @@ msgstr ""
 "La carpeta «%s» necessita els següents permisos addicionals perquè funcioni la compartició:\n"
 "%s%s%sVoleu que Caja afegeixi automàticament aquests permisos a la carpeta?"
 
-#: share/caja-share.c:135
+#: share/baul-share.c:135
 msgid "  - read permission by others\n"
 msgstr "  - permisos de lectura per als altres\n"
 
-#: share/caja-share.c:136
+#: share/baul-share.c:136
 msgid "  - write permission by others\n"
 msgstr "  - permisos d'escriptura per als altres\n"
 
-#: share/caja-share.c:137
+#: share/baul-share.c:137
 msgid "  - execute permission by others\n"
 msgstr "  - permisos d'execució per als altres\n"
 
-#: share/caja-share.c:141
+#: share/baul-share.c:141
 msgid "Add the permissions automatically"
 msgstr "Afegeix automàticament els permisos"
 
-#: share/caja-share.c:167
+#: share/baul-share.c:167
 #, c-format
 msgid "Could not change the permissions of folder \"%s\""
 msgstr "No s'han pogut canviar els permisos de la carpeta «%s»"
 
-#: share/caja-share.c:451
+#: share/baul-share.c:451
 msgid "Share name is too long"
 msgstr "El nom de la compartició és massa llarg"
 
-#: share/caja-share.c:493
+#: share/baul-share.c:493
 msgid "The share name cannot be empty"
 msgstr "El nom de la compartició no pot estar buit"
 
-#: share/caja-share.c:506
+#: share/baul-share.c:506
 #, c-format
 msgid "Error while getting share information: %s"
 msgstr "S'ha produït un error en obtenir la informació de la compartició: %s"
 
-#: share/caja-share.c:516
+#: share/baul-share.c:516
 msgid "Another share has the same name"
 msgstr "Una altra compartició té el cafeix nom"
 
-#: share/caja-share.c:563 share/caja-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:799
 msgid "Modify _Share"
 msgstr "Modifica la _compartició"
 
-#: share/caja-share.c:563 share/caja-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:801
 msgid "Create _Share"
 msgstr "Crea la _compartició"
 
-#: share/caja-share.c:691
+#: share/baul-share.c:691
 msgid "There was an error while getting the sharing information"
 msgstr "S'ha produït un error en obtenir la informació de la compartició"
 
-#: share/caja-share.c:1123
+#: share/baul-share.c:1123
 msgid "Folder Sharing"
 msgstr "Compartició de carpetes"
 
-#: share/caja-share.c:1164
+#: share/baul-share.c:1164
 msgid "Sharing Options"
 msgstr "Opcions de compartició"
 
-#: share/caja-share.c:1165
+#: share/baul-share.c:1165
 msgid "Share this Folder"
 msgstr "Comparteix aquesta carpeta"
 
@@ -658,49 +658,49 @@ msgstr ""
 "No es pot canviar el camí d'una compartició existent; primer elimineu la "
 "compartició antiga i afegiu-ne una de nova"
 
-#: wallpaper/caja-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:109
 msgid "Set as wallpaper"
 msgstr "Estableix com al fons de pantalla"
 
-#: wallpaper/caja-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:110
 msgid "Set image as the current wallpaper"
 msgstr "Estableix la imatge com a l'actual fons de pantalla"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:4
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:4
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "desktop"
 msgstr "escriptori"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
 msgstr "Fons de pantalla"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
 msgid "Allows to quickly set wallpaper"
 msgstr "Permet establir ràpidament el fons de pantalla"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr "Drets d'autor (C) 2014 Stefano Karapetsas"
 
-#: xattr-tags/caja-xattr-tags-extension.c:177
+#: xattr-tags/baul-xattr-tags-extension.c:177
 msgid "Tags"
 msgstr "Marcadors"
 
-#: xattr-tags/caja-xattr-tags-extension.c:178
+#: xattr-tags/baul-xattr-tags-extension.c:178
 msgid "Tags stored in extended attributes"
 msgstr "Etiquetes emmagatzemades als atributs ampliats"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "xattr Tags"
 msgstr "Etiquetes xattr"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
 msgid "View tags stored in extended attributes"
 msgstr "Visualitza les etiquetes emmagatzemades als atributs ampliats"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Drets d'autor (C) 2016 Felipe Barriga Richards"

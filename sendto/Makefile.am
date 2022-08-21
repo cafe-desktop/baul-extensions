@@ -4,7 +4,7 @@ SUBDIRS = . docs plugins
 
 AM_CPPFLAGS =					\
 	-DDATADIR=\"$(datadir)\"		\
-	-DPLUGINDIR=\"$(libdir)/caja-sendto/plugins\"	\
+	-DPLUGINDIR=\"$(libdir)/baul-sendto/plugins\"	\
 	-I$(top_srcdir)				\
 	-I$(top_builddir)			\
 	-DLOCALEDIR="\"$(datadir)/locale\""	\
@@ -13,39 +13,39 @@ AM_CPPFLAGS =					\
 	$(DISABLE_DEPRECATED)			\
 	$(WARN_CFLAGS)
 
-caja_sendto_includedir = $(includedir)/caja-sendto/
-caja_sendto_include_HEADERS = caja-sendto-plugin.h
+baul_sendto_includedir = $(includedir)/baul-sendto/
+baul_sendto_include_HEADERS = baul-sendto-plugin.h
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = caja-sendto.pc
+pkgconfig_DATA = baul-sendto.pc
 
 noinst_LTLIBRARIES = libnstplugin.la
 libnstplugin_la_SOURCES =			\
-	caja-sendto-plugin.h		\
+	baul-sendto-plugin.h		\
 	nst-enum-types.c			\
 	nst-enum-types.h
 libnstplugin_la_LIBADD = $(SENDTO_LIBS)
 
-bin_PROGRAMS = caja-sendto
+bin_PROGRAMS = baul-sendto
 
-resources_built_sources = caja-sendto-resources.h caja-sendto-resources.c
-$(resources_built_sources): org.cafe.caja.extensions.sendto.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.cafe.caja.extensions.sendto.gresource.xml)
+resources_built_sources = baul-sendto-resources.h baul-sendto-resources.c
+$(resources_built_sources): org.cafe.baul.extensions.sendto.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.cafe.baul.extensions.sendto.gresource.xml)
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name sendto $<
 
-caja_sendto_SOURCES = caja-sendto-command.c $(resources_built_sources)
-caja_sendto_LDADD = $(SENDTO_LIBS) libnstplugin.la
+baul_sendto_SOURCES = baul-sendto-command.c $(resources_built_sources)
+baul_sendto_LDADD = $(SENDTO_LIBS) libnstplugin.la
 
-caja_extensiondir = $(CAJA_EXTENSION_DIR)
-caja_extension_LTLIBRARIES = libcaja-sendto.la
-libcaja_sendto_la_SOURCES =		\
-	caja-nste.c			\
-	caja-nste.h			\
-	caja-sendto-module.c
+baul_extensiondir = $(CAJA_EXTENSION_DIR)
+baul_extension_LTLIBRARIES = libbaul-sendto.la
+libbaul_sendto_la_SOURCES =		\
+	baul-nste.c			\
+	baul-nste.h			\
+	baul-sendto-module.c
 
-libcaja_sendto_la_LDFLAGS = -module -avoid-version -no-undefined
-libcaja_sendto_la_LIBADD  = $(CAJA_LIBS)
+libbaul_sendto_la_LDFLAGS = -module -avoid-version -no-undefined
+libbaul_sendto_la_LIBADD  = $(CAJA_LIBS)
 
-nst_headers_to_scan_for_enums = caja-sendto-plugin.h
+nst_headers_to_scan_for_enums = baul-sendto-plugin.h
 # Generate the enums source code, with glib-mkenums:
 # This is based on the same Makefile.am stuff in pango:
 nst_built_headers = nst-enum-types.h
@@ -61,7 +61,7 @@ nst-enum-types.h: $(nst_headers_to_scan_for_enums) Makefile
 
 nst-enum-types.c: $(nst_headers_to_scan_for_enums) Makefile nst-enum-types.h
 	$(AM_V_GEN) (cd $(srcdir) && glib-mkenums \
-			--fhead "#include <caja-sendto-plugin.h>\n" \
+			--fhead "#include <baul-sendto-plugin.h>\n" \
 			--fhead "#include \"nst-enum-types.h\"\n" \
 			--fhead "#include <glib-object.h>" \
 			--fprod "\n/* enumerations from \"@filename@\" */" \
@@ -74,20 +74,20 @@ gsettingsschema_in_files = org.cafe.Caja.Sendto.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
-man_MANS = caja-sendto.1
+man_MANS = baul-sendto.1
 
-extensiondir = $(datadir)/caja/extensions
-extension_in_files = libcaja-sendto.caja-extension.desktop.in
-extension_DATA = $(extension_in_files:.caja-extension.desktop.in=.caja-extension)
+extensiondir = $(datadir)/baul/extensions
+extension_in_files = libbaul-sendto.baul-extension.desktop.in
+extension_DATA = $(extension_in_files:.baul-extension.desktop.in=.baul-extension)
 $(extension_DATA): $(extension_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Copyright --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST = \
 	$(man_MANS) \
-	caja-sendto.pc.in \
-	caja-sendto.ui \
+	baul-sendto.pc.in \
+	baul-sendto.ui \
 	$(gsettingsschema_in_files) \
-	org.cafe.caja.extensions.sendto.gresource.xml \
+	org.cafe.baul.extensions.sendto.gresource.xml \
 	$(NULL)
 
 CLEANFILES = \

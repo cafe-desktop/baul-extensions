@@ -24,10 +24,10 @@
 #include <string.h>
 #include <gio/gio.h>
 #include <glib/gi18n-lib.h>
-#include <libcaja-extension/caja-file-info.h>
-#include <libcaja-extension/caja-info-provider.h>
-#include <libcaja-extension/caja-column-provider.h>
-#include "caja-xattr-tags-extension.h"
+#include <libbaul-extension/baul-file-info.h>
+#include <libbaul-extension/baul-info-provider.h>
+#include <libbaul-extension/baul-column-provider.h>
+#include "baul-xattr-tags-extension.h"
 
 #define XATTR_TAGS_NAME "Xattr::Tags"
 #define XATTR_TAGS_ATTRIBUTE "xattr_tags"
@@ -95,13 +95,13 @@ hex_unescape_string (const char *str,
 }
 /* End of stolen code */
 
-static gchar *caja_xattr_tags_get_xdg_tags(CajaFileInfo *file)
+static gchar *baul_xattr_tags_get_xdg_tags(CajaFileInfo *file)
 {
     gchar *tags = NULL, *uri;
     GFile *location;
     GFileInfo *info;
 
-    uri = caja_file_info_get_activation_uri (file);
+    uri = baul_file_info_get_activation_uri (file);
     location = g_file_new_for_uri (uri);
     info = g_file_query_info (location,
                               G_FILE_ATTRIBUTE_XATTR_XDG_TAGS,
@@ -132,24 +132,24 @@ static gchar *caja_xattr_tags_get_xdg_tags(CajaFileInfo *file)
 }
 
 static CajaOperationResult
-caja_xattr_tags_update_file_info(CajaInfoProvider *provider,
+baul_xattr_tags_update_file_info(CajaInfoProvider *provider,
                             CajaFileInfo *file,
                             GClosure *update_complete,
                             CajaOperationHandle **handle)
 {
-    gchar *value = caja_xattr_tags_get_xdg_tags(file);
+    gchar *value = baul_xattr_tags_get_xdg_tags(file);
     if (value != NULL) {
-        caja_file_info_add_string_attribute(file, XATTR_TAGS_ATTRIBUTE, value);
+        baul_file_info_add_string_attribute(file, XATTR_TAGS_ATTRIBUTE, value);
         g_free(value);
     } else {
-        caja_file_info_add_string_attribute(file, XATTR_TAGS_ATTRIBUTE, "");
+        baul_file_info_add_string_attribute(file, XATTR_TAGS_ATTRIBUTE, "");
     }
     return CAJA_OPERATION_COMPLETE;
 }
 
 
 static void
-caja_xattr_tags_cancel_update(CajaInfoProvider *provider,
+baul_xattr_tags_cancel_update(CajaInfoProvider *provider,
                          CajaOperationHandle *handle)
 {
     CajaXattrTagsHandle *xattr_handle;
@@ -159,20 +159,20 @@ caja_xattr_tags_cancel_update(CajaInfoProvider *provider,
 }
 
 static void
-caja_xattr_tags_info_provider_iface_init(CajaInfoProviderIface *iface)
+baul_xattr_tags_info_provider_iface_init(CajaInfoProviderIface *iface)
 {
-    iface->update_file_info = caja_xattr_tags_update_file_info;
-    iface->cancel_update = caja_xattr_tags_cancel_update;
+    iface->update_file_info = baul_xattr_tags_update_file_info;
+    iface->cancel_update = baul_xattr_tags_cancel_update;
 }
 
 
 static GList *
-caja_xattr_tags_get_columns(CajaColumnProvider *provider)
+baul_xattr_tags_get_columns(CajaColumnProvider *provider)
 {
     GList *ret = NULL;
     CajaColumn *column = NULL;
 
-    column = caja_column_new(XATTR_TAGS_NAME,
+    column = baul_column_new(XATTR_TAGS_NAME,
                              XATTR_TAGS_ATTRIBUTE,
                              _("Tags"),
                              _("Tags stored in extended attributes"));
@@ -182,58 +182,58 @@ caja_xattr_tags_get_columns(CajaColumnProvider *provider)
 }
 
 static void
-caja_xattr_tags_column_provider_iface_init(CajaColumnProviderIface *iface)
+baul_xattr_tags_column_provider_iface_init(CajaColumnProviderIface *iface)
 {
-    iface->get_columns = caja_xattr_tags_get_columns;
+    iface->get_columns = baul_xattr_tags_get_columns;
 }
 
 
 static void
-caja_xattr_tags_instance_init(CajaXattrTags *cajaXattrTags)
+baul_xattr_tags_instance_init(CajaXattrTags *baulXattrTags)
 {
 }
 
 
 static void
-caja_xattr_tags_class_init(CajaXattrTagsClass *class)
+baul_xattr_tags_class_init(CajaXattrTagsClass *class)
 {
     parent_class = g_type_class_peek_parent (class);
 }
 
 
-static GType caja_xattr_tags_type = 0;
+static GType baul_xattr_tags_type = 0;
 
 
 GType
-caja_xattr_tags_get_type(void)
+baul_xattr_tags_get_type(void)
 {
-    return caja_xattr_tags_type;
+    return baul_xattr_tags_type;
 }
 
 
 void
-caja_xattr_tags_register_type(GTypeModule *module)
+baul_xattr_tags_register_type(GTypeModule *module)
 {
     static const GTypeInfo info = {
         sizeof (CajaXattrTagsClass),
         (GBaseInitFunc) NULL,
         (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc) caja_xattr_tags_class_init,
+        (GClassInitFunc) baul_xattr_tags_class_init,
         NULL,
         NULL,
         sizeof (CajaXattrTags),
         0,
-        (GInstanceInitFunc) caja_xattr_tags_instance_init,
+        (GInstanceInitFunc) baul_xattr_tags_instance_init,
     };
 
 
-    caja_xattr_tags_type = g_type_module_register_type (module,
+    baul_xattr_tags_type = g_type_module_register_type (module,
                                             G_TYPE_OBJECT,
                                             "CajaXattrTags",
                                             &info, 0);
 
     static const GInterfaceInfo info_provider_iface_info = {
-            (GInterfaceInitFunc) caja_xattr_tags_info_provider_iface_init,
+            (GInterfaceInitFunc) baul_xattr_tags_info_provider_iface_init,
             NULL,
             NULL
     };
@@ -244,7 +244,7 @@ caja_xattr_tags_register_type(GTypeModule *module)
                                  &info_provider_iface_info);
 
     static const GInterfaceInfo column_provider_iface_info = {
-            (GInterfaceInitFunc) caja_xattr_tags_column_provider_iface_init,
+            (GInterfaceInitFunc) baul_xattr_tags_column_provider_iface_init,
             NULL,
             NULL
     };
@@ -258,21 +258,21 @@ caja_xattr_tags_register_type(GTypeModule *module)
 }
 
 void
-caja_module_initialize (GTypeModule  *module)
+baul_module_initialize (GTypeModule  *module)
 {
-    g_print ("Initializing caja-xattr-tags extension\n");
+    g_print ("Initializing baul-xattr-tags extension\n");
 
-    caja_xattr_tags_register_type (module);
+    baul_xattr_tags_register_type (module);
 }
 
 void
-caja_module_shutdown (void)
+baul_module_shutdown (void)
 {
 }
 
 /* List all the extension types.  */
 void
-caja_module_list_types (const GType **types,
+baul_module_list_types (const GType **types,
                         int          *num_types)
 {
     static GType type_list[1];

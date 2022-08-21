@@ -7,17 +7,17 @@
 ]>
 <book id="index">
   <bookinfo>
-    <title>caja-sendto Reference Manual</title>
+    <title>baul-sendto Reference Manual</title>
     <releaseinfo>
-      for caja-sendto &version;
+      for baul-sendto &version;
       The latest version of this documentation can be found on-line at
-      <ulink role="online-location" url="http://library.cafe.org/devel/caja-sendto/index.html">http://library.cafe.org/devel/caja-sendto/index.html</ulink>.
+      <ulink role="online-location" url="http://library.cafe.org/devel/baul-sendto/index.html">http://library.cafe.org/devel/baul-sendto/index.html</ulink>.
     </releaseinfo>
   </bookinfo>
 
   <chapter>
-    <title>caja-sendto documentation</title>
-    <xi:include href="xml/caja-sendto-plugin.xml"/>
+    <title>baul-sendto documentation</title>
+    <xi:include href="xml/baul-sendto-plugin.xml"/>
 
   </chapter>
   <index id="api-index-full">

@@ -27,7 +27,7 @@
 
 #include <glib/gi18n-lib.h>
 #include <string.h>
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 #include <gio/gio.h>
 
 typedef enum {

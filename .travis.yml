@@ -24,7 +24,7 @@ script:
 notifications:
   irc:
     if: (tag OR branch = "1.24") AND
-        repo = "cafe-desktop/caja-extensions"
+        repo = "cafe-desktop/baul-extensions"
     channels:
       - "irc.freenode.org#cafe-dev"
     template:

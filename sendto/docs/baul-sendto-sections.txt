@@ -1,5 +1,5 @@
 <SECTION>
-<FILE>caja-sendto-plugin</FILE>
+<FILE>baul-sendto-plugin</FILE>
 NstPluginInfo
 NstPlugin
 NstPluginCapabilities

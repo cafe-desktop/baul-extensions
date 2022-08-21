@@ -1,5 +1,5 @@
 /*
- *  caja-open-terminal.h
+ *  baul-open-terminal.h
  *
  *  Copyright (C) 2004, 2005 Free Software Foundation, Inc.
  *
@@ -29,11 +29,11 @@
 G_BEGIN_DECLS
 
 /* Declarations for the open terminal extension object.  This object will be
- * instantiated by caja.  It implements the GInterfaces
- * exported by libcaja. */
+ * instantiated by baul.  It implements the GInterfaces
+ * exported by libbaul. */
 
 
-#define CAJA_TYPE_OPEN_TERMINAL	  (caja_open_terminal_get_type ())
+#define CAJA_TYPE_OPEN_TERMINAL	  (baul_open_terminal_get_type ())
 #define CAJA_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_OPEN_TERMINAL, CajaOpenTerminal))
 #define CAJA_IS_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_OPEN_TERMINAL))
 typedef struct _CajaOpenTerminal      CajaOpenTerminal;
@@ -47,8 +47,8 @@ struct _CajaOpenTerminalClass {
 	GObjectClass parent_slot;
 };
 
-GType caja_open_terminal_get_type      (void);
-void  caja_open_terminal_register_type (GTypeModule *module);
+GType baul_open_terminal_get_type      (void);
+void  baul_open_terminal_register_type (GTypeModule *module);
 
 G_END_DECLS
 

@@ -1,5 +1,5 @@
 /*
- *  caja-image-rotator.c
+ *  baul-image-rotator.c
  *
  *  Copyright (C) 2004-2008 Jürg Billeter
  *
@@ -25,7 +25,7 @@
  #include <config.h> /* for GETTEXT_PACKAGE */
 #endif
 
-#include "caja-image-rotator.h"
+#include "baul-image-rotator.h"
 
 #include <string.h>
 
@@ -33,7 +33,7 @@
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
-#include <libcaja-extension/caja-file-info.h>
+#include <libbaul-extension/baul-file-info.h>
 
 typedef struct _CajaImageRotatorPrivate CajaImageRotatorPrivate;
 
@@ -62,7 +62,7 @@ struct _CajaImageRotatorPrivate {
 	GtkWidget *progress_label;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (CajaImageRotator, caja_image_rotator, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (CajaImageRotator, baul_image_rotator, G_TYPE_OBJECT)
 
 enum {
 	PROP_FILES = 1,
@@ -75,24 +75,24 @@ typedef enum {
 } CajaImageRotatorSignalType;
 
 static void
-caja_image_rotator_finalize(GObject *object)
+baul_image_rotator_finalize(GObject *object)
 {
 	CajaImageRotator *dialog = CAJA_IMAGE_ROTATOR (object);
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (dialog);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (dialog);
 
 	g_free (priv->suffix);
 
-	G_OBJECT_CLASS(caja_image_rotator_parent_class)->finalize(object);
+	G_OBJECT_CLASS(baul_image_rotator_parent_class)->finalize(object);
 }
 
 static void
-caja_image_rotator_set_property (GObject      *object,
+baul_image_rotator_set_property (GObject      *object,
                         guint         property_id,
                         const GValue *value,
                         GParamSpec   *pspec)
 {
 	CajaImageRotator *dialog = CAJA_IMAGE_ROTATOR (object);
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (dialog);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (dialog);
 
 	switch (property_id) {
 	case PROP_FILES:
@@ -107,13 +107,13 @@ caja_image_rotator_set_property (GObject      *object,
 }
 
 static void
-caja_image_rotator_get_property (GObject      *object,
+baul_image_rotator_get_property (GObject      *object,
                         guint         property_id,
                         GValue       *value,
                         GParamSpec   *pspec)
 {
 	CajaImageRotator *self = CAJA_IMAGE_ROTATOR (object);
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (self);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (self);
 
 	switch (property_id) {
 	case PROP_FILES:
@@ -127,14 +127,14 @@ caja_image_rotator_get_property (GObject      *object,
 }
 
 static void
-caja_image_rotator_class_init(CajaImageRotatorClass *klass)
+baul_image_rotator_class_init(CajaImageRotatorClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 	GParamSpec *files_param_spec;
 
-	object_class->finalize = caja_image_rotator_finalize;
-	object_class->set_property = caja_image_rotator_set_property;
-	object_class->get_property = caja_image_rotator_get_property;
+	object_class->finalize = baul_image_rotator_finalize;
+	object_class->set_property = baul_image_rotator_set_property;
+	object_class->get_property = baul_image_rotator_get_property;
 
 	files_param_spec = g_param_spec_pointer ("files",
 	"Files",
@@ -149,9 +149,9 @@ caja_image_rotator_class_init(CajaImageRotatorClass *klass)
 static void run_op (CajaImageRotator *rotator);
 
 static GFile *
-caja_image_rotator_transform_filename (CajaImageRotator *rotator, GFile *orig_file)
+baul_image_rotator_transform_filename (CajaImageRotator *rotator, GFile *orig_file)
 {
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	GFile *parent_file, *new_file;
 	char *basename, *extension, *new_basename;
@@ -184,7 +184,7 @@ static void
 op_finished (GPid pid, gint status, gpointer data)
 {
 	CajaImageRotator *rotator = CAJA_IMAGE_ROTATOR (data);
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	gboolean retry = TRUE;
 
@@ -192,7 +192,7 @@ op_finished (GPid pid, gint status, gpointer data)
 
 	if (status != 0) {
 		/* rotating failed */
-		char *name = caja_file_info_get_name (file);
+		char *name = baul_file_info_get_name (file);
 
 		GtkWidget *msg_dialog = gtk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
 			GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
@@ -218,8 +218,8 @@ op_finished (GPid pid, gint status, gpointer data)
 
 	} else if (priv->suffix == NULL) {
 		/* rotate image in place */
-		GFile *orig_location = caja_file_info_get_location (file);
-		GFile *new_location = caja_image_rotator_transform_filename (rotator, orig_location);
+		GFile *orig_location = baul_file_info_get_location (file);
+		GFile *new_location = baul_image_rotator_transform_filename (rotator, orig_location);
 		g_file_move (new_location, orig_location, G_FILE_COPY_OVERWRITE, NULL, NULL, NULL, NULL);
 		g_object_unref (orig_location);
 		g_object_unref (new_location);
@@ -243,15 +243,15 @@ op_finished (GPid pid, gint status, gpointer data)
 static void
 run_op (CajaImageRotator *rotator)
 {
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	g_return_if_fail (priv->files != NULL);
 
 	CajaFileInfo *file = CAJA_FILE_INFO (priv->files->data);
 
-	GFile *orig_location = caja_file_info_get_location (file);
+	GFile *orig_location = baul_file_info_get_location (file);
 	char *filename = g_file_get_path (orig_location);
-	GFile *new_location = caja_image_rotator_transform_filename (rotator, orig_location);
+	GFile *new_location = baul_image_rotator_transform_filename (rotator, orig_location);
 	char *new_filename = g_file_get_path (new_location);
 	g_object_unref (orig_location);
 	g_object_unref (new_location);
@@ -287,7 +287,7 @@ run_op (CajaImageRotator *rotator)
 	gtk_progress_bar_set_text (GTK_PROGRESS_BAR (priv->progress_bar), tmp);
 	g_free (tmp);
 
-	char *name = caja_file_info_get_name (file);
+	char *name = baul_file_info_get_name (file);
 	tmp = g_strdup_printf (_("<i>Rotating \"%s\"</i>"), name);
 	g_free (name);
 	gtk_label_set_markup (GTK_LABEL (priv->progress_label), tmp);
@@ -296,10 +296,10 @@ run_op (CajaImageRotator *rotator)
 }
 
 static void
-caja_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
+baul_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
 {
 	CajaImageRotator *rotator = CAJA_IMAGE_ROTATOR (user_data);
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	if (response_id == GTK_RESPONSE_OK) {
 		if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
@@ -340,9 +340,9 @@ caja_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer us
 }
 
 static void
-caja_image_rotator_init(CajaImageRotator *rotator)
+baul_image_rotator_init(CajaImageRotator *rotator)
 {
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	GtkBuilder *ui;
 	gchar      *path;
@@ -352,7 +352,7 @@ caja_image_rotator_init(CajaImageRotator *rotator)
 	/* Let's create our gtkbuilder and load the xml file */
 	ui = gtk_builder_new ();
 	gtk_builder_set_translation_domain (ui, GETTEXT_PACKAGE);
-	path = g_build_filename (DATADIR, PACKAGE, "caja-image-rotate.ui", NULL);
+	path = g_build_filename (DATADIR, PACKAGE, "baul-image-rotate.ui", NULL);
 	result = gtk_builder_add_from_file (ui, path, &err);
 	g_free (path);
 
@@ -383,20 +383,20 @@ caja_image_rotator_init(CajaImageRotator *rotator)
 
 	/* Connect the signal */
 	g_signal_connect (G_OBJECT (priv->rotate_dialog), "response",
-			  (GCallback) caja_image_rotator_response_cb,
+			  (GCallback) baul_image_rotator_response_cb,
 			  rotator);
 }
 
 CajaImageRotator *
-caja_image_rotator_new (GList *files)
+baul_image_rotator_new (GList *files)
 {
 	return g_object_new (CAJA_TYPE_IMAGE_ROTATOR, "files", files, NULL);
 }
 
 void
-caja_image_rotator_show_dialog (CajaImageRotator *rotator)
+baul_image_rotator_show_dialog (CajaImageRotator *rotator)
 {
-	CajaImageRotatorPrivate *priv = caja_image_rotator_get_instance_private (rotator);
+	CajaImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	gtk_widget_show (GTK_WIDGET (priv->rotate_dialog));
 }

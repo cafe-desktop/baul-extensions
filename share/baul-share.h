@@ -1,4 +1,4 @@
-/* caja-share -- Caja File Sharing Extension
+/* baul-share -- Caja File Sharing Extension
  *
  * Sebastien Estienne <sebastien.estienne@gmail.com>
  *
@@ -27,8 +27,8 @@
 G_BEGIN_DECLS
 
 /* Declarations for the Share extension object.  This object will be
- * instantiated by caja.  It implements the GInterfaces
- * exported by libcaja. */
+ * instantiated by baul.  It implements the GInterfaces
+ * exported by libbaul. */
 
 
 typedef struct _CajaShare      CajaShare;

@@ -24,10 +24,10 @@
 #include <config.h>
 #include <string.h>
 #include <glib/gi18n-lib.h>
-#include <libcaja-extension/caja-extension-types.h>
-#include <libcaja-extension/caja-file-info.h>
-#include <libcaja-extension/caja-menu-provider.h>
-#include "caja-nste.h"
+#include <libbaul-extension/baul-extension-types.h>
+#include <libbaul-extension/baul-file-info.h>
+#include <libbaul-extension/baul-menu-provider.h>
+#include "baul-nste.h"
 
 
 static GObjectClass *parent_class;
@@ -42,12 +42,12 @@ sendto_callback (CajaMenuItem *item,
 
 	files = g_object_get_data (G_OBJECT (item), "files");
 
-	cmd = g_string_new ("caja-sendto");
+	cmd = g_string_new ("baul-sendto");
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
 
-		uri = caja_file_info_get_uri (file);
+		uri = baul_file_info_get_uri (file);
 		g_string_append_printf (cmd, " \"%s\"", uri);
 		g_free (uri);
 	}
@@ -58,7 +58,7 @@ sendto_callback (CajaMenuItem *item,
 }
 
 static GList *
-caja_nste_get_file_items (CajaMenuProvider *provider,
+baul_nste_get_file_items (CajaMenuProvider *provider,
 			      GtkWidget            *window,
 			      GList                *files)
 {
@@ -71,13 +71,13 @@ caja_nste_get_file_items (CajaMenuProvider *provider,
 
 	one_item = (files != NULL) && (files->next == NULL);
 	if (one_item &&
-	    !caja_file_info_is_directory ((CajaFileInfo *)files->data)) {
-		item = caja_menu_item_new ("CajaNste::sendto",
+	    !baul_file_info_is_directory ((CajaFileInfo *)files->data)) {
+		item = baul_menu_item_new ("CajaNste::sendto",
 					       _("Send to..."),
 					       _("Send file by mail, instant message..."),
 					       "document-send");
 	} else {
-		item = caja_menu_item_new ("CajaNste::sendto",
+		item = baul_menu_item_new ("CajaNste::sendto",
 					       _("Send to..."),
 					       _("Send files by mail, instant message..."),
 					       "document-send");
@@ -88,8 +88,8 @@ caja_nste_get_file_items (CajaMenuProvider *provider,
       provider);
   g_object_set_data_full (G_OBJECT (item),
       "files",
-      caja_file_info_list_copy (files),
-      (GDestroyNotify) caja_file_info_list_free);
+      baul_file_info_list_copy (files),
+      (GDestroyNotify) baul_file_info_list_free);
 
   items = g_list_append (items, item);
 
@@ -98,20 +98,20 @@ caja_nste_get_file_items (CajaMenuProvider *provider,
 
 
 static void
-caja_nste_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_nste_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
-	iface->get_file_items = caja_nste_get_file_items;
+	iface->get_file_items = baul_nste_get_file_items;
 }
 
 
 static void
-caja_nste_instance_init (CajaNste *nste)
+baul_nste_instance_init (CajaNste *nste)
 {
 }
 
 
 static void
-caja_nste_class_init (CajaNsteClass *class)
+baul_nste_class_init (CajaNsteClass *class)
 {
 	parent_class = g_type_class_peek_parent (class);
 }
@@ -121,29 +121,29 @@ static GType nste_type = 0;
 
 
 GType
-caja_nste_get_type (void)
+baul_nste_get_type (void)
 {
 	return nste_type;
 }
 
 
 void
-caja_nste_register_type (GTypeModule *module)
+baul_nste_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
 		sizeof (CajaNsteClass),
 		(GBaseInitFunc) NULL,
 		(GBaseFinalizeFunc) NULL,
-		(GClassInitFunc) caja_nste_class_init,
+		(GClassInitFunc) baul_nste_class_init,
 		NULL,
 		NULL,
 		sizeof (CajaNste),
 		0,
-		(GInstanceInitFunc) caja_nste_instance_init,
+		(GInstanceInitFunc) baul_nste_instance_init,
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) caja_nste_menu_provider_iface_init,
+		(GInterfaceInitFunc) baul_nste_menu_provider_iface_init,
 		NULL,
 		NULL
 	};
