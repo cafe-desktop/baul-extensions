@@ -21,19 +21,19 @@
  *
  */
 
-#ifndef CAJA_IMAGE_ROTATOR_H
-#define CAJA_IMAGE_ROTATOR_H
+#ifndef BAUL_IMAGE_ROTATOR_H
+#define BAUL_IMAGE_ROTATOR_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_IMAGE_ROTATOR         (baul_image_rotator_get_type ())
-#define CAJA_IMAGE_ROTATOR(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotator))
-#define CAJA_IMAGE_ROTATOR_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
-#define CAJA_IS_IMAGE_ROTATOR(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_ROTATOR))
-#define CAJA_IS_IMAGE_ROTATOR_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), CAJA_TYPE_IMAGE_ROTATOR))
-#define CAJA_IMAGE_ROTATOR_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
+#define BAUL_TYPE_IMAGE_ROTATOR         (baul_image_rotator_get_type ())
+#define BAUL_IMAGE_ROTATOR(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_IMAGE_ROTATOR, BaulImageRotator))
+#define BAUL_IMAGE_ROTATOR_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), BAUL_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
+#define BAUL_IS_IMAGE_ROTATOR(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_IMAGE_ROTATOR))
+#define BAUL_IS_IMAGE_ROTATOR_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), BAUL_TYPE_IMAGE_ROTATOR))
+#define BAUL_IMAGE_ROTATOR_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), BAUL_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
 
 typedef struct _BaulImageRotator BaulImageRotator;
 typedef struct _BaulImageRotatorClass BaulImageRotatorClass;
@@ -53,4 +53,4 @@ void baul_image_rotator_show_dialog (BaulImageRotator *dialog);
 
 G_END_DECLS
 
-#endif /* CAJA_IMAGE_ROTATOR_H */
+#endif /* BAUL_IMAGE_ROTATOR_H */

@@ -47,8 +47,8 @@
 
 #define COT_SCHEMA "org.cafe.baul-open-terminal"
 #define COT_DESKTOP_KEY "desktop-opens-home-dir"
-#define CAJA_SCHEMA "org.cafe.baul.preferences"
-#define CAJA_DESKTOP_KEY "desktop-is-home-dir"
+#define BAUL_SCHEMA "org.cafe.baul.preferences"
+#define BAUL_DESKTOP_KEY "desktop-is-home-dir"
 #define TERM_SCHEMA "org.cafe.applications-terminal"
 #define TERM_EXEC_KEY "exec"
 
@@ -159,8 +159,8 @@ desktop_is_home_dir (void)
 	gboolean result;
 	GSettings* settings;
 
-	settings = g_settings_new (CAJA_SCHEMA);
-	result = g_settings_get_boolean (settings, CAJA_DESKTOP_KEY);
+	settings = g_settings_new (BAUL_SCHEMA);
+	result = g_settings_get_boolean (settings, BAUL_DESKTOP_KEY);
 	g_object_unref (settings);
 	return result;
 }
@@ -661,11 +661,11 @@ baul_open_terminal_register_type (GTypeModule *module)
 
 	g_type_module_add_interface (module,
 				     terminal_type,
-				     CAJA_TYPE_MENU_PROVIDER,
+				     BAUL_TYPE_MENU_PROVIDER,
 				     &menu_provider_iface_info);
 
 	g_type_module_add_interface (module,
 				     terminal_type,
-				     CAJA_TYPE_CONFIGURABLE,
+				     BAUL_TYPE_CONFIGURABLE,
 				     &configurable_iface_info);
 }

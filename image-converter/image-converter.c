@@ -37,7 +37,7 @@ baul_module_initialize (GTypeModule *module)
 	g_print ("Initializing baul-image-converter extension\n");
 
 	baul_image_converter_register_type (module);
-	type_list[0] = CAJA_TYPE_IMAGE_CONVERTER;
+	type_list[0] = BAUL_TYPE_IMAGE_CONVERTER;
 
 	bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");

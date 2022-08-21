@@ -23,8 +23,8 @@
  *           Bastien Nocera <hadess@hadess.net>
  */
 
-#ifndef _CAJA_SENDTO_PLUGIN_H_
-#define _CAJA_SENDTO_PLUGIN_H_
+#ifndef _BAUL_SENDTO_PLUGIN_H_
+#define _BAUL_SENDTO_PLUGIN_H_
 
 #include <gmodule.h>
 #include <gtk/gtk.h>
@@ -43,16 +43,16 @@ typedef struct _NstPlugin NstPlugin;
 
 /**
  * NstPluginCapabilities:
- * @CAJA_CAPS_NONE: No capabilities
- * @CAJA_CAPS_SEND_DIRECTORIES: The plugin can send whole directories without compression
- * @CAJA_CAPS_SEND_IMAGES: The plugin only sends images which could be resized
+ * @BAUL_CAPS_NONE: No capabilities
+ * @BAUL_CAPS_SEND_DIRECTORIES: The plugin can send whole directories without compression
+ * @BAUL_CAPS_SEND_IMAGES: The plugin only sends images which could be resized
  *
  * Capabilities of the plugin.
  **/
 typedef enum {
-	CAJA_CAPS_NONE = 0,
-	CAJA_CAPS_SEND_DIRECTORIES = 1 << 0,
-	CAJA_CAPS_SEND_IMAGES = 1 << 1,
+	BAUL_CAPS_NONE = 0,
+	BAUL_CAPS_SEND_DIRECTORIES = 1 << 0,
+	BAUL_CAPS_SEND_IMAGES = 1 << 1,
 } NstPluginCapabilities;
 
 /**
@@ -112,5 +112,5 @@ struct _NstPlugin
                 return TRUE;						\
         }
 
-#endif /* _CAJA_SENDTO_PLUGIN_H_ */
+#endif /* _BAUL_SENDTO_PLUGIN_H_ */
 

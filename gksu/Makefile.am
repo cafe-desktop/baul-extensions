@@ -1,11 +1,11 @@
 AM_CFLAGS = -g -O2 -Wall
-AM_CPPFLAGS = -DLOCALEDIR=\"$(datadir)/locale\" -DDATA_DIR=\"$(datadir)\" -DPREFIX=\"$(prefix)\" $(CAJA_CFLAGS)
+AM_CPPFLAGS = -DLOCALEDIR=\"$(datadir)/locale\" -DDATA_DIR=\"$(datadir)\" -DPREFIX=\"$(prefix)\" $(BAUL_CFLAGS)
 
 baul_extensiondir=$(libdir)/baul/extensions-2.0
 baul_extension_LTLIBRARIES = libbaul-gksu.la
 libbaul_gksu_la_SOURCES = libbaul-gksu.c
 libbaul_gksu_la_LDFLAGS = -module -avoid-version -no-undefined
-libbaul_gksu_la_LIBADD  = $(CAJA_LIBS)
+libbaul_gksu_la_LIBADD  = $(BAUL_LIBS)
 
 extensiondir = $(datadir)/baul/extensions
 extension_in_files = libbaul-gksu.baul-extension.desktop.in

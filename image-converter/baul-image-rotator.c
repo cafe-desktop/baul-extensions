@@ -77,7 +77,7 @@ typedef enum {
 static void
 baul_image_rotator_finalize(GObject *object)
 {
-	BaulImageRotator *dialog = CAJA_IMAGE_ROTATOR (object);
+	BaulImageRotator *dialog = BAUL_IMAGE_ROTATOR (object);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (dialog);
 
 	g_free (priv->suffix);
@@ -91,7 +91,7 @@ baul_image_rotator_set_property (GObject      *object,
                         const GValue *value,
                         GParamSpec   *pspec)
 {
-	BaulImageRotator *dialog = CAJA_IMAGE_ROTATOR (object);
+	BaulImageRotator *dialog = BAUL_IMAGE_ROTATOR (object);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (dialog);
 
 	switch (property_id) {
@@ -112,7 +112,7 @@ baul_image_rotator_get_property (GObject      *object,
                         GValue       *value,
                         GParamSpec   *pspec)
 {
-	BaulImageRotator *self = CAJA_IMAGE_ROTATOR (object);
+	BaulImageRotator *self = BAUL_IMAGE_ROTATOR (object);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (self);
 
 	switch (property_id) {
@@ -183,12 +183,12 @@ baul_image_rotator_transform_filename (BaulImageRotator *rotator, GFile *orig_fi
 static void
 op_finished (GPid pid, gint status, gpointer data)
 {
-	BaulImageRotator *rotator = CAJA_IMAGE_ROTATOR (data);
+	BaulImageRotator *rotator = BAUL_IMAGE_ROTATOR (data);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	gboolean retry = TRUE;
 
-	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = BAUL_FILE_INFO (priv->files->data);
 
 	if (status != 0) {
 		/* rotating failed */
@@ -247,7 +247,7 @@ run_op (BaulImageRotator *rotator)
 
 	g_return_if_fail (priv->files != NULL);
 
-	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = BAUL_FILE_INFO (priv->files->data);
 
 	GFile *orig_location = baul_file_info_get_location (file);
 	char *filename = g_file_get_path (orig_location);
@@ -298,7 +298,7 @@ run_op (BaulImageRotator *rotator)
 static void
 baul_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
 {
-	BaulImageRotator *rotator = CAJA_IMAGE_ROTATOR (user_data);
+	BaulImageRotator *rotator = BAUL_IMAGE_ROTATOR (user_data);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
 	if (response_id == GTK_RESPONSE_OK) {
@@ -390,7 +390,7 @@ baul_image_rotator_init(BaulImageRotator *rotator)
 BaulImageRotator *
 baul_image_rotator_new (GList *files)
 {
-	return g_object_new (CAJA_TYPE_IMAGE_ROTATOR, "files", files, NULL);
+	return g_object_new (BAUL_TYPE_IMAGE_ROTATOR, "files", files, NULL);
 }
 
 void

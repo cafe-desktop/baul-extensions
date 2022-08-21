@@ -3,8 +3,8 @@ Set of extensions for Baul, the CAFE file manager.
 Debug
 -----
 
-In order to see baul debug messages, you need to set the CAJA_DEBUG env variable.
-e.g.: $ CAJA_DEBUG=y baul
+In order to see baul debug messages, you need to set the BAUL_DEBUG env variable.
+e.g.: $ BAUL_DEBUG=y baul
 
 Notes
 -----

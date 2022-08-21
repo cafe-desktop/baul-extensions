@@ -1,6 +1,6 @@
-AM_CPPFLAGS = $(CAJA_CFLAGS)
+AM_CPPFLAGS = $(BAUL_CFLAGS)
 
-baul_extensiondir = $(CAJA_EXTENSION_DIR)
+baul_extensiondir = $(BAUL_EXTENSION_DIR)
 baul_extension_LTLIBRARIES = libbaul-wallpaper.la
 
 libbaul_wallpaper_la_SOURCES = \
@@ -9,7 +9,7 @@ libbaul_wallpaper_la_SOURCES = \
 	baul-wallpaper-command.c
 
 libbaul_wallpaper_la_LDFLAGS = -module -avoid-version
-libbaul_wallpaper_la_LIBADD = $(CAJA_LIBS)
+libbaul_wallpaper_la_LIBADD = $(BAUL_LIBS)
 
 extensiondir = $(datadir)/baul/extensions
 extension_in_files = libbaul-wallpaper.baul-extension.desktop.in

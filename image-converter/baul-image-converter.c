@@ -196,6 +196,6 @@ baul_image_converter_register_type (GTypeModule *module)
 
 	g_type_module_add_interface (module,
 				     image_converter_type,
-				     CAJA_TYPE_MENU_PROVIDER,
+				     BAUL_TYPE_MENU_PROVIDER,
 				     &menu_provider_iface_info);
 }

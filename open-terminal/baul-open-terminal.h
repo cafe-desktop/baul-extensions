@@ -21,8 +21,8 @@
  *
  */
 
-#ifndef CAJA_OPEN_TERMINAL_H
-#define CAJA_OPEN_TERMINAL_H
+#ifndef BAUL_OPEN_TERMINAL_H
+#define BAUL_OPEN_TERMINAL_H
 
 #include <glib-object.h>
 
@@ -33,9 +33,9 @@ G_BEGIN_DECLS
  * exported by libbaul. */
 
 
-#define CAJA_TYPE_OPEN_TERMINAL	  (baul_open_terminal_get_type ())
-#define CAJA_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_OPEN_TERMINAL, BaulOpenTerminal))
-#define CAJA_IS_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_OPEN_TERMINAL))
+#define BAUL_TYPE_OPEN_TERMINAL	  (baul_open_terminal_get_type ())
+#define BAUL_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_OPEN_TERMINAL, BaulOpenTerminal))
+#define BAUL_IS_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_OPEN_TERMINAL))
 typedef struct _BaulOpenTerminal      BaulOpenTerminal;
 typedef struct _BaulOpenTerminalClass BaulOpenTerminalClass;
 

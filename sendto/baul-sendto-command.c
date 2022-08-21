@@ -29,9 +29,9 @@
 #include <gtk/gtk.h>
 #include "baul-sendto-plugin.h"
 
-#define CAJA_SENDTO_LAST_MEDIUM	"last-medium"
-#define CAJA_SENDTO_LAST_COMPRESS	"last-compress"
-#define CAJA_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS 10
+#define BAUL_SENDTO_LAST_MEDIUM	"last-medium"
+#define BAUL_SENDTO_LAST_COMPRESS	"last-compress"
+#define BAUL_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS 10
 
 #define UNINSTALLED_PLUGINDIR "plugins/removable-devices"
 #define UNINSTALLED_SOURCE "baul-sendto-command.c"
@@ -208,7 +208,7 @@ pack_files (NS_ui *ui)
 	}
 
 	g_settings_set_int (settings,
-			    CAJA_SENDTO_LAST_COMPRESS,
+			    BAUL_SENDTO_LAST_COMPRESS,
 			    gtk_combo_box_get_active(GTK_COMBO_BOX(ui->pack_combobox)));
 
 	cmd = g_string_new ("");
@@ -281,7 +281,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 			g_free (error);
 			gtk_label_set_markup (GTK_LABEL (ui->status_label), message);
 			g_free (message);
-			ui->status_timeoutid = g_timeout_add_seconds (CAJA_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS,
+			ui->status_timeoutid = g_timeout_add_seconds (BAUL_SENDTO_STATUS_LABEL_TIMEOUT_SECONDS,
 								      status_label_clear,
 								      ui);
 			gtk_widget_show (ui->status_image);
@@ -292,7 +292,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 	}
 
 	g_settings_set_string (settings,
-			       CAJA_SENDTO_LAST_MEDIUM,
+			       BAUL_SENDTO_LAST_MEDIUM,
 			       p->info->id);
 
 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ui->pack_checkbutton))){
@@ -379,7 +379,7 @@ option_changed (GtkComboBox *cb, NS_ui *ui)
 	gtk_label_set_mnemonic_widget (GTK_LABEL (ui->send_to_label), w);
 
 	p = (NstPlugin *) g_list_nth_data (plugin_list, option);
-	supports_dirs = (p->info->capabilities & CAJA_CAPS_SEND_DIRECTORIES);
+	supports_dirs = (p->info->capabilities & BAUL_CAPS_SEND_DIRECTORIES);
 
 	if (has_dirs == FALSE || supports_dirs != FALSE) {
 		gboolean toggle;
@@ -436,7 +436,7 @@ set_model_for_options_combobox (NS_ui *ui)
 	model = gtk_list_store_new (NUM_COLUMNS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 
 	last_used = g_settings_get_string (settings,
-					   CAJA_SENDTO_LAST_MEDIUM);
+					   BAUL_SENDTO_LAST_MEDIUM);
 
 	for (aux = plugin_list; aux; aux = aux->next) {
 		p = (NstPlugin *) aux->data;
@@ -449,7 +449,7 @@ set_model_for_options_combobox (NS_ui *ui)
 					-1);
 		if (last_used != NULL && !strcmp(last_used, p->info->id)) {
 			option = i;
-			last_used_support_dirs = (p->info->capabilities & CAJA_CAPS_SEND_DIRECTORIES);
+			last_used_support_dirs = (p->info->capabilities & BAUL_CAPS_SEND_DIRECTORIES);
 		}
 		i++;
 	}
@@ -559,7 +559,7 @@ baul_sendto_create_ui (void)
 
 	gtk_combo_box_set_active (GTK_COMBO_BOX(ui->pack_combobox),
 				  g_settings_get_int (settings,
-						      CAJA_SENDTO_LAST_COMPRESS));
+						      BAUL_SENDTO_LAST_COMPRESS));
 
 	if (file_list != NULL && file_list->next != NULL)
 		one_file = FALSE;

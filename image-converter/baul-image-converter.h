@@ -21,8 +21,8 @@
  *
  */
 
-#ifndef CAJA_IMAGE_CONVERTER_H
-#define CAJA_IMAGE_CONVERTER_H
+#ifndef BAUL_IMAGE_CONVERTER_H
+#define BAUL_IMAGE_CONVERTER_H
 
 #include <glib-object.h>
 
@@ -33,9 +33,9 @@ G_BEGIN_DECLS
  * exported by libbaul. */
 
 
-#define CAJA_TYPE_IMAGE_CONVERTER	  (baul_image_converter_get_type ())
-#define CAJA_IMAGE_CONVERTER(o)		  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_CONVERTER, BaulImageConverter))
-#define CAJA_IS_IMAGE_CONVERTER(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_CONVERTER))
+#define BAUL_TYPE_IMAGE_CONVERTER	  (baul_image_converter_get_type ())
+#define BAUL_IMAGE_CONVERTER(o)		  (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_IMAGE_CONVERTER, BaulImageConverter))
+#define BAUL_IS_IMAGE_CONVERTER(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_IMAGE_CONVERTER))
 typedef struct _BaulImageConverter	  BaulImageConverter;
 typedef struct _BaulImageConverterClass	  BaulImageConverterClass;
 

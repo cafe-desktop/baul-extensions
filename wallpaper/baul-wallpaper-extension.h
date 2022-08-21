@@ -22,16 +22,16 @@
  *           Stefano Karapetsas <stefano@karapetsas.com>
  */
 
-#ifndef CAJA_WALLPAPER_EXTENSION_H
-#define CAJA_WALLPAPER_EXTENSION_H
+#ifndef BAUL_WALLPAPER_EXTENSION_H
+#define BAUL_WALLPAPER_EXTENSION_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_CWE  (baul_cwe_get_type ())
-#define CAJA_CWE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_CWE, BaulCwe))
-#define CAJA_IS_CWE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_CWE))
+#define BAUL_TYPE_CWE  (baul_cwe_get_type ())
+#define BAUL_CWE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_CWE, BaulCwe))
+#define BAUL_IS_CWE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_CWE))
 
 typedef struct _BaulCwe      BaulCwe;
 typedef struct _BaulCweClass BaulCweClass;
@@ -49,4 +49,4 @@ void  baul_cwe_register_type (GTypeModule *module);
 
 G_END_DECLS
 
-#endif /* CAJA_WALLPAPER_EXTENSION_H */
+#endif /* BAUL_WALLPAPER_EXTENSION_H */

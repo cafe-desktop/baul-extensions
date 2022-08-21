@@ -21,19 +21,19 @@
  *
  */
 
-#ifndef CAJA_IMAGE_RESIZER_H
-#define CAJA_IMAGE_RESIZER_H
+#ifndef BAUL_IMAGE_RESIZER_H
+#define BAUL_IMAGE_RESIZER_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_IMAGE_RESIZER         (baul_image_resizer_get_type ())
-#define CAJA_IMAGE_RESIZER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizer))
-#define CAJA_IMAGE_RESIZER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
-#define CAJA_IS_IMAGE_RESIZER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_RESIZER))
-#define CAJA_IS_IMAGE_RESIZER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), CAJA_TYPE_IMAGE_RESIZER))
-#define CAJA_IMAGE_RESIZER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
+#define BAUL_TYPE_IMAGE_RESIZER         (baul_image_resizer_get_type ())
+#define BAUL_IMAGE_RESIZER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), BAUL_TYPE_IMAGE_RESIZER, BaulImageResizer))
+#define BAUL_IMAGE_RESIZER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), BAUL_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
+#define BAUL_IS_IMAGE_RESIZER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), BAUL_TYPE_IMAGE_RESIZER))
+#define BAUL_IS_IMAGE_RESIZER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), BAUL_TYPE_IMAGE_RESIZER))
+#define BAUL_IMAGE_RESIZER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), BAUL_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
 
 typedef struct _BaulImageResizer BaulImageResizer;
 typedef struct _BaulImageResizerClass BaulImageResizerClass;
@@ -53,4 +53,4 @@ void baul_image_resizer_show_dialog (BaulImageResizer *dialog);
 
 G_END_DECLS
 
-#endif /* CAJA_IMAGE_RESIZER_H */
+#endif /* BAUL_IMAGE_RESIZER_H */

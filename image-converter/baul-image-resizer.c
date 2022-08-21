@@ -80,7 +80,7 @@ typedef enum {
 static void
 baul_image_resizer_finalize(GObject *object)
 {
-	BaulImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizer *dialog = BAUL_IMAGE_RESIZER (object);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
 
 	g_free (priv->suffix);
@@ -94,7 +94,7 @@ baul_image_resizer_set_property (GObject      *object,
                         const GValue *value,
                         GParamSpec   *pspec)
 {
-	BaulImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizer *dialog = BAUL_IMAGE_RESIZER (object);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
 
 	switch (property_id) {
@@ -115,7 +115,7 @@ baul_image_resizer_get_property (GObject      *object,
                         GValue       *value,
                         GParamSpec   *pspec)
 {
-	BaulImageResizer *self = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizer *self = BAUL_IMAGE_RESIZER (object);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (self);
 
 	switch (property_id) {
@@ -186,12 +186,12 @@ baul_image_resizer_transform_filename (BaulImageResizer *resizer, GFile *orig_fi
 static void
 op_finished (GPid pid, gint status, gpointer data)
 {
-	BaulImageResizer *resizer = CAJA_IMAGE_RESIZER (data);
+	BaulImageResizer *resizer = BAUL_IMAGE_RESIZER (data);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	gboolean retry = TRUE;
 
-	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = BAUL_FILE_INFO (priv->files->data);
 
 	if (status != 0) {
 		/* resizing failed */
@@ -250,7 +250,7 @@ run_op (BaulImageResizer *resizer)
 
 	g_return_if_fail (priv->files != NULL);
 
-	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = BAUL_FILE_INFO (priv->files->data);
 
 	GFile *orig_location = baul_file_info_get_location (file);
 	char *filename = g_file_get_path (orig_location);
@@ -299,7 +299,7 @@ run_op (BaulImageResizer *resizer)
 static void
 baul_image_resizer_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
 {
-	BaulImageResizer *resizer = CAJA_IMAGE_RESIZER (user_data);
+	BaulImageResizer *resizer = BAUL_IMAGE_RESIZER (user_data);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	if (response_id == GTK_RESPONSE_OK) {
@@ -380,7 +380,7 @@ baul_image_resizer_init(BaulImageResizer *resizer)
 BaulImageResizer *
 baul_image_resizer_new (GList *files)
 {
-	return g_object_new (CAJA_TYPE_IMAGE_RESIZER, "files", files, NULL);
+	return g_object_new (BAUL_TYPE_IMAGE_RESIZER, "files", files, NULL);
 }
 
 void

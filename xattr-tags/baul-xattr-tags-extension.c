@@ -144,7 +144,7 @@ baul_xattr_tags_update_file_info(BaulInfoProvider *provider,
     } else {
         baul_file_info_add_string_attribute(file, XATTR_TAGS_ATTRIBUTE, "");
     }
-    return CAJA_OPERATION_COMPLETE;
+    return BAUL_OPERATION_COMPLETE;
 }
 
 
@@ -239,8 +239,8 @@ baul_xattr_tags_register_type(GTypeModule *module)
     };
 
     g_type_module_add_interface (module,
-                                 CAJA_TYPE_XATTR_TAGS,
-                                 CAJA_TYPE_INFO_PROVIDER,
+                                 BAUL_TYPE_XATTR_TAGS,
+                                 BAUL_TYPE_INFO_PROVIDER,
                                  &info_provider_iface_info);
 
     static const GInterfaceInfo column_provider_iface_info = {
@@ -251,8 +251,8 @@ baul_xattr_tags_register_type(GTypeModule *module)
 
 
     g_type_module_add_interface (module,
-                                 CAJA_TYPE_XATTR_TAGS,
-                                 CAJA_TYPE_COLUMN_PROVIDER,
+                                 BAUL_TYPE_XATTR_TAGS,
+                                 BAUL_TYPE_COLUMN_PROVIDER,
                                  &column_provider_iface_info);
 
 }
@@ -277,7 +277,7 @@ baul_module_list_types (const GType **types,
 {
     static GType type_list[1];
 
-    type_list[0] = CAJA_TYPE_XATTR_TAGS;
+    type_list[0] = BAUL_TYPE_XATTR_TAGS;
 
     *types = type_list;
     *num_types = 1;

@@ -9,7 +9,7 @@ AM_CPPFLAGS =					\
 	-I$(top_builddir)			\
 	-DLOCALEDIR="\"$(datadir)/locale\""	\
 	$(SENDTO_CFLAGS)		\
-	$(CAJA_CFLAGS)		\
+	$(BAUL_CFLAGS)		\
 	$(DISABLE_DEPRECATED)			\
 	$(WARN_CFLAGS)
 
@@ -35,7 +35,7 @@ $(resources_built_sources): org.cafe.baul.extensions.sendto.gresource.xml Makefi
 baul_sendto_SOURCES = baul-sendto-command.c $(resources_built_sources)
 baul_sendto_LDADD = $(SENDTO_LIBS) libnstplugin.la
 
-baul_extensiondir = $(CAJA_EXTENSION_DIR)
+baul_extensiondir = $(BAUL_EXTENSION_DIR)
 baul_extension_LTLIBRARIES = libbaul-sendto.la
 libbaul_sendto_la_SOURCES =		\
 	baul-nste.c			\
@@ -43,7 +43,7 @@ libbaul_sendto_la_SOURCES =		\
 	baul-sendto-module.c
 
 libbaul_sendto_la_LDFLAGS = -module -avoid-version -no-undefined
-libbaul_sendto_la_LIBADD  = $(CAJA_LIBS)
+libbaul_sendto_la_LIBADD  = $(BAUL_LIBS)
 
 nst_headers_to_scan_for_enums = baul-sendto-plugin.h
 # Generate the enums source code, with glib-mkenums:
