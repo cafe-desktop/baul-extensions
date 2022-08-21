@@ -433,7 +433,7 @@ set_model_for_options_combobox (NS_ui *ui)
 
 	it = ctk_icon_theme_get_default ();
 
-	model = ctk_list_store_new (NUM_COLUMNS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
+	model = ctk_list_store_new (NUM_COLUMNS, CDK_TYPE_PIXBUF, G_TYPE_STRING);
 
 	last_used = g_settings_get_string (settings,
 					   BAUL_SENDTO_LAST_MEDIUM);
