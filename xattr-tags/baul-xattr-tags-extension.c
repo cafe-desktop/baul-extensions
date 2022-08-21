@@ -1,5 +1,5 @@
 /*
- *  Caja xattr tags extension
+ *  Baul xattr tags extension
  *
  *  Copyright (C) 2016 Felipe Barriga Richards
  *
@@ -38,10 +38,10 @@ static GObjectClass *parent_class;
 
 typedef struct {
     gboolean cancelled;
-    CajaInfoProvider *provider;
-    CajaFileInfo *file;
+    BaulInfoProvider *provider;
+    BaulFileInfo *file;
     GClosure *update_complete;
-} CajaXattrTagsHandle;
+} BaulXattrTagsHandle;
 
 /* Stolen code: why they didn't expose it!?
  * file: glocalfileinfo.c
@@ -95,7 +95,7 @@ hex_unescape_string (const char *str,
 }
 /* End of stolen code */
 
-static gchar *baul_xattr_tags_get_xdg_tags(CajaFileInfo *file)
+static gchar *baul_xattr_tags_get_xdg_tags(BaulFileInfo *file)
 {
     gchar *tags = NULL, *uri;
     GFile *location;
@@ -131,11 +131,11 @@ static gchar *baul_xattr_tags_get_xdg_tags(CajaFileInfo *file)
     return tags;
 }
 
-static CajaOperationResult
-baul_xattr_tags_update_file_info(CajaInfoProvider *provider,
-                            CajaFileInfo *file,
+static BaulOperationResult
+baul_xattr_tags_update_file_info(BaulInfoProvider *provider,
+                            BaulFileInfo *file,
                             GClosure *update_complete,
-                            CajaOperationHandle **handle)
+                            BaulOperationHandle **handle)
 {
     gchar *value = baul_xattr_tags_get_xdg_tags(file);
     if (value != NULL) {
@@ -149,17 +149,17 @@ baul_xattr_tags_update_file_info(CajaInfoProvider *provider,
 
 
 static void
-baul_xattr_tags_cancel_update(CajaInfoProvider *provider,
-                         CajaOperationHandle *handle)
+baul_xattr_tags_cancel_update(BaulInfoProvider *provider,
+                         BaulOperationHandle *handle)
 {
-    CajaXattrTagsHandle *xattr_handle;
+    BaulXattrTagsHandle *xattr_handle;
 
-    xattr_handle = (CajaXattrTagsHandle*)handle;
+    xattr_handle = (BaulXattrTagsHandle*)handle;
     xattr_handle->cancelled = TRUE;
 }
 
 static void
-baul_xattr_tags_info_provider_iface_init(CajaInfoProviderIface *iface)
+baul_xattr_tags_info_provider_iface_init(BaulInfoProviderIface *iface)
 {
     iface->update_file_info = baul_xattr_tags_update_file_info;
     iface->cancel_update = baul_xattr_tags_cancel_update;
@@ -167,10 +167,10 @@ baul_xattr_tags_info_provider_iface_init(CajaInfoProviderIface *iface)
 
 
 static GList *
-baul_xattr_tags_get_columns(CajaColumnProvider *provider)
+baul_xattr_tags_get_columns(BaulColumnProvider *provider)
 {
     GList *ret = NULL;
-    CajaColumn *column = NULL;
+    BaulColumn *column = NULL;
 
     column = baul_column_new(XATTR_TAGS_NAME,
                              XATTR_TAGS_ATTRIBUTE,
@@ -182,20 +182,20 @@ baul_xattr_tags_get_columns(CajaColumnProvider *provider)
 }
 
 static void
-baul_xattr_tags_column_provider_iface_init(CajaColumnProviderIface *iface)
+baul_xattr_tags_column_provider_iface_init(BaulColumnProviderIface *iface)
 {
     iface->get_columns = baul_xattr_tags_get_columns;
 }
 
 
 static void
-baul_xattr_tags_instance_init(CajaXattrTags *baulXattrTags)
+baul_xattr_tags_instance_init(BaulXattrTags *baulXattrTags)
 {
 }
 
 
 static void
-baul_xattr_tags_class_init(CajaXattrTagsClass *class)
+baul_xattr_tags_class_init(BaulXattrTagsClass *class)
 {
     parent_class = g_type_class_peek_parent (class);
 }
@@ -215,13 +215,13 @@ void
 baul_xattr_tags_register_type(GTypeModule *module)
 {
     static const GTypeInfo info = {
-        sizeof (CajaXattrTagsClass),
+        sizeof (BaulXattrTagsClass),
         (GBaseInitFunc) NULL,
         (GBaseFinalizeFunc) NULL,
         (GClassInitFunc) baul_xattr_tags_class_init,
         NULL,
         NULL,
-        sizeof (CajaXattrTags),
+        sizeof (BaulXattrTags),
         0,
         (GInstanceInitFunc) baul_xattr_tags_instance_init,
     };
@@ -229,7 +229,7 @@ baul_xattr_tags_register_type(GTypeModule *module)
 
     baul_xattr_tags_type = g_type_module_register_type (module,
                                             G_TYPE_OBJECT,
-                                            "CajaXattrTags",
+                                            "BaulXattrTags",
                                             &info, 0);
 
     static const GInterfaceInfo info_provider_iface_info = {

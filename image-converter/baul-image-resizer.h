@@ -29,27 +29,27 @@
 G_BEGIN_DECLS
 
 #define CAJA_TYPE_IMAGE_RESIZER         (baul_image_resizer_get_type ())
-#define CAJA_IMAGE_RESIZER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_RESIZER, CajaImageResizer))
-#define CAJA_IMAGE_RESIZER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_RESIZER, CajaImageResizerClass))
+#define CAJA_IMAGE_RESIZER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizer))
+#define CAJA_IMAGE_RESIZER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
 #define CAJA_IS_IMAGE_RESIZER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_RESIZER))
 #define CAJA_IS_IMAGE_RESIZER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), CAJA_TYPE_IMAGE_RESIZER))
-#define CAJA_IMAGE_RESIZER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_RESIZER, CajaImageResizerClass))
+#define CAJA_IMAGE_RESIZER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_RESIZER, BaulImageResizerClass))
 
-typedef struct _CajaImageResizer CajaImageResizer;
-typedef struct _CajaImageResizerClass CajaImageResizerClass;
+typedef struct _BaulImageResizer BaulImageResizer;
+typedef struct _BaulImageResizerClass BaulImageResizerClass;
 
-struct _CajaImageResizer {
+struct _BaulImageResizer {
 	GObject parent;
 };
 
-struct _CajaImageResizerClass {
+struct _BaulImageResizerClass {
 	GObjectClass parent_class;
 	/* Add Signal Functions Here */
 };
 
 GType baul_image_resizer_get_type (void);
-CajaImageResizer *baul_image_resizer_new (GList *files);
-void baul_image_resizer_show_dialog (CajaImageResizer *dialog);
+BaulImageResizer *baul_image_resizer_new (GList *files);
+void baul_image_resizer_show_dialog (BaulImageResizer *dialog);
 
 G_END_DECLS
 

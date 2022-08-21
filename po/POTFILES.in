@@ -16,7 +16,7 @@ sendto/baul-nste.h
 sendto/baul-sendto-command.c
 sendto/baul-sendto-module.c
 sendto/libbaul-sendto.baul-extension.desktop.in.in
-sendto/org.cafe.Caja.Sendto.gschema.xml.in
+sendto/org.cafe.Baul.Sendto.gschema.xml.in
 sendto/baul-sendto.ui
 sendto/plugins/emailclient/emailclient.c
 sendto/plugins/gajim/gajim.c

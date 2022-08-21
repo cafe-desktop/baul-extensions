@@ -1,4 +1,4 @@
-/* baul-share -- Caja File Sharing Extension
+/* baul-share -- Baul File Sharing Extension
  *
  * Sebastien Estienne <sebastien.estienne@gmail.com>
  *
@@ -61,7 +61,7 @@ static GObjectClass *parent_class;
  */
 typedef struct {
   char *path; /* Full path which is being shared */
-  CajaFileInfo *fileinfo; /* Caja file to which this page refers */
+  BaulFileInfo *fileinfo; /* Baul file to which this page refers */
 
   GtkBuilder *ui;
 
@@ -120,7 +120,7 @@ message_confirm_missing_permissions (GtkWidget *widget, const char *path, mode_t
 				   0,
 				   GTK_MESSAGE_QUESTION,
 				   GTK_BUTTONS_NONE,
-				   _("Caja needs to add some permissions to your folder \"%s\" in order to share it"),
+				   _("Baul needs to add some permissions to your folder \"%s\" in order to share it"),
 				   display_name);
 
   /* FIXME: the following message only mentions "permission by others".  We
@@ -130,7 +130,7 @@ message_confirm_missing_permissions (GtkWidget *widget, const char *path, mode_t
   gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 					    _("The folder \"%s\" needs the following extra permissions for sharing to work:\n"
 					      "%s%s%s"
-					      "Do you want Caja to add these permissions to the folder automatically?"),
+					      "Do you want Baul to add these permissions to the folder automatically?"),
 					    display_name,
 					    (need_mask & (S_IRGRP | S_IROTH)) ? _("  - read permission by others\n") : "",
 					    (need_mask & (S_IWGRP | S_IWOTH)) ? _("  - write permission by others\n") : "",
@@ -421,7 +421,7 @@ property_page_commit (PropertyPage *page)
 
 /*--------------------------------------------------------------------------*/
 static gchar *
-get_fullpath_from_fileinfo(CajaFileInfo *fileinfo)
+get_fullpath_from_fileinfo(BaulFileInfo *fileinfo)
 {
   GFile *file;
   gchar *fullpath;
@@ -664,7 +664,7 @@ button_apply_clicked_cb (GtkButton *button,
 
 /*--------------------------------------------------------------------------*/
 static PropertyPage *
-create_property_page (CajaFileInfo *fileinfo)
+create_property_page (BaulFileInfo *fileinfo)
 {
   PropertyPage *page;
   GError *error;
@@ -841,11 +841,11 @@ create_property_page (CajaFileInfo *fileinfo)
   return page;
 }
 
-/* Implementation of the CajaInfoProvider interface */
+/* Implementation of the BaulInfoProvider interface */
 
 /* baul_info_provider_update_file_info
- * This function is called by Caja when it wants the extension to
- * fill in data about the file.  It passes a CajaFileInfo object,
+ * This function is called by Baul when it wants the extension to
+ * fill in data about the file.  It passes a BaulFileInfo object,
  * which the extension can use to read data from the file, and which
  * the extension should add data to.
  *
@@ -865,15 +865,15 @@ create_property_page (CajaFileInfo *fileinfo)
  */
 typedef struct {
   gboolean cancelled;
-  CajaInfoProvider *provider;
-  CajaFileInfo *file;
+  BaulInfoProvider *provider;
+  BaulFileInfo *file;
   GClosure *update_complete;
-} CajaShareHandle;
+} BaulShareHandle;
 
-static CajaShareStatus
+static BaulShareStatus
 get_share_status_and_free_share_info (ShareInfo *share_info)
 {
-  CajaShareStatus result;
+  BaulShareStatus result;
 
   if (!share_info)
     result = CAJA_SHARE_NOT_SHARED;
@@ -893,7 +893,7 @@ get_share_status_and_free_share_info (ShareInfo *share_info)
 
 /*--------------------------------------------------------------------------*/
 static void
-get_share_info_for_file_info (CajaFileInfo *file, ShareInfo **share_info, gboolean *is_shareable)
+get_share_info_for_file_info (BaulFileInfo *file, ShareInfo **share_info, gboolean *is_shareable)
 {
   char		*uri;
   char		*local_path = NULL;
@@ -950,8 +950,8 @@ get_share_info_for_file_info (CajaFileInfo *file, ShareInfo **share_info, gboole
 }
 
 /*--------------------------------------------------------------------------*/
-static CajaShareStatus
-file_get_share_status_file(CajaFileInfo *file)
+static BaulShareStatus
+file_get_share_status_file(BaulFileInfo *file)
 {
   ShareInfo *share_info;
   gboolean is_shareable;
@@ -964,11 +964,11 @@ file_get_share_status_file(CajaFileInfo *file)
   return get_share_status_and_free_share_info (share_info);
 }
 
-static CajaOperationResult
-baul_share_update_file_info (CajaInfoProvider *provider,
-				 CajaFileInfo *file,
+static BaulOperationResult
+baul_share_update_file_info (BaulInfoProvider *provider,
+				 BaulFileInfo *file,
 				 GClosure *update_complete,
-				 CajaOperationHandle **handle)
+				 BaulOperationHandle **handle)
 {
 /*   gchar *share_status = NULL; */
 
@@ -994,24 +994,24 @@ baul_share_update_file_info (CajaInfoProvider *provider,
   }
 
 /*   baul_file_info_add_string_attribute (file, */
-/* 					   "CajaShare::share_status", */
+/* 					   "BaulShare::share_status", */
 /* 					   share_status); */
   return CAJA_OPERATION_COMPLETE;
 }
 
 
 static void
-baul_share_cancel_update (CajaInfoProvider *provider,
-			      CajaOperationHandle *handle)
+baul_share_cancel_update (BaulInfoProvider *provider,
+			      BaulOperationHandle *handle)
 {
-  CajaShareHandle *share_handle;
+  BaulShareHandle *share_handle;
 
-  share_handle = (CajaShareHandle*)handle;
+  share_handle = (BaulShareHandle*)handle;
   share_handle->cancelled = TRUE;
 }
 
 static void
-baul_share_info_provider_iface_init (CajaInfoProviderIface *iface)
+baul_share_info_provider_iface_init (BaulInfoProviderIface *iface)
 {
   iface->update_file_info = baul_share_update_file_info;
   iface->cancel_update = baul_share_cancel_update;
@@ -1020,23 +1020,23 @@ baul_share_info_provider_iface_init (CajaInfoProviderIface *iface)
 /*--------------------------------------------------------------------------*/
 /* baul_property_page_provider_get_pages
  *
- * This function is called by Caja when it wants property page
+ * This function is called by Baul when it wants property page
  * items from the extension.
  *
  * This function is called in the main thread before a property page
  * is shown, so it should return quickly.
  *
- * The function should return a GList of allocated CajaPropertyPage
+ * The function should return a GList of allocated BaulPropertyPage
  * items.
  */
 static GList *
-baul_share_get_property_pages (CajaPropertyPageProvider *provider,
+baul_share_get_property_pages (BaulPropertyPageProvider *provider,
 				   GList *files)
 {
   PropertyPage *page;
   GList *pages;
-  CajaPropertyPage *np_page;
-  CajaFileInfo *fileinfo;
+  BaulPropertyPage *np_page;
+  BaulFileInfo *fileinfo;
   ShareInfo *share_info;
   gboolean is_shareable;
 
@@ -1059,7 +1059,7 @@ baul_share_get_property_pages (CajaPropertyPageProvider *provider,
 
   pages = NULL;
   np_page = baul_property_page_new
-    ("CajaShare::property_page",
+    ("BaulShare::property_page",
      gtk_label_new (_("Share")),
      page->main);
   pages = g_list_append (pages, np_page);
@@ -1069,33 +1069,33 @@ baul_share_get_property_pages (CajaPropertyPageProvider *provider,
 
 /*--------------------------------------------------------------------------*/
 static void
-baul_share_property_page_provider_iface_init (CajaPropertyPageProviderIface *iface)
+baul_share_property_page_provider_iface_init (BaulPropertyPageProviderIface *iface)
 {
   iface->get_pages = baul_share_get_property_pages;
 }
 
 /*--------------------------------------------------------------------------*/
 static void
-baul_share_instance_init (CajaShare *share)
+baul_share_instance_init (BaulShare *share)
 {
 }
 
 /*--------------------------------------------------------------------------*/
 static void
-baul_share_class_init (CajaShareClass *class)
+baul_share_class_init (BaulShareClass *class)
 {
   parent_class = g_type_class_peek_parent (class);
 }
 
 /* baul_menu_provider_get_file_items
  *
- * This function is called by Caja when it wants context menu
+ * This function is called by Baul when it wants context menu
  * items from the extension.
  *
  * This function is called in the main thread before a context menu
  * is shown, so it should return quickly.
  *
- * The function should return a GList of allocated CajaMenuItem
+ * The function should return a GList of allocated BaulMenuItem
  * items.
  */
 
@@ -1109,10 +1109,10 @@ button_cancel_clicked_cb (GtkButton *button, gpointer data)
 }
 
 static void
-share_this_folder_callback (CajaMenuItem *item,
+share_this_folder_callback (BaulMenuItem *item,
 			    gpointer user_data)
 {
-  CajaFileInfo *fileinfo;
+  BaulFileInfo *fileinfo;
   PropertyPage *page;
   GtkWidget * window;
 
@@ -1131,13 +1131,13 @@ share_this_folder_callback (CajaMenuItem *item,
 }
 
 static GList *
-baul_share_get_file_items (CajaMenuProvider *provider,
+baul_share_get_file_items (BaulMenuProvider *provider,
 			     GtkWidget *window,
 			     GList *files)
 {
   GList *items;
-  CajaMenuItem *item;
-  CajaFileInfo *fileinfo;
+  BaulMenuItem *item;
+  BaulFileInfo *fileinfo;
   ShareInfo *share_info;
   gboolean is_shareable;
 
@@ -1160,7 +1160,7 @@ baul_share_get_file_items (CajaMenuProvider *provider,
   g_object_ref (fileinfo);
 
   /* FMQ: change the label to "Share with Windows users"? */
-  item = baul_menu_item_new ("CajaShare::share",
+  item = baul_menu_item_new ("BaulShare::share",
 				 _("Sharing Options"),
 				 _("Share this Folder"),
 				 "folder-remote");
@@ -1178,7 +1178,7 @@ baul_share_get_file_items (CajaMenuProvider *provider,
 
 /*--------------------------------------------------------------------------*/
 static void
-baul_share_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_share_menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
 	iface->get_file_items = baul_share_get_file_items;
 }
@@ -1202,20 +1202,20 @@ static void
 baul_share_register_type (GTypeModule *module)
 {
   static const GTypeInfo info = {
-    sizeof (CajaShareClass),
+    sizeof (BaulShareClass),
     (GBaseInitFunc) NULL,
     (GBaseFinalizeFunc) NULL,
     (GClassInitFunc) baul_share_class_init,
     NULL,
     NULL,
-    sizeof (CajaShare),
+    sizeof (BaulShare),
     0,
     (GInstanceInitFunc) baul_share_instance_init,
   };
 
   share_type = g_type_module_register_type (module,
 					    G_TYPE_OBJECT,
-					    "CajaShare",
+					    "BaulShare",
 					    &info, 0);
 
   static const GInterfaceInfo property_page_provider_iface_info = {

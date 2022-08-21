@@ -1,5 +1,5 @@
 /*
- *  Caja SendTo
+ *  Baul SendTo
  *
  *  Copyright (C) 2005 Roberto Majadas
  *

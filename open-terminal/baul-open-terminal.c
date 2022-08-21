@@ -52,8 +52,8 @@
 #define TERM_SCHEMA "org.cafe.applications-terminal"
 #define TERM_EXEC_KEY "exec"
 
-static void baul_open_terminal_instance_init (CajaOpenTerminal      *cvs);
-static void baul_open_terminal_class_init    (CajaOpenTerminalClass *class);
+static void baul_open_terminal_instance_init (BaulOpenTerminal      *cvs);
+static void baul_open_terminal_class_init    (BaulOpenTerminalClass *class);
 
 static GType terminal_type = 0;
 
@@ -65,7 +65,7 @@ typedef enum {
 } TerminalFileInfo;
 
 static TerminalFileInfo
-get_terminal_file_info (CajaFileInfo *file_info)
+get_terminal_file_info (BaulFileInfo *file_info)
 {
 	TerminalFileInfo  ret;
 	char             *uri;
@@ -246,7 +246,7 @@ parse_sftp_uri (GFile *file, char **host, guint *port, char **user,
 
 static void
 append_sftp_info (char **terminal_exec,
-		  CajaFileInfo *file_info)
+		  BaulFileInfo *file_info)
 {
 	GFile *vfs_uri;
 	char *host_name, *path, *user_name;
@@ -307,8 +307,8 @@ append_sftp_info (char **terminal_exec,
 }
 
 static void
-open_terminal_callback (CajaMenuItem *item,
-			CajaFileInfo *file_info)
+open_terminal_callback (BaulMenuItem *item,
+			BaulFileInfo *file_info)
 {
 	GdkDisplay   *display;
 	const gchar *display_str;
@@ -362,7 +362,7 @@ open_terminal_callback (CajaMenuItem *item,
 	display_str = NULL;
 	old_display_str = g_getenv ("DISPLAY");
 
-	screen = g_object_get_data (G_OBJECT (item), "CajaOpenTerminal::screen");
+	screen = g_object_get_data (G_OBJECT (item), "BaulOpenTerminal::screen");
 	display = gdk_screen_get_display (screen);
 	if (screen != NULL) {
 		display_str = gdk_display_get_name (display);
@@ -377,13 +377,13 @@ open_terminal_callback (CajaMenuItem *item,
 		} while (orig_cwd == -1 && errno == EINTR);
 
 		if (orig_cwd == -1) {
-			g_message ("CajaOpenTerminal: Failed to open current Caja working directory.");
+			g_message ("BaulOpenTerminal: Failed to open current Baul working directory.");
 		} else if (working_directory != NULL) {
 
 			if (chdir (working_directory) == -1) {
 				int ret;
 
-				g_message ("CajaOpenTerminal: Failed to change Caja working directory to \"%s\".",
+				g_message ("BaulOpenTerminal: Failed to change Baul working directory to \"%s\".",
 					   working_directory);
 
 				do {
@@ -391,7 +391,7 @@ open_terminal_callback (CajaMenuItem *item,
 				} while (ret == -1 && errno == EINTR);
 
 				if (ret == -1) {
-					g_message ("CajaOpenTerminal: Failed to close() current Caja working directory.");
+					g_message ("BaulOpenTerminal: Failed to close() current Baul working directory.");
 				}
 
 				orig_cwd = -1;
@@ -413,7 +413,7 @@ open_terminal_callback (CajaMenuItem *item,
 
 			ret = fchdir (orig_cwd);
 			if (ret == -1) {
-				g_message ("CajaOpenTerminal: Failed to change back Caja working directory to original location after changing it to \"%s\".",
+				g_message ("BaulOpenTerminal: Failed to change back Baul working directory to original location after changing it to \"%s\".",
 					   working_directory);
 			}
 
@@ -422,7 +422,7 @@ open_terminal_callback (CajaMenuItem *item,
 			} while (ret == -1 && errno == EINTR);
 
 			if (ret == -1) {
-				g_message ("CajaOpenTerminal: Failed to close Caja working directory.");
+				g_message ("BaulOpenTerminal: Failed to close Baul working directory.");
 			}
 		}
 	} else {
@@ -443,13 +443,13 @@ open_terminal_callback (CajaMenuItem *item,
 	g_free (working_directory);
 }
 
-static CajaMenuItem *
-open_terminal_menu_item_new (CajaFileInfo	  *file_info,
+static BaulMenuItem *
+open_terminal_menu_item_new (BaulFileInfo	  *file_info,
                              TerminalFileInfo  terminal_file_info,
                              GdkScreen        *screen,
                              gboolean          is_file_item)
 {
-	CajaMenuItem *ret;
+	BaulMenuItem *ret;
 	const char *name;
 	const char *tooltip;
 
@@ -479,11 +479,11 @@ open_terminal_menu_item_new (CajaFileInfo	  *file_info,
 			g_assert_not_reached ();
 	}
 
-	ret = baul_menu_item_new ("CajaOpenTerminal::open_terminal",
+	ret = baul_menu_item_new ("BaulOpenTerminal::open_terminal",
 				      name, tooltip, "terminal");
 
 	g_object_set_data (G_OBJECT (ret),
-			   "CajaOpenTerminal::screen",
+			   "BaulOpenTerminal::screen",
 			   screen);
 
 	g_object_set_data_full (G_OBJECT (ret), "file-info",
@@ -497,11 +497,11 @@ open_terminal_menu_item_new (CajaFileInfo	  *file_info,
 }
 
 static GList *
-baul_open_terminal_get_background_items (CajaMenuProvider *provider,
+baul_open_terminal_get_background_items (BaulMenuProvider *provider,
                                          GtkWidget        *window,
-                                         CajaFileInfo     *file_info)
+                                         BaulFileInfo     *file_info)
 {
-	CajaMenuItem *item;
+	BaulMenuItem *item;
 	TerminalFileInfo  terminal_file_info;
 
 	terminal_file_info = get_terminal_file_info (file_info);
@@ -521,11 +521,11 @@ baul_open_terminal_get_background_items (CajaMenuProvider *provider,
 }
 
 GList *
-baul_open_terminal_get_file_items (CajaMenuProvider *provider,
+baul_open_terminal_get_file_items (BaulMenuProvider *provider,
                                    GtkWidget        *window,
                                    GList            *files)
 {
-	CajaMenuItem *item;
+	BaulMenuItem *item;
 	TerminalFileInfo  terminal_file_info;
 
 	if (g_list_length (files) != 1 ||
@@ -552,7 +552,7 @@ baul_open_terminal_get_file_items (CajaMenuProvider *provider,
 }
 
 static void
-baul_open_terminal_run_config (CajaConfigurable *provider)
+baul_open_terminal_run_config (BaulConfigurable *provider)
 {
 	GtkWidget *extconf_dialog, *extconf_content, *extconf_desktophomedir, *extconf_inform1, *extconf_inform2, *extconf_exec;
 	gchar * terminal;
@@ -599,25 +599,25 @@ baul_open_terminal_run_config (CajaConfigurable *provider)
 }
 
 static void
-baul_open_terminal_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_open_terminal_menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
 	iface->get_background_items = baul_open_terminal_get_background_items;
 	iface->get_file_items = baul_open_terminal_get_file_items;
 }
 
 static void
-baul_open_terminal_configurable_iface_init (CajaConfigurableIface *iface)
+baul_open_terminal_configurable_iface_init (BaulConfigurableIface *iface)
 {
 	iface->run_config = baul_open_terminal_run_config;
 }
 
 static void
-baul_open_terminal_instance_init (CajaOpenTerminal *cvs)
+baul_open_terminal_instance_init (BaulOpenTerminal *cvs)
 {
 }
 
 static void
-baul_open_terminal_class_init (CajaOpenTerminalClass *class)
+baul_open_terminal_class_init (BaulOpenTerminalClass *class)
 {
 }
 
@@ -631,13 +631,13 @@ void
 baul_open_terminal_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
-		sizeof (CajaOpenTerminalClass),
+		sizeof (BaulOpenTerminalClass),
 		(GBaseInitFunc) NULL,
 		(GBaseFinalizeFunc) NULL,
 		(GClassInitFunc) baul_open_terminal_class_init,
 		NULL,
 		NULL,
-		sizeof (CajaOpenTerminal),
+		sizeof (BaulOpenTerminal),
 		0,
 		(GInstanceInitFunc) baul_open_terminal_instance_init,
 	};
@@ -656,7 +656,7 @@ baul_open_terminal_register_type (GTypeModule *module)
 
 	terminal_type = g_type_module_register_type (module,
 						     G_TYPE_OBJECT,
-						     "CajaOpenTerminal",
+						     "BaulOpenTerminal",
 						     &info, 0);
 
 	g_type_module_add_interface (module,

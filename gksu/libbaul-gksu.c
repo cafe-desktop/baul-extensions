@@ -34,15 +34,15 @@ gksu_context_menu_init (GksuContextMenu *self);
 static void
 gksu_context_menu_class_init (GksuContextMenuClass *class);
 static void
-menu_provider_iface_init (CajaMenuProviderIface *iface);
+menu_provider_iface_init (BaulMenuProviderIface *iface);
 
 static GList*
-gksu_context_menu_get_file_items (CajaMenuProvider *provider,
+gksu_context_menu_get_file_items (BaulMenuProvider *provider,
 				  GtkWidget *window,
 				  GList *files);
 static void
-gksu_context_menu_activate (CajaMenuItem *item,
-			    CajaFileInfo *file);
+gksu_context_menu_activate (BaulMenuItem *item,
+			    BaulFileInfo *file);
 
 static GType
 gksu_context_menu_get_type (void)
@@ -86,7 +86,7 @@ gksu_context_menu_class_init (GksuContextMenuClass *class)
     parent_class = g_type_class_peek_parent (class);
 }
 
-static void menu_provider_iface_init (CajaMenuProviderIface *iface)
+static void menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
     iface->get_file_items = gksu_context_menu_get_file_items;
 }
@@ -98,13 +98,13 @@ gksu_context_menu_init (GksuContextMenu *self)
 }
 
 static GList *
-gksu_context_menu_get_file_items (CajaMenuProvider *provider,
+gksu_context_menu_get_file_items (BaulMenuProvider *provider,
 				  GtkWidget *window,
 				  GList *files)
 {
     GList *items = NULL;
-    CajaFileInfo *file;
-    CajaMenuItem *item;
+    BaulFileInfo *file;
+    BaulMenuItem *item;
 
     /* if we're already root, really or effectively, do not add
        the menu item */
@@ -175,8 +175,8 @@ start_gksu_thread (void *data)
 }
 
 static void
-gksu_context_menu_activate (CajaMenuItem *item,
-			    CajaFileInfo *file)
+gksu_context_menu_activate (BaulMenuItem *item,
+			    BaulFileInfo *file)
 {
   gchar *uri = NULL;
   gchar *mime_type = NULL;

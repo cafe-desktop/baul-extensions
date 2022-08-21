@@ -36,16 +36,16 @@
 
 #include <string.h> /* for strcmp */
 
-static void baul_image_converter_instance_init (CajaImageConverter      *img);
-static void baul_image_converter_class_init    (CajaImageConverterClass *class);
-GList *     baul_image_converter_get_file_items (CajaMenuProvider *provider,
+static void baul_image_converter_instance_init (BaulImageConverter      *img);
+static void baul_image_converter_class_init    (BaulImageConverterClass *class);
+GList *     baul_image_converter_get_file_items (BaulMenuProvider *provider,
 						     GtkWidget            *window,
 						     GList                *files);
 
 static GType image_converter_type = 0;
 
 static gboolean
-image_converter_file_is_image (CajaFileInfo *file_info)
+image_converter_file_is_image (BaulFileInfo *file_info)
 {
 	gchar            *uri_scheme;
 	gchar            *mime_type;
@@ -82,41 +82,41 @@ image_converter_filter_images (GList *files)
 }
 
 static void
-image_resize_callback (CajaMenuItem *item,
+image_resize_callback (BaulMenuItem *item,
 			GList *files)
 {
-	CajaImageResizer *resizer = baul_image_resizer_new (image_converter_filter_images (files));
+	BaulImageResizer *resizer = baul_image_resizer_new (image_converter_filter_images (files));
 	baul_image_resizer_show_dialog (resizer);
 }
 
 static void
-image_rotate_callback (CajaMenuItem *item,
+image_rotate_callback (BaulMenuItem *item,
 			GList *files)
 {
-	CajaImageRotator *rotator = baul_image_rotator_new (image_converter_filter_images (files));
+	BaulImageRotator *rotator = baul_image_rotator_new (image_converter_filter_images (files));
 	baul_image_rotator_show_dialog (rotator);
 }
 
 static GList *
-baul_image_converter_get_background_items (CajaMenuProvider *provider,
+baul_image_converter_get_background_items (BaulMenuProvider *provider,
 					     GtkWidget		  *window,
-					     CajaFileInfo	  *file_info)
+					     BaulFileInfo	  *file_info)
 {
 	return NULL;
 }
 
 GList *
-baul_image_converter_get_file_items (CajaMenuProvider *provider,
+baul_image_converter_get_file_items (BaulMenuProvider *provider,
 				       GtkWidget            *window,
 				       GList                *files)
 {
-	CajaMenuItem *item;
+	BaulMenuItem *item;
 	GList *file;
 	GList *items = NULL;
 
 	for (file = files; file != NULL; file = file->next) {
 		if (image_converter_file_is_image (file->data)) {
-			item = baul_menu_item_new ("CajaImageConverter::resize",
+			item = baul_menu_item_new ("BaulImageConverter::resize",
 				        _("_Resize Images..."),
 				        _("Resize each selected image"),
 				       NULL);
@@ -126,7 +126,7 @@ baul_image_converter_get_file_items (CajaMenuProvider *provider,
 
 			items = g_list_prepend (items, item);
 
-			item = baul_menu_item_new ("CajaImageConverter::rotate",
+			item = baul_menu_item_new ("BaulImageConverter::rotate",
 				        _("Ro_tate Images..."),
 				        _("Rotate each selected image"),
 				       NULL);
@@ -146,19 +146,19 @@ baul_image_converter_get_file_items (CajaMenuProvider *provider,
 }
 
 static void
-baul_image_converter_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_image_converter_menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
 	iface->get_background_items = baul_image_converter_get_background_items;
 	iface->get_file_items = baul_image_converter_get_file_items;
 }
 
 static void
-baul_image_converter_instance_init (CajaImageConverter *img)
+baul_image_converter_instance_init (BaulImageConverter *img)
 {
 }
 
 static void
-baul_image_converter_class_init (CajaImageConverterClass *class)
+baul_image_converter_class_init (BaulImageConverterClass *class)
 {
 }
 
@@ -172,13 +172,13 @@ void
 baul_image_converter_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
-		sizeof (CajaImageConverterClass),
+		sizeof (BaulImageConverterClass),
 		(GBaseInitFunc) NULL,
 		(GBaseFinalizeFunc) NULL,
 		(GClassInitFunc) baul_image_converter_class_init,
 		NULL,
 		NULL,
-		sizeof (CajaImageConverter),
+		sizeof (BaulImageConverter),
 		0,
 		(GInstanceInitFunc) baul_image_converter_instance_init,
 	};
@@ -191,7 +191,7 @@ baul_image_converter_register_type (GTypeModule *module)
 
 	image_converter_type = g_type_module_register_type (module,
 						     G_TYPE_OBJECT,
-						     "CajaImageConverter",
+						     "BaulImageConverter",
 						     &info, 0);
 
 	g_type_module_add_interface (module,

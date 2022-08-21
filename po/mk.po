@@ -367,21 +367,21 @@ msgstr ""
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -488,18 +488,18 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
-msgstr "Caja треба да додаде дозволи на твојата папка \"%s\" за да ја сподели"
+msgstr "Baul треба да додаде дозволи на твојата папка \"%s\" за да ја сподели"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "На папката \"%s\" и требаат следните додатни дозволи за споделување за да работи:\n"
-"%s%s%s Дали сакаш Caja да ги додаде тие дозволи на папката автоматски?"
+"%s%s%s Дали сакаш Baul да ги додаде тие дозволи на папката автоматски?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

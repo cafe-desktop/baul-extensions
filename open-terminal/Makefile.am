@@ -1,5 +1,5 @@
 AM_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"Caja-Open-Terminal\"	\
+	-DG_LOG_DOMAIN=\"Baul-Open-Terminal\"	\
 	-DDATADIR=\"$(datadir)\"			\
 	-DCAFELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\

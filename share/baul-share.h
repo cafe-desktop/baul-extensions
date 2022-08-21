@@ -1,4 +1,4 @@
-/* baul-share -- Caja File Sharing Extension
+/* baul-share -- Baul File Sharing Extension
  *
  * Sebastien Estienne <sebastien.estienne@gmail.com>
  *
@@ -31,26 +31,26 @@ G_BEGIN_DECLS
  * exported by libbaul. */
 
 
-typedef struct _CajaShare      CajaShare;
-typedef struct _CajaShareClass CajaShareClass;
+typedef struct _BaulShare      BaulShare;
+typedef struct _BaulShareClass BaulShareClass;
 
-struct _CajaShare {
+struct _BaulShare {
 	GObject parent_slot;
 };
 
-struct _CajaShareClass {
+struct _BaulShareClass {
 	GObjectClass parent_slot;
 
 	/* No extra class members */
 };
 
 
-typedef struct _CajaShareData      CajaShareData;
+typedef struct _BaulShareData      BaulShareData;
 
-struct _CajaShareData {
+struct _BaulShareData {
   gchar		*fullpath;
   gchar		*section;
-  CajaFileInfo *fileinfo;
+  BaulFileInfo *fileinfo;
 };
 
 G_END_DECLS
@@ -59,7 +59,7 @@ typedef enum {
   CAJA_SHARE_NOT_SHARED,
   CAJA_SHARE_SHARED_RO,
   CAJA_SHARE_SHARED_RW
-} CajaShareStatus;
+} BaulShareStatus;
 
 #endif
 

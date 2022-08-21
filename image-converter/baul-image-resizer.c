@@ -35,9 +35,9 @@
 
 #include <libbaul-extension/baul-file-info.h>
 
-typedef struct _CajaImageResizerPrivate CajaImageResizerPrivate;
+typedef struct _BaulImageResizerPrivate BaulImageResizerPrivate;
 
-struct _CajaImageResizerPrivate {
+struct _BaulImageResizerPrivate {
 	GList *files;
 
 	gchar *suffix;
@@ -65,7 +65,7 @@ struct _CajaImageResizerPrivate {
 	GtkWidget *progress_label;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (CajaImageResizer, baul_image_resizer, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (BaulImageResizer, baul_image_resizer, G_TYPE_OBJECT)
 
 enum {
 	PROP_FILES = 1,
@@ -75,13 +75,13 @@ typedef enum {
 	/* Place Signal Types Here */
 	SIGNAL_TYPE_EXAMPLE,
 	LAST_SIGNAL
-} CajaImageResizerSignalType;
+} BaulImageResizerSignalType;
 
 static void
 baul_image_resizer_finalize(GObject *object)
 {
-	CajaImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
+	BaulImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
 
 	g_free (priv->suffix);
 
@@ -94,8 +94,8 @@ baul_image_resizer_set_property (GObject      *object,
                         const GValue *value,
                         GParamSpec   *pspec)
 {
-	CajaImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
+	BaulImageResizer *dialog = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (dialog);
 
 	switch (property_id) {
 	case PROP_FILES:
@@ -115,8 +115,8 @@ baul_image_resizer_get_property (GObject      *object,
                         GValue       *value,
                         GParamSpec   *pspec)
 {
-	CajaImageResizer *self = CAJA_IMAGE_RESIZER (object);
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (self);
+	BaulImageResizer *self = CAJA_IMAGE_RESIZER (object);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (self);
 
 	switch (property_id) {
 	case PROP_FILES:
@@ -130,7 +130,7 @@ baul_image_resizer_get_property (GObject      *object,
 }
 
 static void
-baul_image_resizer_class_init(CajaImageResizerClass *klass)
+baul_image_resizer_class_init(BaulImageResizerClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS(klass);
 	GParamSpec *files_param_spec;
@@ -149,12 +149,12 @@ baul_image_resizer_class_init(CajaImageResizerClass *klass)
 	files_param_spec);
 }
 
-static void run_op (CajaImageResizer *resizer);
+static void run_op (BaulImageResizer *resizer);
 
 static GFile *
-baul_image_resizer_transform_filename (CajaImageResizer *resizer, GFile *orig_file)
+baul_image_resizer_transform_filename (BaulImageResizer *resizer, GFile *orig_file)
 {
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	GFile *parent_file, *new_file;
 	char *basename, *extension, *new_basename;
@@ -186,12 +186,12 @@ baul_image_resizer_transform_filename (CajaImageResizer *resizer, GFile *orig_fi
 static void
 op_finished (GPid pid, gint status, gpointer data)
 {
-	CajaImageResizer *resizer = CAJA_IMAGE_RESIZER (data);
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizer *resizer = CAJA_IMAGE_RESIZER (data);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	gboolean retry = TRUE;
 
-	CajaFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
 
 	if (status != 0) {
 		/* resizing failed */
@@ -244,13 +244,13 @@ op_finished (GPid pid, gint status, gpointer data)
 }
 
 static void
-run_op (CajaImageResizer *resizer)
+run_op (BaulImageResizer *resizer)
 {
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	g_return_if_fail (priv->files != NULL);
 
-	CajaFileInfo *file = CAJA_FILE_INFO (priv->files->data);
+	BaulFileInfo *file = CAJA_FILE_INFO (priv->files->data);
 
 	GFile *orig_location = baul_file_info_get_location (file);
 	char *filename = g_file_get_path (orig_location);
@@ -299,8 +299,8 @@ run_op (CajaImageResizer *resizer)
 static void
 baul_image_resizer_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
 {
-	CajaImageResizer *resizer = CAJA_IMAGE_RESIZER (user_data);
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizer *resizer = CAJA_IMAGE_RESIZER (user_data);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	if (response_id == GTK_RESPONSE_OK) {
 		if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
@@ -329,9 +329,9 @@ baul_image_resizer_response_cb (GtkDialog *dialog, gint response_id, gpointer us
 }
 
 static void
-baul_image_resizer_init(CajaImageResizer *resizer)
+baul_image_resizer_init(BaulImageResizer *resizer)
 {
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	GtkBuilder *ui;
 	gchar      *path;
@@ -377,16 +377,16 @@ baul_image_resizer_init(CajaImageResizer *resizer)
 			  resizer);
 }
 
-CajaImageResizer *
+BaulImageResizer *
 baul_image_resizer_new (GList *files)
 {
 	return g_object_new (CAJA_TYPE_IMAGE_RESIZER, "files", files, NULL);
 }
 
 void
-baul_image_resizer_show_dialog (CajaImageResizer *resizer)
+baul_image_resizer_show_dialog (BaulImageResizer *resizer)
 {
-	CajaImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
+	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	gtk_widget_show (GTK_WIDGET (priv->resize_dialog));
 }

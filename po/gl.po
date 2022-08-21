@@ -369,11 +369,11 @@ msgstr "Integra clientes de correo electrónico e Pidgin"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Dereitos de autoría (C) 2004 Roberto Majadas"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Último complemento usado para enviar"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -381,11 +381,11 @@ msgstr ""
 "Usouse para almacenar o complemento que se utilizou a última vez que os "
 "ficheiros foron enviados con «baul-sendto»."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Último tipo de arquivo usado"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -494,19 +494,19 @@ msgstr "Dereitos de autoría (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr ""
-"Caja precisa engadir algúns permisos ao cartafol «%s» a fin de compartilo"
+"Baul precisa engadir algúns permisos ao cartafol «%s» a fin de compartilo"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "O cartafol «%s» necesita os seguintes permisos adicionais para compartir o traballo:\n"
-"%s%s%s Quere que o Caja engada estes permisos ao cartafol de forma automática?"
+"%s%s%s Quere que o Baul engada estes permisos ao cartafol de forma automática?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

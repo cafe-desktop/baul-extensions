@@ -803,7 +803,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	settings = g_settings_new ("org.cafe.Caja.Sendto");
+	settings = g_settings_new ("org.cafe.Baul.Sendto");
 	baul_sendto_init ();
 	if (baul_sendto_plugin_init () == FALSE) {
 		GtkWidget *error_dialog;

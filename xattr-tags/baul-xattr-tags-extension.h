@@ -1,5 +1,5 @@
 /*
- *  Caja xattr tags extension
+ *  Baul xattr tags extension
  *
  *  Copyright (C) 2016 Felipe Barriga Richards
  *
@@ -31,14 +31,14 @@ G_BEGIN_DECLS
 #define CAJA_XATTR_TAGS(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_XATTR_TAGS, baulXattrTags))
 #define CAJA_IS_XATTR_TAGS(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_XATTR_TAGS))
 
-typedef struct _CajaXattrTags      CajaXattrTags;
-typedef struct _CajaXattrTagsClass CajaXattrTagsClass;
+typedef struct _BaulXattrTags      BaulXattrTags;
+typedef struct _BaulXattrTagsClass BaulXattrTagsClass;
 
-struct _CajaXattrTags {
+struct _BaulXattrTags {
 	GObject __parent;
 };
 
-struct _CajaXattrTagsClass {
+struct _BaulXattrTagsClass {
 	GObjectClass __parent;
 };
 

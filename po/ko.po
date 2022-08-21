@@ -368,21 +368,21 @@ msgstr "이메일 클라이언트와 피진 메신저 통합 기능 "
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "보내기에 사용한 마지막 플러그인"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
 msgstr "카하의 보내기를 이용해서 파일들을 보낼때 마지막에 사용된 플러그인을 저장하기."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "마직막에 사용된 압축 형식"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -489,7 +489,7 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr "공유하려면, 카하가 \"%s\" 폴더에 몇몇 권한을 추가해야 합니다"
 
@@ -497,7 +497,7 @@ msgstr "공유하려면, 카하가 \"%s\" 폴더에 몇몇 권한을 추가해�
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "공유를 하기위해서 \"%s\" 폴더에 여분의 권한이 필요합니다.\n"
 "다음과 같은 권한을 카하가 자동으로 해당 폴더에 추가하는것을 원하십니까?\n"
