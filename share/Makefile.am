@@ -6,7 +6,7 @@ libcaja_share_la_CFLAGS =				\
 	-DG_LOG_DOMAIN=\"Caja-Share\"		\
 	-DINTERFACES_DIR=\"$(interfacesdir)\"		\
 	-DDATADIR=\"$(datadir)\"			\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
 	$(WARN_CFLAGS)                                  \

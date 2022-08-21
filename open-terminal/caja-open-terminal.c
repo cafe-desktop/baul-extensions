@@ -404,7 +404,7 @@ open_terminal_callback (CajaMenuItem *item,
 		if (gtk_get_current_event_time () > 0) {
 			cafe_desktop_item_set_launch_time (ditem, gtk_get_current_event_time ());
 		}
-		cafe_desktop_item_launch (ditem, NULL, MATE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR, NULL);
+		cafe_desktop_item_launch (ditem, NULL, CAFE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR, NULL);
 		cafe_desktop_item_unref (ditem);
 		g_free (dfile);
 

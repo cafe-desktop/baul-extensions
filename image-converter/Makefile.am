@@ -1,7 +1,7 @@
 AM_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"Caja-Image-Converter\"	\
 	-DDATADIR=\"$(datadir)\"			\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
 	$(WARN_CFLAGS)                                  \
