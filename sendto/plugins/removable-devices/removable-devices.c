@@ -45,13 +45,13 @@ cb_mount_removed (GVolumeMonitor *volume_monitor,
 	CtkListStore *store;
 	gboolean b, found;
 
-	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	b = ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
+	store = CTK_LIST_STORE (ctk_combo_box_get_model (CTK_COMBO_BOX (cb)));
+	b = ctk_tree_model_get_iter_first (CTK_TREE_MODEL (store), &iter);
 	found = FALSE;
 
 	while (b) {
 		GMount *m;
-		ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
+		ctk_tree_model_get (CTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
 		if (m == mount) {
 			ctk_list_store_remove (store, &iter);
 			g_object_unref (m);
@@ -59,15 +59,15 @@ cb_mount_removed (GVolumeMonitor *volume_monitor,
 			break;
 		}
 		g_object_unref (m);
-		b = ctk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
+		b = ctk_tree_model_iter_next (CTK_TREE_MODEL (store), &iter);
 	}
 
 	/* If a mount was removed */
 	if (found != FALSE) {
 		/* And it was the selected one */
-		if (ctk_combo_box_get_active (GTK_COMBO_BOX (cb)) == -1) {
+		if (ctk_combo_box_get_active (CTK_COMBO_BOX (cb)) == -1) {
 			/* Select the first item in the list */
-			ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+			ctk_combo_box_set_active (CTK_COMBO_BOX (cb), 0);
 		}
 	}
 }
@@ -86,12 +86,12 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 		return;
 	}
 
-	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	b = ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter);
+	store = CTK_LIST_STORE (ctk_combo_box_get_model (CTK_COMBO_BOX (cb)));
+	b = ctk_tree_model_get_iter_first (CTK_TREE_MODEL (store), &iter);
 
 	while (b) {
 		GMount *m;
-		ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
+		ctk_tree_model_get (CTK_TREE_MODEL (store), &iter, MOUNT_COL, &m, -1);
 
 		if (m == mount) {
 			char *name;
@@ -106,7 +106,7 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 			break;
 		}
 		g_object_unref (m);
-		b = ctk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter);
+		b = ctk_tree_model_iter_next (CTK_TREE_MODEL (store), &iter);
 	}
 }
 
@@ -124,12 +124,12 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 		return;
 
 	name = g_mount_get_name (mount);
-	model = ctk_combo_box_get_model (GTK_COMBO_BOX (cb));
+	model = ctk_combo_box_get_model (CTK_COMBO_BOX (cb));
 
 	select_added = ctk_tree_model_iter_n_children (model, NULL) == 0;
 
-	ctk_list_store_append (GTK_LIST_STORE (model), &iter);
-	ctk_list_store_set (GTK_LIST_STORE (model), &iter,
+	ctk_list_store_append (CTK_LIST_STORE (model), &iter);
+	ctk_list_store_set (CTK_LIST_STORE (model), &iter,
 			    NAME_COL, name,
 			    ICON_COL, g_mount_get_icon (mount),
 			    MOUNT_COL, mount,
@@ -138,7 +138,7 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 	g_free (name);
 
 	if (select_added != FALSE)
-		ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+		ctk_combo_box_set_active (CTK_COMBO_BOX (cb), 0);
 
 }
 
@@ -190,17 +190,17 @@ get_contacts_widget (NstPlugin *plugin)
 	}
 	g_list_free (mounts);
 
-	ctk_cell_layout_clear (GTK_CELL_LAYOUT (cb));
-	ctk_combo_box_set_model (GTK_COMBO_BOX (cb), GTK_TREE_MODEL (store));
+	ctk_cell_layout_clear (CTK_CELL_LAYOUT (cb));
+	ctk_combo_box_set_model (CTK_COMBO_BOX (cb), CTK_TREE_MODEL (store));
 
 	text_renderer = ctk_cell_renderer_text_new ();
 	icon_renderer = ctk_cell_renderer_pixbuf_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), icon_renderer, FALSE);
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb), text_renderer, TRUE);
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (cb), icon_renderer, FALSE);
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (cb), text_renderer, TRUE);
 
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), text_renderer, "text", 0,  NULL);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb), icon_renderer, "gicon", 1,  NULL);
-	ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (cb), text_renderer, "text", 0,  NULL);
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (cb), icon_renderer, "gicon", 1,  NULL);
+	ctk_combo_box_set_active (CTK_COMBO_BOX (cb), 0);
 
 	g_signal_connect (G_OBJECT (vol_monitor), "mount-removed", G_CALLBACK (cb_mount_removed), plugin);
 	g_signal_connect (G_OBJECT (vol_monitor), "mount-added", G_CALLBACK (cb_mount_added), plugin);
@@ -218,11 +218,11 @@ send_files (NstPlugin *plugin, CtkWidget *contact_widget,
 	GMount *dest_mount;
 	GFile *mount_root;
 
-	if (ctk_combo_box_get_active_iter (GTK_COMBO_BOX (contact_widget), &iter) == FALSE)
+	if (ctk_combo_box_get_active_iter (CTK_COMBO_BOX (contact_widget), &iter) == FALSE)
 		return TRUE;
 
-	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
-	ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, MOUNT_COL, &dest_mount, -1);
+	store = CTK_LIST_STORE (ctk_combo_box_get_model (CTK_COMBO_BOX (cb)));
+	ctk_tree_model_get (CTK_TREE_MODEL (store), &iter, MOUNT_COL, &dest_mount, -1);
 	mount_root = g_mount_get_root (dest_mount);
 
 	copy_files_to (file_list, mount_root);

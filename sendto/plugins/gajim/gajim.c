@@ -362,10 +362,10 @@ get_contacts_widget (NstPlugin *plugin)
 	completion = ctk_entry_completion_new ();
 
 	renderer = ctk_cell_renderer_pixbuf_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (completion),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (completion),
 					renderer,
 					FALSE);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (completion), renderer,
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (completion), renderer,
 					"pixbuf", 0, NULL);
 
 
@@ -373,9 +373,9 @@ get_contacts_widget (NstPlugin *plugin)
 	if(!add_gajim_contacts_to_model (store)) {
 		ctk_widget_set_sensitive(entry, FALSE);
 	}
-	completion_model = GTK_TREE_MODEL (store);
+	completion_model = CTK_TREE_MODEL (store);
 	ctk_entry_completion_set_model (completion, completion_model);
-	ctk_entry_set_completion (GTK_ENTRY (entry), completion);
+	ctk_entry_set_completion (CTK_ENTRY (entry), completion);
 	ctk_entry_completion_set_text_column (completion, 1);
 	g_object_unref (completion_model);
 	g_object_unref (completion);
@@ -388,15 +388,15 @@ show_error (const gchar *title, const gchar *message)
 	CtkWidget *dialog;
 
 	dialog = ctk_message_dialog_new_with_markup(NULL,
-								GTK_DIALOG_DESTROY_WITH_PARENT,
-								GTK_MESSAGE_ERROR,
-								GTK_BUTTONS_CLOSE, NULL);
+								CTK_DIALOG_DESTROY_WITH_PARENT,
+								CTK_MESSAGE_ERROR,
+								CTK_BUTTONS_CLOSE, NULL);
 
 	gchar *msg = g_markup_printf_escaped("<b>%s</b>\n\n%s", title, message);
-	ctk_message_dialog_set_markup (GTK_MESSAGE_DIALOG (dialog), msg);
+	ctk_message_dialog_set_markup (CTK_MESSAGE_DIALOG (dialog), msg);
 	g_free (msg);
 
-	ctk_dialog_run (GTK_DIALOG (dialog));
+	ctk_dialog_run (CTK_DIALOG (dialog));
 	ctk_widget_destroy (dialog);
 }
 
@@ -420,7 +420,7 @@ send_files (NstPlugin *plugin,
 			   _("There is no connection to gajim remote service."));
 		return FALSE;
 	}
-	send_to = (gchar *) ctk_entry_get_text (GTK_ENTRY(contact_widget));
+	send_to = (gchar *) ctk_entry_get_text (CTK_ENTRY(contact_widget));
 	g_debug("[Gajim] sending to: %s", send_to);
 	if (strlen (send_to) != 0){
 		contact_props = g_hash_table_lookup (jid_table, send_to);

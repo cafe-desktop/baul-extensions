@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS = 1.6
 
 # This is a blank Makefile.am for using ctk-doc.
 # Copy this to your project's API docs directory and modify the variables to
-# suit your project. See the GTK+ Makefiles in ctk+/docs/reference for examples
+# suit your project. See the CTK+ Makefiles in ctk+/docs/reference for examples
 # of using the various options.
 
 # The name of the module, e.g. 'glib'.
@@ -28,7 +28,7 @@ DOC_SOURCE_DIR=../
 SCANGOBJ_OPTIONS=
 
 # Extra options to supply to ctkdoc-scan.
-# e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
+# e.g. SCAN_OPTIONS=--deprecated-guards="CTK_DISABLE_DEPRECATED"
 SCAN_OPTIONS=
 
 # Extra options to supply to ctkdoc-mkdb.
@@ -72,10 +72,10 @@ expand_content_files=
 # CFLAGS and LDFLAGS for compiling ctkdoc-scangobj with your library.
 # Only needed if you are using ctkdoc-scangobj to dynamically query widget
 # signals and properties.
-# e.g. GTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
-# e.g. GTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
-GTKDOC_CFLAGS=$(SENDTO_CFLAGS)
-GTKDOC_LIBS=$(top_builddir)/sendto/libnstplugin.la
+# e.g. CTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
+# e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
+CTKDOC_CFLAGS=$(SENDTO_CFLAGS)
+CTKDOC_LIBS=$(top_builddir)/sendto/libnstplugin.la
 
 # This includes the standard ctk-doc make rules, copied by ctkdocize.
 include $(top_srcdir)/ctk-doc.make
@@ -90,11 +90,11 @@ EXTRA_DIST += version.xml.in
 #DISTCLEANFILES +=
 
 # Comment this out if you want your docs-status tested during 'make check'
-#TESTS = $(GTKDOC_CHECK)
+#TESTS = $(CTKDOC_CHECK)
 
-#if ENABLE_GTK_DOC
+#if ENABLE_CTK_DOC
 #TESTS_ENVIRONMENT = cd $(srcdir) &&  
-#TESTS = $(GTKDOC_CHECK)
+#TESTS = $(CTKDOC_CHECK)
 #endif
 
 

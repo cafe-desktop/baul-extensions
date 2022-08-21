@@ -558,44 +558,44 @@ baul_open_terminal_run_config (BaulConfigurable *provider)
 	gchar * terminal;
 
 	extconf_dialog = ctk_dialog_new ();
-	extconf_content = ctk_dialog_get_content_area (GTK_DIALOG (extconf_dialog));
+	extconf_content = ctk_dialog_get_content_area (CTK_DIALOG (extconf_dialog));
 
 	extconf_desktophomedir = ctk_check_button_new_with_label (_("Open at Home if trying to open on desktop"));
 	extconf_exec = ctk_entry_new ();
-	extconf_inform1 = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+	extconf_inform1 = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
 	extconf_inform2 = ctk_label_new (_("Terminal application:"));
 
-	ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (extconf_desktophomedir), desktop_opens_home_dir ());
+	ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (extconf_desktophomedir), desktop_opens_home_dir ());
 
 	terminal = default_terminal_application();
-	ctk_entry_set_text (GTK_ENTRY (extconf_exec), terminal);
+	ctk_entry_set_text (CTK_ENTRY (extconf_exec), terminal);
 	g_free (terminal);
 
-	ctk_container_add (GTK_CONTAINER (extconf_inform1), extconf_inform2);
+	ctk_container_add (CTK_CONTAINER (extconf_inform1), extconf_inform2);
 	ctk_widget_show (extconf_inform2);
-	ctk_container_add (GTK_CONTAINER (extconf_inform1), extconf_exec);
+	ctk_container_add (CTK_CONTAINER (extconf_inform1), extconf_exec);
 	ctk_widget_show (extconf_exec);
-	ctk_box_set_child_packing (GTK_BOX (extconf_inform1), extconf_exec, FALSE, FALSE, 0, GTK_PACK_END);
+	ctk_box_set_child_packing (CTK_BOX (extconf_inform1), extconf_exec, FALSE, FALSE, 0, CTK_PACK_END);
 
-	ctk_container_add (GTK_CONTAINER (extconf_content), extconf_desktophomedir);
+	ctk_container_add (CTK_CONTAINER (extconf_content), extconf_desktophomedir);
 	ctk_widget_show (extconf_desktophomedir);
-	ctk_container_add (GTK_CONTAINER (extconf_content), extconf_inform1);
+	ctk_container_add (CTK_CONTAINER (extconf_content), extconf_inform1);
 	ctk_widget_show (extconf_inform1);
-	ctk_container_add (GTK_CONTAINER (extconf_content), extconf_exec);
+	ctk_container_add (CTK_CONTAINER (extconf_content), extconf_exec);
 	ctk_widget_show (extconf_exec);
-	ctk_dialog_add_buttons (GTK_DIALOG (extconf_dialog), _("Close"), GTK_RESPONSE_OK, NULL);
+	ctk_dialog_add_buttons (CTK_DIALOG (extconf_dialog), _("Close"), CTK_RESPONSE_OK, NULL);
 
-	ctk_container_set_border_width (GTK_CONTAINER (extconf_inform1), 6);
-	ctk_container_set_border_width (GTK_CONTAINER (extconf_dialog), 6);
-	ctk_container_set_border_width (GTK_CONTAINER (extconf_content), 6);
+	ctk_container_set_border_width (CTK_CONTAINER (extconf_inform1), 6);
+	ctk_container_set_border_width (CTK_CONTAINER (extconf_dialog), 6);
+	ctk_container_set_border_width (CTK_CONTAINER (extconf_content), 6);
 
-	ctk_window_set_title (GTK_WINDOW (extconf_dialog), _("open-terminal Configuration"));
-	ctk_dialog_run (GTK_DIALOG (extconf_dialog));
+	ctk_window_set_title (CTK_WINDOW (extconf_dialog), _("open-terminal Configuration"));
+	ctk_dialog_run (CTK_DIALOG (extconf_dialog));
 
-	set_default_terminal_application (ctk_entry_get_text (GTK_ENTRY (extconf_exec)));
-	set_desktop_opens_home_dir (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (extconf_desktophomedir)));
+	set_default_terminal_application (ctk_entry_get_text (CTK_ENTRY (extconf_exec)));
+	set_desktop_opens_home_dir (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (extconf_desktophomedir)));
 
-	ctk_widget_destroy (GTK_WIDGET (extconf_dialog));
+	ctk_widget_destroy (CTK_WIDGET (extconf_dialog));
 }
 
 static void

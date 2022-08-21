@@ -94,7 +94,7 @@ property_page_validate_fields (PropertyPage *page)
 {
   const char *name;
 
-  name = ctk_entry_get_text (GTK_ENTRY (page->entry_share_name));
+  name = ctk_entry_get_text (CTK_ENTRY (page->entry_share_name));
 
   if (g_utf8_strlen (name, -1) <= 12)
     property_page_set_normal (page);
@@ -111,15 +111,15 @@ message_confirm_missing_permissions (CtkWidget *widget, const char *path, mode_t
   gboolean result;
 
   toplevel = ctk_widget_get_toplevel (widget);
-  if (!GTK_IS_WINDOW (toplevel))
+  if (!CTK_IS_WINDOW (toplevel))
     toplevel = NULL;
 
   display_name = g_filename_display_basename (path);
 
-  dialog = ctk_message_dialog_new (toplevel ? GTK_WINDOW (toplevel) : NULL,
+  dialog = ctk_message_dialog_new (toplevel ? CTK_WINDOW (toplevel) : NULL,
 				   0,
-				   GTK_MESSAGE_QUESTION,
-				   GTK_BUTTONS_NONE,
+				   CTK_MESSAGE_QUESTION,
+				   CTK_BUTTONS_NONE,
 				   _("Baul needs to add some permissions to your folder \"%s\" in order to share it"),
 				   display_name);
 
@@ -127,7 +127,7 @@ message_confirm_missing_permissions (CtkWidget *widget, const char *path, mode_t
    * should probably be more explicit and mention group/other permissions.
    * We'll be able to do that after the period of string freeze.
    */
-  ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+  ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
 					    _("The folder \"%s\" needs the following extra permissions for sharing to work:\n"
 					      "%s%s%s"
 					      "Do you want Baul to add these permissions to the folder automatically?"),
@@ -137,11 +137,11 @@ message_confirm_missing_permissions (CtkWidget *widget, const char *path, mode_t
 					    (need_mask & (S_IXGRP | S_IXOTH)) ? _("  - execute permission by others\n") : "");
   g_free (display_name);
 
-  ctk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
-  ctk_dialog_add_button (GTK_DIALOG (dialog), _("Add the permissions automatically"), GTK_RESPONSE_ACCEPT);
-  ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+  ctk_dialog_add_button (CTK_DIALOG (dialog), CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL);
+  ctk_dialog_add_button (CTK_DIALOG (dialog), _("Add the permissions automatically"), CTK_RESPONSE_ACCEPT);
+  ctk_dialog_set_default_response (CTK_DIALOG (dialog), CTK_RESPONSE_ACCEPT);
 
-  result = ctk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT;
+  result = ctk_dialog_run (CTK_DIALOG (dialog)) == CTK_RESPONSE_ACCEPT;
   ctk_widget_destroy (dialog);
 
   return result;
@@ -155,20 +155,20 @@ error_when_changing_permissions (CtkWidget *widget, const char *path)
   char *display_name;
 
   toplevel = ctk_widget_get_toplevel (widget);
-  if (!GTK_IS_WINDOW (toplevel))
+  if (!CTK_IS_WINDOW (toplevel))
     toplevel = NULL;
 
   display_name = g_filename_display_basename (path);
 
-  dialog = ctk_message_dialog_new (toplevel ? GTK_WINDOW (toplevel) : NULL,
+  dialog = ctk_message_dialog_new (toplevel ? CTK_WINDOW (toplevel) : NULL,
 				   0,
-				   GTK_MESSAGE_ERROR,
-				   GTK_BUTTONS_OK,
+				   CTK_MESSAGE_ERROR,
+				   CTK_BUTTONS_OK,
 				   _("Could not change the permissions of folder \"%s\""),
 				   display_name);
   g_free (display_name);
 
-  ctk_dialog_run (GTK_DIALOG (dialog));
+  ctk_dialog_run (CTK_DIALOG (dialog));
   ctk_widget_destroy (dialog);
 }
 
@@ -372,13 +372,13 @@ property_page_commit (PropertyPage *page)
   GError *error;
   gboolean retval;
 
-  is_shared = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_folder));
+  is_shared = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_folder));
 
   share_info.path = page->path;
-  share_info.share_name = (char *) ctk_entry_get_text (GTK_ENTRY (page->entry_share_name));
-  share_info.comment = (char *) ctk_entry_get_text (GTK_ENTRY (page->entry_share_comment));
-  share_info.is_writable = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro));
-  share_info.guest_ok = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok));
+  share_info.share_name = (char *) ctk_entry_get_text (CTK_ENTRY (page->entry_share_name));
+  share_info.comment = (char *) ctk_entry_get_text (CTK_ENTRY (page->entry_share_comment));
+  share_info.is_writable = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro));
+  share_info.guest_ok = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok));
 
   /* Do we need to unset the write permissions that we added in the past? */
   if (is_shared && page->was_writable && !share_info.is_writable)
@@ -441,44 +441,44 @@ get_fullpath_from_fileinfo(BaulFileInfo *fileinfo)
 static void
 property_page_set_warning (PropertyPage *page)
 {
-  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
-  if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_ERROR))
+  CtkStyleContext *context = ctk_widget_get_style_context (CTK_WIDGET (page->entry_share_name));
+  if (ctk_style_context_has_class (context, CTK_STYLE_CLASS_ERROR))
     {
-      ctk_style_context_remove_class (context, GTK_STYLE_CLASS_ERROR);
+      ctk_style_context_remove_class (context, CTK_STYLE_CLASS_ERROR);
     }
-  ctk_style_context_add_class (context, GTK_STYLE_CLASS_WARNING);
+  ctk_style_context_add_class (context, CTK_STYLE_CLASS_WARNING);
 
-  ctk_label_set_text (GTK_LABEL (page->label_status), _("Share name is too long"));
+  ctk_label_set_text (CTK_LABEL (page->label_status), _("Share name is too long"));
 }
 
 static void
 property_page_set_error (PropertyPage *page, const char *message)
 {
-  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
-  if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_WARNING))
+  CtkStyleContext *context = ctk_widget_get_style_context (CTK_WIDGET (page->entry_share_name));
+  if (ctk_style_context_has_class (context, CTK_STYLE_CLASS_WARNING))
     {
-      ctk_style_context_remove_class (context, GTK_STYLE_CLASS_WARNING);
+      ctk_style_context_remove_class (context, CTK_STYLE_CLASS_WARNING);
     }
-  ctk_style_context_add_class (context, GTK_STYLE_CLASS_ERROR);
+  ctk_style_context_add_class (context, CTK_STYLE_CLASS_ERROR);
 
-  ctk_label_set_text (GTK_LABEL (page->label_status), message);
+  ctk_label_set_text (CTK_LABEL (page->label_status), message);
 }
 
 static void
 property_page_set_normal (PropertyPage *page)
 {
-  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
-  if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_WARNING))
+  CtkStyleContext *context = ctk_widget_get_style_context (CTK_WIDGET (page->entry_share_name));
+  if (ctk_style_context_has_class (context, CTK_STYLE_CLASS_WARNING))
     {
-      ctk_style_context_remove_class (context, GTK_STYLE_CLASS_WARNING);
+      ctk_style_context_remove_class (context, CTK_STYLE_CLASS_WARNING);
     }
 
-  if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_ERROR))
+  if (ctk_style_context_has_class (context, CTK_STYLE_CLASS_ERROR))
     {
-      ctk_style_context_remove_class (context, GTK_STYLE_CLASS_ERROR);
+      ctk_style_context_remove_class (context, CTK_STYLE_CLASS_ERROR);
     }
 
-  ctk_label_set_text (GTK_LABEL (page->label_status), "");
+  ctk_label_set_text (CTK_LABEL (page->label_status), "");
 }
 
 static gboolean
@@ -486,7 +486,7 @@ property_page_share_name_is_valid (PropertyPage *page)
 {
   const char *newname;
 
-  newname = ctk_entry_get_text (GTK_ENTRY (page->entry_share_name));
+  newname = ctk_entry_get_text (CTK_ENTRY (page->entry_share_name));
 
   if (strlen (newname) == 0)
     {
@@ -550,7 +550,7 @@ property_page_check_sensitivity (PropertyPage *page)
   gboolean enabled;
   gboolean apply_is_sensitive;
 
-  enabled = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_folder));
+  enabled = ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_folder));
   property_page_set_controls_sensitivity (page, enabled);
 
   if (enabled)
@@ -559,7 +559,7 @@ property_page_check_sensitivity (PropertyPage *page)
     apply_is_sensitive = page->was_initially_shared;
 
   ctk_widget_set_sensitive (page->button_apply, apply_is_sensitive);
-  ctk_button_set_label (GTK_BUTTON(page->button_apply),
+  ctk_button_set_label (CTK_BUTTON(page->button_apply),
 			page->was_initially_shared ? _("Modify _Share") : _("Create _Share"));
 }
 
@@ -687,9 +687,9 @@ create_property_page (BaulFileInfo *fileinfo)
        */
       CtkWidget *message;
 
-      message = ctk_message_dialog_new (NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE,
+      message = ctk_message_dialog_new (NULL, CTK_DIALOG_MODAL, CTK_MESSAGE_ERROR, CTK_BUTTONS_CLOSE,
 					_("There was an error while getting the sharing information"));
-      ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (message), "%s", error->message);
+      ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (message), "%s", error->message);
       ctk_widget_show (message);
 
       share_info = NULL;
@@ -703,7 +703,7 @@ create_property_page (BaulFileInfo *fileinfo)
   g_assert (ctk_builder_add_from_file (page->ui,
               INTERFACES_DIR"/share-dialog.ui", &error));
 
-  page->main = GTK_WIDGET (ctk_builder_get_object (page->ui, "vbox1"));
+  page->main = CTK_WIDGET (ctk_builder_get_object (page->ui, "vbox1"));
   g_assert (page->main != NULL);
 
   g_object_set_data_full (G_OBJECT (page->main),
@@ -711,16 +711,16 @@ create_property_page (BaulFileInfo *fileinfo)
 			  page,
 			  free_property_page_cb);
 
-  page->checkbutton_share_folder = GTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_folder"));
-  page->hbox_share_comment = GTK_WIDGET (ctk_builder_get_object (page->ui,"hbox_share_comment"));
-  page->hbox_share_name = GTK_WIDGET (ctk_builder_get_object (page->ui,"hbox_share_name"));
-  page->checkbutton_share_rw_ro = GTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_rw_ro"));
-  page->checkbutton_share_guest_ok = GTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_guest_ok"));
-  page->entry_share_name = GTK_WIDGET (ctk_builder_get_object (page->ui,"entry_share_name"));
-  page->entry_share_comment = GTK_WIDGET (ctk_builder_get_object (page->ui,"entry_share_comment"));
-  page->label_status = GTK_WIDGET (ctk_builder_get_object (page->ui,"label_status"));
-  page->button_cancel = GTK_WIDGET (ctk_builder_get_object (page->ui,"button_cancel"));
-  page->button_apply = GTK_WIDGET (ctk_builder_get_object (page->ui,"button_apply"));
+  page->checkbutton_share_folder = CTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_folder"));
+  page->hbox_share_comment = CTK_WIDGET (ctk_builder_get_object (page->ui,"hbox_share_comment"));
+  page->hbox_share_name = CTK_WIDGET (ctk_builder_get_object (page->ui,"hbox_share_name"));
+  page->checkbutton_share_rw_ro = CTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_rw_ro"));
+  page->checkbutton_share_guest_ok = CTK_WIDGET (ctk_builder_get_object (page->ui,"checkbutton_share_guest_ok"));
+  page->entry_share_name = CTK_WIDGET (ctk_builder_get_object (page->ui,"entry_share_name"));
+  page->entry_share_comment = CTK_WIDGET (ctk_builder_get_object (page->ui,"entry_share_comment"));
+  page->label_status = CTK_WIDGET (ctk_builder_get_object (page->ui,"label_status"));
+  page->button_cancel = CTK_WIDGET (ctk_builder_get_object (page->ui,"button_cancel"));
+  page->button_apply = CTK_WIDGET (ctk_builder_get_object (page->ui,"button_apply"));
 
   /* Sanity check so that we don't screw up the Glade file */
   g_assert (page->checkbutton_share_folder != NULL
@@ -753,7 +753,7 @@ create_property_page (BaulFileInfo *fileinfo)
       free_share_name = TRUE;
     }
 
-  ctk_entry_set_text (GTK_ENTRY (page->entry_share_name), share_name);
+  ctk_entry_set_text (CTK_ENTRY (page->entry_share_name), share_name);
 
   if (free_share_name)
     g_free (share_name);
@@ -765,33 +765,33 @@ create_property_page (BaulFileInfo *fileinfo)
   else
     comment = share_info->comment;
 
-  ctk_entry_set_text (GTK_ENTRY (page->entry_share_comment), comment);
+  ctk_entry_set_text (CTK_ENTRY (page->entry_share_comment), comment);
 
   /* Share toggle */
 
   if (share_info)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_folder), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_folder), TRUE);
   else
     {
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_folder), FALSE);
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_folder), FALSE);
     }
 
   /* Share name */
 
-  if (g_utf8_strlen(ctk_entry_get_text (GTK_ENTRY (page->entry_share_name)), -1) > 12)
+  if (g_utf8_strlen(ctk_entry_get_text (CTK_ENTRY (page->entry_share_name)), -1) > 12)
     property_page_set_warning (page);
 
   /* Permissions */
   if (share_info != NULL && share_info->is_writable)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro), TRUE);
   else
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro), FALSE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_rw_ro), FALSE);
 
   /* Guest access */
   if (share_info != NULL && share_info->guest_ok)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok), TRUE);
   else
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok), FALSE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (page->checkbutton_share_guest_ok), FALSE);
 
   /* Apply button */
 
@@ -800,9 +800,9 @@ create_property_page (BaulFileInfo *fileinfo)
   else
     apply_button_label = _("Create _Share");
 
-  ctk_button_set_label (GTK_BUTTON (page->button_apply), apply_button_label);
-  ctk_button_set_use_underline (GTK_BUTTON (page->button_apply), TRUE);
-  ctk_button_set_image (GTK_BUTTON (page->button_apply), ctk_image_new_from_icon_name ("document-save", GTK_ICON_SIZE_BUTTON));
+  ctk_button_set_label (CTK_BUTTON (page->button_apply), apply_button_label);
+  ctk_button_set_use_underline (CTK_BUTTON (page->button_apply), TRUE);
+  ctk_button_set_image (CTK_BUTTON (page->button_apply), ctk_image_new_from_icon_name ("document-save", CTK_ICON_SIZE_BUTTON));
 
   ctk_widget_set_sensitive (page->button_apply, FALSE);
 
@@ -1104,7 +1104,7 @@ button_cancel_clicked_cb (CtkButton *button, gpointer data)
 {
   CtkWidget *window;
 
-  window = GTK_WIDGET (data);
+  window = CTK_WIDGET (data);
   ctk_widget_destroy (window);
 }
 
@@ -1119,14 +1119,14 @@ share_this_folder_callback (BaulMenuItem *item,
   fileinfo = BAUL_FILE_INFO (user_data);
   g_assert (fileinfo != NULL);
 
-  window = ctk_window_new (GTK_WINDOW_TOPLEVEL);
-  ctk_window_set_title (GTK_WINDOW (window), _("Folder Sharing"));
+  window = ctk_window_new (CTK_WINDOW_TOPLEVEL);
+  ctk_window_set_title (CTK_WINDOW (window), _("Folder Sharing"));
   page = create_property_page (fileinfo);
   page->standalone_window = window;
   g_signal_connect (page->button_cancel, "clicked",
 		    G_CALLBACK (button_cancel_clicked_cb), window);
 
-  ctk_container_add (GTK_CONTAINER (window), page->main);
+  ctk_container_add (CTK_CONTAINER (window), page->main);
   ctk_widget_show (window);
 }
 

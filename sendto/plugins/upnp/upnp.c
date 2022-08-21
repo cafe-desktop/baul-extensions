@@ -119,7 +119,7 @@ get_introspection_cb (GUPnPServiceInfo *service_info,
 	context = gupnp_device_info_get_context (device_info);
 	interface = gssdp_client_get_interface (GSSDP_CLIENT (context));
 
-	ctk_list_store_insert_with_values (GTK_LIST_STORE (model), NULL, -1,
+	ctk_list_store_insert_with_values (CTK_LIST_STORE (model), NULL, -1,
 					   UDN_COL, udn,
 					   NAME_COL, name,
 					   INTERFACE_COL, interface,
@@ -163,7 +163,7 @@ device_proxy_unavailable_cb (GUPnPControlPoint *cp,
 
 	/* First check if the device is already added */
 	if (find_device (udn, &iter))
-		ctk_list_store_remove (GTK_LIST_STORE (model), &iter);
+		ctk_list_store_remove (CTK_LIST_STORE (model), &iter);
 }
 
 static void
@@ -221,15 +221,15 @@ init (NstPlugin *plugin)
 				    G_TYPE_STRING,   /* UDN  */
 				    G_TYPE_STRING,   /* Name */
 				    G_TYPE_STRING);  /* Network Interface */
-	model = GTK_TREE_MODEL (store);
-	ctk_combo_box_set_model (GTK_COMBO_BOX (combobox), model);
+	model = CTK_TREE_MODEL (store);
+	ctk_combo_box_set_model (CTK_COMBO_BOX (combobox), model);
 
 	renderer = ctk_cell_renderer_text_new ();
 
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (combobox),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (combobox),
 				    renderer,
 				    TRUE);
-	ctk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combobox),
+	ctk_cell_layout_add_attribute (CTK_CELL_LAYOUT (combobox),
 				       renderer,
 				       "text", NAME_COL);
 
@@ -254,7 +254,7 @@ send_files (NstPlugin *plugin,
 	CtkTreeIter iter;
 	GError *err = NULL;
 
-	if (!ctk_combo_box_get_active_iter (GTK_COMBO_BOX (combobox), &iter))
+	if (!ctk_combo_box_get_active_iter (CTK_COMBO_BOX (combobox), &iter))
 		return FALSE;
 
 	ctk_tree_model_get (model, &iter, UDN_COL, &udn, INTERFACE_COL,

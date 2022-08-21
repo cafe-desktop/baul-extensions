@@ -194,23 +194,23 @@ op_finished (GPid pid, gint status, gpointer data)
 		/* rotating failed */
 		char *name = baul_file_info_get_name (file);
 
-		CtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
-			GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
-			GTK_BUTTONS_NONE,
+		CtkWidget *msg_dialog = ctk_message_dialog_new (CTK_WINDOW (priv->progress_dialog),
+			CTK_DIALOG_DESTROY_WITH_PARENT, CTK_MESSAGE_ERROR,
+			CTK_BUTTONS_NONE,
 			"'%s' cannot be rotated. Check whether you have permission to write to this folder.",
 			name);
 		g_free (name);
 
-		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Skip"), 1);
-		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
-		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Retry"), 0);
-		ctk_dialog_set_default_response (GTK_DIALOG (msg_dialog), 0);
+		ctk_dialog_add_button (CTK_DIALOG (msg_dialog), _("_Skip"), 1);
+		ctk_dialog_add_button (CTK_DIALOG (msg_dialog), CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL);
+		ctk_dialog_add_button (CTK_DIALOG (msg_dialog), _("_Retry"), 0);
+		ctk_dialog_set_default_response (CTK_DIALOG (msg_dialog), 0);
 
-		int response_id = ctk_dialog_run (GTK_DIALOG (msg_dialog));
+		int response_id = ctk_dialog_run (CTK_DIALOG (msg_dialog));
 		ctk_widget_destroy (msg_dialog);
 		if (response_id == 0) {
 			retry = TRUE;
-		} else if (response_id == GTK_RESPONSE_CANCEL) {
+		} else if (response_id == CTK_RESPONSE_CANCEL) {
 			priv->cancelled = TRUE;
 		} else if (response_id == 1) {
 			retry = FALSE;
@@ -282,15 +282,15 @@ run_op (BaulImageRotator *rotator)
 
 	char *tmp;
 
-	ctk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), (double) (priv->images_rotated + 1) / priv->images_total);
+	ctk_progress_bar_set_fraction (CTK_PROGRESS_BAR (priv->progress_bar), (double) (priv->images_rotated + 1) / priv->images_total);
 	tmp = g_strdup_printf (_("Rotating image: %d of %d"), priv->images_rotated + 1, priv->images_total);
-	ctk_progress_bar_set_text (GTK_PROGRESS_BAR (priv->progress_bar), tmp);
+	ctk_progress_bar_set_text (CTK_PROGRESS_BAR (priv->progress_bar), tmp);
 	g_free (tmp);
 
 	char *name = baul_file_info_get_name (file);
 	tmp = g_strdup_printf (_("<i>Rotating \"%s\"</i>"), name);
 	g_free (name);
-	ctk_label_set_markup (GTK_LABEL (priv->progress_label), tmp);
+	ctk_label_set_markup (CTK_LABEL (priv->progress_label), tmp);
 	g_free (tmp);
 
 }
@@ -301,20 +301,20 @@ baul_image_rotator_response_cb (CtkDialog *dialog, gint response_id, gpointer us
 	BaulImageRotator *rotator = BAUL_IMAGE_ROTATOR (user_data);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
-	if (response_id == GTK_RESPONSE_OK) {
-		if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
+	if (response_id == CTK_RESPONSE_OK) {
+		if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
 			if (strlen (ctk_entry_get_text (priv->name_entry)) == 0) {
-				CtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (dialog),
-					GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
-					GTK_BUTTONS_OK, _("Please enter a valid filename suffix!"));
-				ctk_dialog_run (GTK_DIALOG (msg_dialog));
+				CtkWidget *msg_dialog = ctk_message_dialog_new (CTK_WINDOW (dialog),
+					CTK_DIALOG_DESTROY_WITH_PARENT, CTK_MESSAGE_ERROR,
+					CTK_BUTTONS_OK, _("Please enter a valid filename suffix!"));
+				ctk_dialog_run (CTK_DIALOG (msg_dialog));
 				ctk_widget_destroy (msg_dialog);
 				return;
 			}
 			priv->suffix = g_strdup (ctk_entry_get_text (priv->name_entry));
 		}
-		if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->default_angle_radiobutton))) {
-			switch (ctk_combo_box_get_active (GTK_COMBO_BOX (priv->angle_combobox))) {
+		if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (priv->default_angle_radiobutton))) {
+			switch (ctk_combo_box_get_active (CTK_COMBO_BOX (priv->angle_combobox))) {
 			case 0:
 				priv->angle = g_strdup_printf ("90");
 				break;
@@ -327,7 +327,7 @@ baul_image_rotator_response_cb (CtkDialog *dialog, gint response_id, gpointer us
 			default:
 				g_assert_not_reached ();
 			}
-		} else if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->custom_angle_radiobutton))) {
+		} else if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (priv->custom_angle_radiobutton))) {
 			priv->angle = g_strdup_printf ("%d", (int) ctk_spin_button_get_value (priv->angle_spinbutton));
 		} else {
 			g_assert_not_reached ();
@@ -336,7 +336,7 @@ baul_image_rotator_response_cb (CtkDialog *dialog, gint response_id, gpointer us
 		run_op (rotator);
 	}
 
-	ctk_widget_destroy (GTK_WIDGET (dialog));
+	ctk_widget_destroy (CTK_WIDGET (dialog));
 }
 
 static void
@@ -364,19 +364,19 @@ baul_image_rotator_init(BaulImageRotator *rotator)
 	}
 
 	/* Grab some widgets */
-	priv->rotate_dialog = GTK_DIALOG (ctk_builder_get_object (ui, "rotate_dialog"));
+	priv->rotate_dialog = CTK_DIALOG (ctk_builder_get_object (ui, "rotate_dialog"));
 	priv->default_angle_radiobutton =
-		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "default_angle_radiobutton"));
-	priv->angle_combobox = GTK_COMBO_BOX (ctk_builder_get_object (ui, "angle_combobox"));
+		CTK_RADIO_BUTTON (ctk_builder_get_object (ui, "default_angle_radiobutton"));
+	priv->angle_combobox = CTK_COMBO_BOX (ctk_builder_get_object (ui, "angle_combobox"));
 	priv->custom_angle_radiobutton =
-		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "custom_angle_radiobutton"));
+		CTK_RADIO_BUTTON (ctk_builder_get_object (ui, "custom_angle_radiobutton"));
 	priv->angle_spinbutton =
-		GTK_SPIN_BUTTON (ctk_builder_get_object (ui, "angle_spinbutton"));
+		CTK_SPIN_BUTTON (ctk_builder_get_object (ui, "angle_spinbutton"));
 	priv->append_radiobutton =
-		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "append_radiobutton"));
-	priv->name_entry = GTK_ENTRY (ctk_builder_get_object (ui, "name_entry"));
+		CTK_RADIO_BUTTON (ctk_builder_get_object (ui, "append_radiobutton"));
+	priv->name_entry = CTK_ENTRY (ctk_builder_get_object (ui, "name_entry"));
 	priv->inplace_radiobutton =
-		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "inplace_radiobutton"));
+		CTK_RADIO_BUTTON (ctk_builder_get_object (ui, "inplace_radiobutton"));
 
 	/* Set default value for combobox */
 	ctk_combo_box_set_active  (priv->angle_combobox, 0); /* 90° clockwise */
@@ -398,5 +398,5 @@ baul_image_rotator_show_dialog (BaulImageRotator *rotator)
 {
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
-	ctk_widget_show (GTK_WIDGET (priv->rotate_dialog));
+	ctk_widget_show (CTK_WIDGET (priv->rotate_dialog));
 }

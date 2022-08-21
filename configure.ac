@@ -14,11 +14,11 @@ AC_PROG_MAKE_SET
 BAUL_REQUIRED=1.21.3
 LIBCAFE_DESKTOP_REQUIRED=1.17.0
 GLIB_REQUIRED=2.50.0
-GTK_REQUIRED=3.22.0
+CTK_REQUIRED=3.22.0
 
 GLIB_GSETTINGS
 
-GTK_DOC_CHECK(1.9)
+CTK_DOC_CHECK(1.9)
 
 CAFE_COMMON_INIT
 CAFE_COMPILE_WARNINGS
@@ -65,7 +65,7 @@ AC_ARG_ENABLE([image-converter],
 
 if test "x$enable_image-converter" = "xyes"; then
         PKG_CHECK_MODULES(IMAGE_CONVERTER,
-                ctk+-3.0  >= $GTK_REQUIRED
+                ctk+-3.0  >= $CTK_REQUIRED
                 glib-2.0  >= $GLIB_REQUIRED
                 gio-2.0   >= $GLIB_REQUIRED)
         AC_SUBST(IMAGE_CONVERTER_CFLAGS)
@@ -106,7 +106,7 @@ if test "x$enable_sendto" = "xyes"; then
                 gthread-2.0 >= $GTHREAD_REQUIRED
                 gmodule-2.0 >= $GLIB_REQUIRED
                 gobject-2.0 >= $GLIB_REQUIRED
-                ctk+-3.0 >= $GTK_REQUIRED)
+                ctk+-3.0 >= $CTK_REQUIRED)
         AC_SUBST(SENDTO_CFLAGS)
         AC_SUBST(SENDTO_LIBS)
 

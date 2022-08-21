@@ -218,15 +218,15 @@ gksu_context_menu_activate (BaulMenuItem *item,
       CtkWidget *dialog;
 
       dialog = ctk_message_dialog_new_with_markup (NULL, 0,
-						   GTK_MESSAGE_ERROR,
-						   GTK_BUTTONS_CLOSE,
+						   CTK_MESSAGE_ERROR,
+						   CTK_BUTTONS_CLOSE,
 						   _("<big><b>"
 						     "Unable to determine the program to run."
 						     "</b></big>\n\n"
 						     "The item you selected cannot be open with "
 						     "administrator powers because the correct "
 						     "application cannot be determined."));
-      ctk_dialog_run (GTK_DIALOG(dialog));
+      ctk_dialog_run (CTK_DIALOG(dialog));
       ctk_widget_destroy (dialog);
       return;
     }
