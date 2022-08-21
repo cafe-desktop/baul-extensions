@@ -498,7 +498,7 @@ open_terminal_menu_item_new (BaulFileInfo	  *file_info,
 
 static GList *
 baul_open_terminal_get_background_items (BaulMenuProvider *provider,
-                                         GtkWidget        *window,
+                                         CtkWidget        *window,
                                          BaulFileInfo     *file_info)
 {
 	BaulMenuItem *item;
@@ -522,7 +522,7 @@ baul_open_terminal_get_background_items (BaulMenuProvider *provider,
 
 GList *
 baul_open_terminal_get_file_items (BaulMenuProvider *provider,
-                                   GtkWidget        *window,
+                                   CtkWidget        *window,
                                    GList            *files)
 {
 	BaulMenuItem *item;
@@ -554,7 +554,7 @@ baul_open_terminal_get_file_items (BaulMenuProvider *provider,
 static void
 baul_open_terminal_run_config (BaulConfigurable *provider)
 {
-	GtkWidget *extconf_dialog, *extconf_content, *extconf_desktophomedir, *extconf_inform1, *extconf_inform2, *extconf_exec;
+	CtkWidget *extconf_dialog, *extconf_content, *extconf_desktophomedir, *extconf_inform1, *extconf_inform2, *extconf_exec;
 	gchar * terminal;
 
 	extconf_dialog = ctk_dialog_new ();

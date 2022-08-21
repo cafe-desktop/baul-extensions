@@ -48,18 +48,18 @@ struct _BaulImageRotatorPrivate {
 
 	gchar *angle;
 
-	GtkDialog *rotate_dialog;
-	GtkRadioButton *default_angle_radiobutton;
-	GtkComboBox *angle_combobox;
-	GtkRadioButton *custom_angle_radiobutton;
-	GtkSpinButton *angle_spinbutton;
-	GtkRadioButton *append_radiobutton;
-	GtkEntry *name_entry;
-	GtkRadioButton *inplace_radiobutton;
+	CtkDialog *rotate_dialog;
+	CtkRadioButton *default_angle_radiobutton;
+	CtkComboBox *angle_combobox;
+	CtkRadioButton *custom_angle_radiobutton;
+	CtkSpinButton *angle_spinbutton;
+	CtkRadioButton *append_radiobutton;
+	CtkEntry *name_entry;
+	CtkRadioButton *inplace_radiobutton;
 
-	GtkWidget *progress_dialog;
-	GtkWidget *progress_bar;
-	GtkWidget *progress_label;
+	CtkWidget *progress_dialog;
+	CtkWidget *progress_bar;
+	CtkWidget *progress_label;
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (BaulImageRotator, baul_image_rotator, G_TYPE_OBJECT)
@@ -194,7 +194,7 @@ op_finished (GPid pid, gint status, gpointer data)
 		/* rotating failed */
 		char *name = baul_file_info_get_name (file);
 
-		GtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
+		CtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
 			GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
 			GTK_BUTTONS_NONE,
 			"'%s' cannot be rotated. Check whether you have permission to write to this folder.",
@@ -296,7 +296,7 @@ run_op (BaulImageRotator *rotator)
 }
 
 static void
-baul_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
+baul_image_rotator_response_cb (CtkDialog *dialog, gint response_id, gpointer user_data)
 {
 	BaulImageRotator *rotator = BAUL_IMAGE_ROTATOR (user_data);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
@@ -304,7 +304,7 @@ baul_image_rotator_response_cb (GtkDialog *dialog, gint response_id, gpointer us
 	if (response_id == GTK_RESPONSE_OK) {
 		if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
 			if (strlen (ctk_entry_get_text (priv->name_entry)) == 0) {
-				GtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (dialog),
+				CtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (dialog),
 					GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
 					GTK_BUTTONS_OK, _("Please enter a valid filename suffix!"));
 				ctk_dialog_run (GTK_DIALOG (msg_dialog));
@@ -344,7 +344,7 @@ baul_image_rotator_init(BaulImageRotator *rotator)
 {
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);
 
-	GtkBuilder *ui;
+	CtkBuilder *ui;
 	gchar      *path;
 	guint       result;
 	GError     *err = NULL;

@@ -123,9 +123,9 @@ init (NstPlugin *plugin)
 }
 
 static
-GtkWidget* get_contacts_widget (NstPlugin *plugin)
+CtkWidget* get_contacts_widget (NstPlugin *plugin)
 {
-	GtkWidget *entry;
+	CtkWidget *entry;
 
 	// TODO: add an email address format check
 	entry = ctk_entry_new();
@@ -134,7 +134,7 @@ GtkWidget* get_contacts_widget (NstPlugin *plugin)
 }
 
 static void
-get_evo_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
+get_evo_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 {
 	GList *l;
 
@@ -155,7 +155,7 @@ get_evo_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
 }
 
 static void
-get_balsa_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
+get_balsa_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 {
 	GList *l;
 
@@ -177,7 +177,7 @@ get_balsa_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
 }
 
 static void
-get_thunderbird_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
+get_thunderbird_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 {
 	GList *l;
 
@@ -197,7 +197,7 @@ get_thunderbird_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_
 }
 
 static void
-get_sylpheed_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_list)
+get_sylpheed_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 {
 	GList *l;
 
@@ -219,7 +219,7 @@ get_sylpheed_mailto (GtkWidget *contact_widget, GString *mailto, GList *file_lis
 
 static gboolean
 send_files (NstPlugin *plugin,
-	    GtkWidget *contact_widget,
+	    CtkWidget *contact_widget,
 	    GList *file_list)
 {
 	gchar *cmd;

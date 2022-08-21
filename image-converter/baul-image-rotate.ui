@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--*- mode: xml -*-->
 <interface>
-  <object class="GtkAdjustment" id="adjustment1">
+  <object class="CtkAdjustment" id="adjustment1">
     <property name="upper">360</property>
     <property name="lower">1</property>
     <property name="page_increment">45</property>
@@ -9,7 +9,7 @@
     <property name="page_size">45</property>
     <property name="value">90</property>
   </object>
-  <object class="GtkListStore" id="model1">
+  <object class="CtkListStore" id="model1">
     <columns>
       <column type="gchararray"/>
     </columns>
@@ -25,22 +25,22 @@
       </row>
     </data>
   </object>
-  <object class="GtkDialog" id="rotate_dialog">
+  <object class="CtkDialog" id="rotate_dialog">
     <property name="visible">True</property>
     <property name="border_width">12</property>
     <property name="title" translatable="yes">Rotate Images</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox1">
+      <object class="CtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="spacing">6</property>
         <child>
-          <object class="GtkVBox" id="vbox1">
+          <object class="CtkVBox" id="vbox1">
             <property name="visible">True</property>
             <property name="border_width">12</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkLabel" id="label2">
+              <object class="CtkLabel" id="label2">
                 <property name="visible">True</property>
                 <property name="xalign">0</property>
                 <property name="label" translatable="yes">&lt;b&gt;Image Rotation&lt;/b&gt;</property>
@@ -52,11 +52,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="hbox2">
+              <object class="CtkHBox" id="hbox2">
                 <property name="visible">True</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkLabel" id="label5">
+                  <object class="CtkLabel" id="label5">
                     <property name="visible">True</property>
                   </object>
                   <packing>
@@ -65,15 +65,15 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="vbox2">
+                  <object class="CtkVBox" id="vbox2">
                     <property name="visible">True</property>
                     <property name="spacing">6</property>
                     <child>
-                      <object class="GtkHBox" id="hbox4">
+                      <object class="CtkHBox" id="hbox4">
                         <property name="visible">True</property>
                         <property name="spacing">6</property>
                         <child>
-                          <object class="GtkRadioButton" id="default_angle_radiobutton">
+                          <object class="CtkRadioButton" id="default_angle_radiobutton">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="label" translatable="yes">Select an angle:</property>
@@ -86,11 +86,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkComboBox" id="angle_combobox">
+                          <object class="CtkComboBox" id="angle_combobox">
                             <property name="visible">True</property>
                             <property name="model">model1</property>
                             <child>
-                              <object class="GtkCellRendererText" id="renderer1"/>
+                              <object class="CtkCellRendererText" id="renderer1"/>
                               <attributes>
                                 <attribute name="text">0</attribute>
                               </attributes>
@@ -107,11 +107,11 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkHBox" id="hbox8">
+                      <object class="CtkHBox" id="hbox8">
                         <property name="visible">True</property>
                         <property name="spacing">6</property>
                         <child>
-                          <object class="GtkRadioButton" id="custom_angle_radiobutton">
+                          <object class="CtkRadioButton" id="custom_angle_radiobutton">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="label" translatable="yes">Custom angle:</property>
@@ -125,7 +125,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkSpinButton" id="angle_spinbutton">
+                          <object class="CtkSpinButton" id="angle_spinbutton">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="xalign">1</property>
@@ -138,7 +138,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="label15">
+                          <object class="CtkLabel" id="label15">
                             <property name="visible">True</property>
                             <property name="label" translatable="yes">degrees clockwise</property>
                           </object>
@@ -166,7 +166,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label3">
+              <object class="CtkLabel" id="label3">
                 <property name="visible">True</property>
                 <property name="xalign">0</property>
                 <property name="label" translatable="yes">&lt;b&gt;Filename&lt;/b&gt;</property>
@@ -179,11 +179,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="hbox6">
+              <object class="CtkHBox" id="hbox6">
                 <property name="visible">True</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkLabel" id="label12">
+                  <object class="CtkLabel" id="label12">
                     <property name="visible">True</property>
                   </object>
                   <packing>
@@ -192,15 +192,15 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="vbox3">
+                  <object class="CtkVBox" id="vbox3">
                     <property name="visible">True</property>
                     <property name="spacing">6</property>
                     <child>
-                      <object class="GtkHBox" id="hbox7">
+                      <object class="CtkHBox" id="hbox7">
                         <property name="visible">True</property>
                         <property name="spacing">6</property>
                         <child>
-                          <object class="GtkRadioButton" id="append_radiobutton">
+                          <object class="CtkRadioButton" id="append_radiobutton">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="label" translatable="yes">Append</property>
@@ -213,7 +213,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkEntry" id="name_entry">
+                          <object class="CtkEntry" id="name_entry">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="text" translatable="yes">.rotated</property>
@@ -223,7 +223,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="label13">
+                          <object class="CtkLabel" id="label13">
                             <property name="visible">True</property>
                             <property name="label" translatable="yes">to file title</property>
                           </object>
@@ -236,7 +236,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkRadioButton" id="inplace_radiobutton">
+                      <object class="CtkRadioButton" id="inplace_radiobutton">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="label" translatable="yes">Rotate in place</property>
@@ -268,11 +268,11 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area1">
+          <object class="CtkHButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <object class="GtkButton" id="cancelbutton1">
+              <object class="CtkButton" id="cancelbutton1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -281,7 +281,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="okbutton1">
+              <object class="CtkButton" id="okbutton1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>

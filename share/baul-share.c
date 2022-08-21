@@ -63,22 +63,22 @@ typedef struct {
   char *path; /* Full path which is being shared */
   BaulFileInfo *fileinfo; /* Baul file to which this page refers */
 
-  GtkBuilder *ui;
+  CtkBuilder *ui;
 
-  GtkWidget *main; /* Widget that holds all the rest.  Its "PropertyPage" GObject-data points to this PropertyPage structure */
+  CtkWidget *main; /* Widget that holds all the rest.  Its "PropertyPage" GObject-data points to this PropertyPage structure */
 
-  GtkWidget *checkbutton_share_folder;
-  GtkWidget *hbox_share_name;
-  GtkWidget *hbox_share_comment;
-  GtkWidget *entry_share_name;
-  GtkWidget *checkbutton_share_rw_ro;
-  GtkWidget *checkbutton_share_guest_ok;
-  GtkWidget *entry_share_comment;
-  GtkWidget *label_status;
-  GtkWidget *button_cancel;
-  GtkWidget *button_apply;
+  CtkWidget *checkbutton_share_folder;
+  CtkWidget *hbox_share_name;
+  CtkWidget *hbox_share_comment;
+  CtkWidget *entry_share_name;
+  CtkWidget *checkbutton_share_rw_ro;
+  CtkWidget *checkbutton_share_guest_ok;
+  CtkWidget *entry_share_comment;
+  CtkWidget *label_status;
+  CtkWidget *button_cancel;
+  CtkWidget *button_apply;
 
-  GtkWidget *standalone_window;
+  CtkWidget *standalone_window;
 
   gboolean was_initially_shared;
   gboolean was_writable;
@@ -103,10 +103,10 @@ property_page_validate_fields (PropertyPage *page)
 }
 
 static gboolean
-message_confirm_missing_permissions (GtkWidget *widget, const char *path, mode_t need_mask)
+message_confirm_missing_permissions (CtkWidget *widget, const char *path, mode_t need_mask)
 {
-  GtkWidget *toplevel;
-  GtkWidget *dialog;
+  CtkWidget *toplevel;
+  CtkWidget *dialog;
   char *display_name;
   gboolean result;
 
@@ -148,10 +148,10 @@ message_confirm_missing_permissions (GtkWidget *widget, const char *path, mode_t
 }
 
 static void
-error_when_changing_permissions (GtkWidget *widget, const char *path)
+error_when_changing_permissions (CtkWidget *widget, const char *path)
 {
-  GtkWidget *toplevel;
-  GtkWidget *dialog;
+  CtkWidget *toplevel;
+  CtkWidget *dialog;
   char *display_name;
 
   toplevel = ctk_widget_get_toplevel (widget);
@@ -316,7 +316,7 @@ typedef enum {
 } ConfirmPermissionsStatus;
 
 static ConfirmPermissionsStatus
-confirm_sharing_permissions (GtkWidget *widget, const char *path, gboolean is_shared, gboolean guest_ok, gboolean is_writable)
+confirm_sharing_permissions (CtkWidget *widget, const char *path, gboolean is_shared, gboolean guest_ok, gboolean is_writable)
 {
   struct stat st;
   mode_t mode, new_mode, need_mask;
@@ -441,7 +441,7 @@ get_fullpath_from_fileinfo(BaulFileInfo *fileinfo)
 static void
 property_page_set_warning (PropertyPage *page)
 {
-  GtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
+  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
   if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_ERROR))
     {
       ctk_style_context_remove_class (context, GTK_STYLE_CLASS_ERROR);
@@ -454,7 +454,7 @@ property_page_set_warning (PropertyPage *page)
 static void
 property_page_set_error (PropertyPage *page, const char *message)
 {
-  GtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
+  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
   if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_WARNING))
     {
       ctk_style_context_remove_class (context, GTK_STYLE_CLASS_WARNING);
@@ -467,7 +467,7 @@ property_page_set_error (PropertyPage *page, const char *message)
 static void
 property_page_set_normal (PropertyPage *page)
 {
-  GtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
+  CtkStyleContext *context = ctk_widget_get_style_context (GTK_WIDGET (page->entry_share_name));
   if (ctk_style_context_has_class (context, GTK_STYLE_CLASS_WARNING))
     {
       ctk_style_context_remove_class (context, GTK_STYLE_CLASS_WARNING);
@@ -564,7 +564,7 @@ property_page_check_sensitivity (PropertyPage *page)
 }
 
 static void
-modify_share_name_text_entry  (GtkEditable *editable,
+modify_share_name_text_entry  (CtkEditable *editable,
 			       gpointer user_data)
 {
   PropertyPage *page;
@@ -582,7 +582,7 @@ modify_share_name_text_entry  (GtkEditable *editable,
 }
 
 static void
-modify_share_comment_text_entry  (GtkEditable *editable,
+modify_share_comment_text_entry  (CtkEditable *editable,
 				  gpointer user_data)
 {
   PropertyPage *page;
@@ -595,7 +595,7 @@ modify_share_comment_text_entry  (GtkEditable *editable,
 
 /*--------------------------------------------------------------------------*/
 static void
-on_checkbutton_share_folder_toggled    (GtkToggleButton *togglebutton,
+on_checkbutton_share_folder_toggled    (CtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
   PropertyPage *page;
@@ -606,7 +606,7 @@ on_checkbutton_share_folder_toggled    (GtkToggleButton *togglebutton,
 }
 
 static void
-on_checkbutton_rw_ro_toggled    (GtkToggleButton *togglebutton,
+on_checkbutton_rw_ro_toggled    (CtkToggleButton *togglebutton,
 				 gpointer         user_data)
 {
   PropertyPage *page;
@@ -619,7 +619,7 @@ on_checkbutton_rw_ro_toggled    (GtkToggleButton *togglebutton,
 }
 
 static void
-on_checkbutton_guest_ok_toggled    (GtkToggleButton *togglebutton,
+on_checkbutton_guest_ok_toggled    (CtkToggleButton *togglebutton,
 				    gpointer         user_data)
 {
   PropertyPage *page;
@@ -646,7 +646,7 @@ free_property_page_cb (gpointer data)
 }
 
 static void
-button_apply_clicked_cb (GtkButton *button,
+button_apply_clicked_cb (CtkButton *button,
 			 gpointer   data)
 {
   PropertyPage *page;
@@ -685,7 +685,7 @@ create_property_page (BaulFileInfo *fileinfo)
       /* We'll assume that there is no share for that path, but we'll still
        * bring up an error dialog.
        */
-      GtkWidget *message;
+      CtkWidget *message;
 
       message = ctk_message_dialog_new (NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE,
 					_("There was an error while getting the sharing information"));
@@ -1100,9 +1100,9 @@ baul_share_class_init (BaulShareClass *class)
  */
 
 static void
-button_cancel_clicked_cb (GtkButton *button, gpointer data)
+button_cancel_clicked_cb (CtkButton *button, gpointer data)
 {
-  GtkWidget *window;
+  CtkWidget *window;
 
   window = GTK_WIDGET (data);
   ctk_widget_destroy (window);
@@ -1114,7 +1114,7 @@ share_this_folder_callback (BaulMenuItem *item,
 {
   BaulFileInfo *fileinfo;
   PropertyPage *page;
-  GtkWidget * window;
+  CtkWidget * window;
 
   fileinfo = BAUL_FILE_INFO (user_data);
   g_assert (fileinfo != NULL);
@@ -1132,7 +1132,7 @@ share_this_folder_callback (BaulMenuItem *item,
 
 static GList *
 baul_share_get_file_items (BaulMenuProvider *provider,
-			     GtkWidget *window,
+			     CtkWidget *window,
 			     GList *files)
 {
   GList *items;

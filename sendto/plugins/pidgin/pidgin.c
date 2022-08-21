@@ -140,9 +140,9 @@ get_buddy_icon(int id)
 }
 
 static void
-add_pidgin_contacts_to_model (GtkTreeStore *store,
-			      GtkTreeIter *iter,
-			      GtkTreeIter *parent)
+add_pidgin_contacts_to_model (CtkTreeStore *store,
+			      CtkTreeIter *iter,
+			      CtkTreeIter *parent)
 {
 	GError *error;
 	GArray *contacts_list;
@@ -262,10 +262,10 @@ add_pidgin_contacts_to_model (GtkTreeStore *store,
 }
 
 static void
-customize (GtkCellLayout *cell_layout,
-	   GtkCellRenderer *cell,
-	   GtkTreeModel *tree_model,
-	   GtkTreeIter *iter,
+customize (CtkCellLayout *cell_layout,
+	   CtkCellRenderer *cell,
+	   CtkTreeModel *tree_model,
+	   CtkTreeIter *iter,
 	   gpointer text)
 {
 	gboolean has_child;
@@ -279,17 +279,17 @@ customize (GtkCellLayout *cell_layout,
 	g_object_set (G_OBJECT(cell), "sensitive", !has_child, NULL);
 }
 
-static GtkWidget *
+static CtkWidget *
 get_contacts_widget (NstPlugin *plugin)
 {
-	GtkWidget *cb;
-	GtkCellRenderer *renderer;
-	GtkTreeStore *store;
-	GtkTreeModel *model;
-	GtkTreeIter *iter, *iter2;
+	CtkWidget *cb;
+	CtkCellRenderer *renderer;
+	CtkTreeStore *store;
+	CtkTreeModel *model;
+	CtkTreeIter *iter, *iter2;
 
-	iter = g_malloc (sizeof(GtkTreeIter));
-	iter2 = g_malloc (sizeof(GtkTreeIter));
+	iter = g_malloc (sizeof(CtkTreeIter));
+	iter2 = g_malloc (sizeof(CtkTreeIter));
 	store = ctk_tree_store_new (NUM_COLS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 	add_pidgin_contacts_to_model (store, iter, iter2);
 	model = ctk_tree_model_sort_new_with_model (GTK_TREE_MODEL (store));
@@ -324,7 +324,7 @@ get_contacts_widget (NstPlugin *plugin)
 	ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
 	ctk_combo_box_get_active_iter (GTK_COMBO_BOX(cb), iter);
 	if (ctk_tree_model_iter_has_child (model, iter)) {
-		GtkTreePath *path = ctk_tree_path_new_from_indices (0, 0, -1);
+		CtkTreePath *path = ctk_tree_path_new_from_indices (0, 0, -1);
 		ctk_tree_model_get_iter (model, iter2, path);
 		ctk_tree_path_free (path);
 		ctk_combo_box_set_active_iter (GTK_COMBO_BOX (cb), iter2);
@@ -368,7 +368,7 @@ gboolean send_file(int account, const char *who, const char *filename)
 }
 
 static
-gboolean send_files (NstPlugin *plugin, GtkWidget *contact_widget,
+gboolean send_files (NstPlugin *plugin, CtkWidget *contact_widget,
 		     GList *file_list)
 {
 	GList *file_iter;
@@ -377,8 +377,8 @@ gboolean send_files (NstPlugin *plugin, GtkWidget *contact_widget,
 	gchar *file_path;
 
 	gint depth;
-	GtkTreeIter iter;
-	GtkTreePath *path;
+	CtkTreeIter iter;
+	CtkTreePath *path;
 	gint *indices;
 	const gchar *alias;
 	GPtrArray *contacts_group;

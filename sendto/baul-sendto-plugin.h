@@ -78,10 +78,10 @@ struct _NstPluginInfo
 	gchar                             *gettext_package;
 	NstPluginCapabilities              capabilities;
 	gboolean (*init)                  (NstPlugin *plugin);
-	GtkWidget* (*get_contacts_widget) (NstPlugin *plugin);
-	gboolean (*validate_destination)  (NstPlugin *plugin, GtkWidget *contact_widget, char **error);
+	CtkWidget* (*get_contacts_widget) (NstPlugin *plugin);
+	gboolean (*validate_destination)  (NstPlugin *plugin, CtkWidget *contact_widget, char **error);
 	gboolean (*send_files)            (NstPlugin *plugin,
-					   GtkWidget *contact_widget,
+					   CtkWidget *contact_widget,
 					   GList *file_list);
 	gboolean (*destroy)               (NstPlugin *plugin) ;
 };

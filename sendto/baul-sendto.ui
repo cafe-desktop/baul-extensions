@@ -2,17 +2,17 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="ctk+" version="3.20"/>
-  <object class="GtkImage" id="image1">
+  <object class="CtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">document-send</property>
   </object>
-  <object class="GtkImage" id="image2">
+  <object class="CtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">ctk-cancel</property>
   </object>
-  <object class="GtkDialog" id="baul_sendto_dialog">
+  <object class="CtkDialog" id="baul_sendto_dialog">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Send To...</property>
     <property name="icon_name">document-send</property>
@@ -21,7 +21,7 @@
       <placeholder/>
     </child>
     <child internal-child="vbox">
-      <object class="GtkBox">
+      <object class="CtkBox">
         <property name="can_focus">False</property>
         <property name="margin_left">12</property>
         <property name="margin_right">12</property>
@@ -30,11 +30,11 @@
         <property name="orientation">vertical</property>
         <property name="spacing">12</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox">
+          <object class="CtkButtonBox">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="cancel_button">
+              <object class="CtkButton" id="cancel_button">
                 <property name="label" translatable="yes">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -50,7 +50,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="send_button">
+              <object class="CtkButton" id="send_button">
                 <property name="label" translatable="yes">Send</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -74,31 +74,31 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="CtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkFrame">
+              <object class="CtkFrame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment">
+                  <object class="CtkAlignment">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkGrid">
+                      <object class="CtkGrid">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_top">8</property>
                         <property name="row_spacing">8</property>
                         <property name="column_spacing">8</property>
                         <child>
-                          <object class="GtkComboBox" id="options_combobox">
+                          <object class="CtkComboBox" id="options_combobox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="hexpand">True</property>
@@ -109,7 +109,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkAccelLabel" id="send_to_label">
+                          <object class="CtkAccelLabel" id="send_to_label">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
@@ -123,7 +123,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkAccelLabel">
+                          <object class="CtkAccelLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
@@ -136,7 +136,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="hbox_contacts_widgets">
+                          <object class="CtkBox" id="hbox_contacts_widgets">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
@@ -154,7 +154,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel">
+                  <object class="CtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Destination</property>
@@ -171,25 +171,25 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame">
+              <object class="CtkFrame">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label_xalign">0</property>
                 <property name="shadow_type">none</property>
                 <child>
-                  <object class="GtkAlignment">
+                  <object class="CtkAlignment">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkBox">
+                      <object class="CtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_top">8</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">8</property>
                         <child>
-                          <object class="GtkCheckButton" id="pack_checkbutton">
+                          <object class="CtkCheckButton" id="pack_checkbutton">
                             <property name="label" translatable="yes">Send _packed in:</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -205,12 +205,12 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox">
+                          <object class="CtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="spacing">8</property>
                             <child>
-                              <object class="GtkEntry" id="pack_entry">
+                              <object class="CtkEntry" id="pack_entry">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="hexpand">True</property>
@@ -222,7 +222,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkComboBoxText" id="pack_combobox">
+                              <object class="CtkComboBoxText" id="pack_combobox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="active_id">4</property>
@@ -252,7 +252,7 @@
                   </object>
                 </child>
                 <child type="label">
-                  <object class="GtkLabel">
+                  <object class="CtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Compression</property>
@@ -276,11 +276,11 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox" id="status_box">
+          <object class="CtkBox" id="status_box">
             <property name="sensitive">False</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkImage" id="status_image">
+              <object class="CtkImage" id="status_image">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>
@@ -293,7 +293,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="status_label">
+              <object class="CtkLabel" id="status_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="halign">start</property>

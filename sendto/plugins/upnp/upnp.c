@@ -41,13 +41,13 @@ enum {
 	NUM_COLS
 };
 
-static GtkWidget *combobox;
-static GtkTreeModel *model;
+static CtkWidget *combobox;
+static CtkTreeModel *model;
 static GUPnPContextManager *context_manager;
 
 static gboolean
 find_device (const gchar *udn,
-	     GtkTreeIter *iter)
+	     CtkTreeIter *iter)
 {
 	gboolean found = FALSE;
 
@@ -91,7 +91,7 @@ get_introspection_cb (GUPnPServiceInfo *service_info,
 	GUPnPDeviceInfo *device_info;
 	gchar *name;
 	const gchar *udn, *interface;
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	GUPnPContext *context;
 
 	device_info = GUPNP_DEVICE_INFO (user_data);
@@ -154,7 +154,7 @@ static void
 device_proxy_unavailable_cb (GUPnPControlPoint *cp,
 			     GUPnPDeviceProxy  *proxy)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	const gchar *udn;
 
 	udn = gupnp_device_info_get_udn (GUPNP_DEVICE_INFO (proxy));
@@ -194,8 +194,8 @@ on_context_available (GUPnPContextManager *context_manager,
 static gboolean
 init (NstPlugin *plugin)
 {
-	GtkListStore *store;
-	GtkCellRenderer *renderer;
+	CtkListStore *store;
+	CtkCellRenderer *renderer;
 	char *upload_cmd;
 
 	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -236,7 +236,7 @@ init (NstPlugin *plugin)
 	return TRUE;
 }
 
-static GtkWidget*
+static CtkWidget*
 get_contacts_widget (NstPlugin *plugin)
 {
 	return combobox;
@@ -244,14 +244,14 @@ get_contacts_widget (NstPlugin *plugin)
 
 static gboolean
 send_files (NstPlugin *plugin,
-	    GtkWidget *contact_widget,
+	    CtkWidget *contact_widget,
 	    GList *file_list)
 {
 	gchar *upload_cmd, *udn, *interface;
 	GPtrArray *argv;
 	gboolean ret;
 	GList *l;
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	GError *err = NULL;
 
 	if (!ctk_combo_box_get_active_iter (GTK_COMBO_BOX (combobox), &iter))

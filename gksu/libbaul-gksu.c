@@ -38,7 +38,7 @@ menu_provider_iface_init (BaulMenuProviderIface *iface);
 
 static GList*
 gksu_context_menu_get_file_items (BaulMenuProvider *provider,
-				  GtkWidget *window,
+				  CtkWidget *window,
 				  GList *files);
 static void
 gksu_context_menu_activate (BaulMenuItem *item,
@@ -99,7 +99,7 @@ gksu_context_menu_init (GksuContextMenu *self)
 
 static GList *
 gksu_context_menu_get_file_items (BaulMenuProvider *provider,
-				  GtkWidget *window,
+				  CtkWidget *window,
 				  GList *files)
 {
     GList *items = NULL;
@@ -215,7 +215,7 @@ gksu_context_menu_activate (BaulMenuItem *item,
 
   if (cmd == NULL)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
 
       dialog = ctk_message_dialog_new_with_markup (NULL, 0,
 						   GTK_MESSAGE_ERROR,

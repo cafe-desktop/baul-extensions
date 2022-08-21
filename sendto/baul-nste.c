@@ -59,7 +59,7 @@ sendto_callback (BaulMenuItem *item,
 
 static GList *
 baul_nste_get_file_items (BaulMenuProvider *provider,
-			      GtkWidget            *window,
+			      CtkWidget            *window,
 			      GList                *files)
 {
 	GList    *items = NULL;
