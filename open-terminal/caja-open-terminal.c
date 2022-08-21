@@ -317,7 +317,7 @@ open_terminal_callback (CajaMenuItem *item,
 	gchar **argv, *terminal_exec;
 	gchar *working_directory;
 	gchar *dfile;
-	MateDesktopItem *ditem;
+	CafeDesktopItem *ditem;
 	GdkScreen *screen;
 
 	terminal_exec = default_terminal_application();
