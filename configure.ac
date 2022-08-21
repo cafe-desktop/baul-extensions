@@ -315,7 +315,7 @@ AM_CONDITIONAL(ENABLE_XATTR_TAGS, test x"$enable_xattr_tags" = "xyes")
 
 # Get baul extensions directory
 AC_ARG_WITH(bauldir,
-    AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+    AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Baul extension @<:@auto@:>@]),
     [ac_with_bauldir=$withval],
     [ac_with_bauldir=""])
 if test "${ac_with_bauldir}" = ""; then
@@ -334,7 +334,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
 AC_OUTPUT([
   Makefile
-  sendto/org.cafe.Caja.Sendto.gschema.xml
+  sendto/org.cafe.Baul.Sendto.gschema.xml
   open-terminal/org.cafe.baul-open-terminal.gschema.xml
   gksu/libbaul-gksu.baul-extension.desktop.in
   gksu/Makefile

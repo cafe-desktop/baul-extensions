@@ -372,11 +372,11 @@ msgstr "Integreert met e-mailprogramma's en Pidgin"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Auteursrecht (C) 2004 Roberto Majadas"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Laatste invoegsel gebruikt om te versturen"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -384,11 +384,11 @@ msgstr ""
 "Gebruikt om te onthouden welk invoegsel het laatste werd gebruikt om "
 "bestanden te versturen met baul-sendto."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Laatst gebruikte type archief"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -497,7 +497,7 @@ msgstr "Auteursrecht (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr ""
 "De rechten voor de map '%s' moeten worden verruimd om deze te kunnen delen"
@@ -506,7 +506,7 @@ msgstr ""
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Om te kunnen delen moeten de volgende extra rechten aan de map '%s' worden toegevoegd:\n"
 "%s%s%sWilt u deze rechten nu automatisch laten toevoegen?"

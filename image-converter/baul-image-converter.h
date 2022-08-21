@@ -34,16 +34,16 @@ G_BEGIN_DECLS
 
 
 #define CAJA_TYPE_IMAGE_CONVERTER	  (baul_image_converter_get_type ())
-#define CAJA_IMAGE_CONVERTER(o)		  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_CONVERTER, CajaImageConverter))
+#define CAJA_IMAGE_CONVERTER(o)		  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_CONVERTER, BaulImageConverter))
 #define CAJA_IS_IMAGE_CONVERTER(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_CONVERTER))
-typedef struct _CajaImageConverter	  CajaImageConverter;
-typedef struct _CajaImageConverterClass	  CajaImageConverterClass;
+typedef struct _BaulImageConverter	  BaulImageConverter;
+typedef struct _BaulImageConverterClass	  BaulImageConverterClass;
 
-struct _CajaImageConverter {
+struct _BaulImageConverter {
 	GObject parent_slot;
 };
 
-struct _CajaImageConverterClass {
+struct _BaulImageConverterClass {
 	GObjectClass parent_slot;
 };
 

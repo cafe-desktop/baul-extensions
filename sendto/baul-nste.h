@@ -1,5 +1,5 @@
 /*
- *  Caja SendTo extension
+ *  Baul SendTo extension
  *
  *  Copyright (C) 2005 Roberto Majadas
  *
@@ -29,17 +29,17 @@
 G_BEGIN_DECLS
 
 #define CAJA_TYPE_NSTE  (baul_nste_get_type ())
-#define CAJA_NSTE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_NSTE, CajaNste))
+#define CAJA_NSTE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_NSTE, BaulNste))
 #define CAJA_IS_NSTE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_NSTE))
 
-typedef struct _CajaNste      CajaNste;
-typedef struct _CajaNsteClass CajaNsteClass;
+typedef struct _BaulNste      BaulNste;
+typedef struct _BaulNsteClass BaulNsteClass;
 
-struct _CajaNste {
+struct _BaulNste {
 	GObject __parent;
 };
 
-struct _CajaNsteClass {
+struct _BaulNsteClass {
 	GObjectClass __parent;
 };
 

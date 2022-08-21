@@ -1,5 +1,5 @@
 /*
- *  Caja Wallpaper extension
+ *  Baul Wallpaper extension
  *
  *  Copyright (C) 2005 Adam Israel
  *  Copyright (C) 2014 Stefano Karapetsas

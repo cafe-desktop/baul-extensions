@@ -34,16 +34,16 @@ G_BEGIN_DECLS
 
 
 #define CAJA_TYPE_OPEN_TERMINAL	  (baul_open_terminal_get_type ())
-#define CAJA_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_OPEN_TERMINAL, CajaOpenTerminal))
+#define CAJA_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_OPEN_TERMINAL, BaulOpenTerminal))
 #define CAJA_IS_OPEN_TERMINAL(o)	  (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_OPEN_TERMINAL))
-typedef struct _CajaOpenTerminal      CajaOpenTerminal;
-typedef struct _CajaOpenTerminalClass CajaOpenTerminalClass;
+typedef struct _BaulOpenTerminal      BaulOpenTerminal;
+typedef struct _BaulOpenTerminalClass BaulOpenTerminalClass;
 
-struct _CajaOpenTerminal {
+struct _BaulOpenTerminal {
 	GObject parent_slot;
 };
 
-struct _CajaOpenTerminalClass {
+struct _BaulOpenTerminalClass {
 	GObjectClass parent_slot;
 };
 

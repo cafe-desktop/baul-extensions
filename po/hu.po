@@ -372,11 +372,11 @@ msgstr "E-mail kliensek és a Pidgin integrálása"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Küldésre utoljára használt bővítmény"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -384,11 +384,11 @@ msgstr ""
 "Eltárolja, hogy utoljára melyik bővítményt használta a „baul-sendto”-val "
 "történő fájlküldéshez."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Utoljára használt archívum  típus"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -497,20 +497,20 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr ""
-"A megosztáshoz a Caja-nak szüksége van néhány jogra a \"%s\" mappához, hogy "
+"A megosztáshoz a Baul-nak szüksége van néhány jogra a \"%s\" mappához, hogy "
 "megtudja osztani azt"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "A „%s” mappa megosztásához ezekre a további jogosultságokra van szükség:\n"
-"%s%s%sSzeretné, hogy a Caja automatikusan hozzáadja a mappához a jogosultságokat?"
+"%s%s%sSzeretné, hogy a Baul automatikusan hozzáadja a mappához a jogosultságokat?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

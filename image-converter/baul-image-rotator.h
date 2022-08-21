@@ -29,27 +29,27 @@
 G_BEGIN_DECLS
 
 #define CAJA_TYPE_IMAGE_ROTATOR         (baul_image_rotator_get_type ())
-#define CAJA_IMAGE_ROTATOR(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_ROTATOR, CajaImageRotator))
-#define CAJA_IMAGE_ROTATOR_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_ROTATOR, CajaImageRotatorClass))
+#define CAJA_IMAGE_ROTATOR(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotator))
+#define CAJA_IMAGE_ROTATOR_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
 #define CAJA_IS_IMAGE_ROTATOR(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_ROTATOR))
 #define CAJA_IS_IMAGE_ROTATOR_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), CAJA_TYPE_IMAGE_ROTATOR))
-#define CAJA_IMAGE_ROTATOR_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_ROTATOR, CajaImageRotatorClass))
+#define CAJA_IMAGE_ROTATOR_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CAJA_TYPE_IMAGE_ROTATOR, BaulImageRotatorClass))
 
-typedef struct _CajaImageRotator CajaImageRotator;
-typedef struct _CajaImageRotatorClass CajaImageRotatorClass;
+typedef struct _BaulImageRotator BaulImageRotator;
+typedef struct _BaulImageRotatorClass BaulImageRotatorClass;
 
-struct _CajaImageRotator {
+struct _BaulImageRotator {
 	GObject parent;
 };
 
-struct _CajaImageRotatorClass {
+struct _BaulImageRotatorClass {
 	GObjectClass parent_class;
 	/* Add Signal Functions Here */
 };
 
 GType baul_image_rotator_get_type (void);
-CajaImageRotator *baul_image_rotator_new (GList *files);
-void baul_image_rotator_show_dialog (CajaImageRotator *dialog);
+BaulImageRotator *baul_image_rotator_new (GList *files);
+void baul_image_rotator_show_dialog (BaulImageRotator *dialog);
 
 G_END_DECLS
 

@@ -371,11 +371,11 @@ msgstr "Integra clientes de correio eletrónico e Pidgin"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Direitos de Autor (C) 2004 Roberto Majadas"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Último suplemento usado para enviar"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -383,11 +383,11 @@ msgstr ""
 "Usado para armazenar qual suplemento foi utilizado da última vez que se "
 "enviou ficheiros com baul-sendto."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Último tipo de arquivo utilizado"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -496,20 +496,20 @@ msgstr "Direitos de Autor (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr ""
-"Caja precisa de adicionar algumas permissões à sua pasta \"%s\" para a "
+"Baul precisa de adicionar algumas permissões à sua pasta \"%s\" para a "
 "partilhar"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "A pasta \"%s\" precisa das seguintes permissões extra para que a partilha funcione: \n"
-"%s%s%sPretende que a Caja adicione estas permissões à pasta automaticamente?"
+"%s%s%sPretende que a Baul adicione estas permissões à pasta automaticamente?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

@@ -374,11 +374,11 @@ msgstr "Інтегрує поштові клієнти і Pidgin"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Останній плагін використаний для відправки"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -386,11 +386,11 @@ msgstr ""
 "Використовується для зберігання плагіна, що був використаний для останнього "
 "відправлення файлів через baul-sendto."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Останній тип архіва, що був використаний"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -499,18 +499,18 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
-msgstr "Caja потрібно надати певні права для оприлюднення теки «%s»"
+msgstr "Baul потрібно надати певні права для оприлюднення теки «%s»"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Тека  «%s» потребує такі додаткові права для оприлюднення у мережі:\n"
-"%s%s%sЧи бажаєте Ви, аби Caja надав ці права теці самочинно?"
+"%s%s%sЧи бажаєте Ви, аби Baul надав ці права теці самочинно?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

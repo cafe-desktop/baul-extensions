@@ -373,11 +373,11 @@ msgstr "Integrira email odjemalce in Pidgin"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Avtorske pravice (C) 2004 Roberto Majadas"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Zadnji vstavek, uporabljen za pošiljanje"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "baul-sendto."
@@ -385,11 +385,11 @@ msgstr ""
 "Uporablja se za shranjevanje vstavka, ki je bil uporabljen zadnjič, ko so "
 "bile datoteke poslane baul-sendto."
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Zadnja vrsta uporabljenega arhiva"
 
-#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
@@ -498,18 +498,18 @@ msgstr "Avtorske pravice (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Caja needs to add some permissions to your folder \"%s\" in order to share "
+"Baul needs to add some permissions to your folder \"%s\" in order to share "
 "it"
-msgstr "Caja mora v primeru souporabe mape \"%s\" dodati nekatera dovoljenja"
+msgstr "Baul mora v primeru souporabe mape \"%s\" dodati nekatera dovoljenja"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
-"%s%s%sDo you want Caja to add these permissions to the folder automatically?"
+"%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Mapa \"%s\" potrebuje naslednja dodatna dovoljenja za souporabo:\n"
-"%s%s%sAli želite, da Caja samodejno doda ta dodatna dovoljenja v mapo?"
+"%s%s%sAli želite, da Baul samodejno doda ta dodatna dovoljenja v mapo?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"

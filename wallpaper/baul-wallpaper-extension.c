@@ -1,5 +1,5 @@
 /*
- *  Caja Wallpaper extension
+ *  Baul Wallpaper extension
  *
  *  Copyright (C) 2005 Adam Israel
  *  Copyright (C) 2014 Stefano Karapetsas
@@ -37,12 +37,12 @@
 static GObjectClass *parent_class;
 
 static void
-set_wallpaper_callback (CajaMenuItem *item,
+set_wallpaper_callback (BaulMenuItem *item,
               gpointer          user_data)
 {
     GList *files;
     GSettings *settings;
-    CajaFileInfo *file;
+    BaulFileInfo *file;
     gchar *uri;
     gchar *filename;
 
@@ -63,7 +63,7 @@ set_wallpaper_callback (CajaMenuItem *item,
 }
 
 static gboolean
-is_image (CajaFileInfo *file)
+is_image (BaulFileInfo *file)
 {
     gchar   *mimeType;
     gboolean isImage;
@@ -76,17 +76,17 @@ is_image (CajaFileInfo *file)
 
 
 static GList *
-baul_cwe_get_file_items (CajaMenuProvider *provider,
+baul_cwe_get_file_items (BaulMenuProvider *provider,
                   GtkWidget            *window,
                   GList                *files)
 {
     GList    *items = NULL;
     GList    *scan;
     gboolean  one_item;
-    CajaMenuItem *item;
+    BaulMenuItem *item;
 
     for (scan = files; scan; scan = scan->next) {
-        CajaFileInfo *file = scan->data;
+        BaulFileInfo *file = scan->data;
         gchar            *scheme;
         gboolean          local;
 
@@ -99,9 +99,9 @@ baul_cwe_get_file_items (CajaMenuProvider *provider,
     }
 
     one_item = (files != NULL) && (files->next == NULL);
-    if (one_item && is_image ((CajaFileInfo *)files->data) &&
-        !baul_file_info_is_directory ((CajaFileInfo *)files->data)) {
-        item = baul_menu_item_new ("CajaCwe::sendto",
+    if (one_item && is_image ((BaulFileInfo *)files->data) &&
+        !baul_file_info_is_directory ((BaulFileInfo *)files->data)) {
+        item = baul_menu_item_new ("BaulCwe::sendto",
                            _("Set as wallpaper"),
                            _("Set image as the current wallpaper"),
                            NULL);
@@ -120,20 +120,20 @@ baul_cwe_get_file_items (CajaMenuProvider *provider,
 
 
 static void
-baul_cwe_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_cwe_menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
     iface->get_file_items = baul_cwe_get_file_items;
 }
 
 
 static void
-baul_cwe_instance_init (CajaCwe *cwe)
+baul_cwe_instance_init (BaulCwe *cwe)
 {
 }
 
 
 static void
-baul_cwe_class_init (CajaCweClass *class)
+baul_cwe_class_init (BaulCweClass *class)
 {
     parent_class = g_type_class_peek_parent (class);
 }
@@ -153,13 +153,13 @@ void
 baul_cwe_register_type (GTypeModule *module)
 {
     static const GTypeInfo info = {
-        sizeof (CajaCweClass),
+        sizeof (BaulCweClass),
         (GBaseInitFunc) NULL,
         (GBaseFinalizeFunc) NULL,
         (GClassInitFunc) baul_cwe_class_init,
         NULL,
         NULL,
-        sizeof (CajaCwe),
+        sizeof (BaulCwe),
         0,
         (GInstanceInitFunc) baul_cwe_instance_init,
     };
@@ -172,7 +172,7 @@ baul_cwe_register_type (GTypeModule *module)
 
     cwe_type = g_type_module_register_type (module,
                              G_TYPE_OBJECT,
-                             "CajaCwe",
+                             "BaulCwe",
                              &info, 0);
 
     g_type_module_add_interface (module,

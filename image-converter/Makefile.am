@@ -1,5 +1,5 @@
 AM_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"Caja-Image-Converter\"	\
+	-DG_LOG_DOMAIN=\"Baul-Image-Converter\"	\
 	-DDATADIR=\"$(datadir)\"			\
 	-DCAFELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\

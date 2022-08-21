@@ -3,7 +3,7 @@ interfaces_DATA = share-dialog.ui
 
 libbaul_share_la_CFLAGS =				\
 	-Wall						\
-	-DG_LOG_DOMAIN=\"Caja-Share\"		\
+	-DG_LOG_DOMAIN=\"Baul-Share\"		\
 	-DINTERFACES_DIR=\"$(interfacesdir)\"		\
 	-DDATADIR=\"$(datadir)\"			\
 	-DCAFELOCALEDIR=\""$(datadir)/locale"\" 	\

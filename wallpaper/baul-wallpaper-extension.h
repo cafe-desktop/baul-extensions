@@ -1,5 +1,5 @@
 /*
- *  Caja Wallpaper extension
+ *  Baul Wallpaper extension
  *
  *  Copyright (C) 2005 Adam Israel
  *  Copyright (C) 2014 Stefano Karapetsas
@@ -30,17 +30,17 @@
 G_BEGIN_DECLS
 
 #define CAJA_TYPE_CWE  (baul_cwe_get_type ())
-#define CAJA_CWE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_CWE, CajaCwe))
+#define CAJA_CWE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_CWE, BaulCwe))
 #define CAJA_IS_CWE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_CWE))
 
-typedef struct _CajaCwe      CajaCwe;
-typedef struct _CajaCweClass CajaCweClass;
+typedef struct _BaulCwe      BaulCwe;
+typedef struct _BaulCweClass BaulCweClass;
 
-struct _CajaCwe {
+struct _BaulCwe {
 	GObject __parent;
 };
 
-struct _CajaCweClass {
+struct _BaulCweClass {
 	GObjectClass __parent;
 };
 
