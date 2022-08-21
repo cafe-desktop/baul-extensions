@@ -11,6 +11,7 @@ requires:
     - clang
     - clang-tools
     - cppcheck
+    - gobject-introspection
     - gtk-doc-tools
     - expect #required for unbuffer
     - gcc
