@@ -16,6 +16,7 @@ requires:
     - expect #required for unbuffer
     - gcc
     - git
+    - iso-codes
     - libtool
     - libcaja-extension-dev
     - libdbus-1-dev
