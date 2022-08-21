@@ -175,7 +175,7 @@ error_when_changing_permissions (GtkWidget *widget, const char *path)
 static char *
 get_key_file_path (void)
 {
-  return g_build_filename (g_get_home_dir (), ".mate2", "mate-file-manager-share-modified-permissions", NULL);
+  return g_build_filename (g_get_home_dir (), ".cafe2", "cafe-file-manager-share-modified-permissions", NULL);
 }
 
 static void
@@ -919,7 +919,7 @@ get_share_info_for_file_info (CajaFileInfo *file, ShareInfo **share_info, gboole
       if (!shares_get_share_info_for_share_name (share_name, share_info, NULL))
         {
           *share_info = NULL;
-          *is_shareable = TRUE; /* it *has* the prefix, anyway... we are just unsynchronized with what mate-vfs thinks */
+          *is_shareable = TRUE; /* it *has* the prefix, anyway... we are just unsynchronized with what cafe-vfs thinks */
         }
       else
         {

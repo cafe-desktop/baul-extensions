@@ -35,7 +35,7 @@
 #include <gtk/gtkwidget.h>
 #include <gtk/gtkmain.h>
 
-#include <libmate-desktop/mate-desktop-item.h>
+#include <libcafe-desktop/cafe-desktop-item.h>
 #include <gio/gio.h>
 
 #include <errno.h>
@@ -45,11 +45,11 @@
 #include <stdlib.h> /* for atoi */
 #include <sys/stat.h>
 
-#define COT_SCHEMA "org.mate.caja-open-terminal"
+#define COT_SCHEMA "org.cafe.caja-open-terminal"
 #define COT_DESKTOP_KEY "desktop-opens-home-dir"
-#define CAJA_SCHEMA "org.mate.caja.preferences"
+#define CAJA_SCHEMA "org.cafe.caja.preferences"
 #define CAJA_DESKTOP_KEY "desktop-is-home-dir"
-#define TERM_SCHEMA "org.mate.applications-terminal"
+#define TERM_SCHEMA "org.cafe.applications-terminal"
 #define TERM_EXEC_KEY "exec"
 
 static void caja_open_terminal_instance_init (CajaOpenTerminal      *cvs);
@@ -177,7 +177,7 @@ default_terminal_application (void)
 
 	if (result == NULL || strlen (result) == 0) {
 		g_free (result);
-		result = g_strdup ("mate-terminal");
+		result = g_strdup ("cafe-terminal");
 	}
 
 	return result;
@@ -351,8 +351,8 @@ open_terminal_callback (CajaMenuItem *item,
 			g_assert_not_reached ();
 	}
 
-	if (g_str_has_prefix (terminal_exec, "mate-terminal")) {
-		dfile = lookup_in_data_dirs ("applications/mate-terminal.desktop");
+	if (g_str_has_prefix (terminal_exec, "cafe-terminal")) {
+		dfile = lookup_in_data_dirs ("applications/cafe-terminal.desktop");
 	} else {
 		dfile = NULL;
 	}
@@ -398,14 +398,14 @@ open_terminal_callback (CajaMenuItem *item,
 			}
 		}
 
-		ditem = mate_desktop_item_new_from_file (dfile, 0, NULL);
+		ditem = cafe_desktop_item_new_from_file (dfile, 0, NULL);
 
-		mate_desktop_item_set_string (ditem, "Exec", terminal_exec);
+		cafe_desktop_item_set_string (ditem, "Exec", terminal_exec);
 		if (gtk_get_current_event_time () > 0) {
-			mate_desktop_item_set_launch_time (ditem, gtk_get_current_event_time ());
+			cafe_desktop_item_set_launch_time (ditem, gtk_get_current_event_time ());
 		}
-		mate_desktop_item_launch (ditem, NULL, MATE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR, NULL);
-		mate_desktop_item_unref (ditem);
+		cafe_desktop_item_launch (ditem, NULL, MATE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR, NULL);
+		cafe_desktop_item_unref (ditem);
 		g_free (dfile);
 
 		if (orig_cwd != -1) {

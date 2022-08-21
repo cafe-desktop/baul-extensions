@@ -1,4 +1,4 @@
-AC_INIT([caja-extensions], 1.24.1, [https://github.com/mate-desktop/caja-extensions])
+AC_INIT([caja-extensions], 1.24.1, [https://github.com/cafe-desktop/caja-extensions])
 
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz tar-ustar check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -83,7 +83,7 @@ AC_ARG_ENABLE([open-terminal],
 if test "x$enable_open_terminal" = "xyes"; then
         PKG_CHECK_MODULES(OPENTERMINAL,
                 glib-2.0           >= $GLIB_REQUIRED
-                mate-desktop-2.0   >= $LIBMATE_DESKTOP_REQUIRED)
+                cafe-desktop-2.0   >= $LIBMATE_DESKTOP_REQUIRED)
         AC_SUBST(OPENTERMINAL_CFLAGS)
         AC_SUBST(OPENTERMINAL_LIBS)
 fi
@@ -334,8 +334,8 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
 AC_OUTPUT([
   Makefile
-  sendto/org.mate.Caja.Sendto.gschema.xml
-  open-terminal/org.mate.caja-open-terminal.gschema.xml
+  sendto/org.cafe.Caja.Sendto.gschema.xml
+  open-terminal/org.cafe.caja-open-terminal.gschema.xml
   gksu/libcaja-gksu.caja-extension.desktop.in
   gksu/Makefile
   image-converter/libcaja-image-converter.caja-extension.desktop.in

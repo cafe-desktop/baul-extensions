@@ -21,7 +21,7 @@ libcaja_open_terminal_la_SOURCES = \
 libcaja_open_terminal_la_LDFLAGS = -module -avoid-version
 libcaja_open_terminal_la_LIBADD  = $(CAJA_LIBS) $(OPENTERMINAL_LIBS)
 
-gsettings_schemas_in_files = org.mate.caja-open-terminal.gschema.xml.in
+gsettings_schemas_in_files = org.cafe.caja-open-terminal.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_schemas_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
@@ -32,7 +32,7 @@ $(extension_DATA): $(extension_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Copyright --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
 DISTCLEANFILES = \
-	org.mate.caja-open-terminal.gschema.xml
+	org.cafe.caja-open-terminal.gschema.xml
 
 CLEANFILES = \
 	$(extension_DATA) \

@@ -531,7 +531,7 @@ caja_sendto_create_ui (void)
 	GtkWidget *button_image;
 
 	app = gtk_builder_new ();
-	if (gtk_builder_add_from_resource (app, "/org/mate/caja/extensions/sendto/caja-sendto.ui", &error) == 0) {
+	if (gtk_builder_add_from_resource (app, "/org/cafe/caja/extensions/sendto/caja-sendto.ui", &error) == 0) {
 		g_warning ("Could not parse UI definition: %s", error->message);
 		g_error_free (error);
 	}
@@ -803,7 +803,7 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
-	settings = g_settings_new ("org.mate.Caja.Sendto");
+	settings = g_settings_new ("org.cafe.Caja.Sendto");
 	caja_sendto_init ();
 	if (caja_sendto_plugin_init () == FALSE) {
 		GtkWidget *error_dialog;
