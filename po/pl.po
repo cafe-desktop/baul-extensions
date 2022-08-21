@@ -21,11 +21,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: caja-extensions 1.23.1\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/caja-extensions\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/caja-extensions\n"
 "POT-Creation-Date: 2020-02-01 13:01+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Dominik Adrian Grzywak, 2020\n"
-"Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
+"Language-Team: Polish (https://www.transifex.com/cafe/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -308,7 +308,7 @@ msgstr "Otwórz terminal z katalogów"
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr "Prawa autorskie (C) 2004, 2005 Free Software Foundation, Inc"
 
-#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:5
+#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:5
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
@@ -316,7 +316,7 @@ msgstr ""
 "Przy otwarciu terminala na pulpicie otwierany jest terminal w katalogu "
 "domowym uzytkownika"
 
-#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:6
+#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:6
 msgid ""
 "If set to true, then opening a terminal on the desktop will open a terminal "
 "in the home directory. Otherwise, it will be opened in the desktop "
@@ -379,11 +379,11 @@ msgstr "Integruje klienta e-mail i Pidgina"
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Prawa autorskie (C) 2004 Roberto Majadas"
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr "Ostatnia wtyczka używana do wysyłania"
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "caja-sendto."
@@ -391,11 +391,11 @@ msgstr ""
 "Używane do przechowywania informacji która wtyczka została użyta ostatnio do"
 " wysyłania plików używając caja-sendto."
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr "Ostatni użyty typ archiwum"
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."

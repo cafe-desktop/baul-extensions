@@ -29,7 +29,7 @@ libnstplugin_la_LIBADD = $(SENDTO_LIBS)
 bin_PROGRAMS = caja-sendto
 
 resources_built_sources = caja-sendto-resources.h caja-sendto-resources.c
-$(resources_built_sources): org.mate.caja.extensions.sendto.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.mate.caja.extensions.sendto.gresource.xml)
+$(resources_built_sources): org.cafe.caja.extensions.sendto.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.cafe.caja.extensions.sendto.gresource.xml)
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name sendto $<
 
 caja_sendto_SOURCES = caja-sendto-command.c $(resources_built_sources)
@@ -70,7 +70,7 @@ nst-enum-types.c: $(nst_headers_to_scan_for_enums) Makefile nst-enum-types.h
 			--vtail "      { 0, NULL, NULL }\n    };\n    etype = g_@type@_register_static (\"@EnumName@\", values);\n  }\n  return etype;\n}\n" \
 		$(nst_headers_to_scan_for_enums)) > $@
 
-gsettingsschema_in_files = org.mate.Caja.Sendto.gschema.xml.in
+gsettingsschema_in_files = org.cafe.Caja.Sendto.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
@@ -87,7 +87,7 @@ EXTRA_DIST = \
 	caja-sendto.pc.in \
 	caja-sendto.ui \
 	$(gsettingsschema_in_files) \
-	org.mate.caja.extensions.sendto.gresource.xml \
+	org.cafe.caja.extensions.sendto.gresource.xml \
 	$(NULL)
 
 CLEANFILES = \

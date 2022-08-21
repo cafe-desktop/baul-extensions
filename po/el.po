@@ -15,11 +15,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: caja-extensions 1.23.1\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/caja-extensions\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/caja-extensions\n"
 "POT-Creation-Date: 2020-02-01 13:01+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Angelos Chraniotis <chraniotis@gmail.com>, 2020\n"
-"Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
+"Language-Team: Greek (https://www.transifex.com/cafe/teams/13566/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -302,7 +302,7 @@ msgstr "Άνοιγμα τερματικών από φακέλους"
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr ""
 
-#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:5
+#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:5
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
@@ -310,7 +310,7 @@ msgstr ""
 "Όποτε ανοίγετε ένα τερματικό στην επιφάνεια εργασίας, ανοίγετε ένα τερματικό"
 " στον προσωπικό φάκελο"
 
-#: open-terminal/org.mate.caja-open-terminal.gschema.xml.in:6
+#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:6
 msgid ""
 "If set to true, then opening a terminal on the desktop will open a terminal "
 "in the home directory. Otherwise, it will be opened in the desktop "
@@ -374,21 +374,21 @@ msgstr "Ενσωματώνει πελάτες ηλεκτονικού ταχυδ�
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:6
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:6
 msgid "Last plugin used to send"
 msgstr ""
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:7
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
 "caja-sendto."
 msgstr ""
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:14
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
 msgstr ""
 
-#: sendto/org.mate.Caja.Sendto.gschema.xml.in:15
+#: sendto/org.cafe.Caja.Sendto.gschema.xml.in:15
 msgid ""
 "Used to store which type of archive was used the last time (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."

@@ -10,13 +10,13 @@ image-converter/caja-image-rotator.c
 image-converter/libcaja-image-converter.caja-extension.desktop.in.in
 open-terminal/caja-open-terminal.c
 open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in
-open-terminal/org.mate.caja-open-terminal.gschema.xml.in
+open-terminal/org.cafe.caja-open-terminal.gschema.xml.in
 sendto/caja-nste.c
 sendto/caja-nste.h
 sendto/caja-sendto-command.c
 sendto/caja-sendto-module.c
 sendto/libcaja-sendto.caja-extension.desktop.in.in
-sendto/org.mate.Caja.Sendto.gschema.xml.in
+sendto/org.cafe.Caja.Sendto.gschema.xml.in
 sendto/caja-sendto.ui
 sendto/plugins/emailclient/emailclient.c
 sendto/plugins/gajim/gajim.c

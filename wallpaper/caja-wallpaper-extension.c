@@ -31,7 +31,7 @@
 #include <libcaja-extension/caja-menu-provider.h>
 #include "caja-wallpaper-extension.h"
 
-#define WP_SCHEMA "org.mate.background"
+#define WP_SCHEMA "org.cafe.background"
 #define WP_FILE_KEY "picture-filename"
 
 static GObjectClass *parent_class;
