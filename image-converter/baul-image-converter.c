@@ -1,5 +1,5 @@
 /*
- *  caja-image-converter.c
+ *  baul-image-converter.c
  *
  *  Copyright (C) 2004-2005 Jürg Billeter
  *
@@ -25,20 +25,20 @@
  #include <config.h> /* for GETTEXT_PACKAGE */
 #endif
 
-#include "caja-image-converter.h"
-#include "caja-image-resizer.h"
-#include "caja-image-rotator.h"
+#include "baul-image-converter.h"
+#include "baul-image-resizer.h"
+#include "baul-image-rotator.h"
 
-#include <libcaja-extension/caja-menu-provider.h>
+#include <libbaul-extension/baul-menu-provider.h>
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 
 #include <string.h> /* for strcmp */
 
-static void caja_image_converter_instance_init (CajaImageConverter      *img);
-static void caja_image_converter_class_init    (CajaImageConverterClass *class);
-GList *     caja_image_converter_get_file_items (CajaMenuProvider *provider,
+static void baul_image_converter_instance_init (CajaImageConverter      *img);
+static void baul_image_converter_class_init    (CajaImageConverterClass *class);
+GList *     baul_image_converter_get_file_items (CajaMenuProvider *provider,
 						     GtkWidget            *window,
 						     GList                *files);
 
@@ -52,12 +52,12 @@ image_converter_file_is_image (CajaFileInfo *file_info)
 	gboolean	maybe_image;
 
 	maybe_image = TRUE;
-	uri_scheme = caja_file_info_get_uri_scheme (file_info);
+	uri_scheme = baul_file_info_get_uri_scheme (file_info);
 	if (strcmp (uri_scheme, "file") != 0)
 		maybe_image = FALSE;
 	g_free (uri_scheme);
 
-	mime_type = caja_file_info_get_mime_type (file_info);
+	mime_type = baul_file_info_get_mime_type (file_info);
 	if (strncmp (mime_type, "image/", 6) != 0)
 		maybe_image = FALSE;
 	g_free (mime_type);
@@ -85,20 +85,20 @@ static void
 image_resize_callback (CajaMenuItem *item,
 			GList *files)
 {
-	CajaImageResizer *resizer = caja_image_resizer_new (image_converter_filter_images (files));
-	caja_image_resizer_show_dialog (resizer);
+	CajaImageResizer *resizer = baul_image_resizer_new (image_converter_filter_images (files));
+	baul_image_resizer_show_dialog (resizer);
 }
 
 static void
 image_rotate_callback (CajaMenuItem *item,
 			GList *files)
 {
-	CajaImageRotator *rotator = caja_image_rotator_new (image_converter_filter_images (files));
-	caja_image_rotator_show_dialog (rotator);
+	CajaImageRotator *rotator = baul_image_rotator_new (image_converter_filter_images (files));
+	baul_image_rotator_show_dialog (rotator);
 }
 
 static GList *
-caja_image_converter_get_background_items (CajaMenuProvider *provider,
+baul_image_converter_get_background_items (CajaMenuProvider *provider,
 					     GtkWidget		  *window,
 					     CajaFileInfo	  *file_info)
 {
@@ -106,7 +106,7 @@ caja_image_converter_get_background_items (CajaMenuProvider *provider,
 }
 
 GList *
-caja_image_converter_get_file_items (CajaMenuProvider *provider,
+baul_image_converter_get_file_items (CajaMenuProvider *provider,
 				       GtkWidget            *window,
 				       GList                *files)
 {
@@ -116,23 +116,23 @@ caja_image_converter_get_file_items (CajaMenuProvider *provider,
 
 	for (file = files; file != NULL; file = file->next) {
 		if (image_converter_file_is_image (file->data)) {
-			item = caja_menu_item_new ("CajaImageConverter::resize",
+			item = baul_menu_item_new ("CajaImageConverter::resize",
 				        _("_Resize Images..."),
 				        _("Resize each selected image"),
 				       NULL);
 			g_signal_connect (item, "activate",
 					  G_CALLBACK (image_resize_callback),
-					  caja_file_info_list_copy (files));
+					  baul_file_info_list_copy (files));
 
 			items = g_list_prepend (items, item);
 
-			item = caja_menu_item_new ("CajaImageConverter::rotate",
+			item = baul_menu_item_new ("CajaImageConverter::rotate",
 				        _("Ro_tate Images..."),
 				        _("Rotate each selected image"),
 				       NULL);
 			g_signal_connect (item, "activate",
 					  G_CALLBACK (image_rotate_callback),
-					  caja_file_info_list_copy (files));
+					  baul_file_info_list_copy (files));
 
 			items = g_list_prepend (items, item);
 
@@ -146,45 +146,45 @@ caja_image_converter_get_file_items (CajaMenuProvider *provider,
 }
 
 static void
-caja_image_converter_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_image_converter_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
-	iface->get_background_items = caja_image_converter_get_background_items;
-	iface->get_file_items = caja_image_converter_get_file_items;
+	iface->get_background_items = baul_image_converter_get_background_items;
+	iface->get_file_items = baul_image_converter_get_file_items;
 }
 
 static void
-caja_image_converter_instance_init (CajaImageConverter *img)
+baul_image_converter_instance_init (CajaImageConverter *img)
 {
 }
 
 static void
-caja_image_converter_class_init (CajaImageConverterClass *class)
+baul_image_converter_class_init (CajaImageConverterClass *class)
 {
 }
 
 GType
-caja_image_converter_get_type (void)
+baul_image_converter_get_type (void)
 {
 	return image_converter_type;
 }
 
 void
-caja_image_converter_register_type (GTypeModule *module)
+baul_image_converter_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
 		sizeof (CajaImageConverterClass),
 		(GBaseInitFunc) NULL,
 		(GBaseFinalizeFunc) NULL,
-		(GClassInitFunc) caja_image_converter_class_init,
+		(GClassInitFunc) baul_image_converter_class_init,
 		NULL,
 		NULL,
 		sizeof (CajaImageConverter),
 		0,
-		(GInstanceInitFunc) caja_image_converter_instance_init,
+		(GInstanceInitFunc) baul_image_converter_instance_init,
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) caja_image_converter_menu_provider_iface_init,
+		(GInterfaceInitFunc) baul_image_converter_menu_provider_iface_init,
 		NULL,
 		NULL
 	};

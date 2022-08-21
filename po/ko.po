@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR CAFE Desktop Environment team
-# This file is distributed under the same license as the caja-extensions package.
+# This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -13,8 +13,8 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: caja-extensions 1.23.1\n"
-"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/caja-extensions\n"
+"Project-Id-Version: baul-extensions 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
 "POT-Creation-Date: 2020-02-01 13:01+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Wolfgang Ulbrich <cafe@raveit.de>, 2020\n"
@@ -25,15 +25,15 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gksu/libcaja-gksu.c:135
+#: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
 msgstr "관리자 권한으로 열기"
 
-#: gksu/libcaja-gksu.c:136
+#: gksu/libbaul-gksu.c:136
 msgid "Opens the file with administrator privileges"
 msgstr "파일을 관리자 권한으로 엽니다"
 
-#: gksu/libcaja-gksu.c:223
+#: gksu/libbaul-gksu.c:223
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -45,269 +45,269 @@ msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:4
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "system"
 msgstr ""
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
 msgid "Privilege granting extension"
 msgstr "권한 승인 확장 기능"
 
-#: gksu/libcaja-gksu.caja-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr ""
 
-#: image-converter/caja-image-converter.c:120
+#: image-converter/baul-image-converter.c:120
 msgid "_Resize Images..."
 msgstr "그림 크기 조절(_R)..."
 
-#: image-converter/caja-image-converter.c:121
+#: image-converter/baul-image-converter.c:121
 msgid "Resize each selected image"
 msgstr "선택한 각각의 그림의 크기를 조절합니다"
 
-#: image-converter/caja-image-converter.c:130
+#: image-converter/baul-image-converter.c:130
 msgid "Ro_tate Images..."
 msgstr "그림 회전(_T)..."
 
-#: image-converter/caja-image-converter.c:131
+#: image-converter/baul-image-converter.c:131
 msgid "Rotate each selected image"
 msgstr "선택한 각각의 그림을 회전합니다"
 
-#: image-converter/caja-image-resize.ui:33
+#: image-converter/baul-image-resize.ui:33
 msgid "Resize Images"
 msgstr "그림 크기 조절"
 
-#: image-converter/caja-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: image-converter/caja-image-resize.ui:69
+#: image-converter/baul-image-resize.ui:69
 msgid "_Resize"
 msgstr "크기 조정(_R)"
 
-#: image-converter/caja-image-resize.ui:119
+#: image-converter/baul-image-resize.ui:119
 msgid "Select a size:"
 msgstr "크기 선택:"
 
-#: image-converter/caja-image-resize.ui:165
-#: image-converter/caja-image-resize.ui:307
+#: image-converter/baul-image-resize.ui:165
+#: image-converter/baul-image-resize.ui:307
 msgid "pixels"
 msgstr "픽셀"
 
-#: image-converter/caja-image-resize.ui:187
+#: image-converter/baul-image-resize.ui:187
 msgid "Scale:"
 msgstr "크기:"
 
-#: image-converter/caja-image-resize.ui:218
+#: image-converter/baul-image-resize.ui:218
 msgid "percent"
 msgstr "퍼센트"
 
-#: image-converter/caja-image-resize.ui:240
+#: image-converter/baul-image-resize.ui:240
 msgid "Custom size:"
 msgstr "사용자 지정 크기:"
 
-#: image-converter/caja-image-resize.ui:259
+#: image-converter/baul-image-resize.ui:259
 msgid "Width:"
 msgstr "너비:"
 
-#: image-converter/caja-image-resize.ui:283
+#: image-converter/baul-image-resize.ui:283
 msgid "Height:"
 msgstr "높이:"
 
-#: image-converter/caja-image-resize.ui:330
+#: image-converter/baul-image-resize.ui:330
 msgid "Image Size"
 msgstr ""
 
-#: image-converter/caja-image-resize.ui:368
-#: image-converter/caja-image-rotate.ui:206
+#: image-converter/baul-image-resize.ui:368
+#: image-converter/baul-image-rotate.ui:206
 msgid "Append"
 msgstr "추가"
 
-#: image-converter/caja-image-resize.ui:386
+#: image-converter/baul-image-resize.ui:386
 msgid ".resized"
 msgstr ".resized"
 
-#: image-converter/caja-image-resize.ui:398
-#: image-converter/caja-image-rotate.ui:228
+#: image-converter/baul-image-resize.ui:398
+#: image-converter/baul-image-rotate.ui:228
 msgid "to file title"
 msgstr "파일 제목으로"
 
-#: image-converter/caja-image-resize.ui:415
+#: image-converter/baul-image-resize.ui:415
 msgid "Resize in place"
 msgstr "제위치 크기 조절"
 
-#: image-converter/caja-image-resize.ui:438
+#: image-converter/baul-image-resize.ui:438
 msgid "Filename"
 msgstr "파일 이름"
 
-#: image-converter/caja-image-resizer.c:207
-#: image-converter/caja-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:207
+#: image-converter/baul-image-rotator.c:204
 msgid "_Skip"
 msgstr "건너뛰기(_S)"
 
-#: image-converter/caja-image-resizer.c:209
-#: image-converter/caja-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Retry"
 msgstr "다시 시도(_R)"
 
-#: image-converter/caja-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:287
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "그림 크기 조절중: %2$d중 %1$d"
 
-#: image-converter/caja-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:292
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>\"%s\" 크기 조정하는 중</i>"
 
-#: image-converter/caja-image-resizer.c:310
-#: image-converter/caja-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:310
+#: image-converter/baul-image-rotator.c:309
 msgid "Please enter a valid filename suffix!"
 msgstr "올바른 파일 이름 접미사를 입력해 주세요!"
 
-#: image-converter/caja-image-rotate.ui:18
+#: image-converter/baul-image-rotate.ui:18
 msgid "90° clockwise"
 msgstr ""
 
-#: image-converter/caja-image-rotate.ui:21
+#: image-converter/baul-image-rotate.ui:21
 msgid "90° counter-clockwise"
 msgstr ""
 
-#: image-converter/caja-image-rotate.ui:24
+#: image-converter/baul-image-rotate.ui:24
 msgid "180°"
 msgstr ""
 
-#: image-converter/caja-image-rotate.ui:31
+#: image-converter/baul-image-rotate.ui:31
 msgid "Rotate Images"
 msgstr "그림 회전하기"
 
-#: image-converter/caja-image-rotate.ui:46
+#: image-converter/baul-image-rotate.ui:46
 msgid "<b>Image Rotation</b>"
 msgstr "<b>그림 회전</b>"
 
-#: image-converter/caja-image-rotate.ui:79
+#: image-converter/baul-image-rotate.ui:79
 msgid "Select an angle:"
 msgstr "각도 선택:"
 
-#: image-converter/caja-image-rotate.ui:117
+#: image-converter/baul-image-rotate.ui:117
 msgid "Custom angle:"
 msgstr "사용자 지정 각도:"
 
-#: image-converter/caja-image-rotate.ui:143
+#: image-converter/baul-image-rotate.ui:143
 msgid "degrees clockwise"
 msgstr "시계방향으로 회전"
 
-#: image-converter/caja-image-rotate.ui:172
+#: image-converter/baul-image-rotate.ui:172
 msgid "<b>Filename</b>"
 msgstr "<b>파일 이름</b>"
 
-#: image-converter/caja-image-rotate.ui:219
+#: image-converter/baul-image-rotate.ui:219
 msgid ".rotated"
 msgstr ".rotated"
 
-#: image-converter/caja-image-rotate.ui:242
+#: image-converter/baul-image-rotate.ui:242
 msgid "Rotate in place"
 msgstr "제 위치 회전"
 
-#: image-converter/caja-image-rotate.ui:288
+#: image-converter/baul-image-rotate.ui:288
 msgid "_Rotate"
 msgstr "회전(_R)"
 
-#: image-converter/caja-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:286
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "그림 회전중: %2$d중 %1$d"
 
-#: image-converter/caja-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:291
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\"을(를) 회전하는 중</i>"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:4
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "image"
 msgstr ""
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "그림 변환"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
 msgid "Rotate and resize images"
 msgstr "이미지 크기 재조정 과 회전"
 
-#: image-converter/libcaja-image-converter.caja-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
-#: open-terminal/caja-open-terminal.c:459
-#: open-terminal/caja-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:459
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open in _Terminal"
 msgstr "터미널 열기(_T)"
 
-#: open-terminal/caja-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:461
 msgid "Open the currently selected folder in a terminal"
 msgstr "현재 선택한 폴더를 터미널에서 엽니다"
 
-#: open-terminal/caja-open-terminal.c:463
-#: open-terminal/caja-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:463
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open the currently open folder in a terminal"
 msgstr "현재 열어놓은 폴더를 터미널에서 엽니다"
 
-#: open-terminal/caja-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:469
 msgid "Open _Terminal"
 msgstr "터미널 열기(_T)"
 
-#: open-terminal/caja-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:470
 msgid "Open a terminal"
 msgstr "터미널을 엽니다"
 
-#: open-terminal/caja-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:563
 msgid "Open at Home if trying to open on desktop"
 msgstr "바탕화면에서 열려고 하면 Home으로 열기"
 
-#: open-terminal/caja-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:566
 msgid "Terminal application:"
 msgstr "터미널 애플리케이션:"
 
-#: open-terminal/caja-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:586
 msgid "Close"
 msgstr "닫기"
 
-#: open-terminal/caja-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:592
 msgid "open-terminal Configuration"
 msgstr "open-terminal 설정"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:4
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "terminal"
 msgstr ""
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "터미널 열기"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
 msgid "Open terminals from folders"
 msgstr "해당 폴더에서 터미널 열기"
 
-#: open-terminal/libcaja-open-terminal.caja-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr ""
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:5
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:5
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
 msgstr "데스크톱에서 터미널 열 때 내 폴더에서 터미널 열기"
 
-#: open-terminal/org.cafe.caja-open-terminal.gschema.xml.in:6
+#: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:6
 msgid ""
 "If set to true, then opening a terminal on the desktop will open a terminal "
 "in the home directory. Otherwise, it will be opened in the desktop "
@@ -317,54 +317,54 @@ msgstr ""
 "참이면, 데스크톱에서 터미널을 열 때 내 폴더를 기준으로 터미널을 엽니다. 그렇지 않으면 데스크톱 디렉터리에서 엽니다. 참고로 이 키는 "
 "데스크톱 디렉터리가 내 폴더와 일치한다면 상관 없습니다."
 
-#: sendto/caja-nste.c:76 sendto/caja-nste.c:81
+#: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
 msgstr "보내기..."
 
-#: sendto/caja-nste.c:77
+#: sendto/baul-nste.c:77
 msgid "Send file by mail, instant message..."
 msgstr "메일, 인스턴트 메시지로 파일 보내기..."
 
-#: sendto/caja-nste.c:82
+#: sendto/baul-nste.c:82
 msgid "Send files by mail, instant message..."
 msgstr "메일, 인스턴트 메시지로 파일을 보냅니다..."
 
-#: sendto/caja-sendto-command.c:578
+#: sendto/baul-sendto-command.c:578
 msgid "Files"
 msgstr "파일"
 
-#: sendto/caja-sendto-command.c:790
+#: sendto/baul-sendto-command.c:790
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "주어진 URI 또는 파일 이름을 옵션으로 전달합니다\n"
 
-#: sendto/caja-sendto-command.c:810
+#: sendto/baul-sendto-command.c:810
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "명령문 옵션을 해석할 수 없습니다: %s\n"
 
-#: sendto/caja-sendto-command.c:825
+#: sendto/baul-sendto-command.c:825
 msgid "Could not load any plugins."
 msgstr "아무 플러그인도 불러올 수 없습니다."
 
-#: sendto/caja-sendto-command.c:828
+#: sendto/baul-sendto-command.c:828
 msgid "Please verify your installation"
 msgstr "설치가 올바른지 확인하십시오."
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:4
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "mail-send"
 msgstr ""
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
 msgstr "보내기"
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
 msgid "Integrates email clients and Pidgin"
 msgstr "이메일 클라이언트와 피진 메신저 통합 기능 "
 
-#: sendto/libcaja-sendto.caja-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
@@ -375,7 +375,7 @@ msgstr "보내기에 사용한 마지막 플러그인"
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:7
 msgid ""
 "Used to store which plugin was used the last time files were sent using "
-"caja-sendto."
+"baul-sendto."
 msgstr "카하의 보내기를 이용해서 파일들을 보낼때 마지막에 사용된 플러그인을 저장하기."
 
 #: sendto/org.cafe.Caja.Sendto.gschema.xml.in:14
@@ -388,31 +388,31 @@ msgid ""
 "tar.gz, 2: tar.bz2)."
 msgstr " 마지막에 사용된 압축 형식을 저장하기 (0: zip, 1: tar.gz, 2: tar.bz2)"
 
-#: sendto/caja-sendto.ui:24
+#: sendto/baul-sendto.ui:24
 msgid "Send To..."
 msgstr "보내기..."
 
-#: sendto/caja-sendto.ui:100
+#: sendto/baul-sendto.ui:100
 msgid "_Send"
 msgstr "보내기(_S)"
 
-#: sendto/caja-sendto.ui:149
+#: sendto/baul-sendto.ui:149
 msgid "<b>Destination</b>"
 msgstr "<b>대상</b>"
 
-#: sendto/caja-sendto.ui:192
+#: sendto/baul-sendto.ui:192
 msgid "Send _as:"
 msgstr "보낼 방법(_A):"
 
-#: sendto/caja-sendto.ui:234
+#: sendto/baul-sendto.ui:234
 msgid "Send t_o:"
 msgstr "받을 사람(_O):"
 
-#: sendto/caja-sendto.ui:300
+#: sendto/baul-sendto.ui:300
 msgid "<b>Compression</b>"
 msgstr "<b>압축</b>"
 
-#: sendto/caja-sendto.ui:341
+#: sendto/baul-sendto.ui:341
 msgid "Send _packed in:"
 msgstr "묶어서 보내기(_P):"
 
@@ -444,15 +444,15 @@ msgstr "받는 사람을 알 수 없습니다."
 msgid "Instant Message (Gajim)"
 msgstr "인스턴트 메시지(Gajim)"
 
-#: sendto/plugins/caja-burn/caja-burn.c:92
+#: sendto/plugins/baul-burn/baul-burn.c:92
 msgid "New CD/DVD"
 msgstr "새 CD/DVD"
 
-#: sendto/plugins/caja-burn/caja-burn.c:99
+#: sendto/plugins/baul-burn/baul-burn.c:99
 msgid "Existing CD/DVD"
 msgstr "기존 CD/DVD"
 
-#: sendto/plugins/caja-burn/caja-burn.c:178
+#: sendto/plugins/baul-burn/baul-burn.c:178
 msgid "CD/DVD Creator"
 msgstr "CD/DVD 생성기"
 
@@ -470,30 +470,30 @@ msgstr "UPnP 미디어 서버"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: share/libcaja-share.caja-extension.desktop.in.in:4
+#: share/libbaul-share.baul-extension.desktop.in.in:4
 msgid "folder-remote"
 msgstr ""
 
-#: share/libcaja-share.caja-extension.desktop.in.in:5 share/caja-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "공유"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:6
 msgid "Allows to quickly share a folder"
 msgstr "빠른 폴더 공유를 승인합니다"
 
-#: share/libcaja-share.caja-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr ""
 
-#: share/caja-share.c:123
+#: share/baul-share.c:123
 #, c-format
 msgid ""
 "Caja needs to add some permissions to your folder \"%s\" in order to share "
 "it"
 msgstr "공유하려면, 카하가 \"%s\" 폴더에 몇몇 권한을 추가해야 합니다"
 
-#: share/caja-share.c:131
+#: share/baul-share.c:131
 #, c-format
 msgid ""
 "The folder \"%s\" needs the following extra permissions for sharing to work:\n"
@@ -503,65 +503,65 @@ msgstr ""
 "다음과 같은 권한을 카하가 자동으로 해당 폴더에 추가하는것을 원하십니까?\n"
 "%s%s%s"
 
-#: share/caja-share.c:135
+#: share/baul-share.c:135
 msgid "  - read permission by others\n"
 msgstr " - 다른 사람의 읽기권한\n"
 
-#: share/caja-share.c:136
+#: share/baul-share.c:136
 msgid "  - write permission by others\n"
 msgstr " - 다른 사람의 쓰기권한\n"
 
-#: share/caja-share.c:137
+#: share/baul-share.c:137
 msgid "  - execute permission by others\n"
 msgstr " - 다른 사람의 실행 권한\n"
 
-#: share/caja-share.c:141
+#: share/baul-share.c:141
 msgid "Add the permissions automatically"
 msgstr "권한 자동으로 추가하기"
 
-#: share/caja-share.c:167
+#: share/baul-share.c:167
 #, c-format
 msgid "Could not change the permissions of folder \"%s\""
 msgstr "\"%s\" 폴더의 권한을 바꿀 수 없습니다."
 
-#: share/caja-share.c:451
+#: share/baul-share.c:451
 msgid "Share name is too long"
 msgstr "공유 이름이 너무 깁니다"
 
-#: share/caja-share.c:493
+#: share/baul-share.c:493
 msgid "The share name cannot be empty"
 msgstr "공유 이름은 비워 둘 수 없습니다"
 
-#: share/caja-share.c:506
+#: share/baul-share.c:506
 #, c-format
 msgid "Error while getting share information: %s"
 msgstr "%s 공유 정보 가져오는 동안 오류가 발생했습니다."
 
-#: share/caja-share.c:516
+#: share/baul-share.c:516
 msgid "Another share has the same name"
 msgstr "또하나의 공유 이름이 간은 이름 입니다"
 
-#: share/caja-share.c:563 share/caja-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:799
 msgid "Modify _Share"
 msgstr "공유 수정(_S)"
 
-#: share/caja-share.c:563 share/caja-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:801
 msgid "Create _Share"
 msgstr "공유 만들기(_S)"
 
-#: share/caja-share.c:691
+#: share/baul-share.c:691
 msgid "There was an error while getting the sharing information"
 msgstr "공유 정보를 가져오는 동안 오류가 발생 했습니다"
 
-#: share/caja-share.c:1123
+#: share/baul-share.c:1123
 msgid "Folder Sharing"
 msgstr "폴더 공유"
 
-#: share/caja-share.c:1164
+#: share/baul-share.c:1164
 msgid "Sharing Options"
 msgstr "공유 옵션"
 
-#: share/caja-share.c:1165
+#: share/baul-share.c:1165
 msgid "Share this Folder"
 msgstr "이 폴더 공유하기"
 
@@ -647,49 +647,49 @@ msgid ""
 "first and add a new one"
 msgstr "기존 공유 경로를 바꿀 수 없습니다. 이전 공유를 먼저 제거하시고 새 공유를 추가하십시오"
 
-#: wallpaper/caja-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:109
 msgid "Set as wallpaper"
 msgstr "배경화면으로 설정하기"
 
-#: wallpaper/caja-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:110
 msgid "Set image as the current wallpaper"
 msgstr "이미지를 현재 배경화면으로 설정하기"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:4
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:4
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "desktop"
 msgstr "바탕 화면"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
 msgstr "배경화면"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
 msgid "Allows to quickly set wallpaper"
 msgstr "배경화면으로 바로 설정하기를 승인합니다"
 
-#: wallpaper/libcaja-wallpaper.caja-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr ""
 
-#: xattr-tags/caja-xattr-tags-extension.c:177
+#: xattr-tags/baul-xattr-tags-extension.c:177
 msgid "Tags"
 msgstr "태그"
 
-#: xattr-tags/caja-xattr-tags-extension.c:178
+#: xattr-tags/baul-xattr-tags-extension.c:178
 msgid "Tags stored in extended attributes"
 msgstr "확장 속성에 저장된 태그"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "xattr Tags"
 msgstr "xattr 태그"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
 msgid "View tags stored in extended attributes"
 msgstr "확장 속성에 저장된 태그 보기"
 
-#: xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""

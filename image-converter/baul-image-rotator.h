@@ -1,5 +1,5 @@
 /*
- *  caja-image-rotator.h
+ *  baul-image-rotator.h
  *
  *  Copyright (C) 2004-2006 Jürg Billeter
  *
@@ -28,7 +28,7 @@
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_IMAGE_ROTATOR         (caja_image_rotator_get_type ())
+#define CAJA_TYPE_IMAGE_ROTATOR         (baul_image_rotator_get_type ())
 #define CAJA_IMAGE_ROTATOR(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_IMAGE_ROTATOR, CajaImageRotator))
 #define CAJA_IMAGE_ROTATOR_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CAJA_TYPE_IMAGE_ROTATOR, CajaImageRotatorClass))
 #define CAJA_IS_IMAGE_ROTATOR(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_IMAGE_ROTATOR))
@@ -47,9 +47,9 @@ struct _CajaImageRotatorClass {
 	/* Add Signal Functions Here */
 };
 
-GType caja_image_rotator_get_type (void);
-CajaImageRotator *caja_image_rotator_new (GList *files);
-void caja_image_rotator_show_dialog (CajaImageRotator *dialog);
+GType baul_image_rotator_get_type (void);
+CajaImageRotator *baul_image_rotator_new (GList *files);
+void baul_image_rotator_show_dialog (CajaImageRotator *dialog);
 
 G_END_DECLS
 

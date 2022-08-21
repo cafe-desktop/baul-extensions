@@ -27,8 +27,8 @@
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_XATTR_TAGS  (caja_xattr_tags_get_type ())
-#define CAJA_XATTR_TAGS(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_XATTR_TAGS, cajaXattrTags))
+#define CAJA_TYPE_XATTR_TAGS  (baul_xattr_tags_get_type ())
+#define CAJA_XATTR_TAGS(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_XATTR_TAGS, baulXattrTags))
 #define CAJA_IS_XATTR_TAGS(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_XATTR_TAGS))
 
 typedef struct _CajaXattrTags      CajaXattrTags;
@@ -42,8 +42,8 @@ struct _CajaXattrTagsClass {
 	GObjectClass __parent;
 };
 
-GType caja_xattr_tags_get_type(void);
-void  caja_xattr_tags_register_type(GTypeModule *module);
+GType baul_xattr_tags_get_type(void);
+void  baul_xattr_tags_register_type(GTypeModule *module);
 
 G_END_DECLS
 

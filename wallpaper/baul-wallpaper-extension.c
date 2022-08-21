@@ -26,10 +26,10 @@
 #include <string.h>
 #include <gio/gio.h>
 #include <glib/gi18n-lib.h>
-#include <libcaja-extension/caja-extension-types.h>
-#include <libcaja-extension/caja-file-info.h>
-#include <libcaja-extension/caja-menu-provider.h>
-#include "caja-wallpaper-extension.h"
+#include <libbaul-extension/baul-extension-types.h>
+#include <libbaul-extension/baul-file-info.h>
+#include <libbaul-extension/baul-menu-provider.h>
+#include "baul-wallpaper-extension.h"
 
 #define WP_SCHEMA "org.cafe.background"
 #define WP_FILE_KEY "picture-filename"
@@ -49,7 +49,7 @@ set_wallpaper_callback (CajaMenuItem *item,
     files = g_object_get_data (G_OBJECT (item), "files");
     file = files->data;
 
-    uri = caja_file_info_get_uri (file);
+    uri = baul_file_info_get_uri (file);
     filename = g_filename_from_uri(uri, NULL, NULL);
 
     settings = g_settings_new (WP_SCHEMA);
@@ -68,7 +68,7 @@ is_image (CajaFileInfo *file)
     gchar   *mimeType;
     gboolean isImage;
 
-    mimeType = caja_file_info_get_mime_type (file);
+    mimeType = baul_file_info_get_mime_type (file);
     isImage = g_str_has_prefix (mimeType, "image/");
     g_free (mimeType);
     return isImage;
@@ -76,7 +76,7 @@ is_image (CajaFileInfo *file)
 
 
 static GList *
-caja_cwe_get_file_items (CajaMenuProvider *provider,
+baul_cwe_get_file_items (CajaMenuProvider *provider,
                   GtkWidget            *window,
                   GList                *files)
 {
@@ -90,7 +90,7 @@ caja_cwe_get_file_items (CajaMenuProvider *provider,
         gchar            *scheme;
         gboolean          local;
 
-        scheme = caja_file_info_get_uri_scheme (file);
+        scheme = baul_file_info_get_uri_scheme (file);
         local = strncmp (scheme, "file", 4) == 0;
         g_free (scheme);
 
@@ -100,8 +100,8 @@ caja_cwe_get_file_items (CajaMenuProvider *provider,
 
     one_item = (files != NULL) && (files->next == NULL);
     if (one_item && is_image ((CajaFileInfo *)files->data) &&
-        !caja_file_info_is_directory ((CajaFileInfo *)files->data)) {
-        item = caja_menu_item_new ("CajaCwe::sendto",
+        !baul_file_info_is_directory ((CajaFileInfo *)files->data)) {
+        item = baul_menu_item_new ("CajaCwe::sendto",
                            _("Set as wallpaper"),
                            _("Set image as the current wallpaper"),
                            NULL);
@@ -111,8 +111,8 @@ caja_cwe_get_file_items (CajaMenuProvider *provider,
                 provider);
         g_object_set_data_full (G_OBJECT (item),
                     "files",
-                    caja_file_info_list_copy (files),
-                    (GDestroyNotify) caja_file_info_list_free);
+                    baul_file_info_list_copy (files),
+                    (GDestroyNotify) baul_file_info_list_free);
         items = g_list_append (items, item);
     }
     return items;
@@ -120,20 +120,20 @@ caja_cwe_get_file_items (CajaMenuProvider *provider,
 
 
 static void
-caja_cwe_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_cwe_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
-    iface->get_file_items = caja_cwe_get_file_items;
+    iface->get_file_items = baul_cwe_get_file_items;
 }
 
 
 static void
-caja_cwe_instance_init (CajaCwe *cwe)
+baul_cwe_instance_init (CajaCwe *cwe)
 {
 }
 
 
 static void
-caja_cwe_class_init (CajaCweClass *class)
+baul_cwe_class_init (CajaCweClass *class)
 {
     parent_class = g_type_class_peek_parent (class);
 }
@@ -143,29 +143,29 @@ static GType cwe_type = 0;
 
 
 GType
-caja_cwe_get_type (void)
+baul_cwe_get_type (void)
 {
     return cwe_type;
 }
 
 
 void
-caja_cwe_register_type (GTypeModule *module)
+baul_cwe_register_type (GTypeModule *module)
 {
     static const GTypeInfo info = {
         sizeof (CajaCweClass),
         (GBaseInitFunc) NULL,
         (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc) caja_cwe_class_init,
+        (GClassInitFunc) baul_cwe_class_init,
         NULL,
         NULL,
         sizeof (CajaCwe),
         0,
-        (GInstanceInitFunc) caja_cwe_instance_init,
+        (GInstanceInitFunc) baul_cwe_instance_init,
     };
 
     static const GInterfaceInfo menu_provider_iface_info = {
-        (GInterfaceInitFunc) caja_cwe_menu_provider_iface_init,
+        (GInterfaceInitFunc) baul_cwe_menu_provider_iface_init,
         NULL,
         NULL
     };

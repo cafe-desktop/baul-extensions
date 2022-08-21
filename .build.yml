@@ -4,7 +4,7 @@
 requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/caja-extensions
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/baul-extensions
     - aptitude
     - autoconf-archive
     - autopoint
@@ -18,7 +18,7 @@ requires:
     - git
     - intltool
     - iso-codes
-    - libcaja-extension-dev
+    - libbaul-extension-dev
     - libdbus-1-dev
     - libdbus-glib-1-dev
     - libdconf-dev

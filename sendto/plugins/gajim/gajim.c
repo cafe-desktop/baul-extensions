@@ -1,6 +1,6 @@
 /*
  * gajim.c
- *       gajim plugin for caja-sendto
+ *       gajim plugin for baul-sendto
  *
  * Copyright (C) 2006 Dimitur Kirov
  *               2006 Roberto Majadas <telemaco@openshine.com>
@@ -26,7 +26,7 @@
 #include <glib/gi18n-lib.h>
 #include <dbus/dbus.h>
 #include <dbus/dbus-glib.h>
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 #define OBJ_PATH "/org/gajim/dbus/RemoteObject"
 #define INTERFACE "org.gajim.dbus.RemoteInterface"

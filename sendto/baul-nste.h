@@ -28,7 +28,7 @@
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_NSTE  (caja_nste_get_type ())
+#define CAJA_TYPE_NSTE  (baul_nste_get_type ())
 #define CAJA_NSTE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_NSTE, CajaNste))
 #define CAJA_IS_NSTE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_NSTE))
 
@@ -43,8 +43,8 @@ struct _CajaNsteClass {
 	GObjectClass __parent;
 };
 
-GType caja_nste_get_type      (void);
-void  caja_nste_register_type (GTypeModule *module);
+GType baul_nste_get_type      (void);
+void  baul_nste_register_type (GTypeModule *module);
 
 G_END_DECLS
 

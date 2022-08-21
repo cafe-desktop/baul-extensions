@@ -9,27 +9,27 @@ AM_CPPFLAGS =						\
 	$(CAJA_CFLAGS) \
 	$(IMAGE_CONVERTER_CFLAGS)
 
-caja_extensiondir=$(CAJA_EXTENSION_DIR)
+baul_extensiondir=$(CAJA_EXTENSION_DIR)
 
-caja_extension_LTLIBRARIES=libcaja-image-converter.la
+baul_extension_LTLIBRARIES=libbaul-image-converter.la
 
-libcaja_image_converter_la_SOURCES =				\
+libbaul_image_converter_la_SOURCES =				\
 	image-converter.c						\
-	caja-image-converter.c	caja-image-converter.h	\
-	caja-image-resizer.c	caja-image-resizer.h	\
-	caja-image-rotator.c	caja-image-rotator.h
+	baul-image-converter.c	baul-image-converter.h	\
+	baul-image-resizer.c	baul-image-resizer.h	\
+	baul-image-rotator.c	baul-image-rotator.h
 
-libcaja_image_converter_la_LDFLAGS = -module -avoid-version
-libcaja_image_converter_la_LIBADD  = $(CAJA_LIBS) $(IMAGE_CONVERTER_LIBS)
+libbaul_image_converter_la_LDFLAGS = -module -avoid-version
+libbaul_image_converter_la_LIBADD  = $(CAJA_LIBS) $(IMAGE_CONVERTER_LIBS)
 
-builderdir = $(datadir)/caja-extensions
+builderdir = $(datadir)/baul-extensions
 builder_DATA = 				\
-	caja-image-resize.ui	\
-	caja-image-rotate.ui
+	baul-image-resize.ui	\
+	baul-image-rotate.ui
 
-extensiondir = $(datadir)/caja/extensions
-extension_in_files = libcaja-image-converter.caja-extension.desktop.in
-extension_DATA = $(extension_in_files:.caja-extension.desktop.in=.caja-extension)
+extensiondir = $(datadir)/baul/extensions
+extension_in_files = libbaul-image-converter.baul-extension.desktop.in
+extension_DATA = $(extension_in_files:.baul-extension.desktop.in=.baul-extension)
 $(extension_DATA): $(extension_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Copyright --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 

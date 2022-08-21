@@ -1,4 +1,4 @@
-AC_INIT([caja-extensions], 1.24.1, [https://github.com/cafe-desktop/caja-extensions])
+AC_INIT([baul-extensions], 1.24.1, [https://github.com/cafe-desktop/baul-extensions])
 
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz tar-ustar check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -53,7 +53,7 @@ fi
 
 # Common requirements
 PKG_CHECK_MODULES(CAJA,
-                  libcaja-extension >= $CAJA_REQUIRED)
+                  libbaul-extension >= $CAJA_REQUIRED)
 AC_SUBST(CAJA_CFLAGS)
 AC_SUBST(CAJA_LIBS)
 
@@ -111,7 +111,7 @@ if test "x$enable_sendto" = "xyes"; then
         AC_SUBST(SENDTO_LIBS)
 
     # The full list of plugins
-    allowed_sendto_plugins="emailclient gajim caja-burn pidgin removable-devices upnp"
+    allowed_sendto_plugins="emailclient gajim baul-burn pidgin removable-devices upnp"
 
     sendto_plugin_error_or_ignore()
     {
@@ -123,7 +123,7 @@ if test "x$enable_sendto" = "xyes"; then
     }
 
     AC_ARG_WITH([sendto-plugins],
-        [AS_HELP_STRING([--with-sendto-plugins],[Which caja-sendto plugins to compile (default: auto; "all", "autodetect" are valid)])],
+        [AS_HELP_STRING([--with-sendto-plugins],[Which baul-sendto plugins to compile (default: auto; "all", "autodetect" are valid)])],
         [], [with_sendto_plugins=autodetect])
 
     used_sendto_plugins=""
@@ -189,11 +189,11 @@ if test "x$enable_sendto" = "xyes"; then
                     add_sendto_plugin="0"
                 fi
             ;;
-            caja-burn)
+            baul-burn)
                 PKG_CHECK_MODULES(GIO, gio-2.0,
                     enable_burn=yes, enable_burn=no)
                 if test "${enable_burn}" != "yes" ; then
-                    sendto_plugin_error_or_ignore "you need gio installed to build the caja-burn plugin"
+                    sendto_plugin_error_or_ignore "you need gio installed to build the baul-burn plugin"
                     add_sendto_plugin="0"
                 fi
             ;;
@@ -236,7 +236,7 @@ if test "x$enable_sendto" = "xyes"; then
 
     dnl Error out if no plugins will be built
     if test -z "${SENDTO_PLUGINS}" ; then
-        AC_MSG_ERROR([No sendto plugins will be built, and caja-sendto requires at least one])
+        AC_MSG_ERROR([No sendto plugins will be built, and baul-sendto requires at least one])
     fi
 
     AC_MSG_CHECKING([which sendto plugins to compile])
@@ -269,7 +269,7 @@ if test "x$enable_sendto" = "xyes"; then
             AC_MSG_NOTICE([ ${allowed_sendto_plugin} sendto plugin disabled])
         done
     else
-        AC_MSG_NOTICE([ No caja-sendto plugins enabled])
+        AC_MSG_NOTICE([ No baul-sendto plugins enabled])
     fi
 fi
 AM_CONDITIONAL(ENABLE_SENDTO, test x"$enable_sendto" = "xyes")
@@ -313,64 +313,64 @@ AC_ARG_ENABLE([xattr-tags],
 
 AM_CONDITIONAL(ENABLE_XATTR_TAGS, test x"$enable_xattr_tags" = "xyes")
 
-# Get caja extensions directory
-AC_ARG_WITH(cajadir,
-    AS_HELP_STRING([--with-cajadir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
-    [ac_with_cajadir=$withval],
-    [ac_with_cajadir=""])
-if test "${ac_with_cajadir}" = ""; then
-    ac_with_cajadir=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
+# Get baul extensions directory
+AC_ARG_WITH(bauldir,
+    AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+    [ac_with_bauldir=$withval],
+    [ac_with_bauldir=""])
+if test "${ac_with_bauldir}" = ""; then
+    ac_with_bauldir=`$PKG_CONFIG --variable=extensiondir libbaul-extension`
 fi
-AC_MSG_NOTICE([Installing caja plugins in ${ac_with_cajadir}])
-AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_cajadir}])
+AC_MSG_NOTICE([Installing baul plugins in ${ac_with_bauldir}])
+AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_bauldir}])
 
 # gettext
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=caja-extensions
+GETTEXT_PACKAGE=baul-extensions
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
 AC_OUTPUT([
   Makefile
   sendto/org.cafe.Caja.Sendto.gschema.xml
-  open-terminal/org.cafe.caja-open-terminal.gschema.xml
-  gksu/libcaja-gksu.caja-extension.desktop.in
+  open-terminal/org.cafe.baul-open-terminal.gschema.xml
+  gksu/libbaul-gksu.baul-extension.desktop.in
   gksu/Makefile
-  image-converter/libcaja-image-converter.caja-extension.desktop.in
+  image-converter/libbaul-image-converter.baul-extension.desktop.in
   image-converter/Makefile
-  open-terminal/libcaja-open-terminal.caja-extension.desktop.in
+  open-terminal/libbaul-open-terminal.baul-extension.desktop.in
   open-terminal/Makefile
-  sendto/libcaja-sendto.caja-extension.desktop.in
+  sendto/libbaul-sendto.baul-extension.desktop.in
   sendto/Makefile
-  sendto/caja-sendto.pc
+  sendto/baul-sendto.pc
   sendto/docs/Makefile
   sendto/docs/version.xml
   sendto/plugins/Makefile
   sendto/plugins/emailclient/Makefile
   sendto/plugins/gajim/Makefile
-  sendto/plugins/caja-burn/Makefile
+  sendto/plugins/baul-burn/Makefile
   sendto/plugins/pidgin/Makefile
   sendto/plugins/removable-devices/Makefile
   sendto/plugins/upnp/Makefile
-  share/libcaja-share.caja-extension.desktop.in
+  share/libbaul-share.baul-extension.desktop.in
   share/Makefile
-  wallpaper/libcaja-wallpaper.caja-extension.desktop.in
+  wallpaper/libbaul-wallpaper.baul-extension.desktop.in
   wallpaper/Makefile
-  xattr-tags/libcaja-xattr-tags.caja-extension.desktop.in
+  xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in
   xattr-tags/Makefile
   po/Makefile.in
 ])
 
 echo "
-      caja-extensions $VERSION
-      `echo caja-extensions $VERSION | sed "s/./=/g"`
+      baul-extensions $VERSION
+      `echo baul-extensions $VERSION | sed "s/./=/g"`
       prefix:                 ${prefix}
       compiler:               ${CC}
       cflags:                 ${CFLAGS}
       warning flags:          ${WARN_CFLAGS}
-      caja-extension dir      ${ac_with_cajadir}
+      baul-extension dir      ${ac_with_bauldir}
 
       Plugins to be built:
       Image Converter:        $enable_image_converter

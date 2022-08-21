@@ -2,7 +2,7 @@
 
 /*
  * pidgin.c
- *       pidgin plugin for caja-sendto
+ *       pidgin plugin for baul-sendto
  *
  * Copyright (C) 2004 Roberto Majadas
  * Copyright (C) 2009 Pascal Terjan
@@ -29,7 +29,7 @@
 #include <glib/gi18n-lib.h>
 #include <dbus/dbus.h>
 #include <dbus/dbus-glib.h>
-#include "caja-sendto-plugin.h"
+#include "baul-sendto-plugin.h"
 
 #define OBJ_PATH "/im/pidgin/purple/PurpleObject"
 #define INTERFACE "im.pidgin.purple.PurpleInterface"

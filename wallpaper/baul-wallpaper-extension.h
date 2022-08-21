@@ -29,7 +29,7 @@
 
 G_BEGIN_DECLS
 
-#define CAJA_TYPE_CWE  (caja_cwe_get_type ())
+#define CAJA_TYPE_CWE  (baul_cwe_get_type ())
 #define CAJA_CWE(o)    (G_TYPE_CHECK_INSTANCE_CAST ((o), CAJA_TYPE_CWE, CajaCwe))
 #define CAJA_IS_CWE(o) (G_TYPE_CHECK_INSTANCE_TYPE ((o), CAJA_TYPE_CWE))
 
@@ -44,8 +44,8 @@ struct _CajaCweClass {
 	GObjectClass __parent;
 };
 
-GType caja_cwe_get_type      (void);
-void  caja_cwe_register_type (GTypeModule *module);
+GType baul_cwe_get_type      (void);
+void  baul_cwe_register_type (GTypeModule *module);
 
 G_END_DECLS
 

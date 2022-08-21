@@ -30,12 +30,12 @@
 #include <gtk/gtk.h>
 
 /**
- * SECTION:caja-sendto-plugin
- * @short_description: caja-sento plug-in
+ * SECTION:baul-sendto-plugin
+ * @short_description: baul-sento plug-in
  * @stability: Stable
  * @include: bluetooth-plugin.h
  *
- * Plug-ins can be used to extend caja-sendto.
+ * Plug-ins can be used to extend baul-sendto.
  **/
 
 typedef struct _NstPluginInfo NstPluginInfo;
@@ -60,7 +60,7 @@ typedef enum {
  * @icon: The icon name for the plugin selection drop-down
  * @id: A unique ID representing the plugin
  * @description: The label used in the plugin selection drop-down
- * @gettext_package: The domain to use to translate the description, %NULL if the plugin is part of caja-sendto
+ * @gettext_package: The domain to use to translate the description, %NULL if the plugin is part of baul-sendto
  * @capabilities: a bitmask of #NstPluginCapabilities
  * @init: Check for dependencies, and return %FALSE if dependencies such as programs are missing.
  * @get_contacts_widget: Return the contact widget, the widget to select the destination of the files
@@ -68,7 +68,7 @@ typedef enum {
  * @send_files: Actually send the files to the selected destination. The file list is a #GList of URI strings.
  * @destroy: Free all the resources used by the plugin.
  *
- * A structure representing a caja-sendto plugin. You should also call NST_INIT_PLUGIN() on the plugin structure to export it.
+ * A structure representing a baul-sendto plugin. You should also call NST_INIT_PLUGIN() on the plugin structure to export it.
  **/
 struct _NstPluginInfo
 {
@@ -91,7 +91,7 @@ struct _NstPluginInfo
  * @module: the #GModule for the opened shared library
  * @info: a #NstPluginInfo structure
  *
- * A structure as used in caja-sendto.
+ * A structure as used in baul-sendto.
  **/
 struct _NstPlugin
 {
@@ -103,7 +103,7 @@ struct _NstPlugin
  * NST_INIT_PLUGIN:
  * @plugininfo: a #NstPluginInfo structure representing the plugin
  *
- * Call this on an #NstPluginInfo structure to make it available to caja-sendto.
+ * Call this on an #NstPluginInfo structure to make it available to baul-sendto.
  **/
 # define NST_INIT_PLUGIN(plugininfo)					\
 	gboolean nst_init_plugin(NstPlugin *plugin);			\

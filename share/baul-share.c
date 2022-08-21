@@ -1,4 +1,4 @@
-/* caja-share -- Caja File Sharing Extension
+/* baul-share -- Caja File Sharing Extension
  *
  * Sebastien Estienne <sebastien.estienne@gmail.com>
  *
@@ -23,15 +23,15 @@
 #include <config.h>
 #endif
 
-#include <libcaja-extension/caja-extension-types.h>
-#include <libcaja-extension/caja-column-provider.h>
-#include <libcaja-extension/caja-extension-types.h>
-#include <libcaja-extension/caja-file-info.h>
-#include <libcaja-extension/caja-info-provider.h>
-#include <libcaja-extension/caja-menu-provider.h>
-#include <libcaja-extension/caja-property-page-provider.h>
+#include <libbaul-extension/baul-extension-types.h>
+#include <libbaul-extension/baul-column-provider.h>
+#include <libbaul-extension/baul-extension-types.h>
+#include <libbaul-extension/baul-file-info.h>
+#include <libbaul-extension/baul-info-provider.h>
+#include <libbaul-extension/baul-menu-provider.h>
+#include <libbaul-extension/baul-property-page-provider.h>
 
-#include "caja-share.h"
+#include "baul-share.h"
 
 #include <glib/gi18n-lib.h>
 
@@ -403,7 +403,7 @@ property_page_commit (PropertyPage *page)
   else
     {
       property_page_validate_fields (page);
-      caja_file_info_invalidate_extension_info (page->fileinfo);
+      baul_file_info_invalidate_extension_info (page->fileinfo);
     }
 
   if (!is_shared)
@@ -428,7 +428,7 @@ get_fullpath_from_fileinfo(CajaFileInfo *fileinfo)
 
   g_assert (fileinfo != NULL);
 
-  file = caja_file_info_get_location(fileinfo);
+  file = baul_file_info_get_location(fileinfo);
   fullpath = g_file_get_path(file);
   g_assert (fullpath != NULL && g_file_is_native(file)); /* In the beginning we checked that this was a local URI */
   g_object_unref(file);
@@ -843,7 +843,7 @@ create_property_page (CajaFileInfo *fileinfo)
 
 /* Implementation of the CajaInfoProvider interface */
 
-/* caja_info_provider_update_file_info
+/* baul_info_provider_update_file_info
  * This function is called by Caja when it wants the extension to
  * fill in data about the file.  It passes a CajaFileInfo object,
  * which the extension can use to read data from the file, and which
@@ -902,8 +902,8 @@ get_share_info_for_file_info (CajaFileInfo *file, ShareInfo **share_info, gboole
   *share_info = NULL;
   *is_shareable = FALSE;
 
-  uri = caja_file_info_get_uri (file);
-  f = caja_file_info_get_location(file);
+  uri = baul_file_info_get_uri (file);
+  f = baul_file_info_get_location(file);
   if (!uri)
     goto out;
 
@@ -929,7 +929,7 @@ get_share_info_for_file_info (CajaFileInfo *file, ShareInfo **share_info, gboole
       goto out;
     }
 
-  if (!caja_file_info_is_directory(file))
+  if (!baul_file_info_is_directory(file))
     goto out;
 
   local_path = g_file_get_path(f);
@@ -965,7 +965,7 @@ file_get_share_status_file(CajaFileInfo *file)
 }
 
 static CajaOperationResult
-caja_share_update_file_info (CajaInfoProvider *provider,
+baul_share_update_file_info (CajaInfoProvider *provider,
 				 CajaFileInfo *file,
 				 GClosure *update_complete,
 				 CajaOperationHandle **handle)
@@ -975,12 +975,12 @@ caja_share_update_file_info (CajaInfoProvider *provider,
   switch (file_get_share_status_file (file)) {
 
   case CAJA_SHARE_SHARED_RO:
-    caja_file_info_add_emblem (file, "shared");
+    baul_file_info_add_emblem (file, "shared");
 /*     share_status = _("shared (read only)"); */
     break;
 
   case CAJA_SHARE_SHARED_RW:
-    caja_file_info_add_emblem (file, "shared");
+    baul_file_info_add_emblem (file, "shared");
 /*     share_status = _("shared (read and write)"); */
     break;
 
@@ -993,7 +993,7 @@ caja_share_update_file_info (CajaInfoProvider *provider,
     break;
   }
 
-/*   caja_file_info_add_string_attribute (file, */
+/*   baul_file_info_add_string_attribute (file, */
 /* 					   "CajaShare::share_status", */
 /* 					   share_status); */
   return CAJA_OPERATION_COMPLETE;
@@ -1001,7 +1001,7 @@ caja_share_update_file_info (CajaInfoProvider *provider,
 
 
 static void
-caja_share_cancel_update (CajaInfoProvider *provider,
+baul_share_cancel_update (CajaInfoProvider *provider,
 			      CajaOperationHandle *handle)
 {
   CajaShareHandle *share_handle;
@@ -1011,14 +1011,14 @@ caja_share_cancel_update (CajaInfoProvider *provider,
 }
 
 static void
-caja_share_info_provider_iface_init (CajaInfoProviderIface *iface)
+baul_share_info_provider_iface_init (CajaInfoProviderIface *iface)
 {
-  iface->update_file_info = caja_share_update_file_info;
-  iface->cancel_update = caja_share_cancel_update;
+  iface->update_file_info = baul_share_update_file_info;
+  iface->cancel_update = baul_share_cancel_update;
 }
 
 /*--------------------------------------------------------------------------*/
-/* caja_property_page_provider_get_pages
+/* baul_property_page_provider_get_pages
  *
  * This function is called by Caja when it wants property page
  * items from the extension.
@@ -1030,7 +1030,7 @@ caja_share_info_provider_iface_init (CajaInfoProviderIface *iface)
  * items.
  */
 static GList *
-caja_share_get_property_pages (CajaPropertyPageProvider *provider,
+baul_share_get_property_pages (CajaPropertyPageProvider *provider,
 				   GList *files)
 {
   PropertyPage *page;
@@ -1058,7 +1058,7 @@ caja_share_get_property_pages (CajaPropertyPageProvider *provider,
     shares_free_share_info (share_info);
 
   pages = NULL;
-  np_page = caja_property_page_new
+  np_page = baul_property_page_new
     ("CajaShare::property_page",
      gtk_label_new (_("Share")),
      page->main);
@@ -1069,25 +1069,25 @@ caja_share_get_property_pages (CajaPropertyPageProvider *provider,
 
 /*--------------------------------------------------------------------------*/
 static void
-caja_share_property_page_provider_iface_init (CajaPropertyPageProviderIface *iface)
+baul_share_property_page_provider_iface_init (CajaPropertyPageProviderIface *iface)
 {
-  iface->get_pages = caja_share_get_property_pages;
+  iface->get_pages = baul_share_get_property_pages;
 }
 
 /*--------------------------------------------------------------------------*/
 static void
-caja_share_instance_init (CajaShare *share)
+baul_share_instance_init (CajaShare *share)
 {
 }
 
 /*--------------------------------------------------------------------------*/
 static void
-caja_share_class_init (CajaShareClass *class)
+baul_share_class_init (CajaShareClass *class)
 {
   parent_class = g_type_class_peek_parent (class);
 }
 
-/* caja_menu_provider_get_file_items
+/* baul_menu_provider_get_file_items
  *
  * This function is called by Caja when it wants context menu
  * items from the extension.
@@ -1131,7 +1131,7 @@ share_this_folder_callback (CajaMenuItem *item,
 }
 
 static GList *
-caja_share_get_file_items (CajaMenuProvider *provider,
+baul_share_get_file_items (CajaMenuProvider *provider,
 			     GtkWidget *window,
 			     GList *files)
 {
@@ -1160,7 +1160,7 @@ caja_share_get_file_items (CajaMenuProvider *provider,
   g_object_ref (fileinfo);
 
   /* FMQ: change the label to "Share with Windows users"? */
-  item = caja_menu_item_new ("CajaShare::share",
+  item = baul_menu_item_new ("CajaShare::share",
 				 _("Sharing Options"),
 				 _("Share this Folder"),
 				 "folder-remote");
@@ -1178,9 +1178,9 @@ caja_share_get_file_items (CajaMenuProvider *provider,
 
 /*--------------------------------------------------------------------------*/
 static void
-caja_share_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_share_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
-	iface->get_file_items = caja_share_get_file_items;
+	iface->get_file_items = baul_share_get_file_items;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -1190,27 +1190,27 @@ caja_share_menu_provider_iface_init (CajaMenuProviderIface *iface)
  * initialization function. */
 static GType share_type = 0;
 
-#define CAJA_TYPE_SHARE  (caja_share_get_type ())
+#define CAJA_TYPE_SHARE  (baul_share_get_type ())
 
 static GType
-caja_share_get_type (void)
+baul_share_get_type (void)
 {
   return share_type;
 }
 
 static void
-caja_share_register_type (GTypeModule *module)
+baul_share_register_type (GTypeModule *module)
 {
   static const GTypeInfo info = {
     sizeof (CajaShareClass),
     (GBaseInitFunc) NULL,
     (GBaseFinalizeFunc) NULL,
-    (GClassInitFunc) caja_share_class_init,
+    (GClassInitFunc) baul_share_class_init,
     NULL,
     NULL,
     sizeof (CajaShare),
     0,
-    (GInstanceInitFunc) caja_share_instance_init,
+    (GInstanceInitFunc) baul_share_instance_init,
   };
 
   share_type = g_type_module_register_type (module,
@@ -1219,7 +1219,7 @@ caja_share_register_type (GTypeModule *module)
 					    &info, 0);
 
   static const GInterfaceInfo property_page_provider_iface_info = {
-    (GInterfaceInitFunc) caja_share_property_page_provider_iface_init,
+    (GInterfaceInitFunc) baul_share_property_page_provider_iface_init,
     NULL,
     NULL
   };
@@ -1231,7 +1231,7 @@ caja_share_register_type (GTypeModule *module)
 
 
   static const GInterfaceInfo info_provider_iface_info = {
-    (GInterfaceInitFunc) caja_share_info_provider_iface_init,
+    (GInterfaceInitFunc) baul_share_info_provider_iface_init,
     NULL,
     NULL
   };
@@ -1243,7 +1243,7 @@ caja_share_register_type (GTypeModule *module)
 
   /* Menu right clik */
   static const GInterfaceInfo menu_provider_iface_info = {
-    (GInterfaceInitFunc) caja_share_menu_provider_iface_init,
+    (GInterfaceInitFunc) baul_share_menu_provider_iface_init,
     NULL,
     NULL
   };
@@ -1256,34 +1256,34 @@ caja_share_register_type (GTypeModule *module)
 }
 
 /* Extension module functions.  These functions are defined in
- * caja-extensions-types.h, and must be implemented by all
+ * baul-extensions-types.h, and must be implemented by all
  * extensions. */
 
 /* Initialization function.  In addition to any module-specific
  * initialization, any types implemented by the module should
  * be registered here. */
 void
-caja_module_initialize (GTypeModule  *module)
+baul_module_initialize (GTypeModule  *module)
 {
-  /*g_print ("Initializing caja-share extension\n");*/
+  /*g_print ("Initializing baul-share extension\n");*/
 
   bindtextdomain(GETTEXT_PACKAGE, CAFELOCALEDIR);
   bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
 
-  caja_share_register_type (module);
+  baul_share_register_type (module);
 }
 
 /* Perform module-specific shutdown. */
 void
-caja_module_shutdown   (void)
+baul_module_shutdown   (void)
 {
-  /*g_print ("Shutting down caja-share extension\n");*/
+  /*g_print ("Shutting down baul-share extension\n");*/
   /* FIXME freeing */
 }
 
 /* List all the extension types.  */
 void
-caja_module_list_types (const GType **types,
+baul_module_list_types (const GType **types,
 			    int          *num_types)
 {
   static GType type_list[1];
