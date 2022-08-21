@@ -133,7 +133,7 @@ get_buddy_icon(int id)
 			handle_dbus_exception(error);
 		}
 		//FIXME Get the size from somewhere
-		pixbuf = gdk_pixbuf_new_from_file_at_scale(path, 24, 24, TRUE, NULL);
+		pixbuf = cdk_pixbuf_new_from_file_at_scale(path, 24, 24, TRUE, NULL);
 	}
 
 	return pixbuf;
