@@ -34,15 +34,15 @@ enum {
 };
 
 GVolumeMonitor* vol_monitor = NULL;
-GtkWidget *cb;
+CtkWidget *cb;
 
 static void
 cb_mount_removed (GVolumeMonitor *volume_monitor,
 		  GMount         *mount,
 		  NstPlugin      *plugin)
 {
-	GtkTreeIter iter;
-	GtkListStore *store;
+	CtkTreeIter iter;
+	CtkListStore *store;
 	gboolean b, found;
 
 	store = GTK_LIST_STORE (ctk_combo_box_get_model (GTK_COMBO_BOX (cb)));
@@ -77,9 +77,9 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 		  GMount         *mount,
 		  NstPlugin      *plugin)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	gboolean b;
-	GtkListStore *store;
+	CtkListStore *store;
 
 	if (g_mount_is_shadowed (mount) != FALSE) {
 		cb_mount_removed (volume_monitor, mount, plugin);
@@ -116,8 +116,8 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 		NstPlugin      *plugin)
 {
 	char *name;
-	GtkTreeIter iter;
-	GtkTreeModel *model;
+	CtkTreeIter iter;
+	CtkTreeModel *model;
 	gboolean select_added;
 
 	if (g_mount_is_shadowed (mount) != FALSE)
@@ -156,13 +156,13 @@ init (NstPlugin *plugin)
 	return TRUE;
 }
 
-static GtkWidget*
+static CtkWidget*
 get_contacts_widget (NstPlugin *plugin)
 {
-	GtkListStore *store;
+	CtkListStore *store;
 	GList *l, *mounts;
-	GtkTreeIter iter;
-	GtkCellRenderer *text_renderer, *icon_renderer;
+	CtkTreeIter iter;
+	CtkCellRenderer *text_renderer, *icon_renderer;
 
 	mounts = g_volume_monitor_get_mounts (vol_monitor);
 
@@ -210,11 +210,11 @@ get_contacts_widget (NstPlugin *plugin)
 }
 
 static gboolean
-send_files (NstPlugin *plugin, GtkWidget *contact_widget,
+send_files (NstPlugin *plugin, CtkWidget *contact_widget,
 	    GList *file_list)
 {
-	GtkListStore *store;
-	GtkTreeIter iter;
+	CtkListStore *store;
+	CtkTreeIter iter;
 	GMount *dest_mount;
 	GFile *mount_root;
 

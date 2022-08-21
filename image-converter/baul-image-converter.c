@@ -39,7 +39,7 @@
 static void baul_image_converter_instance_init (BaulImageConverter      *img);
 static void baul_image_converter_class_init    (BaulImageConverterClass *class);
 GList *     baul_image_converter_get_file_items (BaulMenuProvider *provider,
-						     GtkWidget            *window,
+						     CtkWidget            *window,
 						     GList                *files);
 
 static GType image_converter_type = 0;
@@ -99,7 +99,7 @@ image_rotate_callback (BaulMenuItem *item,
 
 static GList *
 baul_image_converter_get_background_items (BaulMenuProvider *provider,
-					     GtkWidget		  *window,
+					     CtkWidget		  *window,
 					     BaulFileInfo	  *file_info)
 {
 	return NULL;
@@ -107,7 +107,7 @@ baul_image_converter_get_background_items (BaulMenuProvider *provider,
 
 GList *
 baul_image_converter_get_file_items (BaulMenuProvider *provider,
-				       GtkWidget            *window,
+				       CtkWidget            *window,
 				       GList                *files)
 {
 	BaulMenuItem *item;

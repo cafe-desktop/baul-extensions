@@ -41,7 +41,7 @@ static GFile *burn = NULL;
 static
 gboolean init (NstPlugin *plugin)
 {
-	GtkIconTheme *it;
+	CtkIconTheme *it;
 	char *cmd;
 
 	g_print ("Init baul burn plugin\n");
@@ -63,12 +63,12 @@ gboolean init (NstPlugin *plugin)
 }
 
 static
-GtkWidget* get_contacts_widget (NstPlugin *plugin)
+CtkWidget* get_contacts_widget (NstPlugin *plugin)
 {
-	GtkWidget *widget;
-	GtkCellRenderer *renderer;
-	GtkListStore *store;
-	GtkTreeModel *model;
+	CtkWidget *widget;
+	CtkCellRenderer *renderer;
+	CtkListStore *store;
+	CtkTreeModel *model;
 	GFileEnumerator *fenum;
 	GFileInfo *file_info = NULL;
 	int selection = COMBOBOX_OPTION_NEW_DVD;
@@ -128,7 +128,7 @@ GtkWidget* get_contacts_widget (NstPlugin *plugin)
 
 static
 gboolean send_files (NstPlugin *plugin,
-		     GtkWidget *burntype_widget,
+		     CtkWidget *burntype_widget,
 		     GList *file_list)
 {
 	GFileEnumerator *fenum;

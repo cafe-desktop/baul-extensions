@@ -59,20 +59,20 @@ static GSettings *settings = NULL;
 typedef struct _NS_ui NS_ui;
 
 struct _NS_ui {
-	GtkWidget *dialog;
-	GtkWidget *options_combobox;
-	GtkWidget *send_to_label;
-	GtkWidget *hbox_contacts_ws;
-	GtkWidget *cancel_button;
-	GtkWidget *send_button;
-	GtkWidget *pack_combobox;
-	GtkWidget *pack_checkbutton;
-	GtkWidget *pack_entry;
+	CtkWidget *dialog;
+	CtkWidget *options_combobox;
+	CtkWidget *send_to_label;
+	CtkWidget *hbox_contacts_ws;
+	CtkWidget *cancel_button;
+	CtkWidget *send_button;
+	CtkWidget *pack_combobox;
+	CtkWidget *pack_checkbutton;
+	CtkWidget *pack_entry;
 	GList *contact_widgets;
 
-	GtkWidget *status_box;
-	GtkWidget *status_image;
-	GtkWidget *status_label;
+	CtkWidget *status_box;
+	CtkWidget *status_image;
+	CtkWidget *status_label;
 	guint status_timeoutid;
 };
 
@@ -82,7 +82,7 @@ static const GOptionEntry entries[] = {
 };
 
 static void
-destroy_dialog (GtkWidget *widget, gpointer data )
+destroy_dialog (CtkWidget *widget, gpointer data )
 {
         ctk_main_quit ();
 }
@@ -253,16 +253,16 @@ status_label_clear (gpointer data)
 }
 
 static void
-send_button_cb (GtkWidget *widget, NS_ui *ui)
+send_button_cb (CtkWidget *widget, NS_ui *ui)
 {
 	char *error;
 	NstPlugin *p;
-	GtkWidget *w;
+	CtkWidget *w;
 
 	ctk_widget_set_sensitive (ui->dialog, FALSE);
 
 	p = (NstPlugin *) g_list_nth_data (plugin_list, option);
-	w = (GtkWidget *) g_list_nth_data (ui->contact_widgets, option);
+	w = (CtkWidget *) g_list_nth_data (ui->contact_widgets, option);
 
 	if (ui->status_timeoutid != 0) {
 		g_source_remove (ui->status_timeoutid);
@@ -327,7 +327,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
 }
 
 static void
-send_if_no_pack_cb (GtkWidget *widget, NS_ui *ui)
+send_if_no_pack_cb (CtkWidget *widget, NS_ui *ui)
 {
 	if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ui->pack_checkbutton))) {
 		if (ctk_widget_is_sensitive (ui->pack_entry)) {
@@ -341,9 +341,9 @@ send_if_no_pack_cb (GtkWidget *widget, NS_ui *ui)
 }
 
 static void
-toggle_pack_check (GtkWidget *widget, NS_ui *ui)
+toggle_pack_check (CtkWidget *widget, NS_ui *ui)
 {
-	GtkToggleButton *t = GTK_TOGGLE_BUTTON (widget);
+	CtkToggleButton *t = GTK_TOGGLE_BUTTON (widget);
 	gboolean enabled, send_enabled;
 
 	enabled = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (t));
@@ -364,9 +364,9 @@ toggle_pack_check (GtkWidget *widget, NS_ui *ui)
 }
 
 static void
-option_changed (GtkComboBox *cb, NS_ui *ui)
+option_changed (CtkComboBox *cb, NS_ui *ui)
 {
-	GtkWidget *w;
+	CtkWidget *w;
 	NstPlugin *p;
 	gboolean supports_dirs = FALSE;
 
@@ -398,7 +398,7 @@ static void
 set_contact_widgets (NS_ui *ui)
 {
 	GList *aux ;
-	GtkWidget *w;
+	CtkWidget *w;
 	NstPlugin *p;
 
 	ui->contact_widgets = NULL;
@@ -420,11 +420,11 @@ static gboolean
 set_model_for_options_combobox (NS_ui *ui)
 {
 	GdkPixbuf *pixbuf;
-        GtkTreeIter iter;
-        GtkListStore *model;
-	GtkIconTheme *it;
-	GtkCellRenderer *renderer;
-	GtkWidget *widget;
+        CtkTreeIter iter;
+        CtkListStore *model;
+	CtkIconTheme *it;
+	CtkCellRenderer *renderer;
+	CtkWidget *widget;
 	GList *aux;
 	NstPlugin *p;
 	char *last_used = NULL;
@@ -506,9 +506,9 @@ pack_entry_changed_cb (GObject *object, GParamSpec *spec, NS_ui *ui)
 }
 
 static void
-update_button_image (GtkSettings *settings,
+update_button_image (CtkSettings *settings,
 		     GParamSpec *spec,
-		     GtkWidget *widget)
+		     CtkWidget *widget)
 {
 	gboolean show_images;
 
@@ -522,13 +522,13 @@ update_button_image (GtkSettings *settings,
 static void
 baul_sendto_create_ui (void)
 {
-	GtkBuilder *app;
+	CtkBuilder *app;
 	GError* error = NULL;
 	NS_ui *ui;
 	gboolean one_file = FALSE;
 	gboolean supports_dirs;
-	GtkSettings *ctk_settings;
-	GtkWidget *button_image;
+	CtkSettings *ctk_settings;
+	CtkWidget *button_image;
 
 	app = ctk_builder_new ();
 	if (ctk_builder_add_from_resource (app, "/org/cafe/baul/extensions/sendto/baul-sendto.ui", &error) == 0) {
@@ -806,7 +806,7 @@ int main (int argc, char **argv)
 	settings = g_settings_new ("org.cafe.Baul.Sendto");
 	baul_sendto_init ();
 	if (baul_sendto_plugin_init () == FALSE) {
-		GtkWidget *error_dialog;
+		CtkWidget *error_dialog;
 
 		error_dialog =
 			ctk_message_dialog_new (NULL,

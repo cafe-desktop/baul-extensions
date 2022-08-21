@@ -303,8 +303,8 @@ _set_pixbuf_from_status (const gchar *show, GdkPixbuf **pixbuf)
 static void
 _add_contact_to_model(gpointer key, gpointer value, gpointer user_data)
 {
-	GtkTreeIter *iter;
-	GtkListStore *store;
+	CtkTreeIter *iter;
+	CtkListStore *store;
 	GdkPixbuf *pixbuf;
 	GValue *val;
 	GHashTable *contact_props;
@@ -321,8 +321,8 @@ _add_contact_to_model(gpointer key, gpointer value, gpointer user_data)
 		_set_pixbuf_from_status(show, &pixbuf);
 	}
 
-	store = (GtkListStore *) user_data;
-	iter = g_malloc (sizeof(GtkTreeIter));
+	store = (CtkListStore *) user_data;
+	iter = g_malloc (sizeof(CtkTreeIter));
 	ctk_list_store_append (store, iter);
 	ctk_list_store_set (store, iter, 0, pixbuf, 1, key, -1);
 	g_free (iter);
@@ -333,7 +333,7 @@ _add_contact_to_model(gpointer key, gpointer value, gpointer user_data)
  * filtering only these which are connected
  */
 static gboolean
-add_gajim_contacts_to_model (GtkListStore *store)
+add_gajim_contacts_to_model (CtkListStore *store)
 {
 	if(!_get_contacts()) {
 		return FALSE;
@@ -349,14 +349,14 @@ add_gajim_contacts_to_model (GtkListStore *store)
  * fill completion model for the entry, using list of
  * available gajim contacts
  */
-static GtkWidget *
+static CtkWidget *
 get_contacts_widget (NstPlugin *plugin)
 {
-	GtkWidget *entry;
-	GtkEntryCompletion *completion;
-	GtkListStore *store;
-	GtkCellRenderer *renderer;
-	GtkTreeModel *completion_model;
+	CtkWidget *entry;
+	CtkEntryCompletion *completion;
+	CtkListStore *store;
+	CtkCellRenderer *renderer;
+	CtkTreeModel *completion_model;
 
 	entry = ctk_entry_new ();
 	completion = ctk_entry_completion_new ();
@@ -385,7 +385,7 @@ get_contacts_widget (NstPlugin *plugin)
 static void
 show_error (const gchar *title, const gchar *message)
 {
-	GtkWidget *dialog;
+	CtkWidget *dialog;
 
 	dialog = ctk_message_dialog_new_with_markup(NULL,
 								GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -402,7 +402,7 @@ show_error (const gchar *title, const gchar *message)
 
 static gboolean
 send_files (NstPlugin *plugin,
-	    GtkWidget *contact_widget,
+	    CtkWidget *contact_widget,
 	    GList *file_list)
 {
 	GError *error;
