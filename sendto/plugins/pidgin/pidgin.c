@@ -246,7 +246,7 @@ add_pidgin_contacts_to_model (CtkTreeStore *store,
 			icon = get_buddy_icon(dat->id);
 
 			if (accounts == 1) {
-				g_value_init(&val, CDK_TYPE_PIXBUF);
+				g_value_init(&val, GDK_TYPE_PIXBUF);
 				g_value_set_object (&val, (gpointer)icon);
 				ctk_tree_store_set_value (store, parent, COL_ICON, &val);
 				g_value_unset (&val);
@@ -290,7 +290,7 @@ get_contacts_widget (NstPlugin *plugin)
 
 	iter = g_malloc (sizeof(CtkTreeIter));
 	iter2 = g_malloc (sizeof(CtkTreeIter));
-	store = ctk_tree_store_new (NUM_COLS, CDK_TYPE_PIXBUF, G_TYPE_STRING);
+	store = ctk_tree_store_new (NUM_COLS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 	add_pidgin_contacts_to_model (store, iter, iter2);
 	model = ctk_tree_model_sort_new_with_model (CTK_TREE_MODEL (store));
 	ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (model), COL_ALIAS,
