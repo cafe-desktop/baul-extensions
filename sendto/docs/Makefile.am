@@ -72,10 +72,10 @@ expand_content_files=
 # CFLAGS and LDFLAGS for compiling gtkdoc-scangobj with your library.
 # Only needed if you are using gtkdoc-scangobj to dynamically query widget
 # signals and properties.
-# e.g. CTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
-# e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
-CTKDOC_CFLAGS=$(SENDTO_CFLAGS)
-CTKDOC_LIBS=$(top_builddir)/sendto/libnstplugin.la
+# e.g. GTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
+# e.g. GTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
+GTKDOC_CFLAGS=$(SENDTO_CFLAGS)
+GTKDOC_LIBS=$(top_builddir)/sendto/libnstplugin.la
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make
@@ -90,11 +90,11 @@ EXTRA_DIST += version.xml.in
 #DISTCLEANFILES +=
 
 # Comment this out if you want your docs-status tested during 'make check'
-#TESTS = $(CTKDOC_CHECK)
+#TESTS = $(GTKDOC_CHECK)
 
 #if ENABLE_CTK_DOC
 #TESTS_ENVIRONMENT = cd $(srcdir) &&  
-#TESTS = $(CTKDOC_CHECK)
+#TESTS = $(GTKDOC_CHECK)
 #endif
 
 
