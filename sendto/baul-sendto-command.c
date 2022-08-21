@@ -419,7 +419,7 @@ set_contact_widgets (NS_ui *ui)
 static gboolean
 set_model_for_options_combobox (NS_ui *ui)
 {
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
         CtkTreeIter iter;
         CtkListStore *model;
 	CtkIconTheme *it;

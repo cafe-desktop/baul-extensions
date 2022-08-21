@@ -110,11 +110,11 @@ init (NstPlugin *plugin)
 	return TRUE;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_buddy_icon(int id)
 {
 	GError *error;
-	GdkPixbuf *pixbuf = NULL;
+	CdkPixbuf *pixbuf = NULL;
 	gchar *path = NULL;
 	int icon;
 
@@ -149,7 +149,7 @@ add_pidgin_contacts_to_model (CtkTreeStore *store,
 	GArray *accounts;
 	int i, j;
 
-	GdkPixbuf *icon;
+	CdkPixbuf *icon;
 	GHashTableIter hiter;
 	GPtrArray *contacts_group;
 	ContactData *dat;

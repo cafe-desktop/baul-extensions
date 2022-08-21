@@ -310,7 +310,7 @@ static void
 open_terminal_callback (BaulMenuItem *item,
 			BaulFileInfo *file_info)
 {
-	GdkDisplay   *display;
+	CdkDisplay   *display;
 	const gchar *display_str;
 	const gchar *old_display_str;
 	gchar *uri;
@@ -318,7 +318,7 @@ open_terminal_callback (BaulMenuItem *item,
 	gchar *working_directory;
 	gchar *dfile;
 	CafeDesktopItem *ditem;
-	GdkScreen *screen;
+	CdkScreen *screen;
 
 	terminal_exec = default_terminal_application();
 
@@ -446,7 +446,7 @@ open_terminal_callback (BaulMenuItem *item,
 static BaulMenuItem *
 open_terminal_menu_item_new (BaulFileInfo	  *file_info,
                              TerminalFileInfo  terminal_file_info,
-                             GdkScreen        *screen,
+                             CdkScreen        *screen,
                              gboolean          is_file_item)
 {
 	BaulMenuItem *ret;
