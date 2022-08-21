@@ -30,6 +30,7 @@ requires:
 before_scripts:
   - ./html-cppcheck
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
+  - ./install-from-git https://github.com/cafe-desktop/cafe-desktop master
 
 build_scripts:
   - ./before-build
