@@ -35,7 +35,7 @@ EXTRA_DIST = autogen.sh
 DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS =   \
-	--enable-gtk-doc \
+	--enable-ctk-doc \
 	--with-bauldir='$${libdir}/baul/extensions-2.0-distcheck' \
 	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'

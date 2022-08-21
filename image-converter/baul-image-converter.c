@@ -32,7 +32,7 @@
 #include <libbaul-extension/baul-menu-provider.h>
 
 #include <glib/gi18n-lib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <string.h> /* for strcmp */
 

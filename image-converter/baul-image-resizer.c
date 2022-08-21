@@ -31,7 +31,7 @@
 
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <libbaul-extension/baul-file-info.h>
 
@@ -197,20 +197,20 @@ op_finished (GPid pid, gint status, gpointer data)
 		/* resizing failed */
 		char *name = baul_file_info_get_name (file);
 
-		GtkWidget *msg_dialog = gtk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
+		GtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (priv->progress_dialog),
 			GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
 			GTK_BUTTONS_NONE,
 			"'%s' cannot be resized. Check whether you have permission to write to this folder.",
 			name);
 		g_free (name);
 
-		gtk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Skip"), 1);
-		gtk_dialog_add_button (GTK_DIALOG (msg_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
-		gtk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Retry"), 0);
-		gtk_dialog_set_default_response (GTK_DIALOG (msg_dialog), 0);
+		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Skip"), 1);
+		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+		ctk_dialog_add_button (GTK_DIALOG (msg_dialog), _("_Retry"), 0);
+		ctk_dialog_set_default_response (GTK_DIALOG (msg_dialog), 0);
 
-		int response_id = gtk_dialog_run (GTK_DIALOG (msg_dialog));
-		gtk_widget_destroy (msg_dialog);
+		int response_id = ctk_dialog_run (GTK_DIALOG (msg_dialog));
+		ctk_widget_destroy (msg_dialog);
 		if (response_id == 0) {
 			retry = TRUE;
 		} else if (response_id == GTK_RESPONSE_CANCEL) {
@@ -239,7 +239,7 @@ op_finished (GPid pid, gint status, gpointer data)
 		run_op (resizer);
 	} else {
 		/* cancel/terminate operation */
-		gtk_widget_destroy (priv->progress_dialog);
+		ctk_widget_destroy (priv->progress_dialog);
 	}
 }
 
@@ -283,15 +283,15 @@ run_op (BaulImageResizer *resizer)
 
 	char *tmp;
 
-	gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), (double) (priv->images_resized + 1) / priv->images_total);
+	ctk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->progress_bar), (double) (priv->images_resized + 1) / priv->images_total);
 	tmp = g_strdup_printf (_("Resizing image: %d of %d"), priv->images_resized + 1, priv->images_total);
-	gtk_progress_bar_set_text (GTK_PROGRESS_BAR (priv->progress_bar), tmp);
+	ctk_progress_bar_set_text (GTK_PROGRESS_BAR (priv->progress_bar), tmp);
 	g_free (tmp);
 
 	char *name = baul_file_info_get_name (file);
 	tmp = g_strdup_printf (_("<i>Resizing \"%s\"</i>"), name);
 	g_free (name);
-	gtk_label_set_markup (GTK_LABEL (priv->progress_label), tmp);
+	ctk_label_set_markup (GTK_LABEL (priv->progress_label), tmp);
 	g_free (tmp);
 
 }
@@ -303,29 +303,29 @@ baul_image_resizer_response_cb (GtkDialog *dialog, gint response_id, gpointer us
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
 	if (response_id == GTK_RESPONSE_OK) {
-		if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
-			if (strlen (gtk_entry_get_text (priv->name_entry)) == 0) {
-				GtkWidget *msg_dialog = gtk_message_dialog_new (GTK_WINDOW (dialog),
+		if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->append_radiobutton))) {
+			if (strlen (ctk_entry_get_text (priv->name_entry)) == 0) {
+				GtkWidget *msg_dialog = ctk_message_dialog_new (GTK_WINDOW (dialog),
 					GTK_DIALOG_DESTROY_WITH_PARENT, GTK_MESSAGE_ERROR,
 					GTK_BUTTONS_OK, _("Please enter a valid filename suffix!"));
-				gtk_dialog_run (GTK_DIALOG (msg_dialog));
-				gtk_widget_destroy (msg_dialog);
+				ctk_dialog_run (GTK_DIALOG (msg_dialog));
+				ctk_widget_destroy (msg_dialog);
 				return;
 			}
-			priv->suffix = g_strdup (gtk_entry_get_text (priv->name_entry));
+			priv->suffix = g_strdup (ctk_entry_get_text (priv->name_entry));
 		}
-		if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->default_size_radiobutton))) {
-			priv->size = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (priv->size_combobox));
-		} else if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->custom_pct_radiobutton))) {
-			priv->size = g_strdup_printf ("%d%%", (int) gtk_spin_button_get_value (priv->pct_spinbutton));
+		if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->default_size_radiobutton))) {
+			priv->size = ctk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (priv->size_combobox));
+		} else if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (priv->custom_pct_radiobutton))) {
+			priv->size = g_strdup_printf ("%d%%", (int) ctk_spin_button_get_value (priv->pct_spinbutton));
 		} else {
-			priv->size = g_strdup_printf ("%dx%d", (int) gtk_spin_button_get_value (priv->width_spinbutton), (int) gtk_spin_button_get_value (priv->height_spinbutton));
+			priv->size = g_strdup_printf ("%dx%d", (int) ctk_spin_button_get_value (priv->width_spinbutton), (int) ctk_spin_button_get_value (priv->height_spinbutton));
 		}
 
 		run_op (resizer);
 	}
 
-	gtk_widget_destroy (GTK_WIDGET (dialog));
+	ctk_widget_destroy (GTK_WIDGET (dialog));
 }
 
 static void
@@ -338,11 +338,11 @@ baul_image_resizer_init(BaulImageResizer *resizer)
 	guint       result;
 	GError     *err = NULL;
 
-	/* Let's create our gtkbuilder and load the xml file */
-	ui = gtk_builder_new ();
-	gtk_builder_set_translation_domain (ui, GETTEXT_PACKAGE);
+	/* Let's create our ctkbuilder and load the xml file */
+	ui = ctk_builder_new ();
+	ctk_builder_set_translation_domain (ui, GETTEXT_PACKAGE);
 	path = g_build_filename (DATADIR, PACKAGE, "baul-image-resize.ui", NULL);
-	result = gtk_builder_add_from_file (ui, path, &err);
+	result = ctk_builder_add_from_file (ui, path, &err);
 	g_free (path);
 
 	/* If we're unable to load the xml file */
@@ -353,23 +353,23 @@ baul_image_resizer_init(BaulImageResizer *resizer)
 	}
 
 	/* Grab some widgets */
-	priv->resize_dialog = GTK_DIALOG (gtk_builder_get_object (ui, "resize_dialog"));
+	priv->resize_dialog = GTK_DIALOG (ctk_builder_get_object (ui, "resize_dialog"));
 	priv->default_size_radiobutton =
-		GTK_RADIO_BUTTON (gtk_builder_get_object (ui, "default_size_radiobutton"));
-	priv->size_combobox = GTK_COMBO_BOX_TEXT (gtk_builder_get_object (ui, "comboboxtext_size"));
+		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "default_size_radiobutton"));
+	priv->size_combobox = GTK_COMBO_BOX_TEXT (ctk_builder_get_object (ui, "comboboxtext_size"));
 	priv->custom_pct_radiobutton =
-		GTK_RADIO_BUTTON (gtk_builder_get_object (ui, "custom_pct_radiobutton"));
-	priv->pct_spinbutton = GTK_SPIN_BUTTON (gtk_builder_get_object (ui, "pct_spinbutton"));
+		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "custom_pct_radiobutton"));
+	priv->pct_spinbutton = GTK_SPIN_BUTTON (ctk_builder_get_object (ui, "pct_spinbutton"));
 	priv->custom_size_radiobutton =
-		GTK_RADIO_BUTTON (gtk_builder_get_object (ui, "custom_size_radiobutton"));
-	priv->width_spinbutton = GTK_SPIN_BUTTON (gtk_builder_get_object (ui, "width_spinbutton"));
-	priv->height_spinbutton = GTK_SPIN_BUTTON (gtk_builder_get_object (ui, "height_spinbutton"));
-	priv->append_radiobutton = GTK_RADIO_BUTTON (gtk_builder_get_object (ui, "append_radiobutton"));
-	priv->name_entry = GTK_ENTRY (gtk_builder_get_object (ui, "name_entry"));
-	priv->inplace_radiobutton = GTK_RADIO_BUTTON (gtk_builder_get_object (ui, "inplace_radiobutton"));
+		GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "custom_size_radiobutton"));
+	priv->width_spinbutton = GTK_SPIN_BUTTON (ctk_builder_get_object (ui, "width_spinbutton"));
+	priv->height_spinbutton = GTK_SPIN_BUTTON (ctk_builder_get_object (ui, "height_spinbutton"));
+	priv->append_radiobutton = GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "append_radiobutton"));
+	priv->name_entry = GTK_ENTRY (ctk_builder_get_object (ui, "name_entry"));
+	priv->inplace_radiobutton = GTK_RADIO_BUTTON (ctk_builder_get_object (ui, "inplace_radiobutton"));
 
 	/* Set default item in combo box */
-	/* gtk_combo_box_set_active  (priv->size_combobox, 4);  1024x768 */
+	/* ctk_combo_box_set_active  (priv->size_combobox, 4);  1024x768 */
 
 	/* Connect signal */
 	g_signal_connect (G_OBJECT (priv->resize_dialog), "response",
@@ -388,5 +388,5 @@ baul_image_resizer_show_dialog (BaulImageResizer *resizer)
 {
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);
 
-	gtk_widget_show (GTK_WIDGET (priv->resize_dialog));
+	ctk_widget_show (GTK_WIDGET (priv->resize_dialog));
 }
