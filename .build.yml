@@ -11,6 +11,7 @@ requires:
     - clang
     - clang-tools
     - cppcheck
+    - gtk-doc-tools
     - expect #required for unbuffer
     - gcc
     - git
@@ -20,11 +21,9 @@ requires:
     - libdconf-dev
     - libgtk-3-dev
     - libgupnp-1.2-dev
-    - libcafe-desktop-dev
     - libstartup-notification0-dev
     - libxml2-utils
     - make
-    - cafe-common
     - pkg-config
 
 before_scripts:
