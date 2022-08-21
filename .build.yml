@@ -16,15 +16,21 @@ requires:
     - expect #required for unbuffer
     - gcc
     - git
+    - intltool
     - iso-codes
-    - libtool
     - libcaja-extension-dev
     - libdbus-1-dev
     - libdbus-glib-1-dev
     - libdconf-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libglib2.0-doc
     - libgtk-3-dev
     - libgupnp-1.2-dev
     - libstartup-notification0-dev
+    - libtool
+    - libx11-dev
+    - libxml2-dev
     - libxml2-utils
     - make
     - pkg-config
