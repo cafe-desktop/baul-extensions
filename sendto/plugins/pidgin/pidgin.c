@@ -292,42 +292,42 @@ get_contacts_widget (NstPlugin *plugin)
 	iter2 = g_malloc (sizeof(CtkTreeIter));
 	store = ctk_tree_store_new (NUM_COLS, GDK_TYPE_PIXBUF, G_TYPE_STRING);
 	add_pidgin_contacts_to_model (store, iter, iter2);
-	model = ctk_tree_model_sort_new_with_model (GTK_TREE_MODEL (store));
-	ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model), COL_ALIAS,
-					      GTK_SORT_ASCENDING);
+	model = ctk_tree_model_sort_new_with_model (CTK_TREE_MODEL (store));
+	ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (model), COL_ALIAS,
+					      CTK_SORT_ASCENDING);
 	cb = ctk_combo_box_new_with_model (model);
 
 	renderer = ctk_cell_renderer_pixbuf_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (cb),
 				    renderer,
 				    FALSE);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb),
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (cb),
 					renderer,
 					"pixbuf", COL_ICON,
 					NULL);
-	ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (cb), renderer,
+	ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (cb), renderer,
 					    customize,
 					    (gboolean *)FALSE, NULL);
 	renderer = ctk_cell_renderer_text_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (cb),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (cb),
 				    renderer,
 				    TRUE);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (cb),
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (cb),
 					renderer,
 					"text", COL_ALIAS,
 					NULL);
 	g_object_set(renderer, "ellipsize", PANGO_ELLIPSIZE_END, NULL);
-	ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (cb), renderer,
+	ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (cb), renderer,
 					    customize,
 					    (gboolean *)TRUE, NULL);
 
-	ctk_combo_box_set_active (GTK_COMBO_BOX (cb), 0);
-	ctk_combo_box_get_active_iter (GTK_COMBO_BOX(cb), iter);
+	ctk_combo_box_set_active (CTK_COMBO_BOX (cb), 0);
+	ctk_combo_box_get_active_iter (CTK_COMBO_BOX(cb), iter);
 	if (ctk_tree_model_iter_has_child (model, iter)) {
 		CtkTreePath *path = ctk_tree_path_new_from_indices (0, 0, -1);
 		ctk_tree_model_get_iter (model, iter2, path);
 		ctk_tree_path_free (path);
-		ctk_combo_box_set_active_iter (GTK_COMBO_BOX (cb), iter2);
+		ctk_combo_box_set_active_iter (CTK_COMBO_BOX (cb), iter2);
 	}
 
 	g_free (iter);
@@ -389,15 +389,15 @@ gboolean send_files (NstPlugin *plugin, CtkWidget *contact_widget,
 	if (proxy == NULL)
 		return FALSE;
 
-	ctk_combo_box_get_active_iter (GTK_COMBO_BOX (contact_widget), &iter);
-	path = ctk_tree_model_get_path (GTK_TREE_MODEL (
-		ctk_combo_box_get_model (GTK_COMBO_BOX(
+	ctk_combo_box_get_active_iter (CTK_COMBO_BOX (contact_widget), &iter);
+	path = ctk_tree_model_get_path (CTK_TREE_MODEL (
+		ctk_combo_box_get_model (CTK_COMBO_BOX(
 			contact_widget))), &iter);
 	depth = ctk_tree_path_get_depth(path);
 	indices = ctk_tree_path_get_indices(path);
 	ctk_tree_path_free (path);
-	ctk_tree_model_get_value (GTK_TREE_MODEL (ctk_combo_box_get_model (
-		    GTK_COMBO_BOX(contact_widget))),
+	ctk_tree_model_get_value (CTK_TREE_MODEL (ctk_combo_box_get_model (
+		    CTK_COMBO_BOX(contact_widget))),
 	    &iter, COL_ALIAS, &val);
 	alias = g_value_get_string (&val);
 	contacts_group = g_hash_table_lookup (contact_hash, alias);

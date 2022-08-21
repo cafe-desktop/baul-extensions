@@ -102,26 +102,26 @@ CtkWidget* get_contacts_widget (NstPlugin *plugin)
 		selection = COMBOBOX_OPTION_EXISTING_DVD;
 	}
 
-	model = GTK_TREE_MODEL (store);
+	model = CTK_TREE_MODEL (store);
 	widget = ctk_combo_box_new_with_model (model);
 	renderer = ctk_cell_renderer_pixbuf_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (widget),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (widget),
 				    renderer,
 				    FALSE);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (widget),
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (widget),
 					renderer,
 					"icon-name", COL_PIXBUF,
 					NULL);
 	renderer = ctk_cell_renderer_text_new ();
-	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (widget),
+	ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (widget),
 				    renderer,
 				    TRUE);
-	ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (widget),
+	ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (widget),
 					renderer,
 					"text", COL_LABEL,
 					NULL);
 
-	ctk_combo_box_set_active (GTK_COMBO_BOX (widget), selection);
+	ctk_combo_box_set_active (CTK_COMBO_BOX (widget), selection);
 
 	return widget;
 }
@@ -135,7 +135,7 @@ gboolean send_files (NstPlugin *plugin,
 	GFileInfo *file_info;
 	GFile *child;
 
-	if (ctk_combo_box_get_active (GTK_COMBO_BOX (burntype_widget)) == COMBOBOX_OPTION_NEW_DVD) {
+	if (ctk_combo_box_get_active (CTK_COMBO_BOX (burntype_widget)) == COMBOBOX_OPTION_NEW_DVD) {
 		fenum = g_file_enumerate_children (burn,
 						   G_FILE_ATTRIBUTE_STANDARD_NAME,
 						   G_FILE_QUERY_INFO_NONE,

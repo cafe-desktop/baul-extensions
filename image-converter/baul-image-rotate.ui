@@ -270,7 +270,7 @@
         <child internal-child="action_area">
           <object class="CtkHButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
-            <property name="layout_style">GTK_BUTTONBOX_END</property>
+            <property name="layout_style">CTK_BUTTONBOX_END</property>
             <child>
               <object class="CtkButton" id="cancelbutton1">
                 <property name="visible">True</property>
@@ -295,7 +295,7 @@
           </object>
           <packing>
             <property name="expand">False</property>
-            <property name="pack_type">GTK_PACK_END</property>
+            <property name="pack_type">CTK_PACK_END</property>
           </packing>
         </child>
       </object>

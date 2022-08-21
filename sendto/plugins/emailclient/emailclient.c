@@ -142,7 +142,7 @@ get_evo_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 
 		const char *text;
 
-	text = ctk_entry_get_text (GTK_ENTRY (contact_widget));
+	text = ctk_entry_get_text (CTK_ENTRY (contact_widget));
 	if (text != NULL && *text != '\0')
 		g_string_append_printf (mailto, "\"%s\"", text);
 	else
@@ -164,7 +164,7 @@ get_balsa_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_list)
 
 	const char *text;
 
-	text = ctk_entry_get_text (GTK_ENTRY (contact_widget));
+	text = ctk_entry_get_text (CTK_ENTRY (contact_widget));
 	if (text != NULL && *text != '\0')
 		g_string_append_printf (mailto, "\"%s\"", text);
 	else
@@ -185,7 +185,7 @@ get_thunderbird_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_
 
 	const char *text;
 
-	text = ctk_entry_get_text (GTK_ENTRY (contact_widget));
+	text = ctk_entry_get_text (CTK_ENTRY (contact_widget));
 	if (text != NULL && *text != '\0')
 		g_string_append_printf (mailto, "to='%s',", text);
 
@@ -205,7 +205,7 @@ get_sylpheed_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_lis
 
 	const char *text;
 
-	text = ctk_entry_get_text (GTK_ENTRY (contact_widget));
+	text = ctk_entry_get_text (CTK_ENTRY (contact_widget));
 	if (text != NULL && *text != '\0')
 		g_string_append_printf (mailto, "\"%s\" ", text);
 	else

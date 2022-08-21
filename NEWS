@@ -50,7 +50,7 @@
 ### baul-extensions 1.20.0
 
   * Translations update
-  * require GTK+ 3.22 and GLib 2.50
+  * require CTK+ 3.22 and GLib 2.50
   * xattr-tags: use better English in extension description
   * po: add missing translatable strings from xattrs extension
   * xattr-tags: fix extension description
@@ -73,7 +73,7 @@
   * NEWS: use consistent, project wide, markdown-like formatting to make
     generating release announcements easier
   * Build: require baul >= 1.17.1 and libcafe-desktop >= 1.17.0
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-ctk
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and --with-ctk
     build option
   * Add xattr-tags extension to show xattr tags in a new column
   * Translations update
@@ -88,12 +88,12 @@
 ### baul-extensions 1.14.1
 
   * Translations update
-  * Make distcheck use currently selected GTK+ version
+  * Make distcheck use currently selected CTK+ version
 
 ### baul-extensions 1.14.0
 
   * Drop CafeConf migration scripts
-  * GTK+3: some deprecation fixes
+  * CTK+3: some deprecation fixes
   * Some more fixes and cleanups
   * Translations update
   * Add Changelog generation
