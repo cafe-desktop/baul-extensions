@@ -180,13 +180,13 @@ get_filename_from_list (void)
 static char *
 pack_files (NS_ui *ui)
 {
-	char *engrampa_cmd;
+	char *grapa_cmd;
 	const char *filename;
 	GList *l;
 	GString *cmd, *tmp;
 	char *pack_type, *tmp_dir, *tmp_work_dir, *packed_file;
 
-	engrampa_cmd = g_find_program_in_path ("engrampa");
+	grapa_cmd = g_find_program_in_path ("grapa");
 	filename = ctk_entry_get_text(CTK_ENTRY(ui->pack_entry));
 
 	g_assert (filename != NULL && *filename != '\0');
@@ -213,12 +213,12 @@ pack_files (NS_ui *ui)
 
 	cmd = g_string_new ("");
 	g_string_printf (cmd, "%s --add-to=\"%s/%s%s\"",
-			 engrampa_cmd, tmp_work_dir,
+			 grapa_cmd, tmp_work_dir,
 			 filename,
 			 pack_type);
-	g_free (engrampa_cmd);
+	g_free (grapa_cmd);
 
-	/* engrampa doesn't understand URIs */
+	/* grapa doesn't understand URIs */
 	for (l = file_list ; l; l=l->next){
 		char *file;
 
