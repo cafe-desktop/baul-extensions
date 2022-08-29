@@ -331,7 +331,7 @@ GETTEXT_PACKAGE=baul-extensions
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
   Makefile
   sendto/org.cafe.Baul.Sendto.gschema.xml
   open-terminal/org.cafe.baul-open-terminal.gschema.xml
@@ -361,6 +361,8 @@ AC_OUTPUT([
   xattr-tags/Makefile
   po/Makefile.in
 ])
+
+AC_OUTPUT
 
 echo "
       baul-extensions $VERSION
