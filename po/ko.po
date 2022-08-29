@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
@@ -10,19 +10,19 @@
 # Youngbin Han <sukso96100@gmail.com>, 2020
 # jaekwon.park <jaekwon.park@rockplace.co.kr>, 2020
 # Wolfgang Ulbrich <cafe@raveit.de>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Wolfgang Ulbrich <cafe@raveit.de>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/cafe/teams/13566/ko/)\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -37,17 +37,12 @@ msgstr "파일을 관리자 권한으로 엽니다"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>실행할 프로그램을 찾을 수 없습니다.</b></big>\\\n"
 "\n"
 "올바른 프로그램을 찾을 수 없어 선택한 항목을 관리자 권한으로 열 수 없습니다."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -81,7 +76,7 @@ msgstr "선택한 각각의 그림을 회전합니다"
 msgid "Resize Images"
 msgstr "그림 크기 조절"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "취소(_C)"
 
@@ -227,12 +222,6 @@ msgstr "그림 회전중: %2$d중 %1$d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\"을(를) 회전하는 중</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "그림 변환"
@@ -283,12 +272,6 @@ msgstr "닫기"
 msgid "open-terminal Configuration"
 msgstr "open-terminal 설정"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "터미널 열기"
@@ -314,8 +297,9 @@ msgid ""
 "directory. Note that this key is irrelevant if the desktop directory is "
 "identical to the home directory."
 msgstr ""
-"참이면, 데스크톱에서 터미널을 열 때 내 폴더를 기준으로 터미널을 엽니다. 그렇지 않으면 데스크톱 디렉터리에서 엽니다. 참고로 이 키는 "
-"데스크톱 디렉터리가 내 폴더와 일치한다면 상관 없습니다."
+"참이면, 데스크톱에서 터미널을 열 때 내 폴더를 기준으로 터미널을 엽니다. 그렇"
+"지 않으면 데스크톱 디렉터리에서 엽니다. 참고로 이 키는 데스크톱 디렉터리가 "
+"내 폴더와 일치한다면 상관 없습니다."
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -329,32 +313,26 @@ msgstr "메일, 인스턴트 메시지로 파일 보내기..."
 msgid "Send files by mail, instant message..."
 msgstr "메일, 인스턴트 메시지로 파일을 보냅니다..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "파일"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "주어진 URI 또는 파일 이름을 옵션으로 전달합니다\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "명령문 옵션을 해석할 수 없습니다: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "아무 플러그인도 불러올 수 없습니다."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "설치가 올바른지 확인하십시오."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -374,9 +352,10 @@ msgstr "보내기에 사용한 마지막 플러그인"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
-msgstr "카하의 보내기를 이용해서 파일들을 보낼때 마지막에 사용된 플러그인을 저장하기."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
+msgstr ""
+"카하의 보내기를 이용해서 파일들을 보낼때 마지막에 사용된 플러그인을 저장하기."
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
@@ -384,39 +363,46 @@ msgstr "마직막에 사용된 압축 형식"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr " 마지막에 사용된 압축 형식을 저장하기 (0: zip, 1: tar.gz, 2: tar.bz2)"
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "보내기..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "보내기(_S)"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>대상</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "보낼 방법(_A):"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "받을 사람(_O):"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>압축</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>대상</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "묶어서 보내기(_P):"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>압축</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "전자 메일"
 
@@ -468,12 +454,6 @@ msgstr "이동식 디스크 및 공유"
 msgid "UPnP Media Server"
 msgstr "UPnP 미디어 서버"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "공유"
@@ -489,14 +469,14 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr "공유하려면, 카하가 \"%s\" 폴더에 몇몇 권한을 추가해야 합니다"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "공유를 하기위해서 \"%s\" 폴더에 여분의 권한이 필요합니다.\n"
@@ -645,22 +625,17 @@ msgstr "%s 경로 공유를 제거할 수 없습니다: 경로를 공유하지 �
 msgid ""
 "Cannot change the path of an existing share; please remove the old share "
 "first and add a new one"
-msgstr "기존 공유 경로를 바꿀 수 없습니다. 이전 공유를 먼저 제거하시고 새 공유를 추가하십시오"
+msgstr ""
+"기존 공유 경로를 바꿀 수 없습니다. 이전 공유를 먼저 제거하시고 새 공유를 추가"
+"하십시오"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "배경화면으로 설정하기"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "이미지를 현재 배경화면으로 설정하기"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "바탕 화면"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -693,3 +668,6 @@ msgstr "확장 속성에 저장된 태그 보기"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "바탕 화면"

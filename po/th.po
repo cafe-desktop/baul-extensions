@@ -2,25 +2,25 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Rockers <sumorock@hotmail.com>, 2020
 # Akom <knight2000@gmail.com>, 2020
 # Aefgh Threenine <aefgh3962@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2020\n"
 "Language-Team: Thai (https://www.transifex.com/cafe/teams/13566/th/)\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -35,17 +35,13 @@ msgstr "เปิดแฟ้มด้วยสิทธิ์พิเศษข
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>ไม่สามารถเลือกโปรแกรมที่จะเรียกใช้</b></big>\n"
 "\n"
-"ไม่สามารถเปิดรายการที่คุณเลือกด้วยสิทธิ์พิเศษของผู้ดูแลระบบได้ เพราะไม่สามารถเลือกโปรแกรมที่ถูกต้องสำหรับเปิดได้"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"ไม่สามารถเปิดรายการที่คุณเลือกด้วยสิทธิ์พิเศษของผู้ดูแลระบบได้ "
+"เพราะไม่สามารถเลือกโปรแกรมที่ถูกต้องสำหรับเปิดได้"
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -79,7 +75,7 @@ msgstr "หมุนแต่ละรูปที่เลือก"
 msgid "Resize Images"
 msgstr "ปรับขนาดรูป"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_ยกเลิก"
 
@@ -225,12 +221,6 @@ msgstr "กำลังหมุนรูป: %d จาก %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "เครื่องมือแปลงรูป"
@@ -281,12 +271,6 @@ msgstr "ปิด"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "เปิดเทอร์มินัล"
@@ -325,32 +309,26 @@ msgstr "ส่งแฟ้มทางอีเมล, ข้อความด�
 msgid "Send files by mail, instant message..."
 msgstr "ส่งแฟ้มทางอีเมล, ข้อความด่วน..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Files"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "ต้องส่ง URI หรือชื่อแฟ้มต่างๆ มาในตัวเลือกด้วย\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "ไม่สามารถแจงตัวเลือกในบรรทัดคำสั่ง: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "ไม่สามารถโหลดปลั๊กอินใดๆ"
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "กรุณาตรวจสอบการติดตั้งของคุณ"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -370,8 +348,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -380,39 +358,46 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "ส่งไปยัง..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_ส่ง"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>ปลายทาง</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "ส่งเ_ป็น:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "ส่งไปยั_ง:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>การบีบอัด</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>ปลายทาง</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "ส่งแบบ_บีบอัดในแฟ้ม:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>การบีบอัด</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "อีเมล"
 
@@ -464,12 +449,6 @@ msgstr "ดิสก์ถอดเสียบและแหล่งใช้
 msgid "UPnP Media Server"
 msgstr "เซิร์ฟเวอร์สื่อ UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "แหล่งใช้ร่วม"
@@ -485,14 +464,14 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 
@@ -640,20 +619,13 @@ msgid ""
 "first and add a new one"
 msgstr ""
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "ตั้งเป็นภาพพื้นหลัง"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "เดสก์ท็อป"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -686,3 +658,6 @@ msgstr ""
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "เดสก์ท็อป"

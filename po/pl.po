@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Piotr Drąg <piotrdrag@gmail.com>, 2020
 # Piotr Strębski <strebski@gmail.com>, 2020
@@ -17,20 +17,22 @@
 # Przemek P <ppjg@dami.pl>, 2020
 # Daniel Tokarzewski <bezimo@gmail.com>, 2020
 # Dominik Adrian Grzywak, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Dominik Adrian Grzywak, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/cafe/teams/13566/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
@@ -44,17 +46,13 @@ msgstr "Otwiera plik z uprawnieniami administratora"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Nie można określić programu do uruchomienia.</b></big>\n"
 "\n"
-"Wybrany element nie może zostać otwarty z uprawnieniami administratora ponieważ nie można odnaleźć właściwej aplikacji."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
+"Wybrany element nie może zostać otwarty z uprawnieniami administratora "
+"ponieważ nie można odnaleźć właściwej aplikacji."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -88,7 +86,7 @@ msgstr "Obróć każdy zaznaczony obrazek"
 msgid "Resize Images"
 msgstr "Zmień rozmiar obrazków"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Anuluj"
 
@@ -234,12 +232,6 @@ msgstr "Obracanie obrazu: %d z %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Obracanie \"%s\"</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Konwerter obrazów"
@@ -290,12 +282,6 @@ msgstr "Zamknij"
 msgid "open-terminal Configuration"
 msgstr "Konfiguracja open-terminal"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Otwórz terminal"
@@ -340,32 +326,26 @@ msgstr "Wysyła plik poprzez e-mail, komunikator..."
 msgid "Send files by mail, instant message..."
 msgstr "Wysyła pliki poprzez e-mail, komunikator..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Pliki"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Oczekiwane adresy URI lub nazwy plików wywoływanych jako opcje\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Nie można przetworzyć opcji z wiersza poleceń: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Nie można wczytać żadnych wtyczek."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Proszę sprawdzić poprawność instalacji"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -385,11 +365,11 @@ msgstr "Ostatnia wtyczka używana do wysyłania"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
-"Używane do przechowywania informacji która wtyczka została użyta ostatnio do"
-" wysyłania plików używając baul-sendto."
+"Używane do przechowywania informacji która wtyczka została użyta ostatnio do "
+"wysyłania plików używając baul-sendto."
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
@@ -397,41 +377,48 @@ msgstr "Ostatni użyty typ archiwum"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
-"Używane do przechowywania informacji jaki typ archiwum został użyty ostatnio"
-" (0: zip, 1: tar.gz, 2: tar.bz2)."
+"Używane do przechowywania informacji jaki typ archiwum został użyty ostatnio "
+"(0: zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Wyślij do..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Wyślij"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Miejsce docelowe</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Wyślij ja_ko:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Wyślij d_o:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Kompresja</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Miejsce docelowe</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Wyślij _spakowane:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Kompresja</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-mail"
 
@@ -483,12 +470,6 @@ msgstr "Dyski wymienne i zasoby sieciowe"
 msgid "UPnP Media Server"
 msgstr "Serwer multimediów UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Udostępnij"
@@ -504,8 +485,7 @@ msgstr "Prawa autorskie (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul potrzebuje dodać kilka uprawnień do twojego folderu \"%s\", aby "
 "umożliwić udostępnianie go"
@@ -513,10 +493,12 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
-"Folder \"%s\" potrzebuje następujących dodatkowych uprawnień dla udostępniania, aby funkcjonować:\n"
+"Folder \"%s\" potrzebuje następujących dodatkowych uprawnień dla "
+"udostępniania, aby funkcjonować:\n"
 "%s%s%sCzy chcesz, aby Baul dodała te uprawnienia do folderu automatycznie?"
 
 #: share/baul-share.c:135
@@ -663,23 +645,16 @@ msgid ""
 "Cannot change the path of an existing share; please remove the old share "
 "first and add a new one"
 msgstr ""
-"Nie można zmienić ścieżki istniejącego udziału; proszę najpierw usunąć stary"
-" udział i dodać nowy"
+"Nie można zmienić ścieżki istniejącego udziału; proszę najpierw usunąć stary "
+"udział i dodać nowy"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Ustaw jako tapetę"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Ustaw obraz jako aktualną tapetę"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "pulpit"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -712,3 +687,21 @@ msgstr "Wyświetl etykiety przechowywane w rozszerzonych atrybutach"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Prawa autorskie (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "pulpit"

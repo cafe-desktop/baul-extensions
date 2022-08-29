@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Michal <sinope@seznam.cz>, 2020
@@ -13,20 +13,21 @@
 # Roman Horník <roman.hornik@debian-linux.cz>, 2020
 # Lucas Lommer <drom@kdyne.net>, 2020
 # ToMáš Marný, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
@@ -40,17 +41,13 @@ msgstr "Otevřete soubor s oprávněními správce"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Nemohu určit program, který se má spustit.</b></big>⏎\n"
 "⏎\n"
-"Vybrané položky nelze otevřít s administrátorským oprávněním, protože nelze určit správnou aplikaci."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
+"Vybrané položky nelze otevřít s administrátorským oprávněním, protože nelze "
+"určit správnou aplikaci."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -84,7 +81,7 @@ msgstr "Otočit každý vybraný obrázek"
 msgid "Resize Images"
 msgstr "Změnit velikost obrázků"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Zrušit"
 
@@ -230,12 +227,6 @@ msgstr "Otočit obrázek: %d z %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Otáčí se \"%s\"</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Převaděč obrázků"
@@ -286,12 +277,6 @@ msgstr "Zavřené"
 msgid "open-terminal Configuration"
 msgstr "Konfigurace open-terminal"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Otevřít terminál"
@@ -334,34 +319,28 @@ msgstr "Odeslat soubor e-mailem, rychlou zprávou..."
 msgid "Send files by mail, instant message..."
 msgstr "Odeslat soubory e-mailem, rychlou zprávou..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Soubory"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr ""
 "Jako možnosti očekává zadané URI tzn. jednotné identifikátory zdroje nebo "
 "názvy souborů⏎\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Nelze zpracovat volby příkazové řádky: %s⏎\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Nelze nahrát žádné zásuvné moduly."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Prosím zkontrolujte svoji instalaci"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -381,8 +360,8 @@ msgstr "Poslední zásuvný modul použitý k odeslání"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Slouží k ukládání informací o souborech, které byly zásuvným modulem v "
 "poslední době zaslány pomocí Baul-SendTo."
@@ -393,41 +372,48 @@ msgstr "Naposledy použitý typ archívu"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 "Slouží k ukládání informací o typech archivů, které byly použity v poslední "
 "době (0: zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Odeslat do..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Odeslat"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Umístění</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Odeslat j_ako:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Odeslat _do:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Komprese</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Umístění</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Odeslat za_baleno v:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Komprese</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-mail"
 
@@ -479,12 +465,6 @@ msgstr "Výměnné disky a sdílené složky"
 msgid "UPnP Media Server"
 msgstr "Multimediální server UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Sdílet"
@@ -500,8 +480,7 @@ msgstr "Copyright (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul potřebuje přidat k vaší složce \"%s\" nějaké oprávnění, aby mohlo být "
 "sdíleno"
@@ -509,7 +488,8 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Složka \"%s\" potřebuje speciální oprávnění pro sdílení práce:⏎\n"
@@ -661,20 +641,13 @@ msgstr ""
 "Nelze změnit cestu stávajícího sdílení; prosím odstraňte nejprve původní "
 "sdílení a pak přidejte nové"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Nastavit jako pozadí plochy"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Nastavit jako pozadí plochy"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "desktop"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -707,3 +680,21 @@ msgstr "Zobrazit štítky uložené v rozšířených atributech"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Copyright (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "desktop"

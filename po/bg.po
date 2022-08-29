@@ -2,26 +2,26 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Любомир Василев, 2020
 # breaker loc <breaker9loc@gmail.com>, 2020
 # Wolfgang Ulbrich <cafe@raveit.de>, 2020
 # Замфир Йончев <zamfir.yonchev@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2020\n"
 "Language-Team: Bulgarian (https://www.transifex.com/cafe/teams/13566/bg/)\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -36,17 +36,14 @@ msgstr "Отваря файла с администраторски привил
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
-"<big><b>Не може да се установи програмата, която трябва да се пусне.</b></big>\n"
+"<big><b>Не може да се установи програмата, която трябва да се пусне.</b></"
+"big>\n"
 "\n"
-"Избраният от Вас обект не може да се отвори с права на администратор, защото не може да бъде определено правилното приложение."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"Избраният от Вас обект не може да се отвори с права на администратор, защото "
+"не може да бъде определено правилното приложение."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -80,7 +77,7 @@ msgstr "Завъртане на всяко избрано изображение
 msgid "Resize Images"
 msgstr "Мащабиране на изображенията"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Отказ"
 
@@ -226,12 +223,6 @@ msgstr "Завъртане на изображението: %d от %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Завъртане на \"%s\"</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Конертиране на изображения"
@@ -282,12 +273,6 @@ msgstr "Затваряне"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Отваряне на терминал"
@@ -333,32 +318,26 @@ msgstr "Изпращане на файл чрез писмо или бързо �
 msgid "Send files by mail, instant message..."
 msgstr "Изпращане на файлове чрез писмо или бързо съобщение…"
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Файлове"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "За опции се очакват адреси или файлове\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Опциите от командния ред не могат да се анализират: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Не могат да се заредят никакви приставки."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Проверете инсталацията си"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -378,8 +357,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -388,39 +367,46 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Изпращане до…"
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Изпращане"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Цел</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Изпращане _като:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Изпращане д_о:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Компресия</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Цел</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Изпращане _пакетирано в:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Компресия</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "Е-писмо"
 
@@ -472,12 +458,6 @@ msgstr "Премахваеми устройства и споделяния"
 msgid "UPnP Media Server"
 msgstr "Сървър за мултимедия чрез UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Споделяне"
@@ -493,8 +473,7 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul изисква да се добавят някои права към Вашата папка „%s“, за да бъде "
 "споделена"
@@ -502,10 +481,12 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
-"Папката „%s“ изисква следните допълнително права за споделяне на Вашата работа:\n"
+"Папката „%s“ изисква следните допълнително права за споделяне на Вашата "
+"работа:\n"
 "%s%s%sИскате ли Baul да добави автоматично тези позволения към папката?"
 
 #: share/baul-share.c:135
@@ -644,31 +625,23 @@ msgstr "testparm на Samba приключи със грешка %d"
 #: share/shares.c:681
 #, c-format
 msgid "Cannot remove the share for path %s: that path is not shared"
-msgstr ""
-"Не може да бъде премахнато споделянето на пътя %s: пътят не е споделен"
+msgstr "Не може да бъде премахнато споделянето на пътя %s: пътят не е споделен"
 
 #: share/shares.c:727
 msgid ""
 "Cannot change the path of an existing share; please remove the old share "
 "first and add a new one"
 msgstr ""
-"Не може да се промени пътя на съществуващо споделяне; моля, първо премахнете"
-" старото споделяне и след това добавете новото"
+"Не може да се промени пътя на съществуващо споделяне; моля, първо премахнете "
+"старото споделяне и след това добавете новото"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Използване като фон на работния плот"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Използване на изображението като фон на работния плот"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "работен плот"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -701,3 +674,6 @@ msgstr "Преглед на етикетите съхранявани в раз�
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "работен плот"

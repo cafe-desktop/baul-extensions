@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2020
@@ -10,19 +10,19 @@
 # 8c3c560621f92e66455793da7b85eff0_8989672 <0e181aafae430e5c919398b6a7bba462_109266>, 2020
 # Nathan Follens, 2020
 # Kees Lijkendijk <clkndk@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Kees Lijkendijk <clkndk@gmail.com>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/cafe/teams/13566/nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -37,17 +37,13 @@ msgstr "Opent het bestand met beheerdersrechten"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Kan het te gebruiken programma niet bepalen.</b></big>\n"
 "\n"
-"Het door u geselecteerde element kan niet worden geopend met beheerdersrechten omdat het juiste programma ervoor niet kan worden bepaald."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
+"Het door u geselecteerde element kan niet worden geopend met "
+"beheerdersrechten omdat het juiste programma ervoor niet kan worden bepaald."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -81,7 +77,7 @@ msgstr "Elke geselecteerde afbeelding draaien"
 msgid "Resize Images"
 msgstr "Afbeeldingen herschalen"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Afbreken"
 
@@ -227,12 +223,6 @@ msgstr "Bezig met draaien van afbeeldingen %d van %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Bezig met draaien van '%s'</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Omzetter van afbeeldingen"
@@ -283,12 +273,6 @@ msgstr "Sluiten"
 msgid "open-terminal Configuration"
 msgstr "Instellingen van open-terminal"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Terminalvenster openen"
@@ -318,8 +302,8 @@ msgid ""
 msgstr ""
 "Als dit aan staat zal het starten van een terminalvenster in de grafische "
 "werkomgeving, een terminalvenster openen dat begint in de thuismap van de "
-"gebruiker. Zo niet, dan begint het venster in de bureaubladmap. Deze sleutel"
-" heeft geen effect als de bureaubladmap en de gebruikersmap dezelfde zijn."
+"gebruiker. Zo niet, dan begint het venster in de bureaubladmap. Deze sleutel "
+"heeft geen effect als de bureaubladmap en de gebruikersmap dezelfde zijn."
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -333,32 +317,26 @@ msgstr "Een bestand versturen via e-mail, instantbericht..."
 msgid "Send files by mail, instant message..."
 msgstr "Bestanden versturen via e-mail, instantbericht..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Bestanden"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Verwacht dat URI's of bestandsnamen worden meegegeven als opties\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Kon de volgende opdrachtregel-opties niet lezen: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Kon geen invoegtoepassingen laden."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Controleer a.u.b. uw installatie"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -378,8 +356,8 @@ msgstr "Laatste invoegsel gebruikt om te versturen"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Gebruikt om te onthouden welk invoegsel het laatste werd gebruikt om "
 "bestanden te versturen met baul-sendto."
@@ -390,41 +368,48 @@ msgstr "Laatst gebruikte type archief"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
-"Gebruikt om te onthouden welk type archief de laatste keer werd gebruikt (0:"
-" zip, 1: tar.gz, 2: tar.bz2)."
+"Gebruikt om te onthouden welk type archief de laatste keer werd gebruikt (0: "
+"zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Sturen naar…"
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "Ver_sturen"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Bestemming</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Versturen _als:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Versturen naar:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Compressie:</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Bestemming</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Verstuur inge_pakt in:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Compressie:</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-mail"
 
@@ -476,12 +461,6 @@ msgstr "Verwijderbare en gedeelde schijven"
 msgid "UPnP Media Server"
 msgstr "UPnP-mediaserver"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Gedeelde map"
@@ -497,18 +476,19 @@ msgstr "Auteursrecht (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "De rechten voor de map '%s' moeten worden verruimd om deze te kunnen delen"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
-"Om te kunnen delen moeten de volgende extra rechten aan de map '%s' worden toegevoegd:\n"
+"Om te kunnen delen moeten de volgende extra rechten aan de map '%s' worden "
+"toegevoegd:\n"
 "%s%s%sWilt u deze rechten nu automatisch laten toevoegen?"
 
 #: share/baul-share.c:135
@@ -562,8 +542,7 @@ msgstr "Gedeelde map aanmaken"
 #: share/baul-share.c:691
 msgid "There was an error while getting the sharing information"
 msgstr ""
-"Er is een fout opgetreden bij het ophalen van informatie over de gedeelde "
-"map"
+"Er is een fout opgetreden bij het ophalen van informatie over de gedeelde map"
 
 #: share/baul-share.c:1123
 msgid "Folder Sharing"
@@ -653,8 +632,7 @@ msgstr "Samba's testparm gaf de volgende foutmelding terug: %d"
 #, c-format
 msgid "Cannot remove the share for path %s: that path is not shared"
 msgstr ""
-"Kan de gedeelde map van het pad %s niet verwijderen: het  pad is niet "
-"gedeeld"
+"Kan de gedeelde map van het pad %s niet verwijderen: het  pad is niet gedeeld"
 
 #: share/shares.c:727
 msgid ""
@@ -664,20 +642,13 @@ msgstr ""
 "Kan het pad van een bestaande gedeelde map niet wijzigen; verwijder a.u.b. "
 "eerst de oude gedeelde map alvorens een nieuwe aan te maken"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Instellen als bureaubladachtergrond"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Afbeelding instellen als de huidige bureaubladachtergrond"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "desktop"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -710,3 +681,21 @@ msgstr "Bekijk markeringen opgeslagen in uitgebreide attributen"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Auteursrecht (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "desktop"

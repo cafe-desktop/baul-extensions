@@ -2,23 +2,24 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # 黃柏諺 <s8321414@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/cafe/teams/13566/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/cafe/teams/13566/"
+"zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -33,17 +34,12 @@ msgstr "以管理員權限開啟檔案"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>無法決定讓程式運行。</b></big>\n"
 "\n"
 "您所選的項目無法以管理員的權限開啟，因為無法決定正確的應用程式。"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -77,7 +73,7 @@ msgstr "旋轉每個已選圖片"
 msgid "Resize Images"
 msgstr "調整圖片大小"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "取消(_C)"
 
@@ -223,12 +219,6 @@ msgstr "旋轉圖像：%d 在 %d 中"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>正在旋轉「%s」</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "圖片轉換器"
@@ -279,12 +269,6 @@ msgstr "關閉"
 msgid "open-terminal Configuration"
 msgstr "開啟終端機設定"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "開啟終端機"
@@ -309,7 +293,9 @@ msgid ""
 "in the home directory. Otherwise, it will be opened in the desktop "
 "directory. Note that this key is irrelevant if the desktop directory is "
 "identical to the home directory."
-msgstr "如果設定為真，就在桌面上開啟終端機於使用者家目錄。否則，它將被開啟於桌面目錄。要注意的是，如果桌面目錄與家目錄相同，這個鍵就不重要。"
+msgstr ""
+"如果設定為真，就在桌面上開啟終端機於使用者家目錄。否則，它將被開啟於桌面目"
+"錄。要注意的是，如果桌面目錄與家目錄相同，這個鍵就不重要。"
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -323,32 +309,26 @@ msgstr "經電子郵件、即時訊息等等途徑傳送檔案"
 msgid "Send files by mail, instant message..."
 msgstr "經電子郵件、即時訊息等等途徑傳送檔案"
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "檔案"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "應使用 URI 或檔案名稱做為選項\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "無法分析命令列選項：%s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "無法載入任何外掛程式。"
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "請檢查安裝是否正確"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -368,8 +348,8 @@ msgstr "用於傳送的上一個外掛程式"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr "儲存上次用於 baul-sendto 的外掛程式。"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -378,39 +358,46 @@ msgstr "上次使用的壓縮檔類型"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr "用於儲存上次使用的壓縮檔類型（0：zip、1：tar.gz、2：tar.bz2）。"
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "傳送到..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "傳送(_S)"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>目的端</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "傳送為(_A):"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "傳送到(_O):"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>壓縮</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>目的端</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "傳送時封裝於(_P):"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>壓縮</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "電子郵件"
 
@@ -462,12 +449,6 @@ msgstr "卸除式磁碟與分享"
 msgid "UPnP Media Server"
 msgstr "UPnP 媒體伺服器"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "共用"
@@ -483,14 +464,14 @@ msgstr "Copyright (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr "為了共用，Baul 需要加入一些權限到您的資料夾「 %s 」中"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "資料夾「 %s 」需要下列額外的權限以便共用：\n"
@@ -640,20 +621,13 @@ msgid ""
 "first and add a new one"
 msgstr "無法改變已共用的路徑；請先移除舊的共用再新增一個新的"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "設定為桌布"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "將圖片設定為目前的桌布"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "桌上型電腦"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -686,3 +660,21 @@ msgstr "檢視儲存在延伸屬性中的標籤"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Copyright (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "桌上型電腦"

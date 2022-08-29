@@ -2,25 +2,25 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Mattias Põldaru <mahfiaz@gmail.com>, 2020
 # Ivar Smolin <okul@linux.ee>, 2020
 # Rivo Zängov <eraser@eraser.ee>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Estonian (https://www.transifex.com/cafe/teams/13566/et/)\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -35,17 +35,13 @@ msgstr "Faili avamine halduri õigustes"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Käivitatavat programmi pole võimalik kindlaks teha.</b></big>\n"
 "\n"
-"Sinu poolt valitud kirjet pole võimalik halduri õigustes avada, kuna selle jaoks vajalikku rakendust pole võimalik kindlaks teha."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"Sinu poolt valitud kirjet pole võimalik halduri õigustes avada, kuna selle "
+"jaoks vajalikku rakendust pole võimalik kindlaks teha."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -79,7 +75,7 @@ msgstr "Iga valitud pildi pööramine"
 msgid "Resize Images"
 msgstr "Piltide suuruse muutmine"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Tühista"
 
@@ -225,12 +221,6 @@ msgstr "Pildi pööramine: %d (%d-st)"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\" pööramine</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Pilditeisendaja"
@@ -281,12 +271,6 @@ msgstr "Suletud"
 msgid "open-terminal Configuration"
 msgstr "open-terminal'i seaditus"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Terminali avamine"
@@ -314,8 +298,8 @@ msgid ""
 msgstr ""
 "Kui määratud, siis töölaualt terminali avamine avab terminali "
 "kodukataloogis. Kui määramata, siis avatakse see terminal töölaua "
-"kataloogis. Kui töölaud ja kodukataloog on samas kataloogis, siis ei oma see"
-" väärtus tähendust."
+"kataloogis. Kui töölaud ja kodukataloog on samas kataloogis, siis ei oma see "
+"väärtus tähendust."
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -329,32 +313,26 @@ msgstr "Faili saatmine e-posti või välksõnumiga..."
 msgid "Send files by mail, instant message..."
 msgstr "Failide saatmine e-posti või välksõnumiga..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Failid"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Ootab, et URId või failinimed edastatakse võtmetena\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Käsurea võtmete analüüs pole võimalik: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Ühtegi pluginat pole võimalik laadida."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Palun kontrolli paigaldust"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -374,8 +352,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -384,41 +362,48 @@ msgstr "Viimati kasutatud arhiivi liik"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 "Kasutatakse viimati kastutatud arhiivi liigi meelespidamiseks (0: zip, 1: "
 "tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Failide saatmine..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Saada"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Sihtkoht</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "_Millega saata:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "_Kuhu saata:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Tihendamine</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Sihtkoht</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Saatmine _pakituna arhiivi:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Tihendamine</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-post"
 
@@ -470,12 +455,6 @@ msgstr "Eemaldatavad andmekandjad ja jagatud kataloogid"
 msgid "UPnP Media Server"
 msgstr "UPnP meediaserver"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Jagatud ressurss"
@@ -491,14 +470,15 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
-msgstr "Baul peab kataloogi \"%s\" jagamiseks lisama sellele mõned pääsuõiguseid"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
+msgstr ""
+"Baul peab kataloogi \"%s\" jagamiseks lisama sellele mõned pääsuõiguseid"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Kaust \"%s\" vajab jagamise toimimiseks järgmiseid lisaõiguseid:\n"
@@ -651,20 +631,13 @@ msgstr ""
 "Olemasoleva jagatud ressursi kataloogi pole võimalik muuta. Eemalda eelmine "
 "jagamine ja lisa uus"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Määra tapeediks"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Kujutise määramine praeguseks tapeediks"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "töölaud"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -697,3 +670,6 @@ msgstr "Lisaatribuutides salvestatud siltide kuvamine"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "töölaud"

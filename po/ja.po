@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2020
 # Yuki Shira <shirayuking@gmail.com>, 2020
@@ -13,19 +13,19 @@
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2020
 # Rockers <sumorock@hotmail.com>, 2020
 # Ikuru K <kanumaiku@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Ikuru K <kanumaiku@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -40,17 +40,13 @@ msgstr "管理者権限でファイルを開きます"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>実行するプログラムを決定できません。</b></big>\n"
 "\n"
-"適切なアプリケーションを決定できないので、選んだファイルを管理者権限で開くことはできません。"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"適切なアプリケーションを決定できないので、選んだファイルを管理者権限で開くこ"
+"とはできません。"
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -84,7 +80,7 @@ msgstr "選択した画像を回転します"
 msgid "Resize Images"
 msgstr "画像の大きさの変更"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
@@ -230,12 +226,6 @@ msgstr "画像の回転中: %d / %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\" の回転中</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "画像の変換"
@@ -286,12 +276,6 @@ msgstr "閉じる"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "端末を開く"
@@ -317,7 +301,10 @@ msgid ""
 "directory. Note that this key is irrelevant if the desktop directory is "
 "identical to the home directory."
 msgstr ""
-"この機能をオンにすると、デスクトップ上で端末を呼び出した際にホーム･ディレクトリを開くようになります。オフにすると、デスクトップを開きます。デスクトップ・ディレクトリにホーム・ディレクトリを指定している場合、この設定は効果がありません。"
+"この機能をオンにすると、デスクトップ上で端末を呼び出した際にホーム･ディレクト"
+"リを開くようになります。オフにすると、デスクトップを開きます。デスクトップ・"
+"ディレクトリにホーム・ディレクトリを指定している場合、この設定は効果がありま"
+"せん。"
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -331,32 +318,26 @@ msgstr "ファイルをメールやインスタントメッセージで送信し
 msgid "Send files by mail, instant message..."
 msgstr "ファイルをメールやインスタントメッセージで送信します..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "ファイル"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "オプションとして URI またはファイル名を指定してください\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "コマンドライン・オプションを解析できませんでした: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "プラグインを読み込めませんでした"
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "正しくインストールされているか確認してください"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -376,9 +357,11 @@ msgstr "最後に送信に使用したプラグイン"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
-msgstr "最後にbaul-sendtoを使用してファイルを送信した際に、どのプラグインを使用したかを記録します。"
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
+msgstr ""
+"最後にbaul-sendtoを使用してファイルを送信した際に、どのプラグインを使用したか"
+"を記録します。"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
 msgid "Last type of archive used"
@@ -386,39 +369,47 @@ msgstr "最後に使用したアーカイブの種類"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
-msgstr "最後に使用したアーカイブの種類を記録します。 (0: zip, 1: tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
+msgstr ""
+"最後に使用したアーカイブの種類を記録します。 (0: zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "送る..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "送信(_S)"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>送信先</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "使用するアプリ(_A):"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "宛先(_O):"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>圧縮</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>送信先</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "書庫にして送信する(_P):"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>圧縮</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "メール"
 
@@ -470,12 +461,6 @@ msgstr "リムーバブルディスクと共有"
 msgid "UPnP Media Server"
 msgstr "UPnP メディアサーバー"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "共有"
@@ -491,14 +476,14 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr "フォルダー \"%s\" を共有するためにはアクセス権を追加する必要があります"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "共有機能を有効にするにはフォルダー \"%s\" に次の追加アクセス権が必要です:\n"
@@ -646,22 +631,17 @@ msgstr "パス %s の共有を削除できません: パスは共有されてい
 msgid ""
 "Cannot change the path of an existing share; please remove the old share "
 "first and add a new one"
-msgstr "既に共有されているパスは変更できません; 古い共有を削除して、新しく追加してください"
+msgstr ""
+"既に共有されているパスは変更できません; 古い共有を削除して、新しく追加してく"
+"ださい"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "壁紙に設定"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "画像を現在の壁紙として設定"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "デスクトップ"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -694,3 +674,6 @@ msgstr "拡張属性に格納されたタグを閲覧します。"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "デスクトップ"

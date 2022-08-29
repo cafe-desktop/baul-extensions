@@ -2,27 +2,28 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # corneliu.e <corneliueva@yahoo.com>, 2020
 # Daniel <danny3@tutanota.com>, 2020
 # AntonieG <vastinar.antonie@gmail.com>, 2020
 # sorinn <nemes.sorin@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: sorinn <nemes.sorin@gmail.com>, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/cafe/teams/13566/ro/)\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
 
 #: gksu/libbaul-gksu.c:135
 msgid "Open as administrator"
@@ -36,17 +37,13 @@ msgstr "Deschide fișierul cu privilegii de administrator"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Nu se poate determina programul pentru rulare.</b></big>\n"
 "\n"
-"Elementul selectat nu poate fi deschis cu privilegii de administrator deoarece aplicația corectă nu poate fi determinată."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"Elementul selectat nu poate fi deschis cu privilegii de administrator "
+"deoarece aplicația corectă nu poate fi determinată."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -80,7 +77,7 @@ msgstr "Rotește fiecare imagine selectată"
 msgid "Resize Images"
 msgstr "Redimensionează imaginile"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Renunță"
 
@@ -226,12 +223,6 @@ msgstr "Rotesc imaginea: %d din %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Se rotește „%s”</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Convertor imagini"
@@ -282,12 +273,6 @@ msgstr "Închide"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Deschide terminal"
@@ -332,32 +317,27 @@ msgstr "Trimite fișierul prin mail, mesagerie instantă..."
 msgid "Send files by mail, instant message..."
 msgstr "Trimitere fișiere prin poștă electronică, mesagerie instantanee..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Fișiere"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
-msgstr "Așteaptă ca URI-urile sau numele fișierelor să fie trimise ca opțiuni\n"
+msgstr ""
+"Așteaptă ca URI-urile sau numele fișierelor să fie trimise ca opțiuni\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Nu s-au putut parsa optiunile de consola: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Nu s-a putut încărca niciun modul"
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Va rugăm să verificați instalarea"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -377,8 +357,8 @@ msgstr "Ultimul modul folosit pentru trimitere"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Folosit pentru a stoca care modul a fost folosit ultima dată când au fost "
 "trimise fișiere utilizând baul-sendto."
@@ -389,41 +369,48 @@ msgstr "Ultimul tip de arhivă folosită"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 "Utilizată pentru a stoca ce tip de arhivă a fost folosită ultima dată (0: "
 "zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Trimitere către..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Trimite"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Destinație</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Trimite _ca:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Trimite căt_re:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Comprimare</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Destinație</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Trimite îm_pachetat în:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Comprimare</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "Email"
 
@@ -475,12 +462,6 @@ msgstr "Partajări și discuri amovibile"
 msgid "UPnP Media Server"
 msgstr "Servitor media UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Partajează"
@@ -496,8 +477,7 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul trebuie să adauge unele permisiuni la dosarul „%s” pentru a-l putea "
 "partaja"
@@ -505,10 +485,12 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
-"Dosarul „%s” are nevoie de următoare permisini în plus pentru ca partajarea să funcționeze:\n"
+"Dosarul „%s” are nevoie de următoare permisini în plus pentru ca partajarea "
+"să funcționeze:\n"
 "%s%s%s Doriți ca programul Baul să adauge automat aceste permisiuni la dosar?"
 
 #: share/baul-share.c:135
@@ -648,8 +630,7 @@ msgstr "Programul testparm al lui Samba a întors eroarea %d"
 #, c-format
 msgid "Cannot remove the share for path %s: that path is not shared"
 msgstr ""
-"Partajarea nu poate fi eliminată pentru calea %s: acea cale nu este "
-"partajată"
+"Partajarea nu poate fi eliminată pentru calea %s: acea cale nu este partajată"
 
 #: share/shares.c:727
 msgid ""
@@ -659,20 +640,13 @@ msgstr ""
 "Nu se poate schimba calea unei partajări existente; vă rugăm să eliminați "
 "vechea partajare prima dată și apoi să adăugați una nouă"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Stabilește ca tapet"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Stabilește imaginea ca tapet actual"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "desktop"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -705,3 +679,6 @@ msgstr ""
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "desktop"

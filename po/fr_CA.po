@@ -2,22 +2,23 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # eere leme <eerlemm@hotmail.com>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2019-12-24 15:05+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2018-03-11 15:02+0000\n"
 "Last-Translator: eere leme <eerlemm@hotmail.com>, 2018\n"
-"Language-Team: French (Canada) (https://www.transifex.com/cafe/teams/13566/fr_CA/)\n"
+"Language-Team: French (Canada) (https://www.transifex.com/cafe/teams/13566/"
+"fr_CA/)\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_CA\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -32,13 +33,8 @@ msgstr ""
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
@@ -69,92 +65,71 @@ msgstr ""
 msgid "Rotate each selected image"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:55
+#: image-converter/baul-image-resize.ui:33
 msgid "Resize Images"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:73
-msgid "<b>Image Size</b>"
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
+msgid "_Cancel"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:110
+#: image-converter/baul-image-resize.ui:69
+msgid "_Resize"
+msgstr ""
+
+#: image-converter/baul-image-resize.ui:119
 msgid "Select a size:"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:131
-msgid "96x96"
-msgstr "96x96"
-
-#: image-converter/baul-image-resize.ui:132
-msgid "128x128"
-msgstr "128x128"
-
-#: image-converter/baul-image-resize.ui:133
-msgid "640x480"
-msgstr "640x480"
-
-#: image-converter/baul-image-resize.ui:134
-msgid "800x600"
-msgstr ""
-
-#: image-converter/baul-image-resize.ui:135
-msgid "1024x768"
-msgstr ""
-
-#: image-converter/baul-image-resize.ui:136
-msgid "1280x960"
-msgstr ""
-
-#: image-converter/baul-image-resize.ui:155
-#: image-converter/baul-image-resize.ui:301
+#: image-converter/baul-image-resize.ui:165
+#: image-converter/baul-image-resize.ui:307
 msgid "pixels"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:177
+#: image-converter/baul-image-resize.ui:187
 msgid "Scale:"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:210
+#: image-converter/baul-image-resize.ui:218
 msgid "percent"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:232
+#: image-converter/baul-image-resize.ui:240
 msgid "Custom size:"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:251
+#: image-converter/baul-image-resize.ui:259
 msgid "Width:"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:276
+#: image-converter/baul-image-resize.ui:283
 msgid "Height:"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:335
-#: image-converter/baul-image-rotate.ui:172
-msgid "<b>Filename</b>"
+#: image-converter/baul-image-resize.ui:330
+msgid "Image Size"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:372
+#: image-converter/baul-image-resize.ui:368
 #: image-converter/baul-image-rotate.ui:206
 msgid "Append"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:390
+#: image-converter/baul-image-resize.ui:386
 msgid ".resized"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:402
+#: image-converter/baul-image-resize.ui:398
 #: image-converter/baul-image-rotate.ui:228
 msgid "to file title"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:419
+#: image-converter/baul-image-resize.ui:415
 msgid "Resize in place"
 msgstr ""
 
-#: image-converter/baul-image-resize.ui:478
-msgid "_Resize"
+#: image-converter/baul-image-resize.ui:438
+msgid "Filename"
 msgstr ""
 
 #: image-converter/baul-image-resizer.c:207
@@ -182,6 +157,18 @@ msgstr ""
 msgid "Please enter a valid filename suffix!"
 msgstr ""
 
+#: image-converter/baul-image-rotate.ui:18
+msgid "90° clockwise"
+msgstr ""
+
+#: image-converter/baul-image-rotate.ui:21
+msgid "90° counter-clockwise"
+msgstr ""
+
+#: image-converter/baul-image-rotate.ui:24
+msgid "180°"
+msgstr ""
+
 #: image-converter/baul-image-rotate.ui:31
 msgid "Rotate Images"
 msgstr ""
@@ -200,6 +187,10 @@ msgstr ""
 
 #: image-converter/baul-image-rotate.ui:143
 msgid "degrees clockwise"
+msgstr ""
+
+#: image-converter/baul-image-rotate.ui:172
+msgid "<b>Filename</b>"
 msgstr ""
 
 #: image-converter/baul-image-rotate.ui:219
@@ -222,12 +213,6 @@ msgstr ""
 #: image-converter/baul-image-rotator.c:291
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
 msgstr ""
 
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
@@ -280,12 +265,6 @@ msgstr "Fermer"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr ""
@@ -312,43 +291,37 @@ msgid ""
 "identical to the home directory."
 msgstr ""
 
-#: sendto/baul-nste.c:78 sendto/baul-nste.c:83
+#: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
 msgstr ""
 
-#: sendto/baul-nste.c:79
+#: sendto/baul-nste.c:77
 msgid "Send file by mail, instant message..."
 msgstr ""
 
-#: sendto/baul-nste.c:84
+#: sendto/baul-nste.c:82
 msgid "Send files by mail, instant message..."
 msgstr ""
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr ""
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr ""
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr ""
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr ""
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
 msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
@@ -369,8 +342,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -379,39 +352,43 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr ""
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+msgid "Send"
 msgstr ""
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr ""
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr ""
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr ""
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
+#: sendto/baul-sendto.ui:160
+msgid "Destination"
 msgstr ""
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+msgid "Compression"
+msgstr ""
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr ""
 
@@ -463,12 +440,6 @@ msgstr ""
 msgid "UPnP Media Server"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr ""
@@ -484,14 +455,14 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 
@@ -639,19 +610,12 @@ msgid ""
 "first and add a new one"
 msgstr ""
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr ""
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
-msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
 msgstr ""
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
@@ -685,3 +649,12 @@ msgstr ""
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "96x96"
+#~ msgstr "96x96"
+
+#~ msgid "128x128"
+#~ msgstr "128x128"
+
+#~ msgid "640x480"
+#~ msgstr "640x480"

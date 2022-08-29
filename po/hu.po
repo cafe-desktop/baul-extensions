@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # KAMI KAMI <kami911@gmail.com>, 2020
 # Rezső Páder <rezso@rezso.net>, 2020
@@ -11,19 +11,19 @@
 # Wolfgang Ulbrich <cafe@raveit.de>, 2020
 # Falu <info@falu.me>, 2020
 # Balázs Meskó <meskobalazs@mailbox.org>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/cafe/teams/13566/hu/)\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -38,17 +38,13 @@ msgstr "A fáj megnyitása rendszergazdai jogosultságokkal"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>A futtatandó program nem határozható meg.</b></big>\n"
 "\n"
-"A kijelölt elem nem nyitható meg rendszergazdai jogosultságokkal, mivel a megfelelő alkalmazás nem határozható meg."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"A kijelölt elem nem nyitható meg rendszergazdai jogosultságokkal, mivel a "
+"megfelelő alkalmazás nem határozható meg."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -82,7 +78,7 @@ msgstr "Minden kijelölt kép elforgatása"
 msgid "Resize Images"
 msgstr "Képek átméretezése"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "Mé_gse"
 
@@ -228,12 +224,6 @@ msgstr "Kép elforgatása: %d / %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\" elforgatása</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Kép átalakító"
@@ -284,12 +274,6 @@ msgstr "Bezárás"
 msgid "open-terminal Configuration"
 msgstr "open-terminal beállítások"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Terminál megnyitása"
@@ -333,32 +317,26 @@ msgstr "Fájl küldése levélben, azonnali üzenetként…"
 msgid "Send files by mail, instant message..."
 msgstr "Fájlok küldése levélben, azonnali üzenetként…"
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "fájlokat"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "URI címekre vagy fájlnevekre számít paraméterekként\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Nem dolgozhatók fel a parancssori kapcsolók: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Nem tölthetők be bővítmények."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Ellenőrizze a telepítést"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -378,8 +356,8 @@ msgstr "Küldésre utoljára használt bővítmény"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Eltárolja, hogy utoljára melyik bővítményt használta a „baul-sendto”-val "
 "történő fájlküldéshez."
@@ -390,41 +368,48 @@ msgstr "Utoljára használt archívum  típus"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
-"Eltárolja, hogy utoljára melyik archívum típust használta (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Eltárolja, hogy utoljára melyik archívum típust használta (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Küldés..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Küldés"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Cél</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Küldés _mint:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Küldés _célja:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Tömörítés</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Cél</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Küldés _tömörítve:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Tömörítés</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-mail"
 
@@ -476,12 +461,6 @@ msgstr "Cserélhető lemezek és megosztások"
 msgid "UPnP Media Server"
 msgstr "UPnP médiakiszolgáló"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Megosztás"
@@ -497,8 +476,7 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "A megosztáshoz a Baul-nak szüksége van néhány jogra a \"%s\" mappához, hogy "
 "megtudja osztani azt"
@@ -506,11 +484,13 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "A „%s” mappa megosztásához ezekre a további jogosultságokra van szükség:\n"
-"%s%s%sSzeretné, hogy a Baul automatikusan hozzáadja a mappához a jogosultságokat?"
+"%s%s%sSzeretné, hogy a Baul automatikusan hozzáadja a mappához a "
+"jogosultságokat?"
 
 #: share/baul-share.c:135
 msgid "  - read permission by others\n"
@@ -593,8 +573,7 @@ msgstr "_Megjegyzés:"
 #: share/share-dialog.ui:170
 msgid "_Allow others to create and delete files in this folder"
 msgstr ""
-"_Engedélyezzük mások számára a fájlok létrehozását és törlését ebben "
-"mappában"
+"_Engedélyezzük mások számára a fájlok létrehozását és törlését ebben mappában"
 
 #: share/share-dialog.ui:187
 msgid "_Guest access (for people without a user account)"
@@ -662,20 +641,13 @@ msgstr ""
 "A meglévő megosztás elérési útja nem változtatható meg. Távolítsa el a régi "
 "megosztást és hozza létre az újat."
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Beállítás háttérképként"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "A kép beállítása aktuális háttérképként..."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "asztal"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -708,3 +680,6 @@ msgstr "A bővített attribútumokban tárolt címkék megtekintése"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "asztal"

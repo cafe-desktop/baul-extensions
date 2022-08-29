@@ -2,25 +2,26 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Allan Nordhøy <epost@anotheragency.no>, 2020
 # Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/cafe/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/cafe/teams/13566/"
+"nb/)\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -35,16 +36,12 @@ msgstr "Åpne filen med administratorrettigheter"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Kunne ikke fastsette hvilket program som skal kjøres..</b></big>\n"
-"Elementet du valgte kan ikke åpnes med administratorrettigheter fordi det rette programmet ikke kunne fastsettes."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
+"Elementet du valgte kan ikke åpnes med administratorrettigheter fordi det "
+"rette programmet ikke kunne fastsettes."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -78,7 +75,7 @@ msgstr "Roter alle valgte bilder"
 msgid "Resize Images"
 msgstr "Endre bildestørrelser"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Avbryt"
 
@@ -224,12 +221,6 @@ msgstr "Roterer bilde: %d av %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Roterer «%s»</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Bildekonverteringsprogram"
@@ -280,12 +271,6 @@ msgstr "Lukk"
 msgid "open-terminal Configuration"
 msgstr "Oppsett av open-terminal"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Åpne terminal"
@@ -314,9 +299,9 @@ msgid ""
 "identical to the home directory."
 msgstr ""
 "Hvis satt til sann, vil åpning av en terminal på skrivebordet åpne en "
-"terminal i hjemmemappen. I annet fall vil den bli åpnet i skrivebordsmappen."
-" Merk at denne nøkkelen er irrelevant hvis skrivebordsmappen er den samme "
-"som hjemmemappen."
+"terminal i hjemmemappen. I annet fall vil den bli åpnet i skrivebordsmappen. "
+"Merk at denne nøkkelen er irrelevant hvis skrivebordsmappen er den samme som "
+"hjemmemappen."
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -330,32 +315,26 @@ msgstr "Send fil med e-post, lynmelding …"
 msgid "Send files by mail, instant message..."
 msgstr "Send filer med e-post, lynmelding …"
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Filer"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Forventer URI-er eller filnavn som alternativer\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Kunne ikke fortolke kommandolinjevalg: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Kunne ikke laste inn noen programtillegg."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Sjekk innstallasjonen din"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -375,8 +354,8 @@ msgstr "Siste tillegg som ble brukt til å sende med"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Brukes til å lagre hvilket tillegg som ble brukt forrige gang filer ble "
 "sendt med baul-sendto."
@@ -387,41 +366,48 @@ msgstr "Siste type arkiv som ble brukt"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
-"Brukes til å lagre hvilken type arkiv som ble brukt forrige gang (0: zip, 1:"
-" tar.gz, 2: tar.bz2)."
+"Brukes til å lagre hvilken type arkiv som ble brukt forrige gang (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Send til …"
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Send"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Mål</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Send _som:"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Send t_il:"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Komprimering</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Mål</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Send _pakket i:"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Komprimering</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "E-post"
 
@@ -473,12 +459,6 @@ msgstr "Flyttbare disker og delingsmapper"
 msgid "UPnP Media Server"
 msgstr "UPnP-mediatjener"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Del"
@@ -494,15 +474,15 @@ msgstr "Opphavsrett (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul må legge til noen rettigheter til mappen «%s» for å kunne dele den"
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 "Mappen «%s» trenger følgende ekstra rettigheter for at deling skal fungere:\n"
@@ -654,20 +634,13 @@ msgstr ""
 "Kan ikke endre stien til eksisterende delingsområde; fjern det gamle "
 "delingsområdet først og legg til ett nytt."
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Bruk som bakgrunnsbilde"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Bruk bilde som nåværende bakgrunnsbilde"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "skrivebord"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -700,3 +673,21 @@ msgstr "Vis merkelapper lagret i utvidede attributter"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Opphavsrett (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "skrivebord"

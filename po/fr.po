@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # mauron, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
@@ -17,19 +17,19 @@
 # Laurent Napias <tamplan+transifex@free.fr>, 2020
 # Rox fr <roxfr@outlook.fr>, 2020
 # Laurent Napias, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Laurent Napias, 2020\n"
 "Language-Team: French (https://www.transifex.com/cafe/teams/13566/fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -44,17 +44,13 @@ msgstr "Ouvre le fichier avec les permissions administrateur"
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>Impossible de déterminer le programme à exécuter.</b></big>\n"
 "\n"
-"L'élément que vous avez sélectionné ne peut être ouvert avec les pouvoirs d'administrateur car l'application correcte ne peut être déterminée."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr "system"
+"L'élément que vous avez sélectionné ne peut être ouvert avec les pouvoirs "
+"d'administrateur car l'application correcte ne peut être déterminée."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -88,7 +84,7 @@ msgstr "Pivote chacune des images sélectionnées"
 msgid "Resize Images"
 msgstr "Redimensionnement des images"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "_Annuler"
 
@@ -234,12 +230,6 @@ msgstr "Rotation de l'image: %d sur %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Rotation de \"%s\"</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr "image"
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "Convertisseur d'images"
@@ -290,12 +280,6 @@ msgstr "Fermer"
 msgid "open-terminal Configuration"
 msgstr "Configuration de Ouvrir le terminal"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr "terminal"
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr "Ouvrir le terminal"
@@ -313,8 +297,8 @@ msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
 msgstr ""
-"Indique si l'ouverture d'un terminal sur le bureau ouvre un terminal dans le"
-" dossier personnel"
+"Indique si l'ouverture d'un terminal sur le bureau ouvre un terminal dans le "
+"dossier personnel"
 
 #: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:6
 msgid ""
@@ -323,9 +307,9 @@ msgid ""
 "directory. Note that this key is irrelevant if the desktop directory is "
 "identical to the home directory."
 msgstr ""
-"Si vrai, l'ouverture d'un terminal sur le bureau ouvrira un terminal dans le"
-" dossier personnel. Dans le cas contraire, il sera ouvert dans le dossier du"
-" bureau. Notez que cette option est inutile dans le cas où le dossier du "
+"Si vrai, l'ouverture d'un terminal sur le bureau ouvrira un terminal dans le "
+"dossier personnel. Dans le cas contraire, il sera ouvert dans le dossier du "
+"bureau. Notez que cette option est inutile dans le cas où le dossier du "
 "bureau est identique au dossier personnel."
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
@@ -340,32 +324,26 @@ msgstr "Envoie le fichier par courriel, messagerie instantanée..."
 msgid "Send files by mail, instant message..."
 msgstr "Envoie les fichiers par courriel, messagerie instantanée..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "Fichiers"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Les options attendues sont des URI ou des noms de fichiers\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Impossible d'analyser les options de la ligne de commande: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "Impossible de charger un greffon."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "Veuillez contrôler votre installation"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr "mail-send"
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -385,8 +363,8 @@ msgstr "Dernier module utilisé pour faire l'envoi"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 "Utilisé pour stocker quel module a été utilisé la dernière fois que des "
 "fichiers ont été envoyé grâce à baul-sendto"
@@ -397,41 +375,48 @@ msgstr "Dernier type d'archive utilisé"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
-"Utilisé pour stocker quel type d'archive a été utilisé la dernière fois  (0:"
-" zip, 1: tar.gz, 2: tar.bz2)."
+"Utilisé pour stocker quel type d'archive a été utilisé la dernière fois  (0: "
+"zip, 1: tar.gz, 2: tar.bz2)."
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "Envoyer vers..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "_Envoyer"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>Destination</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "Envoyer en t_ant que :"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "Env_oyer à :"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Compression</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>Destination</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "Envoyer une copie com_pressée dans :"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Compression</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "Courriel"
 
@@ -483,12 +468,6 @@ msgstr "Disques amovibles et partages"
 msgid "UPnP Media Server"
 msgstr "Serveur média UPnP"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr "folder-remote"
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "Partage"
@@ -504,8 +483,7 @@ msgstr "Copyright (C) 2005 Ethium, Inc."
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 "Baul doit ajouter certaines permissions à votre dossier \"%s\" afin de "
 "pouvoir le partager"
@@ -513,10 +491,12 @@ msgstr ""
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
-"Le dossier \"%s\" nécessite les permissions supplémentaires suivantes pour le fonctionnement du partage.\n"
+"Le dossier \"%s\" nécessite les permissions supplémentaires suivantes pour "
+"le fonctionnement du partage.\n"
 "%s%s%sVoulez-vous que Baul ajoute automatiquement ces permissions au dossier?"
 
 #: share/baul-share.c:135
@@ -600,8 +580,7 @@ msgstr "Co_mmentaire :"
 
 #: share/share-dialog.ui:170
 msgid "_Allow others to create and delete files in this folder"
-msgstr ""
-"Permettre à _autrui de créer et supprimer des fichiers dans ce dossier"
+msgstr "Permettre à _autrui de créer et supprimer des fichiers dans ce dossier"
 
 #: share/share-dialog.ui:187
 msgid "_Guest access (for people without a user account)"
@@ -668,20 +647,13 @@ msgstr ""
 "Impossible de changer le chemin d'un partage existant; veuillez d'abord "
 "supprimer l'ancien partage pour ajouter le nouveau"
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr "Définir un fond d'écran"
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr "Définir l'image comme fond d'écran"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "bureau"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -714,3 +686,21 @@ msgstr "Afficher les étiquettes stockées dans les attributs étendus"
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Copyright (C) 2016 Felipe Barriga Richards"
+
+#~ msgid "system"
+#~ msgstr "system"
+
+#~ msgid "image"
+#~ msgstr "image"
+
+#~ msgid "terminal"
+#~ msgstr "terminal"
+
+#~ msgid "mail-send"
+#~ msgstr "mail-send"
+
+#~ msgid "folder-remote"
+#~ msgstr "folder-remote"
+
+#~ msgid "desktop"
+#~ msgstr "bureau"

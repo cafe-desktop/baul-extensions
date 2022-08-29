@@ -2,24 +2,24 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the baul-extensions package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Mooglie <mooglietech@gmail.com>, 2020
 # Maurious Paul Vincent <paulmaurious@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: baul-extensions 1.23.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2020-02-01 13:01+0100\n"
+"POT-Creation-Date: 2022-08-29 19:24+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Maurious Paul Vincent <paulmaurious@gmail.com>, 2020\n"
 "Language-Team: Tamil (https://www.transifex.com/cafe/teams/13566/ta/)\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gksu/libbaul-gksu.c:135
@@ -34,17 +34,13 @@ msgstr "நிர்வாகி உரிமைகளுடன் இந்த 
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
-"The item you selected cannot be open with administrator powers because the correct application cannot be determined."
+"The item you selected cannot be open with administrator powers because the "
+"correct application cannot be determined."
 msgstr ""
 "<big><b>நிரல் செயல்பாட்டினை உறுதி செய்ய இயலவில்லை.</b></big>\n"
 "\n"
-"நீங்கள் தெரிவு செய்த உருப்படியை, நிர்வாகி உரிமைகளோடு திறக்க இயலவில்லை; ஏனெனில் சரியான செயலியை உறுதி செய்ய இயலவில்லை."
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
-msgid "system"
-msgstr ""
+"நீங்கள் தெரிவு செய்த உருப்படியை, நிர்வாகி உரிமைகளோடு திறக்க இயலவில்லை; ஏனெனில் சரியான "
+"செயலியை உறுதி செய்ய இயலவில்லை."
 
 #: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Gksu"
@@ -78,7 +74,7 @@ msgstr "தெரிவு செய்யப்பட்ட பிம்பத�
 msgid "Resize Images"
 msgstr "பிம்பங்களை மறுஅளவிடு"
 
-#: image-converter/baul-image-resize.ui:53
+#: image-converter/baul-image-resize.ui:53 sendto/baul-sendto.ui:38
 msgid "_Cancel"
 msgstr "ரத்து (_C)"
 
@@ -224,12 +220,6 @@ msgstr "பிம்ப சுழற்சி: %d-ன் %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\" சுழற்றப்படுகிறது</i>"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
-msgid "image"
-msgstr ""
-
 #: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Image Converter"
 msgstr "பிம்ப மாற்றி"
@@ -280,12 +270,6 @@ msgstr "மூடுக "
 msgid "open-terminal Configuration"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
-msgid "terminal"
-msgstr ""
-
 #: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminal"
 msgstr ""
@@ -302,8 +286,7 @@ msgstr ""
 msgid ""
 "Whether opening a terminal on the desktop opens a terminal in the home "
 "directory"
-msgstr ""
-" திரையில் இருந்து முனையத்தை திறந்தால் முனையம் இல்ல அடைவில் இருந்து திறக்குமா"
+msgstr " திரையில் இருந்து முனையத்தை திறந்தால் முனையம் இல்ல அடைவில் இருந்து திறக்குமா"
 
 #: open-terminal/org.cafe.baul-open-terminal.gschema.xml.in:6
 msgid ""
@@ -312,10 +295,9 @@ msgid ""
 "directory. Note that this key is irrelevant if the desktop directory is "
 "identical to the home directory."
 msgstr ""
-"நிபந்தனை சரி என்றால், திரையில் இருந்து முனையத்தை திறந்தால் முனையம், இல்ல "
-"அடைவில் இருந்து திறக்கும்,  தவறு என்றால் முனையம் திரையில் உள்ள அடைவில் "
-"இருந்து திறக்கும்குறிப்பு செய்க, சாவி தொடர்பு சரியில்லை என்றால், இல்ல "
-"அடைவும் திரை அடைவும் ஒன்றே "
+"நிபந்தனை சரி என்றால், திரையில் இருந்து முனையத்தை திறந்தால் முனையம், இல்ல அடைவில் இருந்து "
+"திறக்கும்,  தவறு என்றால் முனையம் திரையில் உள்ள அடைவில் இருந்து திறக்கும்குறிப்பு செய்க, "
+"சாவி தொடர்பு சரியில்லை என்றால், இல்ல அடைவும் திரை அடைவும் ஒன்றே "
 
 #: sendto/baul-nste.c:76 sendto/baul-nste.c:81
 msgid "Send to..."
@@ -329,32 +311,26 @@ msgstr "கோப்பினை மின்னஞ்சலில், துர
 msgid "Send files by mail, instant message..."
 msgstr "கோப்புகளை மின்னஞ்சலில், துரித செய்தியில் அனுப்பவும்..."
 
-#: sendto/baul-sendto-command.c:578
+#: sendto/baul-sendto-command.c:569
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: sendto/baul-sendto-command.c:790
+#: sendto/baul-sendto-command.c:781
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "URIகள் மற்றும் கோப்பு பெயர்கள் தவிர விருப்பங்களாக அனுப்பப்பட வேண்டும்\n"
 
-#: sendto/baul-sendto-command.c:810
+#: sendto/baul-sendto-command.c:801
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "கட்டளைவரி வாய்ப்புகளை பகுக்க முடியவில்லை: %s\n"
 
-#: sendto/baul-sendto-command.c:825
+#: sendto/baul-sendto-command.c:816
 msgid "Could not load any plugins."
 msgstr "கூடுதல் இணைப்புகள் எதையும் ஏற்ற முடியவில்லை."
 
-#: sendto/baul-sendto-command.c:828
+#: sendto/baul-sendto-command.c:819
 msgid "Please verify your installation"
 msgstr "உங்களது நிறுவலை சரிபார்க்கவும்"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
-msgid "mail-send"
-msgstr ""
 
 #: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Send To"
@@ -374,8 +350,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:7
 msgid ""
-"Used to store which plugin was used the last time files were sent using "
-"baul-sendto."
+"Used to store which plugin was used the last time files were sent using baul-"
+"sendto."
 msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:14
@@ -384,39 +360,46 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: "
-"tar.gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: tar."
+"gz, 2: tar.bz2)."
 msgstr ""
 
-#: sendto/baul-sendto.ui:24
+#: sendto/baul-sendto.ui:17
 msgid "Send To..."
 msgstr "இதற்கு அனுப்பு..."
 
-#: sendto/baul-sendto.ui:100
-msgid "_Send"
+#: sendto/baul-sendto.ui:54
+#, fuzzy
+msgid "Send"
 msgstr "அனுப்பு (_S)"
 
-#: sendto/baul-sendto.ui:149
-msgid "<b>Destination</b>"
-msgstr "<b>இலக்கு</b>"
-
-#: sendto/baul-sendto.ui:192
+#: sendto/baul-sendto.ui:116
 msgid "Send _as:"
 msgstr "இதுவாக அனுப்பு (_a):"
 
-#: sendto/baul-sendto.ui:234
+#: sendto/baul-sendto.ui:130
 msgid "Send t_o:"
 msgstr "இதற்கு அனுப்பு (_o):"
 
-#: sendto/baul-sendto.ui:300
-msgid "<b>Compression</b>"
-msgstr "<b>Compression</b>"
+#: sendto/baul-sendto.ui:160
+#, fuzzy
+msgid "Destination"
+msgstr "<b>இலக்கு</b>"
 
-#: sendto/baul-sendto.ui:341
+#: sendto/baul-sendto.ui:193
 msgid "Send _packed in:"
 msgstr "தொகுப்பிற்குள் அனுப்பு (_p):"
 
-#: sendto/plugins/emailclient/emailclient.c:263
+#: sendto/baul-sendto.ui:258
+#, fuzzy
+msgid "Compression"
+msgstr "<b>Compression</b>"
+
+#: sendto/baul-sendto.ui:300
+msgid "label"
+msgstr ""
+
+#: sendto/plugins/emailclient/emailclient.c:267
 msgid "Email"
 msgstr "மின்னஞ்சல்"
 
@@ -468,12 +451,6 @@ msgstr "நீக்ககூடிய வட்டுகள்  மற்று
 msgid "UPnP Media Server"
 msgstr "UPnP ஊடக சேவையம்"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: share/libbaul-share.baul-extension.desktop.in.in:4
-msgid "folder-remote"
-msgstr ""
-
 #: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
 msgid "Share"
 msgstr "பகிர்க"
@@ -489,14 +466,14 @@ msgstr ""
 #: share/baul-share.c:123
 #, c-format
 msgid ""
-"Baul needs to add some permissions to your folder \"%s\" in order to share "
-"it"
+"Baul needs to add some permissions to your folder \"%s\" in order to share it"
 msgstr ""
 
 #: share/baul-share.c:131
 #, c-format
 msgid ""
-"The folder \"%s\" needs the following extra permissions for sharing to work:\n"
+"The folder \"%s\" needs the following extra permissions for sharing to "
+"work:\n"
 "%s%s%sDo you want Baul to add these permissions to the folder automatically?"
 msgstr ""
 
@@ -644,20 +621,13 @@ msgid ""
 "first and add a new one"
 msgstr ""
 
-#: wallpaper/baul-wallpaper-extension.c:109
+#: wallpaper/baul-wallpaper-extension.c:105
 msgid "Set as wallpaper"
 msgstr ""
 
-#: wallpaper/baul-wallpaper-extension.c:110
+#: wallpaper/baul-wallpaper-extension.c:106
 msgid "Set image as the current wallpaper"
 msgstr ""
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
-msgid "desktop"
-msgstr "மேல்மேசை"
 
 #: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Wallpaper"
@@ -690,3 +660,6 @@ msgstr ""
 #: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
+
+#~ msgid "desktop"
+#~ msgstr "மேல்மேசை"
