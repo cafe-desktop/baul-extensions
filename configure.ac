@@ -22,14 +22,11 @@ GTK_DOC_CHECK(1.9)
 CAFE_COMMON_INIT
 CAFE_COMPILE_WARNINGS
 
-# Check for pkgconfig first
-AC_CHECK_PROG(HAVE_PKGCONFIG, pkg-config, yes, no)
-AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
-
+PKG_PROG_PKG_CONFIG
 # Give error and exit if we dont have pkgconfig
-if test "x$HAVE_PKGCONFIG" = "xno"; then
+AS_IF([test "x$PKG_CONFIG" = "x"],[
   AC_MSG_ERROR([you need to have pkgconfig installed !])
-fi
+])
 
 GLIB_GENMARSHAL=`$PKG_CONFIG --variable=glib_genmarshal glib-2.0`
 AC_SUBST(GLIB_GENMARSHAL)
@@ -62,14 +59,14 @@ AC_ARG_ENABLE([image-converter],
         [enable_image_converter=$enableval],
         [enable_image_converter=yes])
 
-if test "x$enable_image-converter" = "xyes"; then
+AS_IF([test "x$enable_image-converter" = "xyes"],[
         PKG_CHECK_MODULES(IMAGE_CONVERTER,
                 ctk+-3.0  >= $CTK_REQUIRED
                 glib-2.0  >= $GLIB_REQUIRED
                 gio-2.0   >= $GLIB_REQUIRED)
         AC_SUBST(IMAGE_CONVERTER_CFLAGS)
         AC_SUBST(IMAGE_CONVERTER_LIBS)
-fi
+])
 
 AM_CONDITIONAL(ENABLE_IMAGE_CONVERTER, test x"$enable_image_converter" = "xyes")
 
@@ -79,13 +76,13 @@ AC_ARG_ENABLE([open-terminal],
         [enable_open_terminal=$enableval],
         [enable_open_terminal=yes])
 
-if test "x$enable_open_terminal" = "xyes"; then
+AS_IF([test "x$enable_open_terminal" = "xyes"],[
         PKG_CHECK_MODULES(OPENTERMINAL,
                 glib-2.0           >= $GLIB_REQUIRED
                 cafe-desktop-2.0   >= $LIBCAFE_DESKTOP_REQUIRED)
         AC_SUBST(OPENTERMINAL_CFLAGS)
         AC_SUBST(OPENTERMINAL_LIBS)
-fi
+])
 
 AM_CONDITIONAL(ENABLE_OPEN_TERMINAL, test x"$enable_open_terminal" = "xyes")
 
@@ -95,7 +92,7 @@ AC_ARG_ENABLE([sendto],
         [enable_sendto=$enableval],
         [enable_sendto=yes])
 
-if test "x$enable_sendto" = "xyes"; then
+AS_IF([test "x$enable_sendto" = "xyes"],[
         GTHREAD_REQUIRED=2.6.0
         DBUS_REQUIRED=1.0
         DBUS_GLIB_REQUIRED=0.60
@@ -114,11 +111,11 @@ if test "x$enable_sendto" = "xyes"; then
 
     sendto_plugin_error_or_ignore()
     {
-        if test "${error_on_bad_sendto_plugin}" = "1" ; then
+        AS_IF([test "${error_on_bad_sendto_plugin}" = "1"],[
             AC_MSG_ERROR([$1])
-        else
+        ],[
             AC_MSG_WARN([$1 (disabling sendto plugin)])
-        fi
+        ])
     }
 
     AC_ARG_WITH([sendto-plugins],
@@ -128,15 +125,15 @@ if test "x$enable_sendto" = "xyes"; then
     used_sendto_plugins=""
     used_sendto_plugins2=""
 
-    if test "x${with_sendto_plugins}" = "xautodetect" ; then
+    AS_IF([test "x${with_sendto_plugins}" = "xautodetect"],[
         # Default to all plugins and just ignore them if they won't compile
         with_sendto_plugins="all"
         error_on_bad_sendto_plugin="0"
-    else
+    ],[
         # Clean up the plugin list and error if a plugin won't compile
         with_sendto_plugins=`echo ,"${with_sendto_plugins}", | sed -e 's/[[ ,]][[ ,]]*/ /g' -e 's/,$//'`
         error_on_bad_sendto_plugin="1"
-    fi
+    ])
 
     # Iterate through the wanted plugins and weed out bad ones (or error)
     for wanted_sendto_plugin in ${with_sendto_plugins}; do
@@ -234,9 +231,9 @@ if test "x$enable_sendto" = "xyes"; then
     SENDTO_PLUGINS=$used_sendto_plugins2
 
     dnl Error out if no plugins will be built
-    if test -z "${SENDTO_PLUGINS}" ; then
+    AS_IF([test -z "${SENDTO_PLUGINS}"],[
         AC_MSG_ERROR([No sendto plugins will be built, and baul-sendto requires at least one])
-    fi
+    ])
 
     AC_MSG_CHECKING([which sendto plugins to compile])
     AC_MSG_RESULT([$SENDTO_PLUGINS])
@@ -249,12 +246,12 @@ if test "x$enable_sendto" = "xyes"; then
 
     dnl For the GIO based plugins
     enable_nst_common=no
-    if test "x$enable_burn" = "xyes" -o "x$enable_removable" = "xyes"; then
+    AS_IF([test "x$enable_burn" = "xyes" -o "x$enable_removable" = "xyes"],[
         enable_nst_common=yes
-    fi
+    ])
     AM_CONDITIONAL(HAVE_GIO, test "x$enable_nst_common" = "xyes")
 
-    if test "x${SENDTO_PLUGINS}" != "x" ; then
+    AS_IF([test "x${SENDTO_PLUGINS}" != "x"],[
         for allowed_sendto_plugin in ${ALL_SENDTO_PLUGINS}; do
             for sendto_plugin in ${SENDTO_PLUGINS}; do
                 case ${allowed_sendto_plugin} in
@@ -267,10 +264,10 @@ if test "x$enable_sendto" = "xyes"; then
             done
             AC_MSG_NOTICE([ ${allowed_sendto_plugin} sendto plugin disabled])
         done
-    else
+    ],[
         AC_MSG_NOTICE([ No baul-sendto plugins enabled])
-    fi
-fi
+    ])
+])
 AM_CONDITIONAL(ENABLE_SENDTO, test x"$enable_sendto" = "xyes")
 
 # share extension
@@ -279,12 +276,12 @@ AC_ARG_ENABLE([share],
         [enable_share=$enableval],
         [enable_share=yes])
 
-if test "x$enable_share" = "xyes"; then
+AS_IF([test "x$enable_share" = "xyes"],[
         PKG_CHECK_MODULES(SHARE,
                 glib-2.0 >= $GLIB_REQUIRED)
         AC_SUBST(SHARE_CFLAGS)
         AC_SUBST(SHARE_LIBS)
-fi
+])
 
 AM_CONDITIONAL(ENABLE_SHARE, test x"$enable_share" = "xyes")
 
@@ -317,9 +314,9 @@ AC_ARG_WITH(bauldir,
     AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Baul extension @<:@auto@:>@]),
     [ac_with_bauldir=$withval],
     [ac_with_bauldir=""])
-if test "${ac_with_bauldir}" = ""; then
+AS_IF([test "${ac_with_bauldir}" = ""],[
     ac_with_bauldir=`$PKG_CONFIG --variable=extensiondir libbaul-extension`
-fi
+])
 AC_MSG_NOTICE([Installing baul plugins in ${ac_with_bauldir}])
 AC_SUBST([BAUL_EXTENSION_DIR],[${ac_with_bauldir}])
 
