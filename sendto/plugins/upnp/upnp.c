@@ -84,15 +84,22 @@ check_required_actions (GUPnPServiceIntrospection *introspection)
 }
 
 static void
-get_introspection_cb (GUPnPServiceInfo *service_info,
-		      GUPnPServiceIntrospection *introspection, const GError *error,
-		      gpointer user_data)
+get_introspection_cb (GObject      *source,
+		      GAsyncResult *res,
+		      gpointer      user_data)
 {
 	GUPnPDeviceInfo *device_info;
 	gchar *name;
 	const gchar *udn, *interface;
 	CtkTreeIter iter;
 	GUPnPContext *context;
+	GUPnPServiceIntrospection *introspection;
+
+	GError *error = NULL;
+
+	introspection = gupnp_service_info_introspect_finish (GUPNP_SERVICE_INFO (source),
+							      res,
+							      &error);
 
 	device_info = GUPNP_DEVICE_INFO (user_data);
 
@@ -129,7 +136,7 @@ get_introspection_cb (GUPnPServiceInfo *service_info,
 
 error:
 	/* We don't need the proxy objects anymore */
-	g_object_unref (service_info);
+	g_object_unref (source);
 	g_object_ref (device_info);
 }
 
