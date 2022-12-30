@@ -145,9 +145,10 @@ device_proxy_available_cb (GUPnPControlPoint *cp,
 		return;
 	}
 
-	gupnp_service_info_get_introspection_async (info,
-						    get_introspection_cb,
-						    g_object_ref (proxy));
+	gupnp_service_info_introspect_async (info,
+					     NULL,
+					     get_introspection_cb,
+					     g_object_ref (proxy));
 }
 
 static void
