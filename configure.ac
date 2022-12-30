@@ -210,8 +210,8 @@ AS_IF([test "x$enable_sendto" = "xyes"],[
             fi
             ;;
             upnp)
-                PKG_CHECK_MODULES(UPNP, gupnp-1.2 >= $GUPNP_REQUIRED,
-                    enable_upnp=yes AC_DEFINE([HAS_GUPNP_VERSION_1_2], 1, ["Version is at least 1.2"]), enable_upnp=no)
+                PKG_CHECK_MODULES(UPNP, gupnp-1.6 >= $GUPNP_REQUIRED,
+                    enable_upnp=yes AC_DEFINE([HAS_GUPNP_VERSION_1_6], 1, ["Version is at least 1.6"]), enable_upnp=no)
                 PKG_CHECK_MODULES(UPNP, gupnp-1.0 >= $GUPNP_REQUIRED,
                     enable_upnp=yes, enable_upnp=no)
                 if test "${enable_upnp}" != "yes" ; then
