@@ -27,7 +27,7 @@ requires:
     - libgirepository1.0-dev
     - libglib2.0-dev
     - libglib2.0-doc
-    - libgupnp-1.2-dev
+    - libgupnp-1.6-dev
     - libnotify-dev
     - libpango1.0-dev
     - libselinux1-dev
