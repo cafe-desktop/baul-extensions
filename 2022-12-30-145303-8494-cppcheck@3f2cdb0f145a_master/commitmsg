@@ -1,0 +1,1 @@
+upnp: make 'get_introspection_cb' function compatible with gupnp-1.6
