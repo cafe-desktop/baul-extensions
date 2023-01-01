@@ -317,7 +317,6 @@ open_terminal_callback (BaulMenuItem *item,
 	gchar **argv, *terminal_exec;
 	gchar *working_directory;
 	gchar *dfile;
-	CafeDesktopItem *ditem;
 	CdkScreen *screen;
 
 	terminal_exec = default_terminal_application();
@@ -370,6 +369,7 @@ open_terminal_callback (BaulMenuItem *item,
 	}
 
 	if (dfile != NULL) {
+		CafeDesktopItem *ditem;
 		int orig_cwd = -1;
 
 		do {
