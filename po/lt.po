@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Audrius Meskauskas, 2020\n"
 "Language-Team: Lithuanian (https://www.transifex.com/cafe/teams/13566/lt/)\n"
@@ -445,7 +445,7 @@ msgstr "Esantis CD / DVD"
 msgid "CD/DVD Creator"
 msgstr "CD / DVD kūrimas"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Žinute (Pidgin)"
 
@@ -453,11 +453,11 @@ msgstr "Žinute (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Keičiamieji diskai ir viešiniai"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "UPnP medijos serveris"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Bendrinti"
 
@@ -523,11 +523,11 @@ msgstr "Nepavyko gauti dalijimosi informaciją: %s"
 msgid "Another share has the same name"
 msgstr "Kitas bendrinys turi tokį patį pavadinimą"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Keisti bendrinį"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Kurti bendrinį"
 
@@ -535,15 +535,15 @@ msgstr "Kurti bendrinį"
 msgid "There was an error while getting the sharing information"
 msgstr "Gaunant bendrinimo informaciją įvyko klaida"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Aplankų bendrinimas"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Bendrinimo parametrai"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Bendrinti šį aplanką"
 

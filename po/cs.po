@@ -16,9 +16,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
@@ -453,7 +453,7 @@ msgstr "Existující CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "Tvůrce CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Rychlá zpráva (Pidgin)"
 
@@ -461,11 +461,11 @@ msgstr "Rychlá zpráva (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Výměnné disky a sdílené složky"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Multimediální server UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Sdílet"
 
@@ -533,11 +533,11 @@ msgstr "Chyba při získávání informací o sdílení: %s"
 msgid "Another share has the same name"
 msgstr "Tento název je už používán pro jiné sdílení"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Upravit _Sdílení"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Vytvořit _Sdílení"
 
@@ -545,15 +545,15 @@ msgstr "Vytvořit _Sdílení"
 msgid "There was an error while getting the sharing information"
 msgstr "Došlo k chybě při získávání informací o sdílení"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Sdílená složka"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Možnosti sdílení"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Sdílet složku"
 

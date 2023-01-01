@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: cf1cb53ced613cbf2ac17294c88cdcaa, 2020\n"
 "Language-Team: Galician (https://www.transifex.com/cafe/teams/13566/gl/)\n"
@@ -446,7 +446,7 @@ msgstr "CD/DVD existente"
 msgid "CD/DVD Creator"
 msgstr "Creador de CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Mensaxe instantánea (Pidgin)"
 
@@ -454,11 +454,11 @@ msgstr "Mensaxe instantánea (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Discos removíbeis e compartidos"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Servidor de medios UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Compartir"
 
@@ -527,11 +527,11 @@ msgstr "Produciuse un erro ao obter información do compartido: %s"
 msgid "Another share has the same name"
 msgstr "Outro compartido ten o mesmo nome"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Modificar o _compartido"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Crear un _compartido"
 
@@ -539,15 +539,15 @@ msgstr "Crear un _compartido"
 msgid "There was an error while getting the sharing information"
 msgstr "Produciuse un erro ao obter información do uso compartido"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Compartir cartafoles"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Opcións da compartición"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Compartir este cartafol"
 

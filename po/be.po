@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Mihail Varantsou <meequz@gmail.com>, 2020\n"
 "Language-Team: Belarusian (https://www.transifex.com/cafe/teams/13566/be/)\n"
@@ -439,7 +439,7 @@ msgstr "Існы CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "Стваральнік CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Імгненнае паведамленне (Pidgin)"
 
@@ -447,11 +447,11 @@ msgstr "Імгненнае паведамленне (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Рухомыя дыскі і рэсурсы"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Медыя-сервер UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Зрабіць супольным"
 
@@ -518,11 +518,11 @@ msgstr "Узнікла памылка падчас атрымання звест
 msgid "Another share has the same name"
 msgstr "Іншы рэсурс мае такую самую назву"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Змяніць _супольны рэсурс"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Стварыць _супольны рэсурс"
 
@@ -530,15 +530,15 @@ msgstr "Стварыць _супольны рэсурс"
 msgid "There was an error while getting the sharing information"
 msgstr "Падчас атрымання звестак пра супольныя рэсурсы ўзнікла памылка"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Дзяліцца каталогам"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Настáўленні супольнага выкарыстання"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Падзяліцца гэтым каталогам"
 

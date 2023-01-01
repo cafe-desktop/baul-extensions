@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2020\n"
 "Language-Team: Thai (https://www.transifex.com/cafe/teams/13566/th/)\n"
@@ -437,7 +437,7 @@ msgstr "ซีดี/ดีวีดี ที่มีอยู่"
 msgid "CD/DVD Creator"
 msgstr "เครื่องมือเขียนซีดี/ดีวีดี"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "ข้อความด่วน (Pidgin)"
 
@@ -445,11 +445,11 @@ msgstr "ข้อความด่วน (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "ดิสก์ถอดเสียบและแหล่งใช้ร่วม"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "เซิร์ฟเวอร์สื่อ UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "แหล่งใช้ร่วม"
 
@@ -513,11 +513,11 @@ msgstr "เกิดข้อผิดพลาดขณะอ่านข้อ
 msgid "Another share has the same name"
 msgstr "แหล่งใช้ร่วมอื่นมีชื่อเดียวกัน"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr ""
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "ส_ร้างแหล่งใช้ร่วม"
 
@@ -525,15 +525,15 @@ msgstr "ส_ร้างแหล่งใช้ร่วม"
 msgid "There was an error while getting the sharing information"
 msgstr "มีข้อผิดพลาดเกิดขึ้นขณะอ่านข้อมูลแหล่งใช้ร่วม"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "โฟลเดอร์ใช้ร่วม"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "ตัวเลือกการใช้ร่วมกัน"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "ใช้โฟลเดอร์นี้ร่วมกัน"
 

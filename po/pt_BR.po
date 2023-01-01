@@ -25,9 +25,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Delberto M. <delberto@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/"
@@ -460,7 +460,7 @@ msgstr "CD/DVD existente"
 msgid "CD/DVD Creator"
 msgstr "Criador de CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Mensagem instantânea (Pidgin)"
 
@@ -468,11 +468,11 @@ msgstr "Mensagem instantânea (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Unidades e compartilhamentos removíveis"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Servidor de mídia uPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Compartilhar"
 
@@ -542,11 +542,11 @@ msgstr "Erro ao obter informação de compartilhamento: %s"
 msgid "Another share has the same name"
 msgstr "Outro compartilhamento tem o mesmo nome"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Modificar compartilhamento"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Criar compartilhamento"
 
@@ -554,15 +554,15 @@ msgstr "Criar compartilhamento"
 msgid "There was an error while getting the sharing information"
 msgstr "Ouve um erro ao obter a informação de compartilhamento"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Compartilhamento de pastas"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Opções de compartilhamento"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Compartilhar esta pasta"
 

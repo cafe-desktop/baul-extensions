@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Wolfgang Ulbrich <cafe@raveit.de>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/cafe/teams/13566/ko/)\n"
@@ -442,7 +442,7 @@ msgstr "기존 CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "CD/DVD 생성기"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "인스턴스 메시지(Pidgin)"
 
@@ -450,11 +450,11 @@ msgstr "인스턴스 메시지(Pidgin)"
 msgid "Removable disks and shares"
 msgstr "이동식 디스크 및 공유"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "UPnP 미디어 서버"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "공유"
 
@@ -521,11 +521,11 @@ msgstr "%s 공유 정보 가져오는 동안 오류가 발생했습니다."
 msgid "Another share has the same name"
 msgstr "또하나의 공유 이름이 간은 이름 입니다"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "공유 수정(_S)"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "공유 만들기(_S)"
 
@@ -533,15 +533,15 @@ msgstr "공유 만들기(_S)"
 msgid "There was an error while getting the sharing information"
 msgstr "공유 정보를 가져오는 동안 오류가 발생 했습니다"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "폴더 공유"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "공유 옵션"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "이 폴더 공유하기"
 

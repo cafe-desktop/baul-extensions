@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>, 2020\n"
 "Language-Team: Amharic (https://www.transifex.com/cafe/teams/13566/am/)\n"
@@ -436,7 +436,7 @@ msgstr "ነባር ሲዲ/ዲቪዲ"
 msgid "CD/DVD Creator"
 msgstr "ሲዲ/ዲቪዲ መፍጠሪያ"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "አስቸኳይ መልእክተኛ (ፒጂን)"
 
@@ -444,11 +444,11 @@ msgstr "አስቸኳይ መልእክተኛ (ፒጂን)"
 msgid "Removable disks and shares"
 msgstr "የሚወልቁ ዲስኮች እና የሚካፈሉዋቸው"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "UPnP Media Server"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "ማካፈያ"
 
@@ -514,11 +514,11 @@ msgstr "የ ማካፈያ መረጃ በማግኘት ላይ እንዳለ ስህተ
 msgid "Another share has the same name"
 msgstr "ሌ ማካፈያ በዚህ ስም አለ"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "_ማካፈያ ማሻሻያ"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "_ማካፈያ መፍጠሪያ"
 
@@ -526,15 +526,15 @@ msgstr "_ማካፈያ መፍጠሪያ"
 msgid "There was an error while getting the sharing information"
 msgstr "የ ማካፈያ መረጃ በማግኘት ላይ እንዳለ ስህተተ ተፈጥሯል"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "ፎልደር ማካፈያ"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "የማካፈያ ምርጫዎች"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "ይህን ፎልደር ማካፈያ"
 

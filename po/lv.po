@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: duck <voiceofwise1@gmail.com>, 2020\n"
 "Language-Team: Latvian (https://www.transifex.com/cafe/teams/13566/lv/)\n"
@@ -441,7 +441,7 @@ msgstr "Eksistējošs CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "CD/DVD veidotājs"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Tūlītējs ziņojums (Pidgin)"
 
@@ -449,11 +449,11 @@ msgstr "Tūlītējs ziņojums (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Noņemamie diski un koplietojumi"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "UPnP Mēdiju Serveris"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Koplietot"
 
@@ -517,11 +517,11 @@ msgstr "Kļūme iegūstot koplietojuma informāciju: %s"
 msgid "Another share has the same name"
 msgstr "Šāds nosaukums jau ir izmantots"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr ""
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr ""
 
@@ -529,15 +529,15 @@ msgstr ""
 msgid "There was an error while getting the sharing information"
 msgstr ""
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Mapju Koplietošana"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Koplietošanas Opcijas"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Koplietot šo Mapi"
 

@@ -14,9 +14,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Angelos Chraniotis <chraniotis@gmail.com>, 2020\n"
 "Language-Team: Greek (https://www.transifex.com/cafe/teams/13566/el/)\n"
@@ -449,7 +449,7 @@ msgstr "Υπάρχον CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "Δημιουργός CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Άμεσο μήνυμα (Pidgin)"
 
@@ -457,11 +457,11 @@ msgstr "Άμεσο μήνυμα (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Αφαιρούμενοι δίσκοι και κοινόχρηστοι φάκελοι"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Εξυπηρετητής πολυμέσων UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Κοινή χρήση"
 
@@ -530,11 +530,11 @@ msgstr "Σφάλμα κατά τη λήψη πληροφοριών διαμοι�
 msgid "Another share has the same name"
 msgstr "Κάποιο άλλο κοινόχρηστο αρχείο έχει το ίδιο όνομα"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Τροποποίηση_Κοινόχρηστου Φακέλου"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Δημιουργία_Κοινόχρηστου Φακέλου"
 
@@ -542,15 +542,15 @@ msgstr "Δημιουργία_Κοινόχρηστου Φακέλου"
 msgid "There was an error while getting the sharing information"
 msgstr "Παρουσιάστηκε σφάλμα κατά τη λήψη πληροφοριών διαμοιρασμού"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Κοινή Χρήση Φακέλων"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Επιλογές Κοινόχρηστου"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Κοινή χρήση φακέλου"
 

@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.23.1\n"
+"Project-Id-Version: baul-extensions 1.25.1\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2022-08-29 19:24+0200\n"
+"POT-Creation-Date: 2023-01-01 19:09+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2020\n"
 "Language-Team: Bulgarian (https://www.transifex.com/cafe/teams/13566/bg/)\n"
@@ -446,7 +446,7 @@ msgstr "Съществуващ CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "Създаване на CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:462
+#: sendto/plugins/pidgin/pidgin.c:461
 msgid "Instant Message (Pidgin)"
 msgstr "Бързо съобщение (Pidgin)"
 
@@ -454,11 +454,11 @@ msgstr "Бързо съобщение (Pidgin)"
 msgid "Removable disks and shares"
 msgstr "Премахваеми устройства и споделяния"
 
-#: sendto/plugins/upnp/upnp.c:313
+#: sendto/plugins/upnp/upnp.c:318
 msgid "UPnP Media Server"
 msgstr "Сървър за мултимедия чрез UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1063
+#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
 msgid "Share"
 msgstr "Споделяне"
 
@@ -527,11 +527,11 @@ msgstr "Грешка при получаване на информация за 
 msgid "Another share has the same name"
 msgstr "Друго споделяне има същото име"
 
-#: share/baul-share.c:563 share/baul-share.c:799
+#: share/baul-share.c:563 share/baul-share.c:796
 msgid "Modify _Share"
 msgstr "Промяна на _Споделянето"
 
-#: share/baul-share.c:563 share/baul-share.c:801
+#: share/baul-share.c:563 share/baul-share.c:798
 msgid "Create _Share"
 msgstr "Създаване на _Споделянето"
 
@@ -539,15 +539,15 @@ msgstr "Създаване на _Споделянето"
 msgid "There was an error while getting the sharing information"
 msgstr "Грешка при получаване на информация за споделянето"
 
-#: share/baul-share.c:1123
+#: share/baul-share.c:1120
 msgid "Folder Sharing"
 msgstr "Споделяне на папка"
 
-#: share/baul-share.c:1164
+#: share/baul-share.c:1161
 msgid "Sharing Options"
 msgstr "Настройки на споделянето"
 
-#: share/baul-share.c:1165
+#: share/baul-share.c:1162
 msgid "Share this Folder"
 msgstr "Сподели тази папка"
 
