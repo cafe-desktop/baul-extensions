@@ -230,22 +230,21 @@ add_pidgin_contacts_to_model (CtkTreeStore *store,
 
 	g_hash_table_iter_init (&hiter, contact_hash);
 	while (g_hash_table_iter_next (&hiter, NULL, (gpointer)&contacts_group)) {
-		gint accounts;
+		gint accounts_len;
 
 		dat = g_ptr_array_index (contacts_group, 0);
 
-		accounts = contacts_group->len;
+		accounts_len = contacts_group->len;
 
 		ctk_tree_store_append (store, parent, NULL);
 		ctk_tree_store_set (store, parent, COL_ICON, NULL, COL_ALIAS, dat->alias, -1);
 
-		gint i;
-		for (i = 0; i < accounts; ++i) {
+		for (i = 0; i < accounts_len; ++i) {
 			dat = g_ptr_array_index (contacts_group, i);
 
 			icon = get_buddy_icon(dat->id);
 
-			if (accounts == 1) {
+			if (accounts_len == 1) {
 				g_value_init(&val, GDK_TYPE_PIXBUF);
 				g_value_set_object (&val, (gpointer)icon);
 				ctk_tree_store_set_value (store, parent, COL_ICON, &val);
