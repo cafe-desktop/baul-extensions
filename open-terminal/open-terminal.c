@@ -25,6 +25,8 @@
  #include <config.h>
 #endif
 
+#include <libbaul-extension/baul-extension-types.h>
+
 #include "baul-open-terminal.h"
 
 #include <libintl.h>
