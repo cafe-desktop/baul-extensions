@@ -1,3 +1,15 @@
+### baul-extensions 1.25.1
+
+  * emailclient: Recognize command icedove as MAILER_THUNDERBIRD
+  * Make configure.ac cross compile safe
+  * ci: some improvements
+  * port from gupnp-1.2 to gupnp-1.6
+  * baul-share: avoid duplicate condition
+  * pidgin: avoid shadow variables
+  * baul-open-terminal: reduce the scope of variable
+  * image-converter/open-terminal: Fix [-Wmissing-prototypes] warnings
+  * update translations
+
 ### baul-extensions 1.25.0
 
   * initial commit: caja-extensions 1.24.1 fork
