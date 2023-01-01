@@ -738,12 +738,9 @@ create_property_page (BaulFileInfo *fileinfo)
     {
       page->was_initially_shared = TRUE;
       page->was_writable = share_info->is_writable;
-    }
 
-  /* Share name */
+      /* Share name */
 
-  if (share_info)
-    {
       share_name = share_info->share_name;
       free_share_name = FALSE;
     }
