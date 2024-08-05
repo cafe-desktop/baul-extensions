@@ -1,0 +1,12 @@
+image-converter/open-terminal: Fix [-Wmissing-prototypes] warnings
+
+Fixes the warnings:
+image-converter.c:35:1: warning: no previous prototype for 'baul_module_initialize' [-Wmissing-prototypes]
+image-converter.c:47:1: warning: no previous prototype for 'baul_module_shutdown' [-Wmissing-prototypes]
+image-converter.c:53:1: warning: no previous prototype for 'baul_module_list_types' [-Wmissing-prototypes]
+open-terminal.c:35:1: warning: no previous prototype for 'baul_module_initialize' [-Wmissing-prototypes]
+open-terminal.c:47:1: warning: no previous prototype for 'baul_module_shutdown' [-Wmissing-prototypes]
+open-terminal.c:53:1: warning: no previous prototype for 'baul_module_list_types' [-Wmissing-prototypes]
+
+based in caja-extensions commit:
+https://github.com/mate-desktop/caja-extensions/commit/3841c753e3f103c7164e9eaf2d6b96d7c644209b
