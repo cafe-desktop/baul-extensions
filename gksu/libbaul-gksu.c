@@ -92,15 +92,15 @@ static void menu_provider_iface_init (BaulMenuProviderIface *iface)
 }
 
 static void
-gksu_context_menu_init (GksuContextMenu *self)
+gksu_context_menu_init (GksuContextMenu *self G_GNUC_UNUSED)
 {
   g_message ("Initializing gksu extension...");
 }
 
 static GList *
-gksu_context_menu_get_file_items (BaulMenuProvider *provider,
-				  CtkWidget *window,
-				  GList *files)
+gksu_context_menu_get_file_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+				  CtkWidget        *window G_GNUC_UNUSED,
+				  GList            *files)
 {
     GList *items = NULL;
     BaulFileInfo *file;
@@ -175,7 +175,7 @@ start_gksu_thread (void *data)
 }
 
 static void
-gksu_context_menu_activate (BaulMenuItem *item,
+gksu_context_menu_activate (BaulMenuItem *item G_GNUC_UNUSED,
 			    BaulFileInfo *file)
 {
   gchar *uri = NULL;

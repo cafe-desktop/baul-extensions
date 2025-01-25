@@ -181,7 +181,9 @@ baul_image_rotator_transform_filename (BaulImageRotator *rotator, GFile *orig_fi
 }
 
 static void
-op_finished (GPid pid, gint status, gpointer data)
+op_finished (GPid     pid G_GNUC_UNUSED,
+	     gint     status,
+	     gpointer data)
 {
 	BaulImageRotator *rotator = BAUL_IMAGE_ROTATOR (data);
 	BaulImageRotatorPrivate *priv = baul_image_rotator_get_instance_private (rotator);

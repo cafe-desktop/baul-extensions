@@ -261,9 +261,9 @@ remove_share_info_from_hashes (ShareInfo *info)
 }
 
 static gboolean
-remove_from_path_hash_cb (gpointer key,
+remove_from_path_hash_cb (gpointer key G_GNUC_UNUSED,
 			  gpointer value,
-			  gpointer data)
+			  gpointer data G_GNUC_UNUSED)
 {
 	ShareInfo *info;
 
@@ -274,9 +274,9 @@ remove_from_path_hash_cb (gpointer key,
 }
 
 static gboolean
-remove_from_share_name_hash_cb (gpointer key,
-				gpointer value,
-				gpointer data)
+remove_from_share_name_hash_cb (gpointer key G_GNUC_UNUSED,
+				gpointer value G_GNUC_UNUSED,
+				gpointer data G_GNUC_UNUSED)
 {
 	/* The ShareInfo was already freed in remove_from_path_hash_cb() */
 	return TRUE;
@@ -943,7 +943,9 @@ shares_modify_share (const char *old_path, ShareInfo *info, GError **error)
 }
 
 static void
-copy_to_slist_cb (gpointer key, gpointer value, gpointer data)
+copy_to_slist_cb (gpointer key G_GNUC_UNUSED,
+		  gpointer value,
+		  gpointer data)
 {
 	ShareInfo *info;
 	ShareInfo *copy;

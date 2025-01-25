@@ -564,8 +564,8 @@ property_page_check_sensitivity (PropertyPage *page)
 }
 
 static void
-modify_share_name_text_entry  (CtkEditable *editable,
-			       gpointer user_data)
+modify_share_name_text_entry (CtkEditable *editable G_GNUC_UNUSED,
+			      gpointer     user_data)
 {
   PropertyPage *page;
 
@@ -582,8 +582,8 @@ modify_share_name_text_entry  (CtkEditable *editable,
 }
 
 static void
-modify_share_comment_text_entry  (CtkEditable *editable,
-				  gpointer user_data)
+modify_share_comment_text_entry (CtkEditable *editable G_GNUC_UNUSED,
+				 gpointer user_data)
 {
   PropertyPage *page;
 
@@ -595,8 +595,8 @@ modify_share_comment_text_entry  (CtkEditable *editable,
 
 /*--------------------------------------------------------------------------*/
 static void
-on_checkbutton_share_folder_toggled    (CtkToggleButton *togglebutton,
-                                        gpointer         user_data)
+on_checkbutton_share_folder_toggled (CtkToggleButton *togglebutton G_GNUC_UNUSED,
+				     gpointer         user_data)
 {
   PropertyPage *page;
 
@@ -606,8 +606,8 @@ on_checkbutton_share_folder_toggled    (CtkToggleButton *togglebutton,
 }
 
 static void
-on_checkbutton_rw_ro_toggled    (CtkToggleButton *togglebutton,
-				 gpointer         user_data)
+on_checkbutton_rw_ro_toggled (CtkToggleButton *togglebutton G_GNUC_UNUSED,
+			      gpointer         user_data)
 {
   PropertyPage *page;
 
@@ -619,8 +619,8 @@ on_checkbutton_rw_ro_toggled    (CtkToggleButton *togglebutton,
 }
 
 static void
-on_checkbutton_guest_ok_toggled    (CtkToggleButton *togglebutton,
-				    gpointer         user_data)
+on_checkbutton_guest_ok_toggled (CtkToggleButton *togglebutton G_GNUC_UNUSED,
+				 gpointer         user_data)
 {
   PropertyPage *page;
 
@@ -646,7 +646,7 @@ free_property_page_cb (gpointer data)
 }
 
 static void
-button_apply_clicked_cb (CtkButton *button,
+button_apply_clicked_cb (CtkButton *button G_GNUC_UNUSED,
 			 gpointer   data)
 {
   PropertyPage *page;
@@ -962,10 +962,10 @@ file_get_share_status_file(BaulFileInfo *file)
 }
 
 static BaulOperationResult
-baul_share_update_file_info (BaulInfoProvider *provider,
-				 BaulFileInfo *file,
-				 GClosure *update_complete,
-				 BaulOperationHandle **handle)
+baul_share_update_file_info (BaulInfoProvider     *provider G_GNUC_UNUSED,
+			     BaulFileInfo         *file,
+			     GClosure             *update_complete G_GNUC_UNUSED,
+			     BaulOperationHandle **handle G_GNUC_UNUSED)
 {
 /*   gchar *share_status = NULL; */
 
@@ -998,8 +998,8 @@ baul_share_update_file_info (BaulInfoProvider *provider,
 
 
 static void
-baul_share_cancel_update (BaulInfoProvider *provider,
-			      BaulOperationHandle *handle)
+baul_share_cancel_update (BaulInfoProvider    *provider G_GNUC_UNUSED,
+			  BaulOperationHandle *handle)
 {
   BaulShareHandle *share_handle;
 
@@ -1027,8 +1027,8 @@ baul_share_info_provider_iface_init (BaulInfoProviderIface *iface)
  * items.
  */
 static GList *
-baul_share_get_property_pages (BaulPropertyPageProvider *provider,
-				   GList *files)
+baul_share_get_property_pages (BaulPropertyPageProvider *provider G_GNUC_UNUSED,
+			       GList                    *files)
 {
   PropertyPage *page;
   GList *pages;
@@ -1073,7 +1073,7 @@ baul_share_property_page_provider_iface_init (BaulPropertyPageProviderIface *ifa
 
 /*--------------------------------------------------------------------------*/
 static void
-baul_share_instance_init (BaulShare *share)
+baul_share_instance_init (BaulShare *share G_GNUC_UNUSED)
 {
 }
 
@@ -1097,7 +1097,8 @@ baul_share_class_init (BaulShareClass *class)
  */
 
 static void
-button_cancel_clicked_cb (CtkButton *button, gpointer data)
+button_cancel_clicked_cb (CtkButton *button G_GNUC_UNUSED,
+			  gpointer   data)
 {
   CtkWidget *window;
 
@@ -1106,8 +1107,8 @@ button_cancel_clicked_cb (CtkButton *button, gpointer data)
 }
 
 static void
-share_this_folder_callback (BaulMenuItem *item,
-			    gpointer user_data)
+share_this_folder_callback (BaulMenuItem *item G_GNUC_UNUSED,
+			    gpointer      user_data)
 {
   BaulFileInfo *fileinfo;
   PropertyPage *page;
@@ -1128,9 +1129,9 @@ share_this_folder_callback (BaulMenuItem *item,
 }
 
 static GList *
-baul_share_get_file_items (BaulMenuProvider *provider,
-			     CtkWidget *window,
-			     GList *files)
+baul_share_get_file_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+			   CtkWidget        *window G_GNUC_UNUSED,
+			   GList            *files)
 {
   GList *items;
   BaulMenuItem *item;

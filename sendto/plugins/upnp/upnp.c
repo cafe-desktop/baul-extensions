@@ -141,7 +141,7 @@ error:
 }
 
 static void
-device_proxy_available_cb (GUPnPControlPoint *cp,
+device_proxy_available_cb (GUPnPControlPoint *cp G_GNUC_UNUSED,
 			   GUPnPDeviceProxy  *proxy)
 {
 	GUPnPServiceInfo *info;
@@ -159,7 +159,7 @@ device_proxy_available_cb (GUPnPControlPoint *cp,
 }
 
 static void
-device_proxy_unavailable_cb (GUPnPControlPoint *cp,
+device_proxy_unavailable_cb (GUPnPControlPoint *cp G_GNUC_UNUSED,
 			     GUPnPDeviceProxy  *proxy)
 {
 	CtkTreeIter iter;
@@ -176,8 +176,8 @@ device_proxy_unavailable_cb (GUPnPControlPoint *cp,
 
 static void
 on_context_available (GUPnPContextManager *context_manager,
-                      GUPnPContext        *context,
-                      gpointer             user_data)
+		      GUPnPContext        *context,
+		      gpointer             user_data G_GNUC_UNUSED)
 {
 	GUPnPControlPoint *cp;
 
@@ -200,7 +200,7 @@ on_context_available (GUPnPContextManager *context_manager,
 }
 
 static gboolean
-init (NstPlugin *plugin)
+init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkListStore *store;
 	CtkCellRenderer *renderer;
@@ -242,15 +242,15 @@ init (NstPlugin *plugin)
 }
 
 static CtkWidget*
-get_contacts_widget (NstPlugin *plugin)
+get_contacts_widget (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	return combobox;
 }
 
 static gboolean
-send_files (NstPlugin *plugin,
-	    CtkWidget *contact_widget,
-	    GList *file_list)
+send_files (NstPlugin *plugin G_GNUC_UNUSED,
+	    CtkWidget *contact_widget G_GNUC_UNUSED,
+	    GList     *file_list)
 {
 	gchar *upload_cmd, *udn, *interface;
 	GPtrArray *argv;
@@ -301,7 +301,7 @@ send_files (NstPlugin *plugin,
 }
 
 static gboolean
-destroy (NstPlugin *plugin)
+destroy (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	ctk_widget_destroy (combobox);
 	g_object_unref (model);

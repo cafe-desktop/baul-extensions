@@ -82,33 +82,33 @@ image_converter_filter_images (GList *files)
 }
 
 static void
-image_resize_callback (BaulMenuItem *item,
-			GList *files)
+image_resize_callback (BaulMenuItem *item G_GNUC_UNUSED,
+		       GList        *files)
 {
 	BaulImageResizer *resizer = baul_image_resizer_new (image_converter_filter_images (files));
 	baul_image_resizer_show_dialog (resizer);
 }
 
 static void
-image_rotate_callback (BaulMenuItem *item,
-			GList *files)
+image_rotate_callback (BaulMenuItem *item G_GNUC_UNUSED,
+		       GList        *files)
 {
 	BaulImageRotator *rotator = baul_image_rotator_new (image_converter_filter_images (files));
 	baul_image_rotator_show_dialog (rotator);
 }
 
 static GList *
-baul_image_converter_get_background_items (BaulMenuProvider *provider,
-					     CtkWidget		  *window,
-					     BaulFileInfo	  *file_info)
+baul_image_converter_get_background_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+					   CtkWidget        *window G_GNUC_UNUSED,
+					   BaulFileInfo     *file_info G_GNUC_UNUSED)
 {
 	return NULL;
 }
 
 GList *
-baul_image_converter_get_file_items (BaulMenuProvider *provider,
-				       CtkWidget            *window,
-				       GList                *files)
+baul_image_converter_get_file_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+				     CtkWidget        *window G_GNUC_UNUSED,
+				     GList            *files)
 {
 	BaulMenuItem *item;
 	GList *file;
@@ -153,12 +153,12 @@ baul_image_converter_menu_provider_iface_init (BaulMenuProviderIface *iface)
 }
 
 static void
-baul_image_converter_instance_init (BaulImageConverter *img)
+baul_image_converter_instance_init (BaulImageConverter *img G_GNUC_UNUSED)
 {
 }
 
 static void
-baul_image_converter_class_init (BaulImageConverterClass *class)
+baul_image_converter_class_init (BaulImageConverterClass *class G_GNUC_UNUSED)
 {
 }
 

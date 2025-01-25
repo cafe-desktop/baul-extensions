@@ -132,10 +132,10 @@ static gchar *baul_xattr_tags_get_xdg_tags(BaulFileInfo *file)
 }
 
 static BaulOperationResult
-baul_xattr_tags_update_file_info(BaulInfoProvider *provider,
-                            BaulFileInfo *file,
-                            GClosure *update_complete,
-                            BaulOperationHandle **handle)
+baul_xattr_tags_update_file_info(BaulInfoProvider     *provider G_GNUC_UNUSED,
+				 BaulFileInfo         *file,
+				 GClosure             *update_complete G_GNUC_UNUSED,
+				 BaulOperationHandle **handle G_GNUC_UNUSED)
 {
     gchar *value = baul_xattr_tags_get_xdg_tags(file);
     if (value != NULL) {
@@ -149,8 +149,8 @@ baul_xattr_tags_update_file_info(BaulInfoProvider *provider,
 
 
 static void
-baul_xattr_tags_cancel_update(BaulInfoProvider *provider,
-                         BaulOperationHandle *handle)
+baul_xattr_tags_cancel_update(BaulInfoProvider    *provider G_GNUC_UNUSED,
+			      BaulOperationHandle *handle)
 {
     BaulXattrTagsHandle *xattr_handle;
 
@@ -167,7 +167,7 @@ baul_xattr_tags_info_provider_iface_init(BaulInfoProviderIface *iface)
 
 
 static GList *
-baul_xattr_tags_get_columns(BaulColumnProvider *provider)
+baul_xattr_tags_get_columns(BaulColumnProvider *provider G_GNUC_UNUSED)
 {
     GList *ret = NULL;
     BaulColumn *column = NULL;
@@ -189,7 +189,7 @@ baul_xattr_tags_column_provider_iface_init(BaulColumnProviderIface *iface)
 
 
 static void
-baul_xattr_tags_instance_init(BaulXattrTags *baulXattrTags)
+baul_xattr_tags_instance_init(BaulXattrTags *baulXattrTags G_GNUC_UNUSED)
 {
 }
 

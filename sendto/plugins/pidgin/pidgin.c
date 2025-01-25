@@ -71,7 +71,7 @@ handle_dbus_exception(GError *error)
 }
 
 static gboolean
-init (NstPlugin *plugin)
+init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	DBusGConnection *connection;
 	GError *error;
@@ -261,11 +261,11 @@ add_pidgin_contacts_to_model (CtkTreeStore *store,
 }
 
 static void
-customize (CtkCellLayout *cell_layout,
+customize (CtkCellLayout   *cell_layout G_GNUC_UNUSED,
 	   CtkCellRenderer *cell,
-	   CtkTreeModel *tree_model,
-	   CtkTreeIter *iter,
-	   gpointer text)
+	   CtkTreeModel    *tree_model,
+	   CtkTreeIter     *iter,
+	   gpointer         text)
 {
 	gboolean has_child;
 	has_child = ctk_tree_model_iter_has_child (tree_model, iter);
@@ -279,7 +279,7 @@ customize (CtkCellLayout *cell_layout,
 }
 
 static CtkWidget *
-get_contacts_widget (NstPlugin *plugin)
+get_contacts_widget (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkWidget *cb;
 	CtkCellRenderer *renderer;
@@ -367,8 +367,9 @@ gboolean send_file(int account, const char *who, const char *filename)
 }
 
 static
-gboolean send_files (NstPlugin *plugin, CtkWidget *contact_widget,
-		     GList *file_list)
+gboolean send_files (NstPlugin *plugin G_GNUC_UNUSED,
+		     CtkWidget *contact_widget,
+		     GList     *file_list)
 {
 	GList *file_iter;
 
@@ -432,7 +433,7 @@ free_contact (ContactData *dat)
 }
 
 static gboolean
-destroy (NstPlugin *plugin)
+destroy (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	GHashTableIter iter;
 	GPtrArray *contacts_group;

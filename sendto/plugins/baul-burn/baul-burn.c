@@ -39,7 +39,7 @@ enum {
 static GFile *burn = NULL;
 
 static
-gboolean init (NstPlugin *plugin)
+gboolean init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkIconTheme *it;
 	char *cmd;
@@ -63,7 +63,7 @@ gboolean init (NstPlugin *plugin)
 }
 
 static
-CtkWidget* get_contacts_widget (NstPlugin *plugin)
+CtkWidget* get_contacts_widget (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkWidget *widget;
 	CtkCellRenderer *renderer;
@@ -127,9 +127,9 @@ CtkWidget* get_contacts_widget (NstPlugin *plugin)
 }
 
 static
-gboolean send_files (NstPlugin *plugin,
+gboolean send_files (NstPlugin *plugin G_GNUC_UNUSED,
 		     CtkWidget *burntype_widget,
-		     GList *file_list)
+		     GList     *file_list)
 {
 	GFileEnumerator *fenum;
 	GFileInfo *file_info;
@@ -163,7 +163,7 @@ gboolean send_files (NstPlugin *plugin,
 }
 
 static
-gboolean destroy (NstPlugin *plugin){
+gboolean destroy (NstPlugin *plugin G_GNUC_UNUSED) {
 
 	g_object_unref (burn);
 	burn = NULL;

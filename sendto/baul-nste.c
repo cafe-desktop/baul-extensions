@@ -34,7 +34,7 @@ static GObjectClass *parent_class;
 
 static void
 sendto_callback (BaulMenuItem *item,
-	      gpointer          user_data)
+		 gpointer      user_data G_GNUC_UNUSED)
 {
 	GList            *files, *scan;
 	gchar            *uri;
@@ -59,8 +59,8 @@ sendto_callback (BaulMenuItem *item,
 
 static GList *
 baul_nste_get_file_items (BaulMenuProvider *provider,
-			      CtkWidget            *window,
-			      GList                *files)
+			  CtkWidget        *window G_GNUC_UNUSED,
+			  GList            *files)
 {
 	GList    *items = NULL;
 	gboolean  one_item;
@@ -105,7 +105,7 @@ baul_nste_menu_provider_iface_init (BaulMenuProviderIface *iface)
 
 
 static void
-baul_nste_instance_init (BaulNste *nste)
+baul_nste_instance_init (BaulNste *nste G_GNUC_UNUSED)
 {
 }
 

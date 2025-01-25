@@ -255,7 +255,7 @@ _get_contacts (void)
 }
 
 static gboolean
-init (NstPlugin *plugin)
+init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	g_print ("Init gajim plugin\n");
 
@@ -350,7 +350,7 @@ add_gajim_contacts_to_model (CtkListStore *store)
  * available gajim contacts
  */
 static CtkWidget *
-get_contacts_widget (NstPlugin *plugin)
+get_contacts_widget (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkWidget *entry;
 	CtkEntryCompletion *completion;
@@ -401,9 +401,9 @@ show_error (const gchar *title, const gchar *message)
 }
 
 static gboolean
-send_files (NstPlugin *plugin,
+send_files (NstPlugin *plugin G_GNUC_UNUSED,
 	    CtkWidget *contact_widget,
-	    GList *file_list)
+	    GList     *file_list)
 {
 	GError *error;
 	GValue *value;
@@ -491,7 +491,7 @@ send_files (NstPlugin *plugin,
 }
 
 static gboolean
-destroy (NstPlugin *plugin)
+destroy (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	if (proxy != NULL) {
 		g_object_unref(proxy);

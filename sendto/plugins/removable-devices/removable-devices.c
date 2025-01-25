@@ -37,9 +37,9 @@ GVolumeMonitor* vol_monitor = NULL;
 CtkWidget *cb;
 
 static void
-cb_mount_removed (GVolumeMonitor *volume_monitor,
+cb_mount_removed (GVolumeMonitor *volume_monitor G_GNUC_UNUSED,
 		  GMount         *mount,
-		  NstPlugin      *plugin)
+		  NstPlugin      *plugin G_GNUC_UNUSED)
 {
 	CtkTreeIter iter;
 	CtkListStore *store;
@@ -111,9 +111,9 @@ cb_mount_changed (GVolumeMonitor *volume_monitor,
 }
 
 static void
-cb_mount_added (GVolumeMonitor *volume_monitor,
+cb_mount_added (GVolumeMonitor *volume_monitor G_GNUC_UNUSED,
 		GMount         *mount,
-		NstPlugin      *plugin)
+		NstPlugin      *plugin G_GNUC_UNUSED)
 {
 	char *name;
 	CtkTreeIter iter;
@@ -143,7 +143,7 @@ cb_mount_added (GVolumeMonitor *volume_monitor,
 }
 
 static gboolean
-init (NstPlugin *plugin)
+init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	g_print ("Init removable-devices plugin\n");
 
@@ -210,8 +210,9 @@ get_contacts_widget (NstPlugin *plugin)
 }
 
 static gboolean
-send_files (NstPlugin *plugin, CtkWidget *contact_widget,
-	    GList *file_list)
+send_files (NstPlugin *plugin G_GNUC_UNUSED,
+	    CtkWidget *contact_widget,
+	    GList     *file_list)
 {
 	CtkListStore *store;
 	CtkTreeIter iter;
@@ -233,7 +234,7 @@ send_files (NstPlugin *plugin, CtkWidget *contact_widget,
 }
 
 static gboolean
-destroy (NstPlugin *plugin)
+destroy (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	ctk_widget_destroy (cb);
 

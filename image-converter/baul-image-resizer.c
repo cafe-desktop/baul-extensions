@@ -184,7 +184,9 @@ baul_image_resizer_transform_filename (BaulImageResizer *resizer, GFile *orig_fi
 }
 
 static void
-op_finished (GPid pid, gint status, gpointer data)
+op_finished (GPid     pid G_GNUC_UNUSED,
+	     gint     status,
+	     gpointer data)
 {
 	BaulImageResizer *resizer = BAUL_IMAGE_RESIZER (data);
 	BaulImageResizerPrivate *priv = baul_image_resizer_get_instance_private (resizer);

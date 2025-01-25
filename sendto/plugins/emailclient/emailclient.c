@@ -72,7 +72,7 @@ get_evo_cmd (void)
 }
 
 static gboolean
-init (NstPlugin *plugin)
+init (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	GAppInfo *app_info = NULL;
 
@@ -123,7 +123,7 @@ init (NstPlugin *plugin)
 }
 
 static
-CtkWidget* get_contacts_widget (NstPlugin *plugin)
+CtkWidget* get_contacts_widget (NstPlugin *plugin G_GNUC_UNUSED)
 {
 	CtkWidget *entry;
 
@@ -218,9 +218,9 @@ get_sylpheed_mailto (CtkWidget *contact_widget, GString *mailto, GList *file_lis
 }
 
 static gboolean
-send_files (NstPlugin *plugin,
+send_files (NstPlugin *plugin G_GNUC_UNUSED,
 	    CtkWidget *contact_widget,
-	    GList *file_list)
+	    GList     *file_list)
 {
 	gchar *cmd;
 	GString *mailto;
@@ -254,7 +254,8 @@ send_files (NstPlugin *plugin,
 }
 
 static
-gboolean destroy (NstPlugin *plugin){
+gboolean destroy (NstPlugin *plugin G_GNUC_UNUSED)
+{
 	g_free (mail_cmd);
 	mail_cmd = NULL;
 	return TRUE;

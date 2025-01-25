@@ -38,7 +38,7 @@ static GObjectClass *parent_class;
 
 static void
 set_wallpaper_callback (BaulMenuItem *item,
-              gpointer          user_data)
+			gpointer      user_data G_GNUC_UNUSED)
 {
     GList *files;
     GSettings *settings;
@@ -77,8 +77,8 @@ is_image (BaulFileInfo *file)
 
 static GList *
 baul_cwe_get_file_items (BaulMenuProvider *provider,
-                  CtkWidget            *window,
-                  GList                *files)
+			 CtkWidget        *window G_GNUC_UNUSED,
+			 GList            *files)
 {
     GList    *items = NULL;
     GList    *scan;
@@ -127,7 +127,7 @@ baul_cwe_menu_provider_iface_init (BaulMenuProviderIface *iface)
 
 
 static void
-baul_cwe_instance_init (BaulCwe *cwe)
+baul_cwe_instance_init (BaulCwe *cwe G_GNUC_UNUSED)
 {
 }
 

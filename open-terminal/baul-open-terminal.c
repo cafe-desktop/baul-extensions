@@ -497,9 +497,9 @@ open_terminal_menu_item_new (BaulFileInfo	  *file_info,
 }
 
 static GList *
-baul_open_terminal_get_background_items (BaulMenuProvider *provider,
-                                         CtkWidget        *window,
-                                         BaulFileInfo     *file_info)
+baul_open_terminal_get_background_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+					 CtkWidget        *window,
+					 BaulFileInfo     *file_info)
 {
 	BaulMenuItem *item;
 	TerminalFileInfo  terminal_file_info;
@@ -521,9 +521,9 @@ baul_open_terminal_get_background_items (BaulMenuProvider *provider,
 }
 
 GList *
-baul_open_terminal_get_file_items (BaulMenuProvider *provider,
-                                   CtkWidget        *window,
-                                   GList            *files)
+baul_open_terminal_get_file_items (BaulMenuProvider *provider G_GNUC_UNUSED,
+				   CtkWidget        *window,
+				   GList            *files)
 {
 	BaulMenuItem *item;
 	TerminalFileInfo  terminal_file_info;
@@ -552,7 +552,7 @@ baul_open_terminal_get_file_items (BaulMenuProvider *provider,
 }
 
 static void
-baul_open_terminal_run_config (BaulConfigurable *provider)
+baul_open_terminal_run_config (BaulConfigurable *provider G_GNUC_UNUSED)
 {
 	CtkWidget *extconf_dialog, *extconf_content, *extconf_desktophomedir, *extconf_inform1, *extconf_inform2, *extconf_exec;
 	gchar * terminal;
@@ -612,12 +612,12 @@ baul_open_terminal_configurable_iface_init (BaulConfigurableIface *iface)
 }
 
 static void
-baul_open_terminal_instance_init (BaulOpenTerminal *cvs)
+baul_open_terminal_instance_init (BaulOpenTerminal *cvs G_GNUC_UNUSED)
 {
 }
 
 static void
-baul_open_terminal_class_init (BaulOpenTerminalClass *class)
+baul_open_terminal_class_init (BaulOpenTerminalClass *class G_GNUC_UNUSED)
 {
 }
 

@@ -82,7 +82,8 @@ static const GOptionEntry entries[] = {
 };
 
 static void
-destroy_dialog (CtkWidget *widget, gpointer data )
+destroy_dialog (CtkWidget *widget G_GNUC_UNUSED,
+		gpointer   data G_GNUC_UNUSED)
 {
         ctk_main_quit ();
 }
@@ -253,7 +254,8 @@ status_label_clear (gpointer data)
 }
 
 static void
-send_button_cb (CtkWidget *widget, NS_ui *ui)
+send_button_cb (CtkWidget *widget G_GNUC_UNUSED,
+		NS_ui     *ui)
 {
 	char *error;
 	NstPlugin *p;
@@ -488,7 +490,9 @@ set_model_for_options_combobox (NS_ui *ui)
 }
 
 static void
-pack_entry_changed_cb (GObject *object, GParamSpec *spec, NS_ui *ui)
+pack_entry_changed_cb (GObject    *object G_GNUC_UNUSED,
+		       GParamSpec *spec G_GNUC_UNUSED,
+		       NS_ui      *ui)
 {
 	gboolean send_enabled;
 
@@ -507,8 +511,8 @@ pack_entry_changed_cb (GObject *object, GParamSpec *spec, NS_ui *ui)
 
 static void
 update_button_image (CtkSettings *settings,
-		     GParamSpec *spec,
-		     CtkWidget *widget)
+		     GParamSpec  *spec G_GNUC_UNUSED,
+		     CtkWidget   *widget)
 {
 	gboolean show_images;
 
