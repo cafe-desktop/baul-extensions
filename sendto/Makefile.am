@@ -29,7 +29,9 @@ libnstplugin_la_LIBADD = $(SENDTO_LIBS)
 bin_PROGRAMS = baul-sendto
 
 resources_built_sources = baul-sendto-resources.h baul-sendto-resources.c
-$(resources_built_sources): org.cafe.baul.extensions.sendto.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.cafe.baul.extensions.sendto.gresource.xml)
+dependencies:
+	$(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/org.cafe.baul.extensions.sendto.gresource.xml
+$(resources_built_sources): org.cafe.baul.extensions.sendto.gresource.xml Makefile dependencies
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate --c-name sendto $<
 
 baul_sendto_SOURCES = baul-sendto-command.c $(resources_built_sources)
