@@ -56,20 +56,14 @@ static void
 gksu_context_menu_register_type (GTypeModule *module)
 {
     static const GTypeInfo info = {
-	sizeof (GksuContextMenuClass),
-	(GBaseInitFunc) NULL,
-	(GBaseFinalizeFunc) NULL,
-	(GClassInitFunc) gksu_context_menu_class_init,
-	NULL,
-	NULL,
-	sizeof (GksuContextMenu),
-	0,
-	(GInstanceInitFunc) gksu_context_menu_init
+	.class_size = sizeof (GksuContextMenuClass),
+	.class_init = (GClassInitFunc) gksu_context_menu_class_init,
+	.instance_size = sizeof (GksuContextMenu),
+	.n_preallocs = 0,
+	.instance_init = (GInstanceInitFunc) gksu_context_menu_init
     };
     static const GInterfaceInfo menu_provider_iface_info = {
-	(GInterfaceInitFunc)menu_provider_iface_init,
-	NULL,
-	NULL
+	.interface_init = (GInterfaceInitFunc)menu_provider_iface_init,
     };
 
     gksucm_type = g_type_module_register_type (module,

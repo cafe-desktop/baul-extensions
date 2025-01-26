@@ -1200,15 +1200,11 @@ static void
 baul_share_register_type (GTypeModule *module)
 {
   static const GTypeInfo info = {
-    sizeof (BaulShareClass),
-    (GBaseInitFunc) NULL,
-    (GBaseFinalizeFunc) NULL,
-    (GClassInitFunc) baul_share_class_init,
-    NULL,
-    NULL,
-    sizeof (BaulShare),
-    0,
-    (GInstanceInitFunc) baul_share_instance_init,
+    .class_size = sizeof (BaulShareClass),
+    .class_init = (GClassInitFunc) baul_share_class_init,
+    .instance_size = sizeof (BaulShare),
+    .n_preallocs = 0,
+    .instance_init = (GInstanceInitFunc) baul_share_instance_init,
   };
 
   share_type = g_type_module_register_type (module,
@@ -1217,9 +1213,7 @@ baul_share_register_type (GTypeModule *module)
 					    &info, 0);
 
   static const GInterfaceInfo property_page_provider_iface_info = {
-    (GInterfaceInitFunc) baul_share_property_page_provider_iface_init,
-    NULL,
-    NULL
+    .interface_init = (GInterfaceInitFunc) baul_share_property_page_provider_iface_init,
   };
 
   g_type_module_add_interface (module,
@@ -1229,9 +1223,7 @@ baul_share_register_type (GTypeModule *module)
 
 
   static const GInterfaceInfo info_provider_iface_info = {
-    (GInterfaceInitFunc) baul_share_info_provider_iface_init,
-    NULL,
-    NULL
+    .interface_init = (GInterfaceInitFunc) baul_share_info_provider_iface_init,
   };
 
   g_type_module_add_interface (module,
@@ -1241,9 +1233,7 @@ baul_share_register_type (GTypeModule *module)
 
   /* Menu right clik */
   static const GInterfaceInfo menu_provider_iface_info = {
-    (GInterfaceInitFunc) baul_share_menu_provider_iface_init,
-    NULL,
-    NULL
+    .interface_init = (GInterfaceInitFunc) baul_share_menu_provider_iface_init,
   };
 
   g_type_module_add_interface (module,

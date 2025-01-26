@@ -172,21 +172,15 @@ void
 baul_image_converter_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
-		sizeof (BaulImageConverterClass),
-		(GBaseInitFunc) NULL,
-		(GBaseFinalizeFunc) NULL,
-		(GClassInitFunc) baul_image_converter_class_init,
-		NULL,
-		NULL,
-		sizeof (BaulImageConverter),
-		0,
-		(GInstanceInitFunc) baul_image_converter_instance_init,
+		.class_size = sizeof (BaulImageConverterClass),
+		.class_init = (GClassInitFunc) baul_image_converter_class_init,
+		.instance_size = sizeof (BaulImageConverter),
+		.n_preallocs = 0,
+		.instance_init = (GInstanceInitFunc) baul_image_converter_instance_init,
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) baul_image_converter_menu_provider_iface_init,
-		NULL,
-		NULL
+		.interface_init = (GInterfaceInitFunc) baul_image_converter_menu_provider_iface_init,
 	};
 
 	image_converter_type = g_type_module_register_type (module,

@@ -153,21 +153,15 @@ void
 baul_cwe_register_type (GTypeModule *module)
 {
     static const GTypeInfo info = {
-        sizeof (BaulCweClass),
-        (GBaseInitFunc) NULL,
-        (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc) baul_cwe_class_init,
-        NULL,
-        NULL,
-        sizeof (BaulCwe),
-        0,
-        (GInstanceInitFunc) baul_cwe_instance_init,
+        .class_size = sizeof (BaulCweClass),
+        .class_init = (GClassInitFunc) baul_cwe_class_init,
+        .instance_size = sizeof (BaulCwe),
+        .n_preallocs = 0,
+        .instance_init = (GInstanceInitFunc) baul_cwe_instance_init,
     };
 
     static const GInterfaceInfo menu_provider_iface_info = {
-        (GInterfaceInitFunc) baul_cwe_menu_provider_iface_init,
-        NULL,
-        NULL
+        .interface_init = (GInterfaceInitFunc) baul_cwe_menu_provider_iface_init,
     };
 
     cwe_type = g_type_module_register_type (module,

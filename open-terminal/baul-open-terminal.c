@@ -634,27 +634,19 @@ void
 baul_open_terminal_register_type (GTypeModule *module)
 {
 	static const GTypeInfo info = {
-		sizeof (BaulOpenTerminalClass),
-		(GBaseInitFunc) NULL,
-		(GBaseFinalizeFunc) NULL,
-		(GClassInitFunc) baul_open_terminal_class_init,
-		NULL,
-		NULL,
-		sizeof (BaulOpenTerminal),
-		0,
-		(GInstanceInitFunc) baul_open_terminal_instance_init,
+		.class_size = sizeof (BaulOpenTerminalClass),
+		.class_init = (GClassInitFunc) baul_open_terminal_class_init,
+		.instance_size = sizeof (BaulOpenTerminal),
+		.n_preallocs = 0,
+		.instance_init = (GInstanceInitFunc) baul_open_terminal_instance_init,
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) baul_open_terminal_menu_provider_iface_init,
-		NULL,
-		NULL
+		.interface_init = (GInterfaceInitFunc) baul_open_terminal_menu_provider_iface_init,
 	};
 
 	static const GInterfaceInfo configurable_iface_info = {
-		(GInterfaceInitFunc) baul_open_terminal_configurable_iface_init,
-		NULL,
-		NULL
+		.interface_init = (GInterfaceInitFunc) baul_open_terminal_configurable_iface_init,
 	};
 
 	terminal_type = g_type_module_register_type (module,

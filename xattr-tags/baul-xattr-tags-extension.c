@@ -215,15 +215,11 @@ void
 baul_xattr_tags_register_type(GTypeModule *module)
 {
     static const GTypeInfo info = {
-        sizeof (BaulXattrTagsClass),
-        (GBaseInitFunc) NULL,
-        (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc) baul_xattr_tags_class_init,
-        NULL,
-        NULL,
-        sizeof (BaulXattrTags),
-        0,
-        (GInstanceInitFunc) baul_xattr_tags_instance_init,
+        .class_size = sizeof (BaulXattrTagsClass),
+        .class_init = (GClassInitFunc) baul_xattr_tags_class_init,
+        .instance_size = sizeof (BaulXattrTags),
+        .n_preallocs = 0,
+        .instance_init = (GInstanceInitFunc) baul_xattr_tags_instance_init,
     };
 
 
@@ -233,9 +229,7 @@ baul_xattr_tags_register_type(GTypeModule *module)
                                             &info, 0);
 
     static const GInterfaceInfo info_provider_iface_info = {
-            (GInterfaceInitFunc) baul_xattr_tags_info_provider_iface_init,
-            NULL,
-            NULL
+            .interface_init = (GInterfaceInitFunc) baul_xattr_tags_info_provider_iface_init,
     };
 
     g_type_module_add_interface (module,
@@ -244,9 +238,7 @@ baul_xattr_tags_register_type(GTypeModule *module)
                                  &info_provider_iface_info);
 
     static const GInterfaceInfo column_provider_iface_info = {
-            (GInterfaceInitFunc) baul_xattr_tags_column_provider_iface_init,
-            NULL,
-            NULL
+            .interface_init = (GInterfaceInitFunc) baul_xattr_tags_column_provider_iface_init,
     };
 
 
