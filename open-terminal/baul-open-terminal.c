@@ -55,6 +55,9 @@
 static void baul_open_terminal_instance_init (BaulOpenTerminal      *cvs);
 static void baul_open_terminal_class_init    (BaulOpenTerminalClass *class);
 
+char *lookup_in_data_dir (const char *basename, const char *data_dir);
+GList *baul_open_terminal_get_file_items (BaulMenuProvider *provider, CtkWidget *window, GList *files);
+
 static GType terminal_type = 0;
 
 typedef enum {

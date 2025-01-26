@@ -44,6 +44,8 @@ static void
 gksu_context_menu_activate (BaulMenuItem *item,
 			    BaulFileInfo *file);
 
+gboolean is_gksu_dead (gpointer data);
+
 static GType
 gksu_context_menu_get_type (void)
 {

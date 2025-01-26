@@ -19,6 +19,7 @@
  */
 
 #include <gio/gio.h>
+#include "nst-common.h"
 
 static gboolean
 copy_fobject (GFile* source, GFile* dst)
