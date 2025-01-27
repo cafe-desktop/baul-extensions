@@ -1,4 +1,4 @@
-AC_INIT([baul-extensions], 1.25.1, [https://github.com/cafe-desktop/baul-extensions])
+AC_INIT([baul-extensions], 2.0.0, [https://github.com/cafe-desktop/baul-extensions])
 
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz tar-ustar check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
