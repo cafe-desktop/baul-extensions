@@ -16,9 +16,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.25.1\n"
+"Project-Id-Version: baul-extensions 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2023-01-01 19:09+0100\n"
+"POT-Creation-Date: 2025-01-27 15:53+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Ikuru K <kanumaiku@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
@@ -28,15 +28,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gksu/libbaul-gksu.c:135
+#: gksu/libbaul-gksu.c:131
 msgid "Open as administrator"
 msgstr "管理者として開く"
 
-#: gksu/libbaul-gksu.c:136
+#: gksu/libbaul-gksu.c:132
 msgid "Opens the file with administrator privileges"
 msgstr "管理者権限でファイルを開きます"
 
-#: gksu/libbaul-gksu.c:223
+#: gksu/libbaul-gksu.c:219
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -143,28 +143,28 @@ msgstr "ファイル名を変更しない"
 msgid "Filename"
 msgstr "フルネーム"
 
-#: image-converter/baul-image-resizer.c:207
-#: image-converter/baul-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Skip"
 msgstr "スキップ(_S)"
 
-#: image-converter/baul-image-resizer.c:209
-#: image-converter/baul-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:211
+#: image-converter/baul-image-rotator.c:208
 msgid "_Retry"
 msgstr "再試行(_R)"
 
-#: image-converter/baul-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:289
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "画像の大きさの変更中: %d / %d"
 
-#: image-converter/baul-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:294
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>\"%s\" の大きさを変更中</i>"
 
-#: image-converter/baul-image-resizer.c:310
-#: image-converter/baul-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:312
+#: image-converter/baul-image-rotator.c:311
 msgid "Please enter a valid filename suffix!"
 msgstr "正しい拡張子を指定して下さい！"
 
@@ -216,12 +216,12 @@ msgstr "ファイル名を変更しない"
 msgid "_Rotate"
 msgstr "回転する(_R)"
 
-#: image-converter/baul-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:288
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "画像の回転中: %d / %d"
 
-#: image-converter/baul-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:293
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>\"%s\" の回転中</i>"
@@ -238,41 +238,41 @@ msgstr "画像の回転とサイズの変更"
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:459
-#: open-terminal/baul-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:462
+#: open-terminal/baul-open-terminal.c:475
 msgid "Open in _Terminal"
 msgstr "端末の中に開く(_T)"
 
-#: open-terminal/baul-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:464
 msgid "Open the currently selected folder in a terminal"
 msgstr "端末の中に現在選択しているフォルダを開きます"
 
-#: open-terminal/baul-open-terminal.c:463
-#: open-terminal/baul-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:466
+#: open-terminal/baul-open-terminal.c:476
 msgid "Open the currently open folder in a terminal"
 msgstr "端末の中に現在表示しているフォルダを開きます"
 
-#: open-terminal/baul-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open _Terminal"
 msgstr "端末を開く(_T)"
 
-#: open-terminal/baul-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open a terminal"
 msgstr "端末を開きます"
 
-#: open-terminal/baul-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:566
 msgid "Open at Home if trying to open on desktop"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:569
 msgid "Terminal application:"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:589
 msgid "Close"
 msgstr "閉じる"
 
-#: open-terminal/baul-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:595
 msgid "open-terminal Configuration"
 msgstr ""
 
@@ -318,24 +318,24 @@ msgstr "ファイルをメールやインスタントメッセージで送信し
 msgid "Send files by mail, instant message..."
 msgstr "ファイルをメールやインスタントメッセージで送信します..."
 
-#: sendto/baul-sendto-command.c:569
+#: sendto/baul-sendto-command.c:573
 msgid "Files"
 msgstr "ファイル"
 
-#: sendto/baul-sendto-command.c:781
+#: sendto/baul-sendto-command.c:785
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "オプションとして URI またはファイル名を指定してください\n"
 
-#: sendto/baul-sendto-command.c:801
+#: sendto/baul-sendto-command.c:805
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "コマンドライン・オプションを解析できませんでした: %s\n"
 
-#: sendto/baul-sendto-command.c:816
+#: sendto/baul-sendto-command.c:820
 msgid "Could not load any plugins."
 msgstr "プラグインを読み込めませんでした"
 
-#: sendto/baul-sendto-command.c:819
+#: sendto/baul-sendto-command.c:823
 msgid "Please verify your installation"
 msgstr "正しくインストールされているか確認してください"
 
@@ -369,8 +369,8 @@ msgstr "最後に使用したアーカイブの種類"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: tar."
-"gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 msgstr ""
 "最後に使用したアーカイブの種類を記録します。 (0: zip, 1: tar.gz, 2: tar.bz2)."
 
@@ -409,7 +409,7 @@ msgstr "<b>圧縮</b>"
 msgid "label"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:267
+#: sendto/plugins/emailclient/emailclient.c:268
 msgid "Email"
 msgstr "メール"
 
@@ -449,11 +449,11 @@ msgstr "既存の CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "CD/DVD の作成"
 
-#: sendto/plugins/pidgin/pidgin.c:461
+#: sendto/plugins/pidgin/pidgin.c:462
 msgid "Instant Message (Pidgin)"
 msgstr "インスタントメッセージ (Pidgin)"
 
-#: sendto/plugins/removable-devices/removable-devices.c:248
+#: sendto/plugins/removable-devices/removable-devices.c:249
 msgid "Removable disks and shares"
 msgstr "リムーバブルディスクと共有"
 
@@ -539,15 +539,15 @@ msgstr "共有を作成(_S)"
 msgid "There was an error while getting the sharing information"
 msgstr "共有情報の取得中にエラーが発生しました"
 
-#: share/baul-share.c:1120
+#: share/baul-share.c:1121
 msgid "Folder Sharing"
 msgstr "フォルダーの共有"
 
-#: share/baul-share.c:1161
+#: share/baul-share.c:1162
 msgid "Sharing Options"
 msgstr "共有オプション"
 
-#: share/baul-share.c:1162
+#: share/baul-share.c:1163
 msgid "Share this Folder"
 msgstr "このフォルダを共有する"
 

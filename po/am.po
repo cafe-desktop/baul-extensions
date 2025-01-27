@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.25.1\n"
+"Project-Id-Version: baul-extensions 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2023-01-01 19:09+0100\n"
+"POT-Creation-Date: 2025-01-27 15:53+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>, 2020\n"
 "Language-Team: Amharic (https://www.transifex.com/cafe/teams/13566/am/)\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gksu/libbaul-gksu.c:135
+#: gksu/libbaul-gksu.c:131
 msgid "Open as administrator"
 msgstr "እንደ አስተዳዳሪ መክፈቻ"
 
-#: gksu/libbaul-gksu.c:136
+#: gksu/libbaul-gksu.c:132
 msgid "Opens the file with administrator privileges"
 msgstr "በ አስተዳዳሪ ልዩ መብት መክፈቻ"
 
-#: gksu/libbaul-gksu.c:223
+#: gksu/libbaul-gksu.c:219
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -134,28 +134,28 @@ msgstr "እንደ ገና በ መመጠን ላይ"
 msgid "Filename"
 msgstr "የፋይል ስም "
 
-#: image-converter/baul-image-resizer.c:207
-#: image-converter/baul-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Skip"
 msgstr "_መዝለያ"
 
-#: image-converter/baul-image-resizer.c:209
-#: image-converter/baul-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:211
+#: image-converter/baul-image-rotator.c:208
 msgid "_Retry"
 msgstr "_እንደገና መሞከሪያ"
 
-#: image-converter/baul-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:289
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "ምስል እንደ ገና በ መመጠን ላይ: %d ከ %d"
 
-#: image-converter/baul-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:294
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>እንደ ገና በ መመጠን ላይ \"%s\"</i>"
 
-#: image-converter/baul-image-resizer.c:310
-#: image-converter/baul-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:312
+#: image-converter/baul-image-rotator.c:311
 msgid "Please enter a valid filename suffix!"
 msgstr "እባክዎን ዋጋ ያለው የ ፋይል ስም መድረሻ ያስገቡ"
 
@@ -207,12 +207,12 @@ msgstr "በ ማዞር ላይ"
 msgid "_Rotate"
 msgstr "_ማዞሪያ"
 
-#: image-converter/baul-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:288
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "ምስል በ ማዞር ላይ: %d ከ %d"
 
-#: image-converter/baul-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:293
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>በ ማዞር ላይ \"%s\"</i>"
@@ -229,41 +229,41 @@ msgstr "ምስሎችን ማዞሪያ እና እንደገና መመጠኛ"
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:459
-#: open-terminal/baul-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:462
+#: open-terminal/baul-open-terminal.c:475
 msgid "Open in _Terminal"
 msgstr "በ _ተርሚናል ውስጥ መክፈቻ "
 
-#: open-terminal/baul-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:464
 msgid "Open the currently selected folder in a terminal"
 msgstr "አሁን የተመረጠውን ፎልደር በ ተርሚናል ውስጥ መክፈቻ"
 
-#: open-terminal/baul-open-terminal.c:463
-#: open-terminal/baul-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:466
+#: open-terminal/baul-open-terminal.c:476
 msgid "Open the currently open folder in a terminal"
 msgstr "አሁን የተከፈተውን ፎልደር በ ተርሚናል ውስጥ መክፈቻ"
 
-#: open-terminal/baul-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open _Terminal"
 msgstr "ተርሚናል _መክፈቻ"
 
-#: open-terminal/baul-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open a terminal"
 msgstr "ተርሚናል _መክፈቻ"
 
-#: open-terminal/baul-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:566
 msgid "Open at Home if trying to open on desktop"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:569
 msgid "Terminal application:"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:589
 msgid "Close"
 msgstr "መዝጊያ"
 
-#: open-terminal/baul-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:595
 msgid "open-terminal Configuration"
 msgstr ""
 
@@ -308,24 +308,24 @@ msgstr "ፋይል በ ደብዳቤ መላኪያ በ አስቸኳይ መልእክ
 msgid "Send files by mail, instant message..."
 msgstr "ፋይል በ ደብዳቤ መላኪያ በ አስቸኳይ መልእክት..."
 
-#: sendto/baul-sendto-command.c:569
+#: sendto/baul-sendto-command.c:573
 msgid "Files"
 msgstr "ፋይሎች"
 
-#: sendto/baul-sendto-command.c:781
+#: sendto/baul-sendto-command.c:785
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "ይጠብቃል URIs ወይንም የ ፋይል ስሞች እንደ ምርጫ እስኪያልፉ ድረስ\n"
 
-#: sendto/baul-sendto-command.c:801
+#: sendto/baul-sendto-command.c:805
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "የትእዛዝ - መስመር ምርጫዎችን መተንተን አልተቻለም : %s\n"
 
-#: sendto/baul-sendto-command.c:816
+#: sendto/baul-sendto-command.c:820
 msgid "Could not load any plugins."
 msgstr "ተሰኪዎችን መጫን አልተቻለም"
 
-#: sendto/baul-sendto-command.c:819
+#: sendto/baul-sendto-command.c:823
 msgid "Please verify your installation"
 msgstr "እባክዎን አገጣጠሞን ይመርምሩ"
 
@@ -357,8 +357,8 @@ msgstr "መጨረሻ የተጠቀሙት የ ማህደር አይነት"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: tar."
-"gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 msgstr ""
 
 #: sendto/baul-sendto.ui:17
@@ -396,7 +396,7 @@ msgstr "<b>ማመቂያ</b>"
 msgid "label"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:267
+#: sendto/plugins/emailclient/emailclient.c:268
 msgid "Email"
 msgstr "ኢሜይል"
 
@@ -436,11 +436,11 @@ msgstr "ነባር ሲዲ/ዲቪዲ"
 msgid "CD/DVD Creator"
 msgstr "ሲዲ/ዲቪዲ መፍጠሪያ"
 
-#: sendto/plugins/pidgin/pidgin.c:461
+#: sendto/plugins/pidgin/pidgin.c:462
 msgid "Instant Message (Pidgin)"
 msgstr "አስቸኳይ መልእክተኛ (ፒጂን)"
 
-#: sendto/plugins/removable-devices/removable-devices.c:248
+#: sendto/plugins/removable-devices/removable-devices.c:249
 msgid "Removable disks and shares"
 msgstr "የሚወልቁ ዲስኮች እና የሚካፈሉዋቸው"
 
@@ -526,15 +526,15 @@ msgstr "_ማካፈያ መፍጠሪያ"
 msgid "There was an error while getting the sharing information"
 msgstr "የ ማካፈያ መረጃ በማግኘት ላይ እንዳለ ስህተተ ተፈጥሯል"
 
-#: share/baul-share.c:1120
+#: share/baul-share.c:1121
 msgid "Folder Sharing"
 msgstr "ፎልደር ማካፈያ"
 
-#: share/baul-share.c:1161
+#: share/baul-share.c:1162
 msgid "Sharing Options"
 msgstr "የማካፈያ ምርጫዎች"
 
-#: share/baul-share.c:1162
+#: share/baul-share.c:1163
 msgid "Share this Folder"
 msgstr "ይህን ፎልደር ማካፈያ"
 

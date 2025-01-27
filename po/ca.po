@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.25.1\n"
+"Project-Id-Version: baul-extensions 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2023-01-01 19:09+0100\n"
+"POT-Creation-Date: 2025-01-27 15:53+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Francesc Famadas, 2020\n"
 "Language-Team: Catalan (https://www.transifex.com/cafe/teams/13566/ca/)\n"
@@ -22,15 +22,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gksu/libbaul-gksu.c:135
+#: gksu/libbaul-gksu.c:131
 msgid "Open as administrator"
 msgstr "Obre com a administrador"
 
-#: gksu/libbaul-gksu.c:136
+#: gksu/libbaul-gksu.c:132
 msgid "Opens the file with administrator privileges"
 msgstr "Obre el fitxer amb privilegis d'administrador"
 
-#: gksu/libbaul-gksu.c:223
+#: gksu/libbaul-gksu.c:219
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -137,28 +137,28 @@ msgstr "Sobreescriu els fitxers existents amb la seva versió redimensionada"
 msgid "Filename"
 msgstr "Nom del fitxer"
 
-#: image-converter/baul-image-resizer.c:207
-#: image-converter/baul-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Skip"
 msgstr "_Omet"
 
-#: image-converter/baul-image-resizer.c:209
-#: image-converter/baul-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:211
+#: image-converter/baul-image-rotator.c:208
 msgid "_Retry"
 msgstr "_Torna-ho a intentar"
 
-#: image-converter/baul-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:289
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "S'està redimensionant la imatge %d de %d"
 
-#: image-converter/baul-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:294
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>S'està redimensionant «%s»</i>"
 
-#: image-converter/baul-image-resizer.c:310
-#: image-converter/baul-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:312
+#: image-converter/baul-image-rotator.c:311
 msgid "Please enter a valid filename suffix!"
 msgstr "Introduïu un sufix vàlid per al nom de fitxer!"
 
@@ -210,12 +210,12 @@ msgstr "Sobreescriu els fitxers existents amb la seva versió girada"
 msgid "_Rotate"
 msgstr "_Gira"
 
-#: image-converter/baul-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:288
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "S'està girant la imatge %d de %d"
 
-#: image-converter/baul-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:293
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>S'està girant «%s»</i>"
@@ -232,41 +232,41 @@ msgstr "Gira i redimensiona les imatges"
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Drets d'autor (C) 2004-2005 Jürg Billeter"
 
-#: open-terminal/baul-open-terminal.c:459
-#: open-terminal/baul-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:462
+#: open-terminal/baul-open-terminal.c:475
 msgid "Open in _Terminal"
 msgstr "Obre al _terminal"
 
-#: open-terminal/baul-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:464
 msgid "Open the currently selected folder in a terminal"
 msgstr "Obre la carpeta seleccionada actualment en un terminal"
 
-#: open-terminal/baul-open-terminal.c:463
-#: open-terminal/baul-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:466
+#: open-terminal/baul-open-terminal.c:476
 msgid "Open the currently open folder in a terminal"
 msgstr "Obre la carpeta oberta actualment en un terminal"
 
-#: open-terminal/baul-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open _Terminal"
 msgstr "Obre un _terminal"
 
-#: open-terminal/baul-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open a terminal"
 msgstr "Obre un terminal"
 
-#: open-terminal/baul-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:566
 msgid "Open at Home if trying to open on desktop"
 msgstr "Obre a la carpeta d'usuari si s'intenta obrir a l'escriptori"
 
-#: open-terminal/baul-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:569
 msgid "Terminal application:"
 msgstr "Aplicació de terminal:"
 
-#: open-terminal/baul-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:589
 msgid "Close"
 msgstr "Tanca"
 
-#: open-terminal/baul-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:595
 msgid "open-terminal Configuration"
 msgstr "Configuració d'obertura de terminal"
 
@@ -314,24 +314,24 @@ msgstr "Envia el fitxer per correu electrònic, missatgeria instantània..."
 msgid "Send files by mail, instant message..."
 msgstr "Envia els fitxers per correu electrònic, missatgeria instantània..."
 
-#: sendto/baul-sendto-command.c:569
+#: sendto/baul-sendto-command.c:573
 msgid "Files"
 msgstr "Fitxers"
 
-#: sendto/baul-sendto-command.c:781
+#: sendto/baul-sendto-command.c:785
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Espera que es passin com a opcions els URI o els noms dels fitxers\n"
 
-#: sendto/baul-sendto-command.c:801
+#: sendto/baul-sendto-command.c:805
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "No s'han pogut analitzar les opcions de línia d'ordres: %s\n"
 
-#: sendto/baul-sendto-command.c:816
+#: sendto/baul-sendto-command.c:820
 msgid "Could not load any plugins."
 msgstr "No s'ha pogut carregar cap connector."
 
-#: sendto/baul-sendto-command.c:819
+#: sendto/baul-sendto-command.c:823
 msgid "Please verify your installation"
 msgstr "Verifiqueu la instal·lació"
 
@@ -365,8 +365,8 @@ msgstr "L'últim tipus d'arxiu que es va utilitzar"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: tar."
-"gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 msgstr ""
 "S'utilitza per emmagatzemar el tipus de fitxer que es va utilitzar l'última "
 "vegada (0: zip, 1: tar.gz, 2: tar.bz2)."
@@ -406,7 +406,7 @@ msgstr "<b>Compressió</b>"
 msgid "label"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:267
+#: sendto/plugins/emailclient/emailclient.c:268
 msgid "Email"
 msgstr "Correu electrònic"
 
@@ -446,11 +446,11 @@ msgstr "CD/DVD existent"
 msgid "CD/DVD Creator"
 msgstr "Creador de CD o DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:461
+#: sendto/plugins/pidgin/pidgin.c:462
 msgid "Instant Message (Pidgin)"
 msgstr "Missatge instantani (Pidgin)"
 
-#: sendto/plugins/removable-devices/removable-devices.c:248
+#: sendto/plugins/removable-devices/removable-devices.c:249
 msgid "Removable disks and shares"
 msgstr "Discs extraïbles i comparticions"
 
@@ -539,15 +539,15 @@ msgstr "Crea la _compartició"
 msgid "There was an error while getting the sharing information"
 msgstr "S'ha produït un error en obtenir la informació de la compartició"
 
-#: share/baul-share.c:1120
+#: share/baul-share.c:1121
 msgid "Folder Sharing"
 msgstr "Compartició de carpetes"
 
-#: share/baul-share.c:1161
+#: share/baul-share.c:1162
 msgid "Sharing Options"
 msgstr "Opcions de compartició"
 
-#: share/baul-share.c:1162
+#: share/baul-share.c:1163
 msgid "Share this Folder"
 msgstr "Comparteix aquesta carpeta"
 

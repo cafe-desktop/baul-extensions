@@ -20,9 +20,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.25.1\n"
+"Project-Id-Version: baul-extensions 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2023-01-01 19:09+0100\n"
+"POT-Creation-Date: 2025-01-27 15:53+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Dominik Adrian Grzywak, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/cafe/teams/13566/pl/)\n"
@@ -34,15 +34,15 @@ msgstr ""
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: gksu/libbaul-gksu.c:135
+#: gksu/libbaul-gksu.c:131
 msgid "Open as administrator"
 msgstr "Otwórz jako administrator"
 
-#: gksu/libbaul-gksu.c:136
+#: gksu/libbaul-gksu.c:132
 msgid "Opens the file with administrator privileges"
 msgstr "Otwiera plik z uprawnieniami administratora"
 
-#: gksu/libbaul-gksu.c:223
+#: gksu/libbaul-gksu.c:219
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -149,28 +149,28 @@ msgstr "Zmień rozmiar oryginału"
 msgid "Filename"
 msgstr "Nazwa pliku"
 
-#: image-converter/baul-image-resizer.c:207
-#: image-converter/baul-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Skip"
 msgstr "_Pomiń"
 
-#: image-converter/baul-image-resizer.c:209
-#: image-converter/baul-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:211
+#: image-converter/baul-image-rotator.c:208
 msgid "_Retry"
 msgstr "_Ponów"
 
-#: image-converter/baul-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:289
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "Zmienianie rozmiaru: %d z %d"
 
-#: image-converter/baul-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:294
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr "<i>Zmiana rozmiaru \"%s\"</i>"
 
-#: image-converter/baul-image-resizer.c:310
-#: image-converter/baul-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:312
+#: image-converter/baul-image-rotator.c:311
 msgid "Please enter a valid filename suffix!"
 msgstr "Wprowadź poprawne rozszerzenie pliku!"
 
@@ -222,12 +222,12 @@ msgstr "Obracaj w miejscu"
 msgid "_Rotate"
 msgstr "_Obróć"
 
-#: image-converter/baul-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:288
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "Obracanie obrazu: %d z %d"
 
-#: image-converter/baul-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:293
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Obracanie \"%s\"</i>"
@@ -244,41 +244,41 @@ msgstr "Obróć i zmień rozmiar obrazów"
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Prawa autorskie (C) 2004-2005 Jürg Billeter"
 
-#: open-terminal/baul-open-terminal.c:459
-#: open-terminal/baul-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:462
+#: open-terminal/baul-open-terminal.c:475
 msgid "Open in _Terminal"
 msgstr "Otwórz w _terminalu"
 
-#: open-terminal/baul-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:464
 msgid "Open the currently selected folder in a terminal"
 msgstr "Otwórz obecnie wskazany folder w terminalu"
 
-#: open-terminal/baul-open-terminal.c:463
-#: open-terminal/baul-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:466
+#: open-terminal/baul-open-terminal.c:476
 msgid "Open the currently open folder in a terminal"
 msgstr "Otwórz obecnie otwarty folder w terminalu"
 
-#: open-terminal/baul-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open _Terminal"
 msgstr "Otwórz _terminal"
 
-#: open-terminal/baul-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open a terminal"
 msgstr "Otwiera terminal"
 
-#: open-terminal/baul-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:566
 msgid "Open at Home if trying to open on desktop"
 msgstr "Otwórz w Katalogu Domowym jeśli próbuje otworzyć na pulpicie"
 
-#: open-terminal/baul-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:569
 msgid "Terminal application:"
 msgstr "Aplikacja Terminala:"
 
-#: open-terminal/baul-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:589
 msgid "Close"
 msgstr "Zamknij"
 
-#: open-terminal/baul-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:595
 msgid "open-terminal Configuration"
 msgstr "Konfiguracja open-terminal"
 
@@ -326,24 +326,24 @@ msgstr "Wysyła plik poprzez e-mail, komunikator..."
 msgid "Send files by mail, instant message..."
 msgstr "Wysyła pliki poprzez e-mail, komunikator..."
 
-#: sendto/baul-sendto-command.c:569
+#: sendto/baul-sendto-command.c:573
 msgid "Files"
 msgstr "Pliki"
 
-#: sendto/baul-sendto-command.c:781
+#: sendto/baul-sendto-command.c:785
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "Oczekiwane adresy URI lub nazwy plików wywoływanych jako opcje\n"
 
-#: sendto/baul-sendto-command.c:801
+#: sendto/baul-sendto-command.c:805
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "Nie można przetworzyć opcji z wiersza poleceń: %s\n"
 
-#: sendto/baul-sendto-command.c:816
+#: sendto/baul-sendto-command.c:820
 msgid "Could not load any plugins."
 msgstr "Nie można wczytać żadnych wtyczek."
 
-#: sendto/baul-sendto-command.c:819
+#: sendto/baul-sendto-command.c:823
 msgid "Please verify your installation"
 msgstr "Proszę sprawdzić poprawność instalacji"
 
@@ -377,8 +377,8 @@ msgstr "Ostatni użyty typ archiwum"
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: tar."
-"gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 msgstr ""
 "Używane do przechowywania informacji jaki typ archiwum został użyty ostatnio "
 "(0: zip, 1: tar.gz, 2: tar.bz2)."
@@ -418,7 +418,7 @@ msgstr "<b>Kompresja</b>"
 msgid "label"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:267
+#: sendto/plugins/emailclient/emailclient.c:268
 msgid "Email"
 msgstr "E-mail"
 
@@ -458,11 +458,11 @@ msgstr "Istniejąca płyta CD/DVD"
 msgid "CD/DVD Creator"
 msgstr "Asystent CD/DVD"
 
-#: sendto/plugins/pidgin/pidgin.c:461
+#: sendto/plugins/pidgin/pidgin.c:462
 msgid "Instant Message (Pidgin)"
 msgstr "Wiadomość (Pidgin)"
 
-#: sendto/plugins/removable-devices/removable-devices.c:248
+#: sendto/plugins/removable-devices/removable-devices.c:249
 msgid "Removable disks and shares"
 msgstr "Dyski wymienne i zasoby sieciowe"
 
@@ -551,15 +551,15 @@ msgstr "Utwórz _udział"
 msgid "There was an error while getting the sharing information"
 msgstr "Wystąpił błąd podczas otrzymywania informacji o udziałach"
 
-#: share/baul-share.c:1120
+#: share/baul-share.c:1121
 msgid "Folder Sharing"
 msgstr "Udostępnij folder"
 
-#: share/baul-share.c:1161
+#: share/baul-share.c:1162
 msgid "Sharing Options"
 msgstr "Opcje udostępniania"
 
-#: share/baul-share.c:1162
+#: share/baul-share.c:1163
 msgid "Share this Folder"
 msgstr "Udostępnij ten folder"
 

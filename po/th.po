@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 1.25.1\n"
+"Project-Id-Version: baul-extensions 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2023-01-01 19:09+0100\n"
+"POT-Creation-Date: 2025-01-27 15:53+0100\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2020\n"
 "Language-Team: Thai (https://www.transifex.com/cafe/teams/13566/th/)\n"
@@ -23,15 +23,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: gksu/libbaul-gksu.c:135
+#: gksu/libbaul-gksu.c:131
 msgid "Open as administrator"
 msgstr "เปิดในนามผู้ดูแลระบบ"
 
-#: gksu/libbaul-gksu.c:136
+#: gksu/libbaul-gksu.c:132
 msgid "Opens the file with administrator privileges"
 msgstr "เปิดแฟ้มด้วยสิทธิ์พิเศษของผู้ดูแลระบบ"
 
-#: gksu/libbaul-gksu.c:223
+#: gksu/libbaul-gksu.c:219
 msgid ""
 "<big><b>Unable to determine the program to run.</b></big>\n"
 "\n"
@@ -138,28 +138,28 @@ msgstr "ปรับขนาดในสถานที่"
 msgid "Filename"
 msgstr "ชื่อแฟ้ม"
 
-#: image-converter/baul-image-resizer.c:207
-#: image-converter/baul-image-rotator.c:204
+#: image-converter/baul-image-resizer.c:209
+#: image-converter/baul-image-rotator.c:206
 msgid "_Skip"
 msgstr "_ข้าม"
 
-#: image-converter/baul-image-resizer.c:209
-#: image-converter/baul-image-rotator.c:206
+#: image-converter/baul-image-resizer.c:211
+#: image-converter/baul-image-rotator.c:208
 msgid "_Retry"
 msgstr "_ลองใหม่"
 
-#: image-converter/baul-image-resizer.c:287
+#: image-converter/baul-image-resizer.c:289
 #, c-format
 msgid "Resizing image: %d of %d"
 msgstr "กำลังปรับขนาดของรูป: %d จาก %d"
 
-#: image-converter/baul-image-resizer.c:292
+#: image-converter/baul-image-resizer.c:294
 #, c-format
 msgid "<i>Resizing \"%s\"</i>"
 msgstr ""
 
-#: image-converter/baul-image-resizer.c:310
-#: image-converter/baul-image-rotator.c:309
+#: image-converter/baul-image-resizer.c:312
+#: image-converter/baul-image-rotator.c:311
 msgid "Please enter a valid filename suffix!"
 msgstr ""
 
@@ -211,12 +211,12 @@ msgstr "หมุนในสถานที่"
 msgid "_Rotate"
 msgstr ""
 
-#: image-converter/baul-image-rotator.c:286
+#: image-converter/baul-image-rotator.c:288
 #, c-format
 msgid "Rotating image: %d of %d"
 msgstr "กำลังหมุนรูป: %d จาก %d"
 
-#: image-converter/baul-image-rotator.c:291
+#: image-converter/baul-image-rotator.c:293
 #, c-format
 msgid "<i>Rotating \"%s\"</i>"
 msgstr ""
@@ -233,41 +233,41 @@ msgstr "หมุนและปรับขนาดรูป"
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:459
-#: open-terminal/baul-open-terminal.c:472
+#: open-terminal/baul-open-terminal.c:462
+#: open-terminal/baul-open-terminal.c:475
 msgid "Open in _Terminal"
 msgstr "เปิดในเ_ทอร์มินัล"
 
-#: open-terminal/baul-open-terminal.c:461
+#: open-terminal/baul-open-terminal.c:464
 msgid "Open the currently selected folder in a terminal"
 msgstr "เปิดโฟลเดอร์ที่เลือกอยู่ในเทอร์มินัล"
 
-#: open-terminal/baul-open-terminal.c:463
-#: open-terminal/baul-open-terminal.c:473
+#: open-terminal/baul-open-terminal.c:466
+#: open-terminal/baul-open-terminal.c:476
 msgid "Open the currently open folder in a terminal"
 msgstr "เปิดโฟลเดอร์ที่เปิดอยู่ในเทอร์มินัล"
 
-#: open-terminal/baul-open-terminal.c:469
+#: open-terminal/baul-open-terminal.c:472
 msgid "Open _Terminal"
 msgstr "เปิดเ_ทอร์มินัล"
 
-#: open-terminal/baul-open-terminal.c:470
+#: open-terminal/baul-open-terminal.c:473
 msgid "Open a terminal"
 msgstr "เปิดเทอร์มินัล"
 
-#: open-terminal/baul-open-terminal.c:563
+#: open-terminal/baul-open-terminal.c:566
 msgid "Open at Home if trying to open on desktop"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:566
+#: open-terminal/baul-open-terminal.c:569
 msgid "Terminal application:"
 msgstr ""
 
-#: open-terminal/baul-open-terminal.c:586
+#: open-terminal/baul-open-terminal.c:589
 msgid "Close"
 msgstr "ปิด"
 
-#: open-terminal/baul-open-terminal.c:592
+#: open-terminal/baul-open-terminal.c:595
 msgid "open-terminal Configuration"
 msgstr ""
 
@@ -309,24 +309,24 @@ msgstr "ส่งแฟ้มทางอีเมล, ข้อความด�
 msgid "Send files by mail, instant message..."
 msgstr "ส่งแฟ้มทางอีเมล, ข้อความด่วน..."
 
-#: sendto/baul-sendto-command.c:569
+#: sendto/baul-sendto-command.c:573
 msgid "Files"
 msgstr "Files"
 
-#: sendto/baul-sendto-command.c:781
+#: sendto/baul-sendto-command.c:785
 msgid "Expects URIs or filenames to be passed as options\n"
 msgstr "ต้องส่ง URI หรือชื่อแฟ้มต่างๆ มาในตัวเลือกด้วย\n"
 
-#: sendto/baul-sendto-command.c:801
+#: sendto/baul-sendto-command.c:805
 #, c-format
 msgid "Could not parse command-line options: %s\n"
 msgstr "ไม่สามารถแจงตัวเลือกในบรรทัดคำสั่ง: %s\n"
 
-#: sendto/baul-sendto-command.c:816
+#: sendto/baul-sendto-command.c:820
 msgid "Could not load any plugins."
 msgstr "ไม่สามารถโหลดปลั๊กอินใดๆ"
 
-#: sendto/baul-sendto-command.c:819
+#: sendto/baul-sendto-command.c:823
 msgid "Please verify your installation"
 msgstr "กรุณาตรวจสอบการติดตั้งของคุณ"
 
@@ -358,8 +358,8 @@ msgstr ""
 
 #: sendto/org.cafe.Baul.Sendto.gschema.xml.in:15
 msgid ""
-"Used to store which type of archive was used the last time (0: zip, 1: tar."
-"gz, 2: tar.bz2)."
+"Used to store which type of archive was used the last time (0: zip, 1: "
+"tar.gz, 2: tar.bz2)."
 msgstr ""
 
 #: sendto/baul-sendto.ui:17
@@ -397,7 +397,7 @@ msgstr "<b>การบีบอัด</b>"
 msgid "label"
 msgstr ""
 
-#: sendto/plugins/emailclient/emailclient.c:267
+#: sendto/plugins/emailclient/emailclient.c:268
 msgid "Email"
 msgstr "อีเมล"
 
@@ -437,11 +437,11 @@ msgstr "ซีดี/ดีวีดี ที่มีอยู่"
 msgid "CD/DVD Creator"
 msgstr "เครื่องมือเขียนซีดี/ดีวีดี"
 
-#: sendto/plugins/pidgin/pidgin.c:461
+#: sendto/plugins/pidgin/pidgin.c:462
 msgid "Instant Message (Pidgin)"
 msgstr "ข้อความด่วน (Pidgin)"
 
-#: sendto/plugins/removable-devices/removable-devices.c:248
+#: sendto/plugins/removable-devices/removable-devices.c:249
 msgid "Removable disks and shares"
 msgstr "ดิสก์ถอดเสียบและแหล่งใช้ร่วม"
 
@@ -525,15 +525,15 @@ msgstr "ส_ร้างแหล่งใช้ร่วม"
 msgid "There was an error while getting the sharing information"
 msgstr "มีข้อผิดพลาดเกิดขึ้นขณะอ่านข้อมูลแหล่งใช้ร่วม"
 
-#: share/baul-share.c:1120
+#: share/baul-share.c:1121
 msgid "Folder Sharing"
 msgstr "โฟลเดอร์ใช้ร่วม"
 
-#: share/baul-share.c:1161
+#: share/baul-share.c:1162
 msgid "Sharing Options"
 msgstr "ตัวเลือกการใช้ร่วมกัน"
 
-#: share/baul-share.c:1162
+#: share/baul-share.c:1163
 msgid "Share this Folder"
 msgstr "ใช้โฟลเดอร์นี้ร่วมกัน"
 
