@@ -37,7 +37,7 @@ requires:
     - libxml2-dev
     - libxml2-utils
     - make
-    - pkg-config
+    - pkgconf
     - python3-lxml
     - quilt
     - shared-mime-info
