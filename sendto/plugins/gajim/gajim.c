@@ -292,7 +292,7 @@ _set_pixbuf_from_status (const gchar *show, GdkPixbuf **pixbuf)
 	if(g_file_test(pixbuf_path->str, G_FILE_TEST_EXISTS) &&
 		g_file_test(pixbuf_path->str, G_FILE_TEST_IS_REGULAR)) {
 		error = NULL;
-		*pixbuf = gdk_pixbuf_new_from_file(pixbuf_path->str, &error);
+		*pixbuf = cdk_pixbuf_new_from_file(pixbuf_path->str, &error);
 		if(error != NULL) {
 			g_error_free(error);
 		}
