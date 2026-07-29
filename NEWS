@@ -1,3 +1,10 @@
+### baul-extensions 2.1.0
+
+  * ci: some improvements
+  * port from GdkPixbuf to CdkPixbuf
+  * update translations
+
+
 ### baul-extensions 2.0.0
 
   * ci: add debian sid build
