@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 2.0.0\n"
+"Project-Id-Version: baul-extensions 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2025-01-27 15:53+0100\n"
+"POT-Creation-Date: 2026-07-29 16:14+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: وجدي أبو سلطان, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/cafe/teams/13566/ar/)\n"
@@ -46,15 +46,15 @@ msgstr ""
 "العنصر الذي اخترته لا يمكن فتحه بصلاحيات المدير لعدم إمكانية تحديد البرنامج "
 "الصحيح"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Privilege granting extension"
 msgstr "امتداد منح الصلاحيات"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr ""
 
@@ -224,15 +224,15 @@ msgstr "تدوير الصور: %d من %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>يجري التّدوير \"%s\"</i>"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "Image Converter"
 msgstr "محوّل الصور"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Rotate and resize images"
 msgstr "تدوير و تحجيم الصور"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
@@ -274,15 +274,15 @@ msgstr "إغلاق"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "Open terminal"
 msgstr "افتح الطرفية"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminals from folders"
 msgstr "فتح الطرفية من المجلدات"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr ""
 
@@ -336,15 +336,15 @@ msgstr "تعذّر تحميل أية ملحقات."
 msgid "Please verify your installation"
 msgstr "رجاءً راجع تثبيتك"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "Send To"
 msgstr "أرسل إلى"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Integrates email clients and Pidgin"
 msgstr "دمج عملاء البريد الإلكتروني وPidgin"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
@@ -455,15 +455,15 @@ msgstr "الأقراص القابلة للفصل والمشارَكات"
 msgid "UPnP Media Server"
 msgstr "خادوم وسائط UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
+#: share/libbaul-share.baul-extension.desktop.in.in:4 share/baul-share.c:1060
 msgid "Share"
 msgstr "شارك"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:5
 msgid "Allows to quickly share a folder"
 msgstr "يسمح بمشاركة مجلد بسرعة "
 
-#: share/libbaul-share.baul-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr ""
 
@@ -636,15 +636,15 @@ msgstr "اضبط كخلفية"
 msgid "Set image as the current wallpaper"
 msgstr "اختر الصورة لتكون الخلفية الحالية"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
 msgid "Wallpaper"
 msgstr "الخلفية"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Allows to quickly set wallpaper"
 msgstr "يسمح بضبط سريع للخلفية"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr ""
 
@@ -656,15 +656,15 @@ msgstr "وسوم"
 msgid "Tags stored in extended attributes"
 msgstr ""
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "xattr Tags"
 msgstr ""
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "View tags stored in extended attributes"
 msgstr ""
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
 

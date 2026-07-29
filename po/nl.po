@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 2.0.0\n"
+"Project-Id-Version: baul-extensions 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2025-01-27 15:53+0100\n"
+"POT-Creation-Date: 2026-07-29 16:14+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Kees Lijkendijk <clkndk@gmail.com>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/cafe/teams/13566/nl/)\n"
@@ -45,15 +45,15 @@ msgstr ""
 "Het door u geselecteerde element kan niet worden geopend met "
 "beheerdersrechten omdat het juiste programma ervoor niet kan worden bepaald."
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Privilege granting extension"
 msgstr "Rechten verlenende uitbreiding"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr "Auteursrecht (C) 2002-2005 Gustavo Noronha Silva"
 
@@ -223,15 +223,15 @@ msgstr "Bezig met draaien van afbeeldingen %d van %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Bezig met draaien van '%s'</i>"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "Image Converter"
 msgstr "Omzetter van afbeeldingen"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Rotate and resize images"
 msgstr "Draai en herschaal afbeeldingen"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Auteursrecht (C) 2004-2005 Jürg Billeter"
 
@@ -273,15 +273,15 @@ msgstr "Sluiten"
 msgid "open-terminal Configuration"
 msgstr "Instellingen van open-terminal"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "Open terminal"
 msgstr "Terminalvenster openen"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminals from folders"
 msgstr "Terminalvensters openen vanuit mappen"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr "Auteursrecht (C) 2004, 2005 Free Software Foundation, Inc."
 
@@ -338,15 +338,15 @@ msgstr "Kon geen invoegtoepassingen laden."
 msgid "Please verify your installation"
 msgstr "Controleer a.u.b. uw installatie"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "Send To"
 msgstr "Verzend naar"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Integrates email clients and Pidgin"
 msgstr "Integreert met e-mailprogramma's en Pidgin"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Auteursrecht (C) 2004 Roberto Majadas"
 
@@ -461,15 +461,15 @@ msgstr "Verwijderbare en gedeelde schijven"
 msgid "UPnP Media Server"
 msgstr "UPnP-mediaserver"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
+#: share/libbaul-share.baul-extension.desktop.in.in:4 share/baul-share.c:1060
 msgid "Share"
 msgstr "Gedeelde map"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:5
 msgid "Allows to quickly share a folder"
 msgstr "Maakt het mogelijk om een map snel te delen"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr "Auteursrecht (C) 2005 Ethium, Inc."
 
@@ -650,15 +650,15 @@ msgstr "Instellen als bureaubladachtergrond"
 msgid "Set image as the current wallpaper"
 msgstr "Afbeelding instellen als de huidige bureaubladachtergrond"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
 msgid "Wallpaper"
 msgstr "Bureaubladachtergrond"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Allows to quickly set wallpaper"
 msgstr "Maakt het mogelijk om snel een bureaubladachtergrond in te stellen"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr "Auteursrecht (C) 2014 Stefano Karapetsas"
 
@@ -670,15 +670,15 @@ msgstr "Markeringen"
 msgid "Tags stored in extended attributes"
 msgstr "Markeringen opgeslagen in uitgebreide attributen"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "xattr Tags"
 msgstr "xattr Markeringen"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "View tags stored in extended attributes"
 msgstr "Bekijk markeringen opgeslagen in uitgebreide attributen"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Auteursrecht (C) 2016 Felipe Barriga Richards"
 

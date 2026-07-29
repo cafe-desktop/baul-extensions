@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 2.0.0\n"
+"Project-Id-Version: baul-extensions 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2025-01-27 15:53+0100\n"
+"POT-Creation-Date: 2026-07-29 16:14+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: cf1cb53ced613cbf2ac17294c88cdcaa, 2020\n"
 "Language-Team: Galician (https://www.transifex.com/cafe/teams/13566/gl/)\n"
@@ -42,15 +42,15 @@ msgstr ""
 "O elemento que seleccionou non se pode abrir con dereitos de administrador "
 "porque non se determinou a aplicación correcta."
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Privilege granting extension"
 msgstr "Extensión de concesión de privilexios"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr "Dereitos de autoría (C) 2002-2005 Gustavo Noronha Silva"
 
@@ -220,15 +220,15 @@ msgstr "Rotando a imaxe: %d de %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Rotando «%s»</i>"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "Image Converter"
 msgstr "Convertedor de imaxe"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Rotate and resize images"
 msgstr "Rotar e redimensionar imaxes"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr "Dereitos de autoría (C) 2004-2005 Jürg Billeter"
 
@@ -270,15 +270,15 @@ msgstr "Pechar"
 msgid "open-terminal Configuration"
 msgstr "Configuración de abrir-terminal"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "Open terminal"
 msgstr "Abrir terminal"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminals from folders"
 msgstr "Terminais abertos dende cartafoles"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr "Dereitos de autoría (C) 2004, 2005 Free Software Foundation, Inc."
 
@@ -335,15 +335,15 @@ msgstr "Non foi posíbel cargar algún engadidos."
 msgid "Please verify your installation"
 msgstr "Comprobe a súa instalación."
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "Send To"
 msgstr "Enviar a"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Integrates email clients and Pidgin"
 msgstr "Integra clientes de correo electrónico e Pidgin"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr "Dereitos de autoría (C) 2004 Roberto Majadas"
 
@@ -458,15 +458,15 @@ msgstr "Discos removíbeis e compartidos"
 msgid "UPnP Media Server"
 msgstr "Servidor de medios UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
+#: share/libbaul-share.baul-extension.desktop.in.in:4 share/baul-share.c:1060
 msgid "Share"
 msgstr "Compartir"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:5
 msgid "Allows to quickly share a folder"
 msgstr "Permite compartir rapidamente un cartafol"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr "Dereitos de autoría (C) 2005 Ethium, Inc."
 
@@ -644,15 +644,15 @@ msgstr "Estabelecer como fondo de pantalla"
 msgid "Set image as the current wallpaper"
 msgstr "Estabelecer a imaxe como fondo de pantalla actual"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
 msgid "Wallpaper"
 msgstr "Fondo de pantalla"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Allows to quickly set wallpaper"
 msgstr "Permite estabelecer fondos de pantalla rapidamente"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr "Dereitos de autoría (C) 2014 Stefano Karapetsas"
 
@@ -664,15 +664,15 @@ msgstr "Etiquetas"
 msgid "Tags stored in extended attributes"
 msgstr "Etiquetas almacenadas en atributos estendidos"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "xattr Tags"
 msgstr "Etiquetas xattr"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "View tags stored in extended attributes"
 msgstr "Ver as etiquetas almacenadas en atributos estendidos"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr "Dereitos de autoría (C) 2016 Felipe Barriga Richards"
 

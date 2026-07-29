@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 2.0.0\n"
+"Project-Id-Version: baul-extensions 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2025-01-27 15:53+0100\n"
+"POT-Creation-Date: 2026-07-29 16:14+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: Замфир Йончев <zamfir.yonchev@gmail.com>, 2020\n"
 "Language-Team: Bulgarian (https://www.transifex.com/cafe/teams/13566/bg/)\n"
@@ -45,15 +45,15 @@ msgstr ""
 "Избраният от Вас обект не може да се отвори с права на администратор, защото "
 "не може да бъде определено правилното приложение."
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Privilege granting extension"
 msgstr "Разширение за даване на права"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr ""
 
@@ -223,15 +223,15 @@ msgstr "Завъртане на изображението: %d от %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>Завъртане на \"%s\"</i>"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "Image Converter"
 msgstr "Конертиране на изображения"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Rotate and resize images"
 msgstr "Завъртане и преоразмеряване на изображение"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
@@ -273,15 +273,15 @@ msgstr "Затваряне"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "Open terminal"
 msgstr "Отваряне на терминал"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminals from folders"
 msgstr "Отваряне на терминали от папките"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr ""
 
@@ -339,15 +339,15 @@ msgstr "Не могат да се заредят никакви приставк
 msgid "Please verify your installation"
 msgstr "Проверете инсталацията си"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "Send To"
 msgstr "Изпращане до"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Integrates email clients and Pidgin"
 msgstr "Свързва e-mail клиентите с Pidgin"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
@@ -458,15 +458,15 @@ msgstr "Премахваеми устройства и споделяния"
 msgid "UPnP Media Server"
 msgstr "Сървър за мултимедия чрез UPnP"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
+#: share/libbaul-share.baul-extension.desktop.in.in:4 share/baul-share.c:1060
 msgid "Share"
 msgstr "Споделяне"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:5
 msgid "Allows to quickly share a folder"
 msgstr "Позволява бързо споделяне на папка"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr ""
 
@@ -643,15 +643,15 @@ msgstr "Използване като фон на работния плот"
 msgid "Set image as the current wallpaper"
 msgstr "Използване на изображението като фон на работния плот"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
 msgid "Wallpaper"
 msgstr "Фон на работния плот"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Allows to quickly set wallpaper"
 msgstr "Позволява да бъде избран фон на работния плот бързо"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr ""
 
@@ -663,15 +663,15 @@ msgstr "Етикети"
 msgid "Tags stored in extended attributes"
 msgstr "Етикети съхранявани в разширени атрибути"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "xattr Tags"
 msgstr "Етикети „xattr“"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "View tags stored in extended attributes"
 msgstr "Преглед на етикетите съхранявани в разширени атрибути"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
 

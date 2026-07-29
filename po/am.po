@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: baul-extensions 2.0.0\n"
+"Project-Id-Version: baul-extensions 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/baul-extensions\n"
-"POT-Creation-Date: 2025-01-27 15:53+0100\n"
+"POT-Creation-Date: 2026-07-29 16:14+0200\n"
 "PO-Revision-Date: 2020-02-14 11:51+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>, 2020\n"
 "Language-Team: Amharic (https://www.transifex.com/cafe/teams/13566/am/)\n"
@@ -39,15 +39,15 @@ msgstr ""
 "\n"
 "የመረጡትን እቃ በአስተዳዳሪ ሀይል መክፈት አልተቻለም ምክንያቱም ትክክለኛውን መተግበሪያ መወሰን አልተቻለም "
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:4
 msgid "Gksu"
 msgstr "Gksu"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:6
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:5
 msgid "Privilege granting extension"
 msgstr "ለ ተጨማሪዎች ቅድሚያ መስጫ"
 
-#: gksu/libbaul-gksu.baul-extension.desktop.in.in:8
+#: gksu/libbaul-gksu.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2002-2005 Gustavo Noronha Silva"
 msgstr ""
 
@@ -217,15 +217,15 @@ msgstr "ምስል በ ማዞር ላይ: %d ከ %d"
 msgid "<i>Rotating \"%s\"</i>"
 msgstr "<i>በ ማዞር ላይ \"%s\"</i>"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:4
 msgid "Image Converter"
 msgstr "ምስል መቀየሪያ "
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:6
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:5
 msgid "Rotate and resize images"
 msgstr "ምስሎችን ማዞሪያ እና እንደገና መመጠኛ"
 
-#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:8
+#: image-converter/libbaul-image-converter.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004-2005 Jürg Billeter"
 msgstr ""
 
@@ -267,15 +267,15 @@ msgstr "መዝጊያ"
 msgid "open-terminal Configuration"
 msgstr ""
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:4
 msgid "Open terminal"
 msgstr "ተርሚናል መክፈቻ "
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:6
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:5
 msgid "Open terminals from folders"
 msgstr "ተርሚናል መክፈቻ ከ ፎልደሮች ውስጥ"
 
-#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:8
+#: open-terminal/libbaul-open-terminal.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004, 2005 Free Software Foundation, Inc."
 msgstr ""
 
@@ -329,15 +329,15 @@ msgstr "ተሰኪዎችን መጫን አልተቻለም"
 msgid "Please verify your installation"
 msgstr "እባክዎን አገጣጠሞን ይመርምሩ"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:4
 msgid "Send To"
 msgstr "መላኪያ ወደ."
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:6
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:5
 msgid "Integrates email clients and Pidgin"
 msgstr "Pidgin እና የ ኢሜይል ደንበኛ ማዋሀጃ"
 
-#: sendto/libbaul-sendto.baul-extension.desktop.in.in:8
+#: sendto/libbaul-sendto.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2004 Roberto Majadas"
 msgstr ""
 
@@ -448,15 +448,15 @@ msgstr "የሚወልቁ ዲስኮች እና የሚካፈሉዋቸው"
 msgid "UPnP Media Server"
 msgstr "UPnP Media Server"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:5 share/baul-share.c:1060
+#: share/libbaul-share.baul-extension.desktop.in.in:4 share/baul-share.c:1060
 msgid "Share"
 msgstr "ማካፈያ"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:6
+#: share/libbaul-share.baul-extension.desktop.in.in:5
 msgid "Allows to quickly share a folder"
 msgstr "በፍጥነት ፎልደር ማካፈያ ማስቻያ"
 
-#: share/libbaul-share.baul-extension.desktop.in.in:8
+#: share/libbaul-share.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2005 Ethium, Inc."
 msgstr ""
 
@@ -628,15 +628,15 @@ msgstr "እንደ ግድግዳ ወረቀት ማሰናጃ"
 msgid "Set image as the current wallpaper"
 msgstr "ምስሉን እንደ ግድግዳ ወረቀት አሁን ማሰናጃ..."
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:4
 msgid "Wallpaper"
 msgstr "የ ግድግዳ ወረቀት"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:6
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:5
 msgid "Allows to quickly set wallpaper"
 msgstr "በፍጥነት የ ግድግዳ ወረቀት ማሰናጃ ማስቻያ"
 
-#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:8
+#: wallpaper/libbaul-wallpaper.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2014 Stefano Karapetsas"
 msgstr ""
 
@@ -648,15 +648,15 @@ msgstr "Tags"
 msgid "Tags stored in extended attributes"
 msgstr "በ ተስፋፋ መለያዎች ውስጥ የ ተቀመጡ Tags"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:4
 msgid "xattr Tags"
 msgstr "xattr Tags"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:6
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:5
 msgid "View tags stored in extended attributes"
 msgstr "በ ተስፋፋ መለያዎች ውስጥ የ ተቀመጡ Tags መመልከቻ"
 
-#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:8
+#: xattr-tags/libbaul-xattr-tags.baul-extension.desktop.in.in:7
 msgid "Copyright (C) 2016 Felipe Barriga Richards"
 msgstr ""
 
